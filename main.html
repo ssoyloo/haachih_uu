@@ -8,17 +8,6 @@
          body {
             font-family: Arial, sans-serif;
         }
-        header, nav, section, article, footer {
-            display: block;
-        }
-        .search-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            width: 200px;
-        }
         
     </style>
 </head>
@@ -35,154 +24,208 @@
                 <li><a href="./menubar.html">Валинтин гэсэн</a></li>
                 <li><a href="./menubar.html">Хөдөө гарья</a></li>
                 <button>Search</button>
-                <li><a href="./login.html"><button>log in</button></a></li>  
+                <li><a href="./login/login.html"><button>log in</button></a></li>
+                
             </ul>
+             
+                
+            
+        
         </nav>
     </header>
+    
+<main>
+    <section>
+        <article class="Search">
+            <label for="CountCustomers">Хүний тоо:</label>
 
-    <main>
-        <section>
-            <img src="https://imgur.com/a/hlxFWCT" alt="nuur">
-            <section>
-                <select name="persons">
-                    <option value="" disabled selected hidden>Хүний тоо</option>
-                    <option value="1hun">1</option>
-                    <option value="2hun">2</option>
-                    <option value="3hun">3</option>
-                    <option value="4hun">4</option>
-                    <option value="5hun">5</option>
-                    <option value="6hun">6</option>
-                    <option value="7hun">7</option>
-                    <option value="8hun">8</option>
-                    <option value="9hun">9</option>
-                </select>
+                    <select id="CountCustomers">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10+">10+</option>
 
-                <select name="place">
-                    <option value="" disabled selected hidden>Ойрхон газар</option>
-                    <option value="baynzurh">Баянзүх дүүрэг</option>
-                    <option value="songinohairhan">Сонгино хайрхан дүүрэг</option>
-                    <option value="chingeltei">Чингэлтэй</option>
-                    <option value="hanuul">Хан-Уул дүүрэг</option>
-                    <option value="suhbaatar">Сүхбаатар дүүрэг</option>
-                    <option value="nalaih">Налайх дүүрэг</option>
-                    <option value="bayngol">Баянгол дүүрэг</option>
-                </select>
+                    </select>
 
-                <select name="types">
-                    <option value="" disabled selected hidden>Төрөл</option>
-                    <option value="foods">Хоолны газрууд</option>
-                    <option value="songinohairhan">Кафе</option>
-                    <option value="hanuul">Зуслан</option>
-                    <option value="suhbaatar">Караоке</option>
-                    <option value="nalaih">Музей</option>
-                    <option value="bayngol">Хүрээлэн</option>
-                    <option value="chingeltei">Pub, Lounge</option>
-                    <option value="chingeltei">Club</option>
+                    <label for="CountCustomers">Ойрхон газар:</label>
 
-                </select>
-                <button>LET'S GO</button>
-            </section>
-        </section>
+                    <select id="CountCustomers">
+                        <option value="Баянзүрх дүүрэг">Баянзүрх дүүрэг</option>
+                        <option value="Сүхбаатар дүүрэг">Сүхбаатар дүүрэг</option>
+                        <option value="Хан-уул дүүрэг">Хан-уул дүүрэг</option>
+                        <option value="Сонгинохайрхан дүүрэг">Сонгинохайрхан дүүрэг</option>
+                        <option value="Баянгол дүүрэг">Баянгол дүүрэг</option>
+                        <option value="Чингэлтэй дүүрэг">Чингэлтэй дүүрэг</option>
+                        <option value="Налайх дүүрэг">Налайх дүүрэг</option>
 
-        <section>
-            <h2>Топ төлөвлөгөөнүүд</h2>
-            <article>
-                <h2>Төлөвлөгөө 1</h2>
-                <img src="bla.jpg" alt="bla">
-                <p>Орой яахын</p>
-                <p>БЗД, 13р хороолол - СБД, 5р хороолол</p>
-                <input type="text"> 
-                <button>100К-c эхэлье</button>
-            </article>
+                    </select>
+                    <label for="CountCustomers">Төрөл:</label>
 
-            <article>
-                <h2>Төлөвлөгөө 2</h2>
-                <img src="bla.jpg" alt="bla">
-                <p>Орой яахын</p>
-                <p>БЗД, 13р хороолол - СБД, 5р хороолол</p>
-                <input type="text"> 
-                <button>100К-c эхэлье</button>
-            </article>
+                    <select id="Type">
+                        <option value="Хоолны газар">Хоолны газар</option>
+                        <option value="Кафе">Кафе</option>
+                        <option value="Паб, лоунж">Паб, лоунж</option>
+                        <option value="Зуслан">Зуслан</option>
+                        <option value="Караоке">Караоке</option>
+                        <option value="Музей">Музей</option>
+                        <option value="Кино театр">Кино театр</option>
+                        <option value="Клаб">Клаб</option>
+                        <option value="Хүрээлэн">Хүрээлэн</option>
 
-            <article>
-                <h2>Төлөвлөгөө 3</h2>
-                <img src="bla.jpg" alt="bla">
-                <p>Орой яахын</p>
-                <p>БЗД, 13р хороолол - СБД, 5р хороолол</p>
-                <input type="text"> 
-                <button>100К-c эхэлье</button>
-            </article>
+                    </select>
+                        <button>Let's g</button>
+    
+        </article>
 
-            <article>
-                <h2>Төлөвлөгөө 4</h2>
-                <img src="bla.jpg" alt="bla">
-                <p>Орой яахын</p>
-                <p>БЗД, 13р хороолол - СБД, 5р хороолол</p>
-                <input type="text"> 
-                <button>100К-c эхэлье</button>
-            </article>
-        </section>
-
-        <section>
-            <h2>Санал болгох газрууд</h2>
-            <article>
-                <h2>Хүүхдийн парк</h2>
-                <img src="bla.jpg" alt="bla">
-                <p>Орой яахын</p>
-                <p>7:30-21:0</p>
-                <input type="text"> 
-                <button>100К-c эхэлье</button>
-            </article>
-
-            <article>
-                <h4>Sura</h4>
-                <img src="bla.jpg" alt="bla">
-                <p>Орой яахын</p>
-                <p>7:30-21:0</p>
-                <input type="text"> 
-                <button>100К-c эхэлье</button>
-            </article>
-
-            <article>
-                <h2>Хүүхдийн парк</h2>
-                <img src="bla.jpg" alt="bla">
-                <p>Орой яахын</p>
-                <p>7:30-21:0</p>
-                <input type="text"> 
-                <button>100К-c эхэлье</button>
-            </article>
-
-            <article>
-                <h2>Хүүхдийн парк</h2>
-                <img src="bla.jpg" alt="bla">
-                <p>Орой яахын</p>
-                <p>7:30-21:0</p>
-                <input type="text"> 
-                <button>100К-c эхэлье</button>
-            </article>
-        </section>
-
-        <section>
-            <h2>Шинээр нэмэгдсэн</h2>
+    </section>
+    <section>
+        <h2>Топ л гээд байгаам чинь</h2>
+        <article class="plans">
+            
             <article>
                 <h3>төлөвлөгөө 1</h3>
-                <img src="" alt="">
+                <img src="bla.jpg" alt="bla">
+                <p><stars:5></stars:5></p>
+                <p>Орой яахын?</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>7:30-21:00</p>
+        
+        
+            </article>
+            <article>
+                <h3>төлөвлөгөө 1</h3>
+                <img src="bla.jpg" alt="bla">
+                <p><stars:5></stars:5></p>
+                <p>Орой яахын?</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>7:30-21:00</p>
+        
+        
+            </article>
+            <article>
+                <h3>төлөвлөгөө 1</h3>
+                <img src="bla.jpg" alt="bla">
+                <p><stars:5></stars:5></p>
+                <p>Орой яахын?</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>7:30-21:00</p>
+        
+        
+            </article>
+        </article>
+    </section>
+    <section>
+        <h2>Санал болгох газрууд</h2>
+        <article class="placesToRecommend">
+            <article class="BigRecommend">
+                <img src="bla.jpg" alt="bla">
+                <h3>Sura</h3>
+                <p>Хоолны газар</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>7:30-21:00</p>
+                <p>Эхлэх үнэ:20000</p>
+            </article>
+            <article class="RecommendPlacesToFlex">
+            <article>
+                <img src="bla.jpg" alt="bla">
+                <h3>Sura</h3>
+                <p>Хоолны газар</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>7:30-21:00</p>
+                <p>Эхлэх үнэ:20000</p>
+        
+        
+            </article>
+            <article>
+                <img src="bla.jpg" alt="bla">
+                <h3>Sura</h3>
+                <p>Хоолны газар</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>7:30-21:00</p>
+                <p>Эхлэх үнэ:20000</p>
+        
+        
+            </article>
+            <article>
+                <img src="bla.jpg" alt="bla">
+                <h3>Sura</h3>
+                <p>Хоолны газар</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>7:30-21:00</p>
+                <p>Эхлэх үнэ:20000</p>
+        
+        
+            </article>
+        </article>
+                
+            
+    </section>
+
+    <section>
+        <h2>Шинээр нэмэгдсэн</h2>
+        <article class="newPlaces">
+            <article>
+                <img src="bla.jpg" alt="bla">
+                <h3>placesName</h3>
+                <p>Кафе</p>
+                <p>7:30-21:00</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>Эхлэх үнэ:10000</p>
             </article>
 
             <article>
-                <img src="destination2.jpg" alt="Destination 2">
-                <h3>Destination 2</h3>
-                <p>Zaa yahw huleejil baiy.</p>
+                <img src="bla.jpg" alt="bla">
+                <h3>placesName</h3>
+                <p>Кафе</p>
+                <p>7:30-21:00</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>Эхлэх үнэ:10000</p>
             </article>
 
             <article>
-                <img src="destination3.jpg" alt="Destination 3">
-                <h3>Destination 3</h3>
-                <p>zzaa yahw</p>
+                <img src="bla.jpg" alt="bla">
+                <h3>placesName</h3>
+                <p>Кафе</p>
+                <p>7:30-21:00</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>Эхлэх үнэ:10000</p>
             </article>
-        </section>
-    </main>
 
+            <article>
+                <img src="bla.jpg" alt="bla">
+                <h3>placesName</h3>
+                <p>Кафе</p>
+                <p>7:30-21:00</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>Эхлэх үнэ:10000</p>
+            </article>
+
+            <article>
+                <img src="bla.jpg" alt="bla">
+                <h3>placesName</h3>
+                <p>Кафе</p>
+                <p>7:30-21:00</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>Эхлэх үнэ:10000</p>
+            </article>
+
+            <article>
+                <img src="bla.jpg" alt="bla">
+                <h3>placesName</h3>
+                <p>Кафе</p>
+                <p>7:30-21:00</p>
+                <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
+                <p>Эхлэх үнэ:10000</p>
+            </article>
+    </article>
+    </section>
+</main>
     <footer>
         <a href="#"><img  src="logo.jpg" alt="bla2"></a>
         <a href="#"><img  src="url.jpg" alt="bla2"></a>
