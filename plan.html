@@ -33,115 +33,127 @@
     <section>
 
             <article>
-            <h2>1</h2>
-            <img src="bla.jpg" alt="bla">
+                <p><time datetime="2023-02-08">9:30</time>-<time>12:00</time></p>
+                <h2>1</h2>
+                <img src="bla.jpg" alt="bla">
 
-            <h2>Хүүхдийн парк</h2>
-            <p>Хүрээлэн</p>
-            <p>СБД, 1-р хороо</p>
-            <p>Open 24 hours</p>
-            <p>11326020</p>
-            <h3>Танилцуулга</h3>
-            <p>bla2.....</p>
-            <p>Эхлэх үнэ: 10000</p>
+                <h3>Хүүхдийн парк</h3>
+                <p>Хүрээлэн</p>
+                <meter id="gazar1" value="5" min="0" max="5">5 out of 5</meter>
+
+                <address>СБД, 1-р хороо</address>
+                <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                <a href="11326020">11326020</a>
+                <h4>Танилцуулга</h4>
+                <p>bla2.....</p>
+                <a href="./plan.html"><span>100</span>K-c эхэлье</a>
             </article>
         
             <article>
+                <p><time datetime="2023-02-08">12:30</time>-<time>14:00</time></p>
                 <h2>2</h2>
                 <img src="bla.jpg" alt="bla">
     
-                <h2>Чили рестарон</h2>
+                <h3>Чили рестарон</h3>
                 <p>Хоолны газар</p>
-                <p>СБД, 1-р хороо</p>
-                <p>Open 24 hours</p>
-                <p>11326020</p>
-                <h3>Танилцуулга</h3>
+                <meter id="gazar2" value="5" min="0" max="5">5 out of 5</meter>
+                
+                <address>СБД, 1-р хороо</address>
+                <p><time datetime="2023-02-08">12:00</time>-<time>22:00</time></p>
+                <a href="11326020">11326020</a>
+                <h4>Танилцуулга</h4>
                 <p>bla2.....</p>
-                <p>Эхлэх үнэ: 10000</p>
+                <a href="./plan.html"><span>100</span>K-c эхэлье</a>
             </article>
             <article>
+                <p><time datetime="2023-02-08">14:00</time>-<time>16:00</time></p>
                 <h2>3</h2>
                 <img src="bla.jpg" alt="bla">
     
-                <h2>Өргөө 3 IMAX</h2>
+                <h3>Өргөө 3 IMAX</h3>
                 <p>Кино театр</p>
-                <p>СБД, 1-р хороо</p>
-                <p>Open 24 hours</p>
-                <p>11326020</p>
-                <h3>Танилцуулга</h3>
+                <meter id="gazar3" value="5" min="0" max="5">5 out of 5</meter>
+                
+                <address>СБД, 1-р хороо</address>
+                <p><time datetime="2023-02-08">12:00</time>-<time>22:00</time></p>
+                <a href="11326020">11326020</a>
+                <h4>Танилцуулга</h4>
                 <p>bla2.....</p>
-                <p>Эхлэх үнэ: <span>10000</span></p>
+                <a href="./plan.html"><span>100</span>K-c эхэлье</a>
             </article>
 
-            <article class="ratingPlan">
+            <article class="ratingplan">
                 <h3>Үнэлгээ</h3>
-                <p><span class="fa fa-star checked"></span></p>
-                <table>
-                    <tr>
-                        <td>5 од</td>
-                        <td><input type="range" min="0" max="100" step="1" value="50" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>4 од</td>
-                        <td><input type="range" min="0" max="100" step="1" value="20" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>3 од</td>
-                        <td><input type="range" min="0" max="100" step="1" value="20" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>2 од</td>
-                        <td><input type="range" min="0" max="100" step="1" value="10" disabled></td>
-                    </tr>
-                </table>
-                <article class="commentOnPlan">
-                        <h4>Сэтгэгдэл</h4>
-                        <p>⭐⭐⭐⭐⭐</p>
-                        <P>Urana, Oct, 2023</P>
-                        <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <label for="5">5 од</label>
+                <progress id="5" value="80" max="100"> 80% </progress>
+                
+                <label for="4">4 од</label>
+                <progress id="4" value="80" max="100"> 80% </progress>
+            
+                <label for="3">3 од</label>
+                <progress id="3" value="80" max="100"> 80% </progress>
+
+                <label for="2">2 од</label>
+                <progress id="2" value="80" max="100"> 80% </progress>
+
+                <label for="1">1 од</label>
+                <progress id="1" value="80" max="100"> 80% </progress>
+
+                <article class="ratingOnComment">
+                    <h4>Сэтгэгдэл</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>Urana, Oct, 2023 </p> 
+                    <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
                 </article>
+
             </article>
     </section>
     <section class="similarPlans">
-        <h2>Ижил төстэй төлөвлөгөөнүүд:</h2>   
+        <h2>Ижил төстэй төлөвлөгөөнүүд:</h2> 
+
+        <article>
+            <img src="bla.jpg" alt="bla">
+            <h3>Ажлаараа архидъя</h3>
+            <meter id="tuluvluguu1" value="5" min="0" max="5">5 out of 5</meter>
+            <address>БЗД, 13р хороолол 
+                СБД, 5р хороолол</address>
+            <a href="./plan.html"><span>10</span>K-c эхэлье</a>
+        </article>
+
             <article>
                 <img src="bla.jpg" alt="bla">
-                <h4>Ажлаараа архидъя</h4>
-                <p>БЗД, 13р хороолол 
-                    СБД, 5р хороолол</p>
-                    <p>Эхлэх үнэ:  100000 төг</p>
+                <h3>Ажлаараа архидъя</h3>
+                <meter id="tuluvluguu2" value="5" min="0" max="5">5 out of 5</meter>
+                <address>БЗД, 13р хороолол 
+                    СБД, 5р хороолол</address>
+                <a href="./plan.html"><span>10</span>K-c эхэлье</a>
             </article>
 
             <article>
                 <img src="bla.jpg" alt="bla">
-                <h4>Ажлаараа архидъя</h4>
-                <p>БЗД, 13р хороолол 
-                    СБД, 5р хороолол</p>
-                    <p>Эхлэх үнэ:  100000 төг</p>
+                <h3>Ажлаараа архидъя</h3>
+                <meter id="tuluvluguu3" value="5" min="0" max="5">5 out of 5</meter>
+                <address>БЗД, 13р хороолол 
+                    СБД, 5р хороолол</address>
+                <a href="./plan.html"><span>10</span>K-c эхэлье</a>
             </article>
 
             <article>
                 <img src="bla.jpg" alt="bla">
-                <h4>Ажлаараа архидъя</h4>
-                <p>БЗД, 13р хороолол 
-                    СБД, 5р хороолол</p>
-                    <p>Эхлэх үнэ:  100000 төг</p>
-            </article>
-
-            <article>
-                <img src="bla.jpg" alt="bla">
-                <h4>Ажлаараа архидъя</h4>
-                <p>БЗД, 13р хороолол 
-                    СБД, 5р хороолол</p>
-                    <p>Эхлэх үнэ:  100000 төг</p>
+                <h3>Ажлаараа архидъя</h3>
+                <meter id="tuluvluguu4" value="5" min="0" max="5">5 out of 5</meter>
+                <address>БЗД, 13р хороолол 
+                    СБД, 5р хороолол</address>
+                <a href="./plan.html"><span>10</span>K-c эхэлье</a>
             </article>
     </section>
     
 
     <footer>
         <a href="#"><img  src="logo.jpg" alt="bla2"></a>
-        <a href="#"><img  src="url.jpg" alt="bla2"></a>
-        <a href="#"><img  src="url.jpg" alt="bla2"></a>
+        <a href="#"><i  class="facebook"></i></a>
+        <a href="#"><i class="instagram"></i></a>
     <ul>
         <li><a href="#"><p>Асуулт хариулт</p></a></li>
         <li><a href="#"><p>Санал хүсэлт</p></a></li>
