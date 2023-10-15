@@ -136,15 +136,9 @@ p {
     color: #555;
     font-size: 14px;
 }
-.logopng{
-    max-width: 10%;
-    color: #ffffff;
+.logopng1 img{
+width: 10%;
 }
-/* styles.css */
-
-/* ... (previous styles) ... */
-
-/* Section styles */
 section {
     margin-bottom: 30px;
 }
@@ -206,8 +200,72 @@ h2 {
     max-width: 700px;
     width: 100%;
 }
-.RecommendPlacesToFlex{
-    max-width: 700px;
+.RecommendPlacesToFlex img{
+    max-width: 150px;
+    width: 100%; /* Set the width to 100% to make the image fill its container */
+    max-height: 150px;
+}
+.RecommendPlacesToFlex {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.RecommendPlacesToFlex .image {
+    flex: 1;
+    max-width: 300px; /* Set a maximum width for the image side */
+}
+
+.RecommendPlacesToFlex img {
+    width: 100%;
+    height: auto;
+}
+
+.RecommendPlacesToFlex .details {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+}
+
+.RecommendPlacesToFlex h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.RecommendPlacesToFlex p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.RecommendPlacesToFlex address {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.RecommendPlacesToFlex time {
+    color: #555;
+    font-size: 16px;
+}
+
+.RecommendPlacesToFlex button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.RecommendPlacesToFlex button:hover {
+    background-color: #0056b3;
 }
 
 
@@ -226,3 +284,6 @@ margin-top: -500px;
 margin-left: -100px;
 margin-right: -400px;
 } 
+.SearchLetsGo{
+    text-align: center;
+}
