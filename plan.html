@@ -20,17 +20,16 @@
             </ul>
             <button>Search</button>
             <button>log in</button>
-        </nav>      
-        
+        </nav>        
     </header>
+    <main>
+        <section>
+            <button onclick="history.back()"> _ </button>
+            <h2>Төлөвлөгөөний нэр</h2>
+            <div class="line"></div>
+        </section>
 
-    <section>
-        <button onclick="history.back()"> _ </button>
-        <h2>Төлөвлөгөөний нэр</h2>
-        <div class="line"></div>
-    </section>
-
-    <section>
+        <section>
 
             <article>
             <h2>1</h2>
@@ -73,40 +72,37 @@
                 <p>Эхлэх үнэ: <span>10000</span></p>
             </article>
 
-            <article class="ratingPlan">
+            <article class="ratingplace">
                 <h3>Үнэлгээ</h3>
-                <p><span class="fa fa-star checked"></span></p>
-                <table>
-                    <tr>
-                        <td>5 од</td>
-                        <td><input type="range" min="0" max="100" step="1" value="50" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>4 од</td>
-                        <td><input type="range" min="0" max="100" step="1" value="20" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>3 од</td>
-                        <td><input type="range" min="0" max="100" step="1" value="20" disabled></td>
-                    </tr>
-                    <tr>
-                        <td>2 од</td>
-                        <td><input type="range" min="0" max="100" step="1" value="10" disabled></td>
-                    </tr>
-                </table>
-                <article class="commentOnPlan">
-                        <h4>Сэтгэгдэл</h4>
-                        <p>⭐⭐⭐⭐⭐</p>
-                        <P>Urana, Oct, 2023</P>
-                        <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
+                <p>⭐⭐⭐⭐⭐</p>
+                <label for="5">5 од</label>
+                <progress id="5" value="80" max="100"> 80% </progress>
+                
+                <label for="4">4 од</label>
+                <progress id="4" value="80" max="100"> 80% </progress>
+            
+                <label for="3">3 од</label>
+                <progress id="3" value="80" max="100"> 80% </progress>
+
+                <label for="2">2 од</label>
+                <progress id="2" value="80" max="100"> 80% </progress>
+
+                <label for="1">1 од</label>
+                <progress id="1" value="80" max="100"> 80% </progress>
+
+                <article class="ratingOnComment">
+                    <h4>Сэтгэгдэл</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>Urana, Oct, 2023 </p> 
+                    <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
                 </article>
             </article>
     </section>
-    <section class="similarPlans">
-        <h2>Ижил төстэй төлөвлөгөөнүүд:</h2>   
+        <section class="similarPlans">
+            <h2>Ижил төстэй төлөвлөгөөнүүд:</h2>   
             <article>
                 <img src="bla.jpg" alt="bla">
-                <h4>Ажлаараа архидъя</h4>
+                <h3>Хамт олноороо зугаалъя</h3>
                 <p>БЗД, 13р хороолол 
                     СБД, 5р хороолол</p>
                     <p>Эхлэх үнэ:  100000 төг</p>
@@ -114,7 +110,7 @@
 
             <article>
                 <img src="bla.jpg" alt="bla">
-                <h4>Ажлаараа архидъя</h4>
+                <h3>Найзуудаараа шоудъя</h3>
                 <p>БЗД, 13р хороолол 
                     СБД, 5р хороолол</p>
                     <p>Эхлэх үнэ:  100000 төг</p>
@@ -122,7 +118,7 @@
 
             <article>
                 <img src="bla.jpg" alt="bla">
-                <h4>Ажлаараа архидъя</h4>
+                <h3>Амралтанд цугаараа</h3>
                 <p>БЗД, 13р хороолол 
                     СБД, 5р хороолол</p>
                     <p>Эхлэх үнэ:  100000 төг</p>
@@ -130,13 +126,13 @@
 
             <article>
                 <img src="bla.jpg" alt="bla">
-                <h4>Ажлаараа архидъя</h4>
+                <h3>Мөнгөө үрье</h3>
                 <p>БЗД, 13р хороолол 
                     СБД, 5р хороолол</p>
                     <p>Эхлэх үнэ:  100000 төг</p>
             </article>
-    </section>
-    
+        </section>
+    </main>
 
     <footer>
         <a href="#"><img  src="logo.jpg" alt="bla2"></a>
