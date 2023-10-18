@@ -16,6 +16,7 @@ body {
 /* Header styles */
 header {
     background-color:rgb(10, 92, 118);
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6 );
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
