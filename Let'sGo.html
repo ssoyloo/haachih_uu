@@ -22,39 +22,48 @@
         </nav>
     </header>
     <main>
-      <section class="Main_search">
-        <article>
-            <label for="CountPeople" id="CountPeople">Хүний тоо:</label>
-            <input list="browsers" >
-            <datalist id="CountPeople">
-              <option value="2">
-              <option value="4">
-              <option value="6">
-              <option value="8">
-              <option value="+10">
-            </datalist>
-            <label for="NearPlace" id="nearPlaces">Ойрхон газар:</label>
-            <input list="browsers" >
-            <datalist id="NearPlace">
-              <option value="Баянзүрх дүүрэг">
-              <option value="Баянгол дүүрэг">
-              <option value="Сонгинохайрхан дүүрэг">
-              <option value="Хан-уул дүүрэг">
-              <option value="Сүхбаатар дүүрэг">
-            </datalist>
-            <label for="typePlaces" id="typePlaces"> Төрөл:</label> 
-            <input list="browsers" >
-            <datalist id="browsers">
-              <option value="Паб">
-              <option value="Караоке">
-              <option value="Кафе">
-              <option value="Хоолны газар">
-              <option value="Клаб">
-            </datalist>
-          <button>Let's go</button>
-      </article>
-      </section>
-
+      <div>
+        <select name="huniiToo">
+            <option value="">Хүний тоо</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7" >7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10+</option>
+            <option value="20">20+</option>
+            <option value="30">30+</option>
+            <option value="40">40+</option>
+            <option value="50">50+</option>
+        </select>
+        <select name="oirhonGazar">
+            <option value="">Ойрхон газар</option>
+            <option value="HanUul">Хан-Уул дүүрэг</option>
+            <option value="SonginoHairhan">Сонгино хайрхан дүүрэг</option>
+            <option value="Baynzurh">Баянзүрх дүүрэг</option>
+            <option value="Chingeltei">Чингэлтэй дүүрэг</option>
+            <option value="Sukhbaatar">Сүхбаатар дүүрэг</option>
+            <option value="Nalaih" >Налайх дүүрэг</option>
+            <option value="Bayngol">Баянгол дүүрэг</option>
+        </select>
+        <select name="type">
+            <option value="">Төрөл</option>
+            <option value="HoolniiGazar">Хоолны газрууд</option>
+            <option value="Cafe">Кафе</option>
+            <option value="PubLounge">Паб, лоунж</option>
+            <option value="Camp">Зуслан</option>
+            <option value="Karaoke">Караоке</option>
+            <option value="Museum" >Музей</option>
+            <option value="Cinema">Кино театр</option>
+            <option value="Club">Клаб</option>
+            <option value="Garden">Хүрээлэн</option>
+            <option value="Enjoy">Хөгжилдөх газар</option>
+        </select>
+        <button>LET'S GO</button>
+      </div>
           <aside>
             <h2>Filter by:</h2>
                 <hr>
@@ -104,41 +113,34 @@
           </article>
 
           <article>
-              <img src="bla.jpg" alt="bla">
-              <h3>Төлөвлөгөө 2</h3>
-              
-              <p>Орой яахын?</p>
-              <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
-              <p>7:30-21:00</p>
-              <p>+976 85168646</p>
-              <table>
-                  <tr>
-                      <td>1</td>
-                      <td>Паб, лоунж</td>
-                  </tr>
-                  <tr>
-                      <td>2</td>
-                      <td>Клаб</td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Караоке</td>
-                  </tr>
-              </table>
+            <img src="zurag/ubnight.jpeg" alt="bla">
+            <h3>Төлөвлөгөө 1</h3>
+            
+            <p>Орой яахын?</p>
+            <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
+            <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
+            <a href="11326020">11326020</a>
+            <a href="./plan.html"><span>10</span>K-c эхэлье</a>
+            <ol>
+              <li>Паб, лоунж</li>
+              <li>Клаб</li>
+              <li>Караоке</li>
+            </ol>
           </article>
 
           <article>
-              <img src="bla.jpg" alt="bla">
-              <h3>Төлөвлөгөө 3</h3>
+              <img src="zurag/ubnight.jpeg" alt="bla">
+              <h3>Төлөвлөгөө 1</h3>
               
               <p>Орой яахын?</p>
-              <p>СБД, 1-р хороо - УБ,  Сөүл гудамж</p>
-              <p>7:30-21:00</p>
-              <p>+976 85168646</p>
-              <ol>                 
-                  <li>Паб, лоунж</li>
-                  <li>Клаб</li>
-                  <li>Караоке</li>
+              <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
+              <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
+              <a href="11326020">11326020</a>
+              <a href="./plan.html"><span>10</span>K-c эхэлье</a>
+              <ol>
+                <li>Паб, лоунж</li>
+                <li>Клаб</li>
+                <li>Караоке</li>
               </ol>
           </article>
 
