@@ -1,29 +1,13 @@
 /* styles.css */
 
-/*import font*/
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
-/* styles.css */
-
 /* Resetting default margin and padding */
 :root {
     --main-color: #007bff;
     --secondary-color: #555;
     --border-radius: 20px;
 }
-
-/* Use custom properties in your styles */
-button {
-    background-color: var(--main-color);
-    color: #fff;
-    border-radius: var(--border-radius);
-}
-
-p {
-    color: var(--secondary-color);
-}
-
-* {
+/* Resetting default margin and padding */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,19 +20,12 @@ body {
 }
 
 /* Header styles */
-
-nav
- {
-    display: inline;
-
-    & a {
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-    } 
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
 }
-
-
 
 button {
     margin-left: 15px;
@@ -70,22 +47,96 @@ button:hover {
 main {
     padding: 30px;
 }
-header{
+
+header {
     background-color: #0056b3;
 }
 
-/* Section styles */
-
+/* Section and Article styles */
+section, article {
+    margin-bottom: 30px;
+}
 
 h2 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
+    text-align: center;
 }
 
-/* Article styles */
+article img {
+    max-width: 100%;
+    border-radius: 2%;
+    margin-bottom: 2%;
+}
+
+article h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Footer styles */
+footer {
+    background-color: rgb(10, 92, 118);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer {
+    & p{
+    color: white;
+    }
+    & a{
+        text-decoration: none;
+    }
+    & .logopngfooter {
+        max-width: 20%; /* Make sure the images don't exceed their container */
+      }
+      
+}
+
+.logopngfooter {
+    max-width: 20%;
+}
+
+.footerGrid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    color: white;
+}
+/* Use custom properties in your styles */
 
 
+
+/* Header styles */
+
+nav
+ {
+    display: inline;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    } 
+}
 article:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -248,11 +299,6 @@ h2 {
     padding: 15px;
     text-align: center;
 }
-
-
-
-
-
 .newPlaces {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -278,136 +324,11 @@ h2 {
     padding: 15px;
     text-align: center;
 }
-
-    
-
-
-
-  
 .plansContainer{
     margin-top: 10%;
 }
 
-:root {
-    --main-color: #007bff;
-    --secondary-color: #555;
-    --border-radius: 20px;
-}
-/* Resetting default margin and padding */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Body styles */
-body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    background-color: #f8f8f8;
-}
-
-/* Header styles */
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-button {
-    margin-left: 15px;
-    padding: 8px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Main styles */
-main {
-    padding: 30px;
-}
-
-header {
-    background-color: #0056b3;
-}
-
-/* Section and Article styles */
-section, article {
-    margin-bottom: 30px;
-}
-
-h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-}
-
-article img {
-    max-width: 100%;
-    border-radius: 2%;
-    margin-bottom: 2%;
-}
-
-article h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-p {
-    color: #555;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-/* Footer styles */
-footer {
-    background-color: rgb(10, 92, 118);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-footer {
-    & p{
-    color: white;
-    }
-    & a{
-        text-decoration: none;
-    }
-    & .logopngfooter {
-        max-width: 20%; /* Make sure the images don't exceed their container */
-      }
-      
-}
-
-.logopngfooter {
-    max-width: 20%;
-}
-
-.footerGrid-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    color: white;
-}
 
 /* Media Query for smaller screens */
 /* ... (previous CSS code) ... */
