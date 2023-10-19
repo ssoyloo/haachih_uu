@@ -1,5 +1,6 @@
 /* styles.css */
-
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 /* Resetting default margin and padding */
 * {
     margin: 0;
@@ -9,13 +10,14 @@
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Pangolin;
     background-color: #f8f8f8;
 }
 
 /* Header styles */
 header {
     background-color:rgb(10, 92, 118);
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6 );
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -32,6 +34,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
+
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s;
