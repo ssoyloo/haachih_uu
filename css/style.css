@@ -3,7 +3,26 @@
 /*import font*/
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
+/* styles.css */
+
 /* Resetting default margin and padding */
+:root {
+    --main-color: #007bff;
+    --secondary-color: #555;
+    --border-radius: 20px;
+}
+
+/* Use custom properties in your styles */
+button {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+}
+
+p {
+    color: var(--secondary-color);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -26,19 +45,11 @@ nav
         text-decoration: none;
         color: white;
         font-size: 16px;
-        transition: color 0.3s;
     } 
 }
 
 
 
-
-.firstNavWord{
-    margin-left: 10%;
-}
-.lastNavWord{
-    margin-right: 10%;
-}
 button {
     margin-left: 15px;
     padding: 8px 15px;
@@ -139,13 +150,10 @@ h2 {
     margin: 0; /* Set margins to zero */
     padding: 0; /* Set padding to zero */
     height: 800px;
-    background-size: cover; /* This ensures the background covers the entire element */
-    background-position: center; /* This centers the background */
-    background-repeat: no-repeat; /* This prevents the background from repeating */
     width: 120%;
-    margin-top: -150px;
-    margin-left: -100px;
-    margin-bottom: -200px;
+    margin-top: -10%;
+    margin-left: -10%;
+    margin-bottom: -10%;
 }
 
 .SearchLetsGo {
@@ -199,6 +207,7 @@ h2 {
 }
 
 .BigRecommend {
+    text-align: center;
     border: 1px solid #ccc;
     background-color: #fff;
     max-width: 800px;
@@ -214,7 +223,6 @@ h2 {
 }
 
 .subRecommend{
-    border: 0;
     max-width: 700px;
     width: 100%;
     border-radius: 50px;
@@ -226,67 +234,23 @@ h2 {
 }
 .RecommendPlacesToFlex {
     display: flex;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    margin-bottom: 30px;
     max-width: 800px;
     border-radius: 20px;
+    border: 1px solid;
 }
 
 .RecommendPlacesToFlex .image {
     flex: 1;
-    max-width: 300px; /* Set a maximum width for the image side */
+    max-width: 300px; 
 }
-
-.RecommendPlacesToFlex img {
-    width: 100%;
-    height: auto;
-}
-
 .RecommendPlacesToFlex .details {
     flex: 1;
     padding: 15px;
     text-align: center;
 }
 
-.RecommendPlacesToFlex h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-}
 
-.RecommendPlacesToFlex p {
-    color: #555;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
 
-.RecommendPlacesToFlex address {
-    color: #555;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.RecommendPlacesToFlex time {
-    color: #555;
-    font-size: 16px;
-}
-
-.RecommendPlacesToFlex button {
-    margin-top: 10px;
-    padding: 8px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.RecommendPlacesToFlex button:hover {
-    background-color: #0056b3;
-}
 
 
 .newPlaces {
@@ -317,40 +281,172 @@ h2 {
 
     
 
-  .logopngfooter {
-    max-width: 20%; /* Make sure the images don't exceed their container */
-  }
+
+
   
-  .footerGrid-container {
+.plansContainer{
+    margin-top: 10%;
+}
+
+:root {
+    --main-color: #007bff;
+    --secondary-color: #555;
+    --border-radius: 20px;
+}
+/* Resetting default margin and padding */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+button {
+    margin-left: 15px;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Main styles */
+main {
+    padding: 30px;
+}
+
+header {
+    background-color: #0056b3;
+}
+
+/* Section and Article styles */
+section, article {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 2%;
+    margin-bottom: 2%;
+}
+
+article h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Footer styles */
+footer {
+    background-color: rgb(10, 92, 118);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer {
+    & p{
+    color: white;
+    }
+    & a{
+        text-decoration: none;
+    }
+    & .logopngfooter {
+        max-width: 20%; /* Make sure the images don't exceed their container */
+      }
+      
+}
+
+.logopngfooter {
+    max-width: 20%;
+}
+
+.footerGrid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     color: white;
-  }
+}
 
-  
-  .details ul li {
-    margin-bottom: 10px; /* Adjust the spacing between list items as needed */
-  }
-.navButton:hover {
-    background-color: #0056b3;
-    color: white;
-}
-.plansContainer{
-    margin-top: 5%;
-}
-footer p{
-    color: white;
-    
-}
-footer li a {
-    text-decoration: none;
+/* Media Query for smaller screens */
+/* ... (previous CSS code) ... */
 
-}
+/* Media Query for smaller screens */
 @media (max-width: 768px) {
     .logopngfooter {
         max-width: 50%;
     }
+
     .footerGrid-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newPlaces, .RecommendPlacesToFlex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .subNewPlaces, .subRecommend {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 10px 20px;
+    }
+
+    .RecommendPlacesToFlex .image, .RecommendPlacesToFlex .details {
+        flex: 1;
+        max-width: none;
+    }
+
+    .RecommendPlacesToFlex img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .BigRecommend, .subNewPlaces .image, .subNewPlaces .details {
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
     }
 }
