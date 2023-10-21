@@ -1,6 +1,5 @@
 /*import fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
+@import url('root.css');
 * {
     padding: 0;
     margin:0;
