@@ -1,0 +1,8 @@
+/*import fonts*/
+@import url('root.css');
+* {
+    padding: 0;
+    margin:0;
+    font-family: Pangolin;
+}
+
