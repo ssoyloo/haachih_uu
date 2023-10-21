@@ -9,7 +9,6 @@
 /* Body styles */
 body {
     font-family: Pangolin;
-    background-color: #f8f8f8;
 }
 
 button {
@@ -34,12 +33,6 @@ main {
     padding: 30px;
 }
 
-header {
-    background-color: var(--main-color);
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    padding-bottom: 4%;
-}
-
 /* Section and Article styles */
 section, article {
     margin-bottom: 30px;
@@ -51,42 +44,6 @@ h2 {
     color: #333;
     text-align: center;
 }
-
- 
-    
-
-footer {
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    padding:0px;
-    text-align: center;
-    & p{
-    color: white;
-    text-align: center;
-    padding-bottom: 10px;
-    }
-     & a{
-        text-decoration: none;
-        padding: 5px;
-    }
-    & ul, li{
-        list-style: none;
-    }
-    & .logopngfooter {
-        max-width: 60%; /* Make sure the images don't exceed their container */
-      }
-    .footerGrid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-        padding-top: 20px;
-    }
-     & .footer-section:nth-child(2) img {
-        padding: 5px;
-    }
-    
-      
-}
-
-
 
 nav
  {
@@ -237,7 +194,6 @@ p {
     }
     
 }
-
 
 
 .RecommendPlacesToFlex img{
