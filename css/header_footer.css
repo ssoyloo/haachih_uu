@@ -1,23 +1,54 @@
-@import url("root.css");
-
-* {
-    box-sizing: border-box;
-    padding: 0rem;
-    margin: 0rem;
-  }
-
-  body {
-    width: 100%;
-  }
-
-  /*header part*/
-  header {
-    background-color: var(--main-color);
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    padding-bottom: 4%;
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+:root {
+    --main-color: rgb(10,92,118);
+    --secondary-color: rgb(41,151,185);
+}
+body {
+    font-family: Pangolin;
 }
 
-/*footer part*/
+header {
+    background-color: var(--main-color);
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+    padding-bottom: 5%; 
+    & nav
+    {
+       display: inline;
+   
+       & a {
+           text-decoration: none;
+           color: white;
+           font-size: 16px;
+       } 
+       & img{
+               width: 12%;
+               margin-bottom: -2.4%;
+               margin-left: 4%;
+       }
+       & ul{
+           list-style-type: none;
+       }
+       & li {
+           display: inline;
+           margin-right: 10px;
+       }
+       & a:hover{
+        color: black;
+       }
+       .searchicon{
+        width: 2%;
+        padding-bottom: 25px;
+       }
+       .navButton :hover{
+            color: aliceblue;
+            background-color: aqua;
+       }
+   }
+   
+    
+}
+
+
 footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     padding:0px;
@@ -45,6 +76,10 @@ footer {
     & .footer-section:nth-child(2) img {
         padding: 5px;
     }
-    
+     & hr{
+        margin-bottom: 10px;
+        width: 80%;
+        margin-left: 10%;
+    }
       
 }
