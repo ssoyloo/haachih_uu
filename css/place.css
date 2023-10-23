@@ -1,0 +1,280 @@
+@font-face {
+    font-family: pangolin;
+    src: url(Pangolin-Regular.ttf);
+}
+
+body {
+    font-family: pangolin;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#hr1 {
+    height: 5px;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+}
+
+#idk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    width: 1440px;
+    margin: auto;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+.grid {
+    margin-top: 5%;
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: 60% 35%;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+}
+
+#ScrollingImage {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+}
+
+#ScrollingImage img {
+    width: 100%;
+    height: auto;
+}
+
+#info {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+}
+
+#info h3 {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#info ul {
+    margin: 5%;
+}
+
+#info ul li {
+    margin: 5%;
+}
+
+#taniltsuulga {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+}
+
+#taniltsuulga h3{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#taniltsuulga p {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+#ratingplace {
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+}
+
+#ratingplace h3 {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#ratingplace #stars {
+    margin-top: 30px;
+    margin-left: 350px;
+}
+
+.progress-list {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.progress-list label {
+    display: block; 
+    margin-left: 20px;
+    width: 100%; 
+}
+
+progress {
+    position: relative;
+    left: 20px;
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    border-radius: 25px;
+}
+
+progress::-webkit-progress-value {
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    border-radius: 25px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: lightgray; 
+    border-radius: 25px;
+}
+
+.progress-list label {
+    padding: 10px;
+}
+
+#ratingplace h4 {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#ratingplace p {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+section {
+    margin-bottom: 20px;
+}
+
+h2, h3, h4 {
+    color: #333333;
+}
+
+address, time, p, ul {
+    color: #666666;
+}
+
+.ratingplace progress {
+    width: 100%;
+}
+
+.similarPlans {
+    margin-top: 5%;
+}
+
+.similarPlans h2 {
+    font-weight: bold;
+}
+
+.similarPlans div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+article {
+    display: flex;
+    width: calc(33.33% - 20px);
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    overflow: hidden; 
+}
+
+article img {
+    width: 50%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.content {
+    flex: 1;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+h3, p, address, time, a {
+    margin: 0;
+}
+
+footer {
+    background-color: #0A5C76;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.logo {
+    width: 50px;
+    height: 50px;
+}
+  
+footer {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.footer-div ul a {
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+footer p {
+    color: white;
+}
+
+.logo2 {
+    width: 100px; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+#hr2 {
+    height: 5px;
+    width: 80%;
+    border-radius: 25px;
+    background-color: lightgray;
+}
