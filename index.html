@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Улаанбаатар хот дотроо нэг өдрийг хөгжилтэй өнгөрүүлэх төлөвлөгөө болон газруудыг харуулна.">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/header_footer.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./zurag/logo.png">
     <title>Haachih uu?</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/headerfooter.css">
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
-                <li><a href="main.html"><img src="./zurag/logo.png" alt="haachih_uu?"></a></li>
-                <li><a href="./menubar.html">Орой яахын?</a></li>
-                <li><a href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
-                <li><a href="./menubar.html">Арван жил шдээ</a></li>
-                <li><a href="./menubar.html">Валинтин гэсэн</a></li>
-                <li><a href="./menubar.html">Хөдөө гарья</a></li>   
+                <li><a class="logopng1" href="./index.html"><img src="./zurag/logo.png" alt="haachih_uu?"></a></li>
+                <li><a class="text" href="./menubar.html">Орой яахын?</a></li>
+                <li><a class="text" href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
+                <li><a class="text" href="./menubar.html">Арван жил шдээ</a></li>
+                <li><a class="text" href="./menubar.html">Валинтин гэсэн</a></li>
+                <li><a class="text" href="./menubar.html">Хөдөө гарья</a></li>
+                <a class="navButton" href="./search.html"> <input type="button" onclick="letsgo()" value="Search"></a>
+                <a class="navButton" href="./login.html"> <input type="button" onclick="log_in()" value="Log in"></a>
             </ul>
-             
-            <button>Search</button>
-            <button>log in</button>
-        
         </nav>
     </header>
+
     <main>
-        <div>
-            <select name="huniiToo">
+        <article class="background">
+        </article>
+        <div class="Lsearch">
+            <select class="option1" name="huniiToo">
                 <option value="">Хүний тоо</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -44,7 +47,7 @@
                 <option value="40">40+</option>
                 <option value="50">50+</option>
             </select>
-            <select name="oirhonGazar">
+            <select class="option2" name="oirhonGazar">
                 <option value="">Ойрхон газар</option>
                 <option value="HanUul">Хан-Уул дүүрэг</option>
                 <option value="SonginoHairhan">Сонгино хайрхан дүүрэг</option>
@@ -54,7 +57,7 @@
                 <option value="Nalaih" >Налайх дүүрэг</option>
                 <option value="Bayngol">Баянгол дүүрэг</option>
             </select>
-            <select name="type">
+            <select class="option3" name="type">
                 <option value="">Төрөл</option>
                 <option value="HoolniiGazar">Хоолны газрууд</option>
                 <option value="Cafe">Кафе</option>
@@ -65,179 +68,236 @@
                 <option value="Cinema">Кино театр</option>
                 <option value="Club">Клаб</option>
                 <option value="Garden">Хүрээлэн</option>
-                <option value="Enjoy">Хөгжилдөх газар</option>
             </select>
-            <button>LET'S GO</button>
-        </div>
+            <button onclick="Letsgo()">LET'S GO</button>
+        </div>  
+    
+    <section class="plansContainer">
+        <h2>Топ л гээд байгаам чинь</h2>
         <section class="plans">
-            <h2>Топ л гээд байгаам чинь</h2>
-            <article>
-                <h3>Топ 1</h3>
-                <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top1">
-                <meter id="planEvaluation1" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
-                <i class="fa-solid fa-tag"></i>
-                <p>Орой яахын?</p>
-                <i class="fa-solid fa-location-dot"></i>
-                <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>    
-                <a href="./plan.html"><span>100</span>K-c эхэлье</a>
-            </article>
-                <article>
+                <article class="subPlans">
+                    <h3>Топ 1</h3>
+                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top1">
+                    <meter id="planEvaluation" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
+                    <i class="fa-solid fa-tag"></i>
+                    <p>Орой яахын?</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>    
+                    <button><span>100</span>К-с эхэлье</button>
+                </article>
+                <article class="subPlans">
                     <h3>Топ 2</h3>
                     <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top2">
-                    <meter id="planEvaluation2" value="0.85" min="0.0" max="5.0">85%</meter>
+                    <meter id="planEvaluation" value="0.85" min="0.0" max="5.0">85%</meter>
                     <i class="fa-solid fa-tag"></i>
                     <p>Орой яахын?</p>
                     <i class="fa-solid fa-location-dot"></i>
                     <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>   
-                    <a href="./plan.html"><span>100</span>K-c эхэлье</a>         
+                    <button><span>100</span>К-с эхэлье</button>           
                 </article>
-                <article>
+                <article class="subPlans">
                     <h3>Топ 3</h3>
                     <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top3">
-                    <meter id="planEvaluation3" value="0.85" min="0.0" max="5.0">85%</meter>
+                    <meter id="planEvaluation" value="0.85" min="0.0" max="5.0">85%</meter>
                     <i class="fa-solid fa-tag"></i>
                     <p>Орой яахын?</p>
                     <i class="fa-solid fa-location-dot"></i>
-                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>  
-                    <a href="./plan.html"><span>100</span>K-c эхэлье</a>          
+                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
+                    <button><span>100</span>К-с эхэлье</button>          
                 </article>
-                <article>
+                <article class="subPlans">
                     <h3>Топ 4</h3>
                     <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top4">
-                    <meter id="planEvaluation4" value="0.85" min="0.0" max="5.0">85%</meter>
+                    <meter id="planEvaluation" value="0.85" min="0.0" max="5.0">85%</meter>
                     <i class="fa-solid fa-tag"></i>
                     <p>Орой яахын?</p>
                     <i class="fa-solid fa-location-dot"></i>
                     <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address> 
-                    <a href="./plan.html"><span>100</span>K-c эхэлье</a>         
+                    <button><span>100</span>К-с эхэлье</button>         
                 </article>
         </section>
+    </section>
+        <h2>Санал болгочихъё</h2>
         <section class="placesToRecommend">
-            <h2>Санал болгочихъё</h2>
+            
                 <article class="BigRecommend">
                     <img src="https://eguur.mn/wp-content/uploads/2021/07/DSC00068.jpg" alt="sanalBolgoh1">
                     <h3>Үндэсний соёл амралтын хүрээлэн</h3>
-                    <i class="fa-solid fa-tags"></i>
+
                     <p>Хүрээлэн</p>
-                    <i class="fa-solid fa-location-dot"></i>
                     <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
                     <i class="far fa-clock"></i>
-                    <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                    <a href="./place.html"><span>100</span>K-c эхэлье</a>
+                    <time>7:30-21:00</time> <br> 
+                    <button><span>10</span>К-с эхэлье</button>
                 </article>
-                <article class="RecommendPlacesToFlex1">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-p/17/e5/63/39/the-best-authentic-korean.jpg" alt="sanalBolgoh2">
-                    <h3>Sura</h3>
-                    <i class="fa-solid fa-tags"></i>
-                    <p>Хоолны газар</p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                    <i class="far fa-clock"></i>
-                    <p><time datetime="2023-02-09">7:30</time>-<time>21:00</time></p>
+                <article class="subRecommend">
 
-                </article>
+                    <article class="RecommendPlacesToFlex">
+                        <div class="image">
+                            <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                        </div>
+                        <div class="details">
+                            <h3>Sura</h3>
+                            <p>Хоолны газар</p>
+                            <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                            <i class="far fa-clock"></i>
+                            <time>7:30-21:00</time><br> 
+                            <button><span>20</span>К-с эхэлье</button>
+                        </div>
+                    </article>
+                
+                    <article class="RecommendPlacesToFlex">
+                        <div class="image">
+                            <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                        </div>
+                        <div class="details">
+                            <h3>Sura</h3>
+                            <p>Хоолны газар</p>
+                            <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                            <i class="far fa-clock"></i>
+                            <time>7:30-21:00</time><br> 
+                            <button><span>20</span>К-с эхэлье</button>
+                        </div>
+                    </article>
 
-                <article class="RecommendPlacesToFlex2">
-                    <img src="http://shangrilacentreub.mn/media/shangrila/content/Mall/Brand%20info/Caffe_Bene/Caffe_Bene_Sign_I26Affb.jpg" alt="sanalBolgoh3">
-                    <h3>Cafe bene</h3>
-                    <i class="fa-solid fa-tags"></i>
-                    <p>Кафе</p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                    <i class="far fa-clock"></i>
-                    <p><time datetime="2023-02-10">7:30</time>-<time>21:00</time></p>
-                    <a href="./place.html"><span>100</span>K-c эхэлье</a>  
-                </article>
-                <article class="RecommendPlacesToFlex3">
-                    <img src="./zurag/smokycity_roller.jpg" alt="sanalBolgoh4">
-                    <h3>Smoky city</h3>
-                    <i class="fa-solid fa-tags"></i>
-                    <p>Хөгжилдөх газар</p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                    <i class="far fa-clock"></i>
-                    <p><time datetime="2023-02-11">7:30</time>-<time>21:00</time></p>
-                    <a href="./place.html"><span>100</span>K-c эхэлье</a>              
-                </article>    
+                    <article class="RecommendPlacesToFlex">
+                        <div class="image">
+                            <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                        </div>
+                        <div class="details">
+                            <h3>Sura</h3>
+                            <p>Хоолны газар</p>
+                            <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                            <i class="far fa-clock"></i>
+                            <time>7:30-21:00</time><br> 
+                            <button><span>20</span>К-с эхэлье</button>
+                        </div>
+                    </article>
+            </article>
+            
         </section>
+        <h2>Шинээр нэмэгдсэн</h2>
         <section class="newPlaces">
-            <h2>Шинэ шүү шинэ</h2>
-            <article>
-                <img src="./zurag/caffebene.jpg" alt="bla">
-                <h3>Cafe bene</h3>
-                <i class="fa-solid fa-tags"></i>
-                <p>Кафе</p>
-                <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                <i class="fa-solid fa-location-dot"></i>
-                <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                <a href="./place.html"><span>100</span>K-c эхэлье</a>     
+            
+            <article class="subNewPlaces">
+                <div class="image">
+                    <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                </div>
+                <div class="details">
+                    <h3>Sura</h3>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                    <i class="far fa-clock"></i>
+                    <time>7:30-21:00</time><br>
+                    <button><span>20</span>К-с эхэлье</button>
+                </div>
             </article>
-            <article>
-                <h3>Cafe bene</h3>
-                <i class="fa-solid fa-tags"></i>
-                <p>Кафе</p>
-                <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                <i class="fa-solid fa-location-dot"></i>
-                <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                <a href="./place.html"><span>100</span>K-c эхэлье</a>
-            </article>
-            <article>
-                <h3>Cafe bene</h3>
-                <i class="fa-solid fa-tags"></i>
-                <p>Кафе</p>
-                <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                <i class="fa-solid fa-location-dot"></i>
-                <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                <a href="./place.html"><span>100</span>K-c эхэлье</a>
-            </article>
-            <article>
-                <h3>Cafe bene</h3>
-                <i class="fa-solid fa-tags"></i>
-                <p>Кафе</p>
-                <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                <i class="fa-solid fa-location-dot"></i>
-                <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                <a href="./place.html"><span>100</span>K-c эхэлье</a>
-            </article>
-            <article>
 
-                <h3>Cafe bene</h3>
-                <i class="fa-solid fa-tags"></i>
-                <p>Кафе</p>
-                <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                <i class="fa-solid fa-location-dot"></i>
-                <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                <a href="./place.html"><span>100</span>K-c эхэлье</a>
-            </article> 
-            <article>
-                <img src="zurag/caffebene.jpg" alt="bla">
+            <article class="subNewPlaces">
+                <div class="image">
+                    <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                </div>
+                <div class="details">
+                    <h3>Sura</h3>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                    <i class="far fa-clock"></i>
+                    <time>7:30-21:00</time><br>
+                    <button><span>20</span>К-с эхэлье</button>
+                </div>
+            </article>
 
-                <h3>Cafe bene</h3>
-                <i class="fa-solid fa-tags"></i>
-                <p>Кафе</p>
-                <p><time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                <i class="fa-solid fa-location-dot"></i>
-                <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
-                <a href="./place.html"><span>100</span>K-c эхэлье</a> 
+            <article class="subNewPlaces">
+                <div class="image">
+                    <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                </div>
+                <div class="details">
+                    <h3>Sura</h3>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                    <i class="far fa-clock"></i>
+                    <time>7:30-21:00</time><br>
+                    <button><span>20</span>К-с эхэлье</button>
+                </div>
+            </article>
+
+            <article class="subNewPlaces">
+                <div class="image">
+                    <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                </div>
+                <div class="details">
+                    <h3>Sura</h3>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                    <i class="far fa-clock"></i>
+                    <time>7:30-21:00</time><br>
+                    <button><span>20</span>К-с эхэлье</button>
+                </div>
+            </article>
+
+            <article class="subNewPlaces">
+                <div class="image">
+                    <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                </div>
+                <div class="details">
+                    <h3>Sura</h3>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                    <i class="far fa-clock"></i>
+                    <time>7:30-21:00</time><br>
+                    <button><span>20</span>К-с эхэлье</button>
+                </div>
+            </article>
+
+            <article class="subNewPlaces">
+                <div class="image">
+                    <img src="./zurag/sura.jpg" alt="sanalBolgoh2">
+                </div>
+                <div class="details">
+                    <h3>Sura</h3>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
+                    <i class="far fa-clock"></i>
+                    <time>7:30-21:00</time><br>
+                    <button><span>20</span>К-с эхэлье</button>
+                </div>
             </article>
         </section>
     </main>
 
-    <footer>
-        <a href="#"><img  src="zurag/logo.png" alt="bla2"></a>
+    <footer >
+        <secion class="footerGrid-container">
+        <section class="footer-section">
+        <a href="./index.html"><img class="logopngfooter" src="./zurag/logo.png" alt="bla2"></a>
+        </section>
+        <address class="footer-section">
+        <a href="https://www.facebook.com/profile.php?id=100030214399759"><img src="./zurag/facebookicon.png" alt="bla2"></a><br>
+        <a href="https://www.instagram.com/belgee_enkhbat/"><img src="./zurag/instagramicon.png" alt="bla2"></a>
+        </address>
+        <section class="footer-section">
         <ul>
-            <li><p>Бидэнтэй холбогдох</p></li>
-            <li><a href="#"><i class="gmail"></i><p>Gmail</p></a></li>
-            <li><a href="#"><i class="ig"></i><p>Instagram</p></a></li>
-            <li><a href="#"><i class="fb"></i><p>Facebook</p></a></li>
+          <li><a href="#"><p>Асуулт хариулт</p></a></li>
+          <li><a href="#"><p>Санал хүсэлт</p></a></li>
+          <li><a href="#"><p>Үйлчилгээний нөхцөл</p></a></li>
         </ul>
-        <ul>
-            <li><p>Тусламж үйлчилгээ</p></li>
-            <li><a href="#"><p>Асуулт хариулт</p></a></li>
-            <li><a href="#"><p>Санал хүсэлт</p></a></li>
-            <li><a href="#"><p>Үйлчилгээний нөхцөл</p></a></li>
-        </ul>
-        <p>&copy; Haachih uu inc.2023. We love our customers.</p>
-    </footer>
+        </section>
+        </secion>
+        <hr class="line1">
+        <p>&copy; Haachih uu inc. 2023. We love our customers.</p>
+      </footer>
+      
+
+<!-- Code injected by live-server -->
+<script>
+	// ]]>
+    function log_in(){
+        window.prompt("udername password!");
+        window.location.reload();
+    }
+    function letsgo(){
+        window.alert(" this is not ready.");
+            window.location.reload();
+    }
+</script>
 </body>
 </html>
