@@ -5,38 +5,7 @@
     font-family: Pangolin;
 }
 
-header{
-    width: 100%;
-    height: 5rem;   
-    display: flex;
-    background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
-    & ul{
-        list-style-type: none;
-        overflow: hidden;
-        position: absolute;
-        & li{
-            float: left;
-            & a{
-                display: block;
-                color: var(--main-bg-color);
-                text-align: center;
-                padding: 1rem;
-                text-decoration: none;
-            }
-        } 
-    }
-    & img{
-        width: 10rem;
-        height: auto;
-    }
-    & button{
-        position: relative;
-    }
 
-}
-li a:hover{
-    color: #555;
-}
 main{
     margin-left: 10rem;
     margin-right: 10rem;
@@ -74,31 +43,4 @@ article {
     }
 }
 
-footer{
-    width: 100%;
-    height: 15rem;
-    display: flex;
-    background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
-    color: var(--main-color);
-    & img{
-        padding: 0;
-        width: auto;
-        height: 8rem;
-    }
-    & ul{
-        list-style-type: none;
-        text-align: none;
-        overflow: hidden;
-        & li{
-            & a{
-                color: var(--main-color);
-                text-decoration: none;
-            }
-        } 
-    }
-
-    & p{
-        font-size: 1.2rem;
-    }
-}
 
