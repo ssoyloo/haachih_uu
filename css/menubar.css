@@ -1,4 +1,12 @@
 /*import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+/* Resetting default margin and padding */
+:root {
+    --main-color: white;
+    --secondary-color: #555;
+    --border-radius: 20px;
+}
 
 * {
     box-sizing: border-box;
@@ -11,11 +19,9 @@ header{
     display: flex;
     background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     & ul{
-        margin: 0;
-        padding: 0;   
         list-style-type: none;
         overflow: hidden;
-
+        position: absolute;
         & li{
             float: left;
             & a{
@@ -28,32 +34,29 @@ header{
         } 
     }
     & img{
-        width: 11rem;
+        width: 10rem;
         height: auto;
     }
     & button{
-        background-color: var(--main-color);
-        border: none;
-        color:black;
-        padding: 2rem;
+        position: relative;
     }
+
 }
 li a:hover{
     color: #555;
 }
-
+main{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: flex;
+}
 article {
-    top: 0;
-    left: 0;
-    right:0;
-    width: 70%;
-    height: 20rem;
-    border-radius: 10rem;
-    border-width: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0.1rem 0.2rem 1rem #555;
+    border-radius: 1rem;
     & img{
-        width: 15rem;
         border-radius: 1rem;
-        max-width: 100%;
     }
     & ol{
         margin: 0;
@@ -65,12 +68,45 @@ article {
             text-decoration: none;
         } 
     }
+
 }
 
 .name{
+
     & h1{
-        
+        font-size: 1.2rem;
+    }
+    & hr{
+        height: 0.2rem;
+        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
 
+footer{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    color: var(--main-color);
+    & img{
+        padding: 0;
+        width: auto;
+        height: 8rem;
+    }
+    & ul{
+        list-style-type: none;
+        text-align: none;
+        overflow: hidden;
+        & li{
+            & a{
+                color: var(--main-color);
+                text-decoration: none;
+            }
+        } 
+    }
+
+    & p{
+        font-size: 1.2rem;
+    }
+}
 
