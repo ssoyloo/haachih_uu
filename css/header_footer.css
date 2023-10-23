@@ -27,7 +27,7 @@ footer {
     text-align: center;
     padding-bottom: 10px;
     }
-     & a{
+    & a{
         text-decoration: none;
         padding: 5px;
     }
@@ -42,7 +42,7 @@ footer {
         grid-template-columns: 1fr 1fr 1fr; 
         padding-top: 20px;
     }
-     & .footer-section:nth-child(2) img {
+    & .footer-section:nth-child(2) img {
         padding: 5px;
     }
     

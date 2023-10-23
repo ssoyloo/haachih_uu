@@ -1,4 +1,4 @@
-/*import fonts*/
+@import url('root.css');
 
 * {
     box-sizing: border-box;
@@ -18,7 +18,7 @@ header{
             float: left;
             & a{
                 display: block;
-                color: var(--main-color);
+                color: var(--main-bg-color);
                 text-align: center;
                 padding: 1rem;
                 text-decoration: none;
