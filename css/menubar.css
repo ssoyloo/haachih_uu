@@ -1,12 +1,4 @@
 /*import fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
-/* Resetting default margin and padding */
-:root {
-    --main-color: white;
-    --secondary-color: #555;
-    --border-radius: 20px;
-}
 
 * {
     box-sizing: border-box;
