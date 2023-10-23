@@ -10,25 +10,24 @@ main{
     margin-left: 10rem;
     margin-right: 10rem;
     display: flex;
-    display: grid;
 }
-section .plans{
+
+.plans{
     display: grid;
-    gap: 50px 100px;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    padding: 10px;
+    gap: 5rem;
+    grid-template-columns: auto auto;
 }
+
 article {
-    margin-bottom: 1rem;
     border: none;
     box-shadow: 0.1rem 0.2rem 1rem #555;
     border-radius: 1rem;
     & img{
         border-radius: 1rem;
+        width: 20rem;
+        height: auto;
     }
     & ol{
-        margin: 0;
         padding: 0; 
         & li{
             float: left;
@@ -41,7 +40,6 @@ article {
 }
 
 .name{
-
     & h1{
         font-size: 1.2rem;
     }
