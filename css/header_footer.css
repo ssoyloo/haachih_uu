@@ -17,6 +17,29 @@
     padding-bottom: 4%;
 }
 
+nav
+ {
+    display: inline;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    } 
+    & img{
+            width: 12%;
+            margin-bottom: -2.4%;
+            margin-left: 4%;
+    }
+    & ul{
+        list-style-type: none;
+    }
+    & li {
+        display: inline;
+        margin-right: 10px;
+    }
+}
+
 /*footer part*/
 footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
