@@ -1,8 +1,54 @@
-/*import fonts*/
 @import url('root.css');
+
 * {
-    padding: 0;
-    margin:0;
+    box-sizing: border-box;
     font-family: Pangolin;
 }
+
+
+main{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: flex;
+    display: grid;
+}
+section .plans{
+    display: grid;
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+article {
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0.1rem 0.2rem 1rem #555;
+    border-radius: 1rem;
+    & img{
+        border-radius: 1rem;
+    }
+    & ol{
+        margin: 0;
+        padding: 0; 
+        & li{
+            float: left;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        } 
+    }
+
+}
+
+.name{
+
+    & h1{
+        font-size: 1.2rem;
+    }
+    & hr{
+        height: 0.2rem;
+        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    }
+}
+
 

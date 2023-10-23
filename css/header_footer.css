@@ -1,46 +1,54 @@
-@import url("root.css");
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+:root {
+    --main-color: rgb(10,92,118);
+    --secondary-color: rgb(41,151,185);
+}
+body {
+    font-family: Pangolin;
+}
 
-* {
-    box-sizing: border-box;
-    padding: 0rem;
-    margin: 0rem;
-  }
-
-  body {
-    width: 100%;
-  }
-
-  /*header part*/
-  header {
+header {
     background-color: var(--main-color);
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    padding-bottom: 4%;
+    padding-bottom: 5%; 
+    & nav
+    {
+       display: inline;
+   
+       & a {
+           text-decoration: none;
+           color: white;
+           font-size: 16px;
+       } 
+       & img{
+               width: 20%;
+               margin-bottom: -2.4%;
+               margin-left: 4%;
+       }
+       & ul{
+           list-style-type: none;
+       }
+       & li {
+           display: inline;
+           margin-right: 10px;
+       }
+       & a:hover{
+        color: black;
+       }
+       .searchicon{
+        width: 2%;
+        padding-bottom: 25px;
+       }
+       .navButton :hover{
+            color: aliceblue;
+            background-color: aqua;
+       }
+   }
+   
+    
 }
 
-nav
- {
-    display: inline;
 
-    & a {
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-    } 
-    & img{
-            width: 12%;
-            margin-bottom: -2.4%;
-            margin-left: 4%;
-    }
-    & ul{
-        list-style-type: none;
-    }
-    & li {
-        display: inline;
-        margin-right: 10px;
-    }
-}
-
-/*footer part*/
 footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     padding:0px;
@@ -50,7 +58,7 @@ footer {
     text-align: center;
     padding-bottom: 10px;
     }
-     & a{
+    & a{
         text-decoration: none;
         padding: 5px;
     }
@@ -65,9 +73,17 @@ footer {
         grid-template-columns: 1fr 1fr 1fr; 
         padding-top: 20px;
     }
-     & .footer-section:nth-child(2) img {
+    & .footer-section:nth-child(2) img {
         padding: 5px;
     }
-    
-      
+     & hr{
+        margin-bottom: 10px;
+        width: 80%;
+        margin-left: 10%;
+    }
+    & img{
+      width: 30%;
+      margin-bottom: -2.4%;
+      margin-left: 4%;
+}  
 }
