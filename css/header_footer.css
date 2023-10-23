@@ -21,7 +21,7 @@ header {
            font-size: 16px;
        } 
        & img{
-               width: 12%;
+               width: 20%;
                margin-bottom: -2.4%;
                margin-left: 4%;
        }
@@ -81,5 +81,9 @@ footer {
         width: 80%;
         margin-left: 10%;
     }
-      
+    & img{
+      width: 30%;
+      margin-bottom: -2.4%;
+      margin-left: 4%;
+}  
 }
