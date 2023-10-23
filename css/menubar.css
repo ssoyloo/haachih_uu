@@ -10,6 +10,14 @@ main{
     margin-left: 10rem;
     margin-right: 10rem;
     display: flex;
+    display: grid;
+}
+section .plans{
+    display: grid;
+    gap: 50px 100px;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
 }
 article {
     margin-bottom: 1rem;
