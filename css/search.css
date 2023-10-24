@@ -1,0 +1,6 @@
+@import url('root.css');
+
+* {
+    box-sizing: border-box;
+    font-family: Pangolin;
+}

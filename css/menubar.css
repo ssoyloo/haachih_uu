@@ -18,13 +18,18 @@ main{
     grid-template-columns: auto auto;
 }
 
+.item{
+    display: grid;
+    gap: 2rem;
+    grid-template-areas: 'zrg ug';
+}
 article {
     border: none;
     box-shadow: 0.1rem 0.2rem 1rem #555;
     border-radius: 1rem;
     & img{
         border-radius: 1rem;
-        width: 20rem;
+        width: 25rem;
         height: auto;
     }
     & ol{
