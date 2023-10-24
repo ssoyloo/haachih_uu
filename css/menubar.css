@@ -41,7 +41,17 @@ article {
             text-decoration: none;
         } 
     }
-
+    & button {
+        border: none;
+        border-radius: var(--border-radius);
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-left: 2%;
+        padding: 0.7em 0.7em;
+        font-size: 1em;    
+    }
 }
 
 .name{
@@ -53,5 +63,6 @@ article {
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
+
 
 
