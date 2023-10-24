@@ -14,15 +14,36 @@ main{
 
 .plans{
     display: grid;
-    gap: 5rem;
-    grid-template-columns: auto auto;
+    gap: 3rem;
+    grid-template-columns: auto auto; 
+
+    & .name{
+        grid-column: 1 / span 2;
+        margin-bottom: 0;
+        padding-left: 3rem;
+    }
+
+    & .item{
+        display: grid;
+        gap: 2rem;
+        grid-template-areas: 'zrg ug';
+    }
+    & button {
+        border: none;
+        border-radius: var(--border-radius);
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        color: white;
+        cursor: pointer;
+        margin-left: 2%;
+        padding: 0.7em 0.7em;
+        font-size: 1em;    
+    }
 }
 
-.item{
-    display: grid;
-    gap: 2rem;
-    grid-template-areas: 'zrg ug';
+.heart{
+    position: absolute;
 }
+
 article {
     border: none;
     box-shadow: 0.1rem 0.2rem 1rem #555;
@@ -41,7 +62,10 @@ article {
             text-decoration: none;
         } 
     }
+    & meter{
+        position: absolute;
 
+    }
 }
 
 .name{
@@ -53,5 +77,6 @@ article {
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
+
 
 
