@@ -66,9 +66,11 @@ article {
         padding: 0.5rem;
         position: relative;
 
-        & .heart{
+        & .heartbutton{
             float: right;
-            margin: 1rem;
+            margin: 0.5rem;
+            border: none;
+            background-color: white;
         }
         & .value{
             width:80%;
@@ -83,7 +85,10 @@ article {
         }
         & a {
             float: right;
-            margin: 1rem;
+            margin-right: 5rem;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: black;
         }
         & ol{
             display: flex;
