@@ -9,11 +9,10 @@
 main{
     margin-left: 8rem;
     margin-right: 8rem;
-    display: flex;
-
 }
 /*Нэр ба зураас*/
 .name{
+    
     & h1{
         font-size: 1.2rem;
     }
@@ -28,10 +27,10 @@ main{
     gap: 3rem;
     grid-template-columns: auto auto; 
 
-    & .name{
+    & .ilerts{
         grid-column: 1 / span 2;
         margin-bottom: 0;
-        padding-left: 3rem;
+        padding-left: 2rem;
     }
 
     & .item{
@@ -73,8 +72,7 @@ article {
             background-color: white;
         }
         & .value{
-            width:80%;
-            align-items: center;
+            width:100%;
             border: none;
             border-radius: var(--border-radius);
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
@@ -86,7 +84,6 @@ article {
         & a {
             float: right;
             margin-right: 5rem;
-            margin-top: 1rem;
             text-decoration: none;
             color: black;
         }
@@ -94,11 +91,20 @@ article {
             display: flex;
             flex-direction: row;
             & li{
-                flex-direction: column;
+               
             }
         }
     }
 }
 
+button.ilerts{
+    border: none;
+    border-radius: var(--border-radius);
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+    color: white;
+    cursor: pointer;
+    padding: 0.7em 0.7em;
+    font-size: 1em;
+}
 
 
