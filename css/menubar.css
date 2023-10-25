@@ -44,7 +44,7 @@ main{
 /*Blogcard доторх мэдээлэл болон зурагны дизайн*/
 article {
     border: none;
-    box-shadow: 0.1rem 0.2rem 1rem #555;
+    box-shadow: 0.1rem 0.2rem 0.5rem #555;
     border-radius: 1rem;
     & .PlanImage{
         display: flex;
@@ -63,7 +63,7 @@ article {
     }
 
     & .PlanInfo{
-        padding: 1rem;
+        padding: 0.5rem;
         position: relative;
 
         & .heart{
