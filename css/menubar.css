@@ -84,6 +84,7 @@ article {
         & a {
             float: right;
             margin-right: 5rem;
+            margin-top: 1rem;
             text-decoration: none;
             color: black;
         }
