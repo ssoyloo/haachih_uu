@@ -51,39 +51,42 @@ header {
 
 footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    padding:0px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    padding-top: 1rem;
+    & hr{
+        margin-top: 2rem;
+        border: none;
+        height: 0.1rem;
+        background-color: white;
+        width: 80%;
+        grid-column: 1 / span 3;
+        grid-row: 2;
+    }
     & p{
-    color: white;
-    text-align: center;
-    padding-bottom: 10px;
+        color: white;
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+    &> p{
+        text-align: center;
     }
     & a{
+        color: white;
         text-decoration: none;
-        padding: 5px;
     }
     & ul, li{
+        margin-left: 5rem;
         list-style: none;
+        font-size: 1.2rem;
+        padding: 0.3rem;
+        &> p{
+            font-size: 1.8rem;
+        }
     }
-    & .logopngfooter {
-        max-width: 60%; /* Make sure the images don't exceed their container */
-      }
-    .footerGrid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-        padding-top: 20px;
-    }
-    & .footer-section:nth-child(2) img {
-        padding: 5px;
-    }
-     & hr{
-        margin-bottom: 10px;
-        width: 80%;
-        margin-left: 10%;
-    }
+
     & img{
-      width: 30%;
-      margin-bottom: -2.4%;
-      margin-left: 4%;
-}  
+        margin-left: 12rem;
+        width: 60%;
+    } 
 }
