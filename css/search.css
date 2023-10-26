@@ -6,8 +6,8 @@
 }
 /*Дэлгэцээ хуваах*/
 main{
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin-left: var(--margin-side);
+    margin-right: var(--margin-side);
     display: grid;
     gap: 2rem;
     & .name{
@@ -23,7 +23,17 @@ main{
         grid-row: 3;
     }
 }
+.result{
+    display: grid;
+    gap: 0;
+    grid-template-areas: 'PlaceImage PlaceInfo';
+}
+.filter{
+    & article{
+        padding: 1rem;
+    }
 
+}
 /*Нэр ба зураасаа гоё болгох*/
 .name{
     
@@ -41,8 +51,6 @@ article {
     border: none;
     box-shadow: 0.1rem 0.2rem 0.5rem #555;
     border-radius: 1rem;
-    display: grid;
-    grid-template-areas: 'PlaceImage PlaceInfo';
     & img{
         border-radius: 1rem;
         width: 25rem;
