@@ -9,7 +9,7 @@ main{
     margin-left: 8rem;
     margin-right: 8rem;
     display: grid;
-    gap: 3rem;
+    gap: 2rem;
     & .name{
         grid-column: 1 / span 3;
         grid-row: 1;
@@ -18,7 +18,7 @@ main{
         grid-column: 1 / span 2;
         grid-row: 2;
     }
-    & .btn{
+    & .Bugd{
         grid-column: 1 / span 3;
         grid-row: 3;
     }
@@ -31,35 +31,25 @@ main{
         font-size: 1.2rem;
     }
     & hr{
-        height: 0.2rem;
+        height: 0.25rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
 
 article {
+    margin-bottom: 2rem;
     border: none;
     box-shadow: 0.1rem 0.2rem 0.5rem #555;
     border-radius: 1rem;
-    & .PlaceImage{
-        display: flex;
-
-        & img{
-            border-radius: 1rem;
-            width: 25rem;
-            height: auto;
-        }
-
-        & meter{
-            position:absolute;
-            margin-left: 18rem;
-            margin-top: 1rem;
-        }
+    display: grid;
+    grid-template-areas: 'PlaceImage PlaceInfo';
+    & img{
+        border-radius: 1rem;
+        width: 25rem;
+        height: auto;
     }
 
     & .PlaceInfo{
-        padding: 0.5rem;
-        position: relative;
-
         & .heartbutton{
             float: right;
             margin: 0.5rem;
@@ -89,5 +79,28 @@ article {
                
             }
         }
+    }
+}
+
+/*Бүгдийг харуулах товчны байрлал дизайн*/
+.Bugd{
+    margin-bottom: 5rem;
+
+    & hr{
+        height: 0.25rem;
+        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    }
+    & .btn{
+        width: 15rem;
+        margin-left: 44rem;
+        margin-top: -0.8rem;
+        position: absolute;
+        border: none;
+        border-radius: var(--border-radius);
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        color: white;
+        cursor: pointer;
+        padding: 0.7em 0.7em;
+        font-size: 1em;
     }
 }

@@ -17,7 +17,7 @@ main{
         font-size: 1.2rem;
     }
     & hr{
-        height: 0.2rem;
+        height: 0.25rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
@@ -75,7 +75,7 @@ article {
         & .value{
             width:100%;
             border: none;
-            border-radius: var(--border-radius);
+            border-radius: var(--button-border-radius);
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             color: white;
             cursor: pointer;
@@ -114,7 +114,7 @@ article {
         margin-top: -1.2rem;
         position: absolute;
         border: none;
-        border-radius: var(--border-radius);
+        border-radius: var(--button-border-radius);
         background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
         color: white;
         cursor: pointer;
