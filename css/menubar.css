@@ -9,16 +9,15 @@
 main{
     margin-left: 8rem;
     margin-right: 8rem;
-    display: flex;
-
 }
 /*Нэр ба зураас*/
 .name{
+    
     & h1{
         font-size: 1.2rem;
     }
     & hr{
-        height: 0.2rem;
+        height: 0.25rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
@@ -28,10 +27,10 @@ main{
     gap: 3rem;
     grid-template-columns: auto auto; 
 
-    & .name{
+    & .ilerts{
         grid-column: 1 / span 2;
         margin-bottom: 0;
-        padding-left: 3rem;
+        padding-left: 2rem;
     }
 
     & .item{
@@ -46,6 +45,7 @@ article {
     border: none;
     box-shadow: 0.1rem 0.2rem 0.5rem #555;
     border-radius: 1rem;
+    /*Зураг болон үнэлгээ*/
     & .PlanImage{
         display: flex;
 
@@ -61,20 +61,21 @@ article {
             margin-top: 1rem;
         }
     }
-
+    /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
     & .PlanInfo{
         padding: 0.5rem;
         position: relative;
 
-        & .heart{
+        & .heartbutton{
             float: right;
-            margin: 1rem;
+            margin: 0.5rem;
+            border: none;
+            background-color: white;
         }
         & .value{
-            width:80%;
-            align-items: center;
+            width:100%;
             border: none;
-            border-radius: var(--border-radius);
+            border-radius: var(--button-border-radius);
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             color: white;
             cursor: pointer;
@@ -83,15 +84,42 @@ article {
         }
         & a {
             float: right;
-            margin: 1rem;
+            margin-right: 5rem;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: black;
         }
         & ol{
             display: flex;
             flex-direction: row;
             & li{
-                flex-direction: column;
+               
             }
         }
+    }
+}
+
+/*Бүгдийг харуулах товчны байрлал дизайн*/
+.Bugd{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    & hr{
+        height: 0.25rem;
+        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    }
+    & .btn{
+        width: 15rem;
+        margin-left: 44rem;
+        margin-top: -1.2rem;
+        position: absolute;
+        border: none;
+        border-radius: var(--button-border-radius);
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        color: white;
+        cursor: pointer;
+        padding: 0.7em 0.7em;
+        font-size: 1em;
     }
 }
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Хайлтын илэрцээр нь газруудыг харахаас гадна 2янзын шүүлтүүрээр шүүх боломжтой.">
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/search.css">
     <title>Search</title>
 </head>
 <body>
@@ -23,52 +25,58 @@
     </header>
 
     <main>
-        <section>
+        <section class="name">
             <h2>Sura</h2>
             <hr>
         </section>
 
-        <section>
+        <section class="place">
             <h1>Хайлтын илэрц: 3</h1>
             <article class="result">
-                <img src="zurag/sura.jpg" alt="sura">
-                <h2>Sura</h2>
-                <meter id="rating1" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
-                <p>Хоолны газар</p>
-                <address>СБД, 1-р хороо</address>
-                <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
-                <a href="11326020">11326020</a>
-                <h3>Танилцуулга</h3>
-                <p>...</p>
+                <img class="PlaceImage" src="zurag/sura.jpg" alt="sura">
+                <div class="PlaceInfo">
+                    <h2>Sura</h2>
+                    <meter id="rating1" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо</address>
+                    <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                    <a href="11326020">11326020</a>
+                    <h3>Танилцуулга</h3>
+                    <p>...</p>
+                </div>
             </article>
 
             <article class="result">
-                <img src="zurag/sura.jpg" alt="sura">
-                <h2>Sura</h2>
-                <meter id="rating2" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
-                <p>Хоолны газар</p>
-                <address>СБД, 1-р хороо</address>
-                <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
-                <a href="11326020">11326020</a>
-                <h3>Танилцуулга</h3>
-                <p>...</p>
+                <img class="PlaceImage" src="zurag/sura.jpg" alt="sura">
+                <div class="PlaceInfo">
+                    <h2>Sura</h2>
+                    <meter id="rating1" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо</address>
+                    <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                    <a href="11326020">11326020</a>
+                    <h3>Танилцуулга</h3>
+                    <p>...</p>
+                </div>
             </article>
 
             <article class="result">
-                <img src="zurag/sura.jpg" alt="sura">
-                <h2>Sura</h2>
-                <meter id="rating3" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
-                <p>Хоолны газар</p>
-                <address>СБД, 1-р хороо</address>
-                <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
-                <a href="11326020">11326020</a>
-                <h3>Танилцуулга</h3>
-                <p>...</p>
+                <img class="PlaceImage" src="zurag/sura.jpg" alt="sura">
+                <div class="PlaceInfo">
+                    <h2>Sura</h2>
+                    <meter id="rating1" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
+                    <p>Хоолны газар</p>
+                    <address>СБД, 1-р хороо</address>
+                    <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                    <a href="11326020">11326020</a>
+                    <h3>Танилцуулга</h3>
+                    <p>...</p>
+                </div>
             </article>
-            <button>Бүгдийг харах</button>
         </section>
 
-        <aside class="FilterTable">
+        <aside class="filter">
+            <article>
             <h3>Төрөл:</h3>
                 <ol>
                     <li>Хоолны газар<p>10</p></li>
@@ -82,8 +90,9 @@
                     <li>Хүрээлэн<p>10</p></li>
                     <li>Хөгжилдөх газар<p>10</p></li>
                 </ol>
-        </aside>
-        <aside class="FilterByCategory">
+            </article>
+
+            <article>
             <h3>Ангилал:</h3>
                 <ol>
                     <li>Орой яахын?<p>10</p></li>
@@ -92,7 +101,14 @@
                     <li>Валинтин гэсэн<p>10</p></li>
                     <li>Хөдөө гарья<p>10</p></li>
                 </ol>
+            </article>
         </aside>
+
+        <section class="Bugd">              
+            <button class="btn">Бүгдийг харах</button>
+            <hr>
+        </section> 
+
     </main>
 
     <footer>
