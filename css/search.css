@@ -4,13 +4,37 @@
     box-sizing: border-box;
     font-family: Pangolin;
 }
-
-/*Дэлгэцний гол хэсэг*/
+/*Дэлгэцээ хуваах*/
 main{
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin-left: var(--margin-side);
+    margin-right: var(--margin-side);
+    display: grid;
+    gap: 2rem;
+    & .name{
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+    & .place{
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    & .Bugd{
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
 }
-/*Нэр ба зураас*/
+.result{
+    display: grid;
+    gap: 0;
+    grid-template-areas: 'PlaceImage PlaceInfo';
+}
+.filter{
+    & article{
+        padding: 1rem;
+    }
+
+}
+/*Нэр ба зураасаа гоё болгох*/
 .name{
     
     & h1{
@@ -21,51 +45,19 @@ main{
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
-/*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
-.plans{
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: auto auto; 
 
-    & .ilerts{
-        grid-column: 1 / span 2;
-        margin-bottom: 0;
-        padding-left: 2rem;
-    }
-
-    & .item{
-        display: grid;
-        max-width: 50vw;
-        gap: 1rem;
-        grid-template-areas: 'PlanImage PlanInfo';
-    }
-}
-/*Blogcard доторх мэдээлэл болон зурагны дизайн*/
 article {
+    margin-bottom: 2rem;
     border: none;
     box-shadow: 0.1rem 0.2rem 0.5rem #555;
     border-radius: 1rem;
-    /*Зураг болон үнэлгээ*/
-    & .PlanImage{
-        display: flex;
-
-        & img{
-            border-radius: 1rem;
-            width: 25rem;
-            height: auto;
-        }
-
-        & meter{
-            position:absolute;
-            margin-left: 18rem;
-            margin-top: 1rem;
-        }
+    & img{
+        border-radius: 1rem;
+        width: 25rem;
+        height: auto;
     }
-    /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-    & .PlanInfo{
-        padding: 0.5rem;
-        position: relative;
 
+    & .PlaceInfo{
         & .heartbutton{
             float: right;
             margin: 0.5rem;
@@ -75,7 +67,7 @@ article {
         & .value{
             width:100%;
             border: none;
-            border-radius: var(--button-border-radius);
+            border-radius: var(--border-radius);
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             color: white;
             cursor: pointer;
@@ -85,7 +77,6 @@ article {
         & a {
             float: right;
             margin-right: 5rem;
-            margin-top: 1rem;
             text-decoration: none;
             color: black;
         }
@@ -101,7 +92,6 @@ article {
 
 /*Бүгдийг харуулах товчны байрлал дизайн*/
 .Bugd{
-    margin-top: 5rem;
     margin-bottom: 5rem;
 
     & hr{
@@ -111,10 +101,10 @@ article {
     & .btn{
         width: 15rem;
         margin-left: 44rem;
-        margin-top: -1.2rem;
+        margin-top: -0.8rem;
         position: absolute;
         border: none;
-        border-radius: var(--button-border-radius);
+        border-radius: var(--border-radius);
         background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
         color: white;
         cursor: pointer;
@@ -122,6 +112,3 @@ article {
         font-size: 1em;
     }
 }
-
-
-

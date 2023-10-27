@@ -5,4 +5,7 @@
     --secondary-color: rgb(41,151,185);
     --main-bg-color: #f8f8f8;
     --main-fonts: Pangolin;
+    --border-radius: 2rem;
+    --button-border-radius: 1rem;
+    --margin-side: 8rem;
 }
