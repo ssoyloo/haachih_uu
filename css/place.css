@@ -1,7 +1,4 @@
-@font-face {
-    font-family: pangolin;
-    src: url(Pangolin-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 body {
     font-family: pangolin;
@@ -10,47 +7,63 @@ body {
 }
 
 nav {
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    & ul{
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 0.2rem 7rem;
+    }
+    & li {
+        display: inline;
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    & svg {
+        height: 1.4rem;
+        margin-right: 1rem;
+    }
+    & .logopng1 {
+        width:18%;
+    }
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 20px;
+h2 {
+    font-weight: lighter;
+    font-size: 18px
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
+h3 {
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 #hr1 {
-    height: 5px;
-    border-radius: 25px;
+    height: 0.15rem;
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
 }
 
-#idk {
+.idk {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
 main {
-    width: 1440px;
+    width: 80rem;
     margin: auto;
 }
 
-h2 {
-    font-weight: lighter;
-}
-
-.grid {
+.main {
     margin-top: 5%;
     display: grid;
     grid-row: auto;
@@ -59,60 +72,50 @@ h2 {
     grid-row-gap: 5%;
 }
 
-#ScrollingImage {
+#bigPic {
     object-fit: cover;
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 2rem;
     box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    & img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-#ScrollingImage img {
-    width: 100%;
-    height: auto;
-}
 
-#info {
-    border-radius: 25px;
+.info {
+    border-radius: 2rem;
     box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    & li {
+        margin: 5%;
+    }
 }
 
-#info h3 {
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-#info ul {
-    margin: 5%;
-}
-
-#info ul li {
-    margin: 5%;
-}
 
 #taniltsuulga {
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    & p {
+        margin-left: 30px;
+        font-weight: bold;
+    }
 }
 
-#taniltsuulga h3{
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-#taniltsuulga p {
-    margin-left: 30px;
-    font-weight: bold;
-}
-
-#ratingplace {
+#ratingOnComment {
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
-}
-
-#ratingplace h3 {
-    position: absolute;
-    margin-top: 30px;
-    margin-left: 30px;
+    & h3 {
+        position: absolute;
+    }
+    & h4 {
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    & p {
+        margin-top: 10px;
+        margin-left: 30px;
+    }
 }
 
 #ratingplace #stars {
@@ -120,16 +123,19 @@ h2 {
     margin-left: 350px;
 }
 
-.progress-list {
+.ratingplace {
     list-style-type: none; 
     padding: 0; 
     margin: 0; 
-}
-
-.progress-list label {
-    display: block; 
-    margin-left: 20px;
-    width: 100%; 
+    & label {
+        padding: 10px;
+        display: block; 
+        margin-left: 20px;
+        width: 100%; 
+    }
+    & progress {
+        width: 100%;
+    }
 }
 
 progress {
@@ -149,19 +155,6 @@ progress::-webkit-progress-bar {
     border-radius: 25px;
 }
 
-.progress-list label {
-    padding: 10px;
-}
-
-#ratingplace h4 {
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-#ratingplace p {
-    margin-top: 10px;
-    margin-left: 30px;
-}
 section {
     margin-bottom: 20px;
 }
@@ -174,40 +167,37 @@ address, time, p, ul {
     color: #666666;
 }
 
-.ratingplace progress {
-    width: 100%;
-}
-
 .similarPlans {
-    margin-top: 5%;
-}
-
-.similarPlans h2 {
-    font-weight: bold;
-}
-
-.similarPlans div {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+    & h2 {
+        font-weight: bold;
+    }
+    & div {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
 }
 
 article {
-    display: flex;
-    width: calc(33.33% - 20px);
     background-color: #f9f9f9;
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
     overflow: hidden; 
-}
-
-article img {
-    width: 50%;
-    height: 100%; 
-    object-fit: cover; 
+    & img {
+        width: 50%;
+        height: 100%; 
+        object-fit: cover; 
+    }
 }
 
 .content {
+    width: calc(33.33% - 20px);
     flex: 1;
     padding: 20px; 
     display: flex;
@@ -220,46 +210,38 @@ article img {
 h3, p, address, time, a {
     margin: 0;
 }
-
+  
 footer {
     background-color: #0A5C76;
     justify-content: space-between;
     align-items: center;
-}
-  
-.logo {
-    width: 50px;
-    height: 50px;
-}
-  
-footer {
     margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 20px;
+
+    & p {
+        color: white;
+    }
+
 }
 
-.footer-div {
+.footerGrid-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    
+    & ul a {
+        text-decoration: none;
+        font-weight: lighter;
+    }
 }
 
-
-.footer-div ul a {
-    text-decoration: none;
-    font-weight: lighter;
-}
-
-footer p {
-    color: white;
-}
-
-.logo2 {
+.logopngfooter {
     width: 100px; 
 }
 
@@ -272,9 +254,26 @@ ul li {
     margin: 10px 0;
 }
 
-#hr2 {
+#line1 {
     height: 5px;
     width: 80%;
     border-radius: 25px;
     background-color: lightgray;
+}
+
+@media (max-width: 780px) {
+    .logopngfooter {
+        max-width: 50%;
+    }
+    .footerGrid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .logopngfooter {
+        max-width: 30%; /* Adjust logo size in the footer */
+    }
+    .footerGrid-container {
+        grid-template-columns: repeat(1, 1fr); /* Adjust footer grid layout */
+    }
 }
