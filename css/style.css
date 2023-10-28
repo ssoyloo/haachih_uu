@@ -1,14 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
-:root {
-    --main-color: rgb(10,92,118);
-    --secondary-color: rgb(41,151,185);
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url(root.css);
 
 /* Body styles */
 body {
@@ -48,28 +38,6 @@ h2 {
     text-align: center;
 }
 
-nav
- {
-    display: inline;
-
-    & a {
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-    } 
-    & img{
-            width: 12%;
-            margin-bottom: -2.4%;
-            margin-left: 4%;
-    }
-    & ul{
-        list-style-type: none;
-    }
-    & li {
-        display: inline;
-        margin-right: 10px;
-    }
-}
 
 article:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
