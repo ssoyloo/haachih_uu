@@ -38,7 +38,7 @@ nav {
         font-size: 15px;
     }
     & a:hover{
-        color: rgb(10, 52, 187);
+        color: rgb(10,92,118);
     }
     & svg {
         height: 1.4rem;
@@ -68,7 +68,8 @@ footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+    text-align: left;
     & hr{
         margin-top: 2rem;
         border: none;
@@ -85,23 +86,36 @@ footer {
     }
     &> p{
         text-align: center;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(205, 205, 205);
     }
     & a{
-        color: white;
+        color: rgb(205, 205, 205);
         text-decoration: none;
+        font-size: 14px;
     }
+
     & ul, li{
-        margin-left: 5rem;
+        margin-left: 6rem;
+        margin-bottom: 0rem;
         list-style: none;
         font-size: 1.2rem;
         padding: 0.3rem;
         &> p{
-            font-size: 1.8rem;
+            font-size: 18px;
         }
     }
 
     & img{
-        margin-left: 12rem;
-        width: 60%;
+        margin-left: 15rem;
+        width: 70%;
+        justify-content: space-around
     } 
+    & svg {
+        fill: rgb(205, 205, 205); 
+    }
+    & a:hover{
+        color: rgb(10,92,118);;
+    }
 }
