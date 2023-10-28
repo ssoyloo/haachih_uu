@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-:root {
-    --main-color: rgb(10,92,118);
-    --secondary-color: rgb(41,151,185);
-}
+@import url(root.css);
+
 body {
     font-family: Pangolin;
 }
@@ -95,7 +92,6 @@ footer {
         text-decoration: none;
         font-size: 14px;
     }
-
     & ul, li{
         margin-left: 6rem;
         margin-bottom: 0rem;
@@ -106,7 +102,6 @@ footer {
             font-size: 18px;
         }
     }
-
     & img{
         margin-left: 15rem;
         width: 70%;
