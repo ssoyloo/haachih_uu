@@ -6,35 +6,8 @@ body {
     padding: 0;
 }
 
-nav {
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    & ul{
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-        padding: 0.2rem 7rem;
-    }
-    & li {
-        display: inline;
-    }
-    & a {
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-    }
-    & svg {
-        height: 1.4rem;
-        margin-right: 1rem;
-    }
-    & .logopng1 {
-        width:18%;
-    }
-}
+
+
 
 h2 {
     font-weight: lighter;
@@ -228,52 +201,3 @@ footer {
 
 }
 
-.footerGrid-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    
-    & ul a {
-        text-decoration: none;
-        font-weight: lighter;
-    }
-}
-
-.logopngfooter {
-    width: 100px; 
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
-}
-
-#line1 {
-    height: 5px;
-    width: 80%;
-    border-radius: 25px;
-    background-color: lightgray;
-}
-
-@media (max-width: 780px) {
-    .logopngfooter {
-        max-width: 50%;
-    }
-    .footerGrid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 480px) {
-    .logopngfooter {
-        max-width: 30%; /* Adjust logo size in the footer */
-    }
-    .footerGrid-container {
-        grid-template-columns: repeat(1, 1fr); /* Adjust footer grid layout */
-    }
-}

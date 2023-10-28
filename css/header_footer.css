@@ -8,44 +8,59 @@ body {
 }
 
 header {
-    background-color: var(--main-color);
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    padding-bottom: 5%; 
-    & nav
-    {
-       display: inline;
-   
-       & a {
-           text-decoration: none;
-           color: white;
-           font-size: 16px;
-       } 
-       & img{
-               width: 20%;
-               margin-bottom: -2.4%;
-               margin-left: 4%;
-       }
-       & ul{
-           list-style-type: none;
-       }
-       & li {
-           display: inline;
-           margin-right: 10px;
-       }
-       & a:hover{
-        color: black;
-       }
-       .searchicon{
-        width: 2%;
-        padding-bottom: 25px;
-       }
-       .navButton :hover{
-            color: aliceblue;
-            background-color: aqua;
-       }
-   }
-   
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+  }
+
+nav {
+    display: flex;
+    align-items: center;
+    & ul{
+        width: 80rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-left: -80rem;
+    }
+    & li {
+        list-style: none;
+        margin-right: -10rem;
+        margin-left: -3rem;
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+    & a:hover{
+        color: rgb(10, 52, 187);
+    }
+    & svg {
+        height: 1.4rem;
+        margin-right: 1rem;
+        fill: white; 
+        padding: 0 7rem;
+    }
+    & .logopng1 {
+        width:13%;
+        padding: 0 7rem;
+        align-items: center;
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+    }
+    & .headerButton{
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.2rem;
+    }
+    & .navSearch{
+        margin-right: -13rem;
+    }
 }
 
 
