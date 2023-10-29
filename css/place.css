@@ -49,29 +49,39 @@ main {
     object-fit: cover;
     overflow: hidden;
     border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    box-shadow: 0 4px 8px 0 gray;
     & img {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
 
-.info {
+aside {
     border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    box-shadow: 0 4px 8px 0 gray;
     & li , p, h3{
         margin: 5%;
     }
     & img {
-        width: 1.2rem;
-        color: ;
+        width: 1rem;
+    }
+    & p {
+        font-size: 12px;
+    }
+    & li {
+        font-size: 14px;
+        margin-top: -0.5rem;
+    }
+    & h3 {
+        font-size: 16px;
+        margin-top: -0.5rem;
     }
 }
 
 
 #taniltsuulga {
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 gray;
     & p {
         margin-left: 30px;
         font-weight: bold;
@@ -79,8 +89,8 @@ main {
 }
 
 #ratingOnComment {
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 gray;
     & h3 {
         position: absolute;
     }
@@ -163,7 +173,7 @@ address, time, p, ul , a{
 article {
     background-color: #f9f9f9;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+    box-shadow: 0 4px 8px 0 gray;
     overflow: hidden; 
     & img {
         width: 50%;
