@@ -4,12 +4,27 @@ body {
     font-family: pangolin;
     margin: 0;
     padding: 0;
+    
 }
 
-h2 {
-    font-weight: lighter;
-    font-size: 14px;
-    font-weight: bold
+main {
+    width: 85%;
+    margin: auto;
+}
+
+.placeName  {
+    margin-top: 1rem;
+    & h2{
+        font-weight: lighter;
+        font-size: 1rem;
+        font-weight: bold
+    }
+}
+
+#hr1 {
+    height: 0.1rem;
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    margin: 0.4rem 0;
 }
 
 .idk {
@@ -19,30 +34,23 @@ h2 {
     align-items: center;
     font-size: 12px;
     margin-top: -1rem;
-}
-
-h3 {
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-#hr1 {
-    height: 0.1rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-}
-
-main {
-    width: 80rem;
-    margin: auto;
+    & a{
+        text-decoration: none;
+    }
 }
 
 .undsen_heseg {
     margin-top: 2%;
     display: grid;
     grid-row: auto;
-    grid-template-columns: 60% 35%;
+    grid-template-columns: 65% 30%;
     grid-column-gap: 5%;
     grid-row-gap: 5%;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 #bigPic {
@@ -58,6 +66,7 @@ main {
 
 aside {
     border-radius: 1rem;
+    padding: 0.5rem 1em;
     box-shadow: 0 4px 8px 0 gray;
     & li , p, h3{
         margin: 5%;
@@ -70,13 +79,21 @@ aside {
     }
     & li {
         font-size: 14px;
-        margin-top: -0.5rem;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
     }
     & h3 {
         font-size: 16px;
         margin-top: -0.5rem;
     }
+    & div{
+        display: flex;
+        gap: 1rem;
+    }
+   
 }
+
 
 
 #taniltsuulga {
@@ -88,39 +105,43 @@ aside {
     }
 }
 
-#ratingOnComment {
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray;
-    & h3 {
-        position: absolute;
-    }
-    & h4 {
-        margin-top: 30px;
-        margin-left: 30px;
-    }
-    & p {
-        margin-top: 10px;
-        margin-left: 30px;
-    }
+.ratingOnComment {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
 }
 
-#ratingplace #stars {
-    margin-top: 30px;
-    margin-left: 350px;
-}
+
 
 .ratingplace {
+    width: 100%;
+    padding: 1.5rem;
     list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-    & label {
-        padding: 10px;
-        display: block; 
-        margin-left: 20px;
-        width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem ;
+ 
+& ul {
+    margin-top: 0.1rem;
+        width: 80%;
+        display: flex; 
+        flex-direction: column;
+        & li {
+            list-style: none ;
+            display: flex;
+           padding: 0.5rem;
+        }
     }
     & progress {
+        width: 60%;
+        height: 60%;
+    }
+    & .ratingTitle{
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -156,23 +177,36 @@ address, time, p, ul , a{
 .similarPlans {
     display: flex;
     gap: 20px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+  
     margin-top: 5%;
     & h2 {
         font-weight: bold;
     }
-    & div {
+    /* & div {
         display: flex;
         justify-content: space-between;
         gap: 20px;
+    } */
+    & section {
+        width: 100%;
+        display: flex; 
+        gap: 2.5rem; 
+    }
+    & meter{
+        width: 1.5rem;
     }
 }
+.content{
+   
+    display: flex;
+   
+}
+
 
 article {
     background-color: #f9f9f9;
-    border-radius: 25px;
+    border-radius: 1rem;
     box-shadow: 0 4px 8px 0 gray;
     overflow: hidden; 
     & img {
@@ -182,7 +216,40 @@ article {
     }
 }
 
-.content {
+.negyum{
+    width: 100%;
+    display: flex;
+    padding: 0.2rem 0.5rem;
+    flex-direction: column;
+  
+    & section{
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+    & p{
+        font-size: 0.7rem;
+    }
+    & button{
+        margin: 0.5rem 0.5rem;
+        cursor: pointer;
+        padding: 0.1rem 0.2rem;
+        border-radius: 0.4rem;
+        border-style: none;
+        color: white;
+        font-family: pangolin;
+        background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    }
+}
+.miniTitle{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* .content {
     width: calc(33.33% - 20px);
     flex: 1;
     padding: 20px; 
@@ -191,7 +258,7 @@ article {
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-}
+} */
 
 h3, p, address, time, a {
     margin: 0;
