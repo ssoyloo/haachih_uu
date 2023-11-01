@@ -8,20 +8,23 @@
     <link rel="icon" type="image/x-icon" href="./zurag/logo.png">
     <title>Haachih uu?</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/headerfooter.css">
+    <link rel="stylesheet" href="./css/plangridmodule.css">
+    <link rel="stylesheet" href="./css/./general.css">
 </head>
 <body>
 
     <header>
         <nav>
             <ul>
-                <li><a class="logopng1" href="main.html"><img src="./zurag/logo.png" alt="haachih_uu?"></a></li>
-                <li><a class="firstNavWord" href="./menubar.html">Орой яахын?</a></li>
-                <li><a href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
-                <li><a href="./menubar.html">Арван жил шдээ</a></li>
-                <li><a href="./menubar.html">Валинтин гэсэн</a></li>
-                <li><a href="./menubar.html">Хөдөө гарья</a></li>
-                <li><button class="navButton" onclick="Letsgo()">Search</button></li>
-                 <li><button class="navButton" onclick="Letsgo()" >Log in</button></li>
+                <li><a class="logopng1" href="./index.html"><img class="logopng3" src="./zurag/logo.png" alt="haachih_uu?"></a></li>
+                <li><a class="text1" id="text" href="./menubar.html">Орой яахын?</a></li>
+                <li><a id="text" href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
+                <li><a id="text" href="./menubar.html">Арван жил шдээ</a></li>
+                <li><a id="text" href="./menubar.html">Валинтин гэсэн</a></li>
+                <li><a id="text" href="./menubar.html">Хөдөө гарья</a></li>
+                <a class="navButton" href="./search.html"> <img src="./zurag/./searchicon.png"></a>
+                <a  href="./login.html"> <img src="./zurag/./usericon.png"></a>
             </ul>
         </nav>
     </header>
@@ -29,6 +32,7 @@
     <main>
         <article class="background">
         </article>
+        <div class="Lsearch">
             <select class="option1" name="huniiToo">
                 <option value="">Хүний тоо</option>
                 <option value="2">2</option>
@@ -67,8 +71,8 @@
                 <option value="Club">Клаб</option>
                 <option value="Garden">Хүрээлэн</option>
             </select>
-            <button onclick="Letsgo()">LET'S GO</button>
-           
+            <button onclick="letsgo()">LET'S GO</button>
+        </div>  
     
     <section class="plansContainer">
         <h2>Топ л гээд байгаам чинь</h2>
@@ -81,7 +85,7 @@
                     <p>Орой яахын?</p>
                     <i class="fa-solid fa-location-dot"></i>
                     <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>    
-                    <button><span>100</span>К-с эхэлье</button>
+                    <a href="./plan.html"><button><span>100</span>К-с эхэлье</button></a>
                 </article>
                 <article class="subPlans">
                     <h3>Топ 2</h3>
@@ -91,7 +95,7 @@
                     <p>Орой яахын?</p>
                     <i class="fa-solid fa-location-dot"></i>
                     <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>   
-                    <button><span>100</span>К-с эхэлье</button>           
+                    <a href="./plan.html"><button><span>100</span>К-с эхэлье</button></a>          
                 </article>
                 <article class="subPlans">
                     <h3>Топ 3</h3>
@@ -100,8 +104,8 @@
                     <i class="fa-solid fa-tag"></i>
                     <p>Орой яахын?</p>
                     <i class="fa-solid fa-location-dot"></i>
-                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>  
-                    <button><span>100</span>К-с эхэлье</button>          
+                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
+                    <a href="./plan.html"><button><span>100</span>К-с эхэлье</button></a>          
                 </article>
                 <article class="subPlans">
                     <h3>Топ 4</h3>
@@ -111,7 +115,7 @@
                     <p>Орой яахын?</p>
                     <i class="fa-solid fa-location-dot"></i>
                     <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address> 
-                    <button><span>100</span>К-с эхэлье</button>         
+                    <a href="./plan.html"><button><span>100</span>К-с эхэлье</button></a>        
                 </article>
         </section>
     </section>
@@ -125,7 +129,7 @@
                     <p>Хүрээлэн</p>
                     <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
                     <i class="far fa-clock"></i>
-                    <time>7:30-21:00</time>
+                    <time>7:30-21:00</time> <br> 
                     <button><span>10</span>К-с эхэлье</button>
                 </article>
                 <article class="subRecommend">
@@ -139,7 +143,7 @@
                             <p>Хоолны газар</p>
                             <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                             <i class="far fa-clock"></i>
-                            <time>7:30-21:00</time>
+                            <time>7:30-21:00</time><br> 
                             <button><span>20</span>К-с эхэлье</button>
                         </div>
                     </article>
@@ -153,7 +157,7 @@
                             <p>Хоолны газар</p>
                             <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                             <i class="far fa-clock"></i>
-                            <time>7:30-21:00</time>
+                            <time>7:30-21:00</time><br> 
                             <button><span>20</span>К-с эхэлье</button>
                         </div>
                     </article>
@@ -167,7 +171,7 @@
                             <p>Хоолны газар</p>
                             <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                             <i class="far fa-clock"></i>
-                            <time>7:30-21:00</time>
+                            <time>7:30-21:00</time><br> 
                             <button><span>20</span>К-с эхэлье</button>
                         </div>
                     </article>
@@ -186,7 +190,7 @@
                     <p>Хоолны газар</p>
                     <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                     <i class="far fa-clock"></i>
-                    <time>7:30-21:00</time>
+                    <time>7:30-21:00</time><br>
                     <button><span>20</span>К-с эхэлье</button>
                 </div>
             </article>
@@ -200,7 +204,7 @@
                     <p>Хоолны газар</p>
                     <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                     <i class="far fa-clock"></i>
-                    <time>7:30-21:00</time>
+                    <time>7:30-21:00</time><br>
                     <button><span>20</span>К-с эхэлье</button>
                 </div>
             </article>
@@ -214,7 +218,7 @@
                     <p>Хоолны газар</p>
                     <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                     <i class="far fa-clock"></i>
-                    <time>7:30-21:00</time>
+                    <time>7:30-21:00</time><br>
                     <button><span>20</span>К-с эхэлье</button>
                 </div>
             </article>
@@ -228,7 +232,7 @@
                     <p>Хоолны газар</p>
                     <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                     <i class="far fa-clock"></i>
-                    <time>7:30-21:00</time>
+                    <time>7:30-21:00</time><br>
                     <button><span>20</span>К-с эхэлье</button>
                 </div>
             </article>
@@ -242,7 +246,7 @@
                     <p>Хоолны газар</p>
                     <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                     <i class="far fa-clock"></i>
-                    <time>7:30-21:00</time>
+                    <time>7:30-21:00</time><br>
                     <button><span>20</span>К-с эхэлье</button>
                 </div>
             </article>
@@ -256,30 +260,45 @@
                     <p>Хоолны газар</p>
                     <address>СБД, 1-р хороо - УБ, Сөүл гудамж</address>
                     <i class="far fa-clock"></i>
-                    <time>7:30-21:00</time>
+                    <time>7:30-21:00</time><br>
                     <button><span>20</span>К-с эхэлье</button>
                 </div>
             </article>
         </section>
     </main>
 
-    <footer class="footerGrid-container">
+    <footer >
+        <secion class="footerGrid-container">
+        <section class="footer-section">
         <a href="./index.html"><img class="logopngfooter" src="./zurag/logo.png" alt="bla2"></a>
-        <a href="https://www.facebook.com/profile.php?id=100030214399759"><img src="./zurag/facebookicon.png" alt="bla2"></a>
+        </section>
+        <address class="footer-section">
+        <a href="https://www.facebook.com/profile.php?id=100030214399759"><img src="./zurag/facebookicon.png" alt="bla2"></a><br>
         <a href="https://www.instagram.com/belgee_enkhbat/"><img src="./zurag/instagramicon.png" alt="bla2"></a>
+        </address>
+        <section class="footer-section">
         <ul>
-          <li><a href="#"><p>Асуулт хариулт</p></a></li>
-          <li><a href="#"><p>Санал хүсэлт</p></a></li>
-          <li><a href="#"><p>Үйлчилгээний нөхцөл</p></a></li>
+          <li><a href="./README.md"><p>Асуулт хариулт</p></a></li>
+          <li><a href="./README.md"><p>Санал хүсэлт</p></a></li>
+          <li><a href="./README.md"><p>Үйлчилгээний нөхцөл</p></a></li>
         </ul>
+        </section>
+        </secion>
+        <hr class="line1">
         <p>&copy; Haachih uu inc. 2023. We love our customers.</p>
       </footer>
       
 
-</body>
 <script>
-    function Letsgo(){
-        window.alert("odoohondoo ajillahkve");
+	// ]]>
+    function log_in(){
+        window.prompt("udername password!");
+        window.location.reload();
+    }
+    function letsgo(){
+        window.alert(" this is not ready.");
+            window.location.reload();
     }
 </script>
+</body>
 </html>
