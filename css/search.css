@@ -49,6 +49,7 @@ main{
 }
 
 article {
+    
     margin-bottom: 2rem;
     border: none;
     box-shadow: 0.1rem 0.2rem 0.5rem #555;
@@ -60,6 +61,7 @@ article {
     }
 
     & .PlaceInfo{
+        padding: 1rem;
         & .heartbutton{
             float: right;
             margin: 0.5rem;
@@ -68,6 +70,7 @@ article {
         }
         & .value{
             float: right;
+            margin-left: 2%;
             width:50%;
             border: none;
             border-radius: var(--border-radius);
