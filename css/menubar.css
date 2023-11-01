@@ -1,127 +1,104 @@
-@import url('root.css');
+/*import fonts*/
 
 * {
     box-sizing: border-box;
     font-family: Pangolin;
 }
 
-/*Дэлгэцний гол хэсэг*/
-main{
-    margin-left: 8rem;
-    margin-right: 8rem;
+header{
+    width: 100%;
+    height: 5rem;   
+    display: flex;
+    background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    & ul{
+        list-style-type: none;
+        overflow: hidden;
+        position: absolute;
+        & li{
+            float: left;
+            & a{
+                display: block;
+                color: var(--main-color);
+                text-align: center;
+                padding: 1rem;
+                text-decoration: none;
+            }
+        } 
+    }
+    & img{
+        width: 10rem;
+        height: auto;
+    }
+    & button{
+        position: relative;
+    }
+
 }
-/*Нэр ба зураас*/
+li a:hover{
+    color: #555;
+}
+main{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: flex;
+}
+article {
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0.1rem 0.2rem 1rem #555;
+    border-radius: 1rem;
+    & img{
+        border-radius: 1rem;
+    }
+    & ol{
+        margin: 0;
+        padding: 0; 
+        & li{
+            float: left;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        } 
+    }
+
+}
+
 .name{
-    
+
     & h1{
         font-size: 1.2rem;
     }
     & hr{
-        height: 0.25rem;
+        height: 0.2rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
-/*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
-.plans{
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: auto auto; 
 
-    & .ilerts{
-        grid-column: 1 / span 2;
-        margin-bottom: 0;
-        padding-left: 2rem;
+footer{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    color: var(--main-color);
+    & img{
+        padding: 0;
+        width: auto;
+        height: 8rem;
     }
-
-    & .item{
-        display: grid;
-        max-width: 50vw;
-        gap: 1rem;
-        grid-template-areas: 'PlanImage PlanInfo';
-    }
-}
-/*Blogcard доторх мэдээлэл болон зурагны дизайн*/
-article {
-    border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #555;
-    border-radius: 1rem;
-    /*Зураг болон үнэлгээ*/
-    & .PlanImage{
-        display: flex;
-
-        & img{
-            border-radius: 1rem;
-            width: 25rem;
-            height: auto;
-        }
-
-        & meter{
-            position:absolute;
-            margin-left: 18rem;
-            margin-top: 1rem;
-        }
-    }
-    /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-    & .PlanInfo{
-        padding: 0.5rem;
-        position: relative;
-
-        & .heartbutton{
-            float: right;
-            margin: 0.5rem;
-            border: none;
-            background-color: white;
-        }
-        & .value{
-            width:100%;
-            border: none;
-            border-radius: var(--button-border-radius);
-            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            color: white;
-            cursor: pointer;
-            padding: 0.7em 0.7em;
-            font-size: 1em;   
-        }
-        & a {
-            float: right;
-            margin-right: 5rem;
-            margin-top: 1rem;
-            text-decoration: none;
-            color: black;
-        }
-        & ol{
-            display: flex;
-            flex-direction: row;
-            & li{
-               
+    & ul{
+        list-style-type: none;
+        text-align: none;
+        overflow: hidden;
+        & li{
+            & a{
+                color: var(--main-color);
+                text-decoration: none;
             }
-        }
+        } 
+    }
+
+    & p{
+        font-size: 1.2rem;
     }
 }
-
-/*Бүгдийг харуулах товчны байрлал дизайн*/
-.Bugd{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-
-    & hr{
-        height: 0.25rem;
-        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
-    }
-    & .btn{
-        width: 15rem;
-        margin-left: 44rem;
-        margin-top: -1.2rem;
-        position: absolute;
-        border: none;
-        border-radius: var(--button-border-radius);
-        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-        color: white;
-        cursor: pointer;
-        padding: 0.7em 0.7em;
-        font-size: 1em;
-    }
-}
-
-
 

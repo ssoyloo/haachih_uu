@@ -4,97 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Төлөвлөгөө болон дээр байгаа газруудын дэлгэрэнгүйг харуулна.">
+    <link rel="icon" type="image/x-icon" href="./zurag/logo.png">
     <title>Haachih uu?</title>
+    <link rel="stylesheet" href="./css/headerfooter.css">
+    <link rel="stylesheet" href="./css/./plangridmodule.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/plan.css">
+    
 
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="main.html"><img src="zurag/logo.png" alt="haachih_uu?"></a></li>
-                <li><a href="./menubar.html">Орой яахын?</a></li>
-                <li><a href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
-                <li><a href="./menubar.html">Арван жил шдээ</a></li>
-                <li><a href="./menubar.html">Валинтин гэсэн</a></li>
-                <li><a href="./menubar.html">Хөдөө гарья</a></li>               
+                <li><a class="logopng1" href="./index.html"><img class="logopng3" src="./zurag/logo.png" alt="haachih_uu?"></a></li>
+                <li><a class="text" href="./menubar.html">Орой яахын?</a></li>
+                <li><a class="text" href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
+                <li><a class="text" href="./menubar.html">Арван жил шдээ</a></li>
+                <li><a class="text" href="./menubar.html">Валинтин гэсэн</a></li>
+                <li><a class="text" href="./menubar.html">Хөдөө гарья</a></li>
+                <a class="navButton" href="./search.html"> <img src="./zurag/./searchicon.png"></a>
+                <a class="navButton" href="./login.html"> <img src="./zurag/./usericon.png"></a>
             </ul>
-            <button>Search</button>
-            <button>log in</button>
-        </nav>      
+        </nav>
     </header>
     <main>
-    <section>
-        <h2>Төлөвлөгөөний нэр</h2>
-        <hr>
-    </section>
-
-            <article>
-                <p><time datetime="2023-02-08">9:30</time>-<time>12:00</time></p>
-                <h2>1</h2>
-                <img src="zurag/park.jpeg" alt="bla">
-
-                <h3>Хүүхдийн парк</h3>
-                <p>Хүрээлэн</p>
-                <meter id="gazar1" value="5" min="0" max="5">5 out of 5</meter>
-
-                <address>СБД, 1-р хороо</address>
-                <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
-                <a href="11326020">11326020</a>
-                <h4>Танилцуулга</h4>
-                <p>bla2.....</p>
-                <a href="./plan.html"><span>100</span>K-c эхэлье</a>
-            </article>
+        <h2 class="titleplan">Төлөвлөгөөний нэр</h2>
+    <section class="mainPlans">
         
-            <article>
-                <p><time datetime="2023-02-08">12:30</time>-<time>14:00</time></p>
-                <h2>2</h2>
-                <img src="zurag/chili.jpg" alt="bla">
-    
-                <h3>Чили рестарон</h3>
-                <p>Хоолны газар</p>
-                <meter id="gazar2" value="5" min="0" max="5">5 out of 5</meter>
-                
-                <address>СБД, 1-р хороо</address>
-                <p><time datetime="2023-02-08">12:00</time>-<time>22:00</time></p>
-                <a href="11326020">11326020</a>
-                <h4>Танилцуулга</h4>
-                <p>bla2.....</p>
-                <a href="./plan.html"><span>100</span>K-c эхэлье</a>
-            </article>
-            <article>
-                <p><time datetime="2023-02-08">14:00</time>-<time>16:00</time></p>
-                <h2>3</h2>
-                <img src="zurag/imax.jpg" alt="bla">
-    
-                <h3>Өргөө 3 IMAX</h3>
-                <p>Кино театр</p>
-                <meter id="gazar3" value="5" min="0" max="5">5 out of 5</meter>
-                
-                <address>СБД, 1-р хороо</address>
-                <p><time datetime="2023-02-08">12:00</time>-<time>22:00</time></p>
-                <a href="11326020">11326020</a>
-                <h4>Танилцуулга</h4>
-                <p>bla2.....</p>
-                <a href="./plan.html"><span>100</span>K-c эхэлье</a>
-            </article>
+            <section class="leftsection">
+                    <article class="subplan-grid">
+                        
+                        <h2 class="Bignumber">1</h2>
+                        <img class="PlanPhoto" src="zurag/park.jpeg" alt="bla">
+                        <article class="plan-detials">
+                        <h3>Хүүхдийн парк</h3>
+                        <p>Хүрээлэн</p>
+                        <meter id="gazar1" value="5" min="0" max="5">5 out of 5</meter>
+
+                        <address>СБД, 1-р хороо</address>
+                        <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                        <a href="11326020">11326020</a>
+                        <h4>Танилцуулга</h4>
+                        <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
+                        <a href="./plan.html"><button><span>100</span>K-c эхэлье </button></a>
+                        </article>
+                    </article >
+        
+                    <article class="subplan-grid">
+                        
+                        <h2 class="Bignumber">2</h2>
+                        <img class="PlanPhoto" src="zurag/park.jpeg" alt="bla">
+                        <article class="plan-detials">
+                        <h3>Хүүхдийн парк</h3>
+                        <p>Хүрээлэн</p>
+                        <meter id="gazar1" value="5" min="0" max="5">5 out of 5</meter>
+
+                        <address>СБД, 1-р хороо</address>
+                        <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                        <a href="11326020">11326020</a>
+                        <h4>Танилцуулга</h4>
+                        <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
+                        <a href="./plan.html"><button><span>100</span>K-c эхэлье </button></a>
+                        </article>
+                    </article >
+                    <article class="subplan-grid">
+                        
+                        <h2 class="Bignumber">3</h2>
+                        <img class="PlanPhoto" src="zurag/park.jpeg" alt="bla">
+                        <article class="plan-detials">
+                        <h3>Хүүхдийн парк</h3>
+                        <p>Хүрээлэн</p>
+                        <meter id="gazar1" value="5" min="0" max="5">5 out of 5</meter>
+
+                        <address>СБД, 1-р хороо</address>
+                        <p><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                        <a href="11326020">11326020</a>
+                        <h4>Танилцуулга</h4>
+                        <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа.</p>
+                        <a href="./plan.html"><button><span>100</span>K-c эхэлье </button></a>
+                        </article>
+                    </article >
+        </section>
+        <section class="rightsection">
 
             <aside class="ratingplan">
                 <h3>Үнэлгээ</h3>
                 <p>⭐⭐⭐⭐⭐</p>
                 <label for="5">5 од</label>
                 <progress id="5" value="80" max="100"> 80% </progress>
-                
+                <br/>
                 <label for="4">4 од</label>
-                <progress id="4" value="80" max="100"> 80% </progress>
-            
+                <progress id="4" value="10" max="100"> 80% </progress>
+                <br/>
                 <label for="3">3 од</label>
-                <progress id="3" value="80" max="100"> 80% </progress>
-
+                <progress id="3" value="5" max="100"> 80% </progress>
+                <br/>
                 <label for="2">2 од</label>
-                <progress id="2" value="80" max="100"> 80% </progress>
-
+                <progress id="2" value="3" max="100"> 80% </progress>
+                <br/>
                 <label for="1">1 од</label>
-                <progress id="1" value="80" max="100"> 80% </progress>
+                <progress id="1" value="2" max="100"> 80% </progress>
 
                 <aside class="ratingOnComment">
                     <h4>Сэтгэгдэл</h4>
@@ -103,64 +113,76 @@
                     <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
                 </aside>
             </aside>
+        </section>
+    </section>
 
-    <section class="similarPlans">
-        <h2>Ижил төстэй төлөвлөгөөнүүд:</h2> 
-
-        <article>
-            <img src="zurag/ubnight.jpeg" alt="bla">
-            <h3>Ажлаараа архидъя</h3>
-            <meter id="tuluvluguu1" value="5" min="0" max="5">5 out of 5</meter>
-            <address>БЗД, 13р хороолол 
-                СБД, 5р хороолол</address>
-            <a href="./plan.html"><span>10</span>K-c эхэлье</a>
-        </article>
-
-            <article>
-                <img src="zurag/smokycity_roller.jpg" alt="bla">
-                <h3>Ажлаараа архидъя</h3>
-                <meter id="tuluvluguu2" value="5" min="0" max="5">5 out of 5</meter>
-                <address>БЗД, 13р хороолол 
-                    СБД, 5р хороолол</address>
-                <a href="./plan.html"><span>10</span>K-c эхэлье</a>
-            </article>
-
-            <article>
-                <img src="zurag/chili.jpg" alt="bla">
-                <h3>Ажлаараа архидъя</h3>
-                <meter id="tuluvluguu3" value="5" min="0" max="5">5 out of 5</meter>
-                <address>БЗД, 13р хороолол 
-                    СБД, 5р хороолол</address>
-                <a href="./plan.html"><span>10</span>K-c эхэлье</a>
-            </article>
-
-            <article>
-                <img src="zurag/caffebene.jpg" alt="bla">
-                <h3>Ажлаараа архидъя</h3>
-                <meter id="tuluvluguu4" value="5" min="0" max="5">5 out of 5</meter>
-                <address>БЗД, 13р хороолол 
-                    СБД, 5р хороолол</address>
-                <a href="./plan.html"><span>10</span>K-c эхэлье</a>
-            </article>
+    <section class="plansContainer">
+        <h2 class="similartitle">Ижил төстэй</h2>
+        <section class="plans">
+                <article class="subPlans">
+                    <h3>Топ 1</h3>
+                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top1">
+                    <meter id="planEvaluation" value="0.85" min="0.0" max="5.0"><span>85%</span></meter>
+                    <i class="fa-solid fa-tag"></i>
+                    <p>Орой яахын?</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>    
+                    <a href="./menubar.html"><button><span>100</span>К-с эхэлье</button></a>
+                </article>
+                <article class="subPlans">
+                    <h3>Топ 2</h3>
+                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top2">
+                    <meter id="planEvaluation" value="0.85" min="0.0" max="5.0">85%</meter>
+                    <i class="fa-solid fa-tag"></i>
+                    <p>Орой яахын?</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>   
+                    <a href="./menubar.html"><button><span>100</span>К-с эхэлье</button></a>          
+                </article>
+                <article class="subPlans">
+                    <h3>Топ 3</h3>
+                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top3">
+                    <meter id="planEvaluation" value="0.85" min="0.0" max="5.0">85%</meter>
+                    <i class="fa-solid fa-tag"></i>
+                    <p>Орой яахын?</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address>
+                    <a href="./menubar.html"><button><span>100</span>К-с эхэлье</button></a>          
+                </article>
+                <article class="subPlans">
+                    <h3>Топ 4</h3>
+                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top4">
+                    <meter id="planEvaluation" value="0.85" min="0.0" max="5.0">85%</meter>
+                    <i class="fa-solid fa-tag"></i>
+                    <p>Орой яахын?</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <address>СБД, 1-р хороо - УБ,  Сөүл гудамж</address> 
+                    <a href="./menubar.html"><button><span>100</span>К-с эхэлье</button></a>        
+                </article>
+        </section>
     </section>
     </main>
 
-    <footer>
-        <a href="#"><img  src="zurag/logo.png" alt="bla2"></a>
+    <footer >
+        <secion class="footerGrid-container">
+        <section class="footer-section">
+        <a href="./index.html"><img class="logopngfooter" src="./zurag/logo.png" alt="bla2"></a>
+        </section>
+        <address class="footer-section">
+        <a href="https://www.facebook.com/profile.php?id=100030214399759"><img src="./zurag/facebookicon.png" alt="bla2"></a><br>
+        <a href="https://www.instagram.com/belgee_enkhbat/"><img src="./zurag/instagramicon.png" alt="bla2"></a>
+        </address>
+        <section class="footer-section">
         <ul>
-            <li><p>Бидэнтэй холбогдох</p></li>
-            <li><a href="#"><i class="gmail"></i><p>Gmail</p></a></li>
-            <li><a href="#"><i class="ig"></i><p>Instagram</p></a></li>
-            <li><a href="#"><i class="fb"></i><p>Facebook</p></a></li>
+          <li><a href="#"><p>Асуулт хариулт</p></a></li>
+          <li><a href="#"><p>Санал хүсэлт</p></a></li>
+          <li><a href="#"><p>Үйлчилгээний нөхцөл</p></a></li>
         </ul>
-        <ul>
-            <li><p>Тусламж үйлчилгээ</p></li>
-            <li><a href="#"><p>Асуулт хариулт</p></a></li>
-            <li><a href="#"><p>Санал хүсэлт</p></a></li>
-            <li><a href="#"><p>Үйлчилгээний нөхцөл</p></a></li>
-        </ul>
-        <p>&copy; Haachih uu inc.2023. We love our customers.</p>
-    </footer>
+        </section>
+        </secion>
+        <hr class="line1">
+        <p>&copy; Haachih uu inc. 2023. We love our customers.</p>
+      </footer>
 
 </body>
 </html>

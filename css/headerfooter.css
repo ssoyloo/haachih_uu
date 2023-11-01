@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+:root {
+    --main-color: rgb(10,92,118);
+    --secondary-color: rgb(41,151,185);
+}
+body {
+    font-family: Pangolin;
+}
+
+header {
+    background-color: var(--main-color);
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+    padding-bottom: 2%; 
+    & nav
+    {
+       display: inline;
+       margin-top: 100px;
+   
+       & a {
+           text-decoration: none;
+           color: white;
+           font-size: 16px;
+       } 
+       & img{
+               width: 2rem;
+               margin-bottom: -0.6%;
+
+       }
+       & ul{
+           list-style-type: none;
+       }
+       & li {
+           display: inline;
+           margin-right: 10px;
+       }
+       & a:hover{
+        color: black;
+       }
+       .searchicon{
+        width: 2%;
+        padding-bottom: 25px;
+       }
+       .navButton :hover{
+            color: aliceblue;
+            background-color: aqua;
+       }
+       .navButton{
+        padding-left: 5%;
+       }
+       .text1{
+        padding-left: 5%;
+       }
+       & .logopng3{
+        width: 11rem;
+        margin-bottom: -2.4%;
+        margin-left: 4%;
+       }
+   }
+   
+    
+}
+
+
+
+footer {
+    background-color: #0A5C76;
+    padding:0px;
+    text-align: center;
+    & p{
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    }
+     & a{
+        text-decoration: none;
+    }
+    & ul, li{
+        list-style: none;
+        padding: 0.8rem;
+    }
+    & .logopngfooter {
+        max-width: 60%; /* Make sure the images don't exceed their container */
+      }
+    .footerGrid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        padding-top: 20px;
+    }
+     & .footer-section:nth-child(2) img {
+        padding: 5px;
+    }
+     & hr{
+        margin-bottom: 10px;
+        width: 80%;
+        margin-left: 10%;
+    }
+      
+}
+@media (max-width: 1000px) {
+    nav {
+        & .text, button{
+        font-size: 0.8rem;
+    }
+    }
+    nav .text{
+        display: none;
+    }
+}
