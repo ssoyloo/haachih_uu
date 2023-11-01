@@ -33,7 +33,6 @@ main {
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
-    margin-top: -1rem;
     & a{
         text-decoration: none;
     }
@@ -97,8 +96,6 @@ aside {
 
 
 #taniltsuulga {
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray;
     & p {
         margin-left: 30px;
         font-weight: bold;
@@ -109,7 +106,8 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-
+    height: 10rem;
+    overflow: auto;
 }
 
 
@@ -162,10 +160,6 @@ progress::-webkit-progress-bar {
     border-radius: 25px;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
 h2, h3, h4 {
     color: #333333;
 }
@@ -183,11 +177,6 @@ address, time, p, ul , a{
     & h2 {
         font-weight: bold;
     }
-    /* & div {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    } */
     & section {
         width: 100%;
         display: flex; 
@@ -242,26 +231,14 @@ article {
     }
 }
 .miniTitle{
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 
-/* .content {
-    width: calc(33.33% - 20px);
-    flex: 1;
-    padding: 20px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-} */
-
-h3, p, address, time, a {
+/* h3, p, address, time, a {
     margin: 0;
-}
+} */
 
 
