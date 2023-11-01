@@ -10,6 +10,7 @@ main{
     margin-right: var(--margin-side);
     display: grid;
     gap: 2rem;
+
     & .name{
         grid-column: 1 / span 3;
         grid-row: 1;
@@ -26,7 +27,8 @@ main{
 .result{
     display: grid;
     gap: 0;
-    grid-template-areas: 'PlaceImage PlaceInfo';
+    grid-template-columns: 40% 60%;
+
 }
 .filter{
     & article{
@@ -65,7 +67,8 @@ article {
             background-color: white;
         }
         & .value{
-            width:100%;
+            float: right;
+            width:50%;
             border: none;
             border-radius: var(--border-radius);
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
@@ -77,15 +80,9 @@ article {
         & a {
             float: right;
             margin-right: 5rem;
+            margin-bottom: 5rem;
             text-decoration: none;
             color: black;
-        }
-        & ol{
-            display: flex;
-            flex-direction: row;
-            & li{
-               
-            }
         }
     }
 }
