@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
+/*undsen tohiruulga*/
 body {
     font-family: pangolin;
     margin: 0;
@@ -11,7 +11,7 @@ main {
     width: 85%;
     margin: auto;
 }
-
+/*tuhain gazriin ner*/
 .placeName  {
     margin-top: 1rem;
     & h2{
@@ -20,13 +20,13 @@ main {
         font-weight: bold
     }
 }
-
+/*gazrrin neren doorh urt zuraas*/
 #hr1 {
     height: 0.1rem;
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     margin: 0.4rem 0;
 }
-
+/*zuraasan door tuhain gazriin hayg, tsagiin huvaari, utasiig haruulsan heseg*/
 .idk {
     display: flex;
     flex-direction: row;
@@ -46,12 +46,7 @@ main {
     grid-column-gap: 5%;
     grid-row-gap: 5%;
 }
-
-h3 {
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
+/*Undsen heseg deh ehnii gazriin zurgiig haruulah heseg*/
 #bigPic {
     object-fit: cover;
     overflow: hidden;
@@ -62,7 +57,7 @@ h3 {
         height: 100%;
     }
 }
-
+/*zuragnii hajuu taliin checkbar*/
 aside {
     border-radius: 1rem;
     padding: 0.5rem 1em;
@@ -92,25 +87,15 @@ aside {
     }
    
 }
-
-
-
+/*taniltsuulga ni*/
 #taniltsuulga {
+    padding: 1.5rem;
     & p {
+        padding: 0.5rem;
         margin-left: 30px;
         font-weight: bold;
     }
 }
-
-.ratingOnComment {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    height: 10rem;
-    overflow: auto;
-}
-
-
 
 .ratingplace {
     width: 100%;
@@ -119,16 +104,16 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 1rem ;
- 
-& ul {
-    margin-top: 0.1rem;
+    & ul {
+        margin-top: 0.1rem;
         width: 80%;
         display: flex; 
         flex-direction: column;
         & li {
             list-style: none ;
             display: flex;
-           padding: 0.5rem;
+            padding: 0.2rem;
+            color: #0A5C76;
         }
     }
     & progress {
@@ -139,43 +124,47 @@ aside {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+    }
+    & #stars{
+        color: #0A5C76;
     }
 }
-
+.ratingOnComment {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    height: 9.2rem;
+    overflow: auto;
+    & #comment {
+        font-size: 12px;
+    }
+}
+/*progress oo goy buduun baarag bolgosiin*/
 progress {
     position: relative;
-    left: 20px;
+    left: 1rem;
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     border-radius: 25px;
 }
-
+/*budagdsan ghiimu unelegdsen ghimu ter hesgiig ni borderradius ugj muguud ungiig ni uusgachihlaa*/
 progress::-webkit-progress-value {
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     border-radius: 25px;
 }
-
+/*ene harin ariin budagdaagui heseg ni*/
 progress::-webkit-progress-bar {
     background-color: lightgray; 
     border-radius: 25px;
 }
-
-h2, h3, h4 {
-    color: #333333;
-}
-
-address, time, p, ul , a{
-    color: #666666;
-}
-
+/*daraagiin heseg buyu ijil tustei gazruud*/
 .similarPlans {
     display: flex;
     gap: 20px;
     flex-direction: column;
-  
     margin-top: 5%;
     & h2 {
         font-weight: bold;
+        font-size: 1.2rem;
     }
     & section {
         width: 100%;
@@ -187,9 +176,7 @@ address, time, p, ul , a{
     }
 }
 .content{
-   
-    display: flex;
-   
+    display: flex; 
 }
 
 
@@ -236,9 +223,12 @@ article {
     justify-content: space-between;
 }
 
+h2, h3, h4 {
+    color: #333333;
+}
 
-/* h3, p, address, time, a {
-    margin: 0;
-} */
+address, time, p, ul , a{
+    color: #666666;
+}
 
 

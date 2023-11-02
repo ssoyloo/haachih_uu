@@ -1,2 +1,14 @@
 @import url('root.css');
 
+body {
+    font-family: pangolin;
+    margin: 0;
+    padding: 0;
+    
+}
+
+main {
+    width: 85%;
+    margin: auto;
+}
+
