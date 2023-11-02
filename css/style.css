@@ -262,6 +262,10 @@ p {
     p{
         font-size: 1rem;
     }
+    .BigRecommend img {
+        width: 100%; /* Set the image width to 100% */
+        height: auto; /* Maintain the aspect ratio */
+    }
     
 }
 
@@ -278,14 +282,6 @@ p {
     }
     
 }
-@media (max-width: 780px) {
-    .BigRecommend img {
-        width: 100%; /* Set the image width to 100% */
-        height: auto; /* Maintain the aspect ratio */
-    }
-}
-/* ... (previous CSS rules) ... */
-
 @media (max-width: 480px) {
     p, nav #text, button.navButton, .option1, .option2, .option3 {
         font-size: 0.8rem; /* Adjust font size for navigation items */
