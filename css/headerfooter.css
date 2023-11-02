@@ -1,108 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-:root {
-    --main-color: rgb(10,92,118);
-    --secondary-color: rgb(41,151,185);
+@import url(root.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
+    width: 100%;
     font-family: Pangolin;
 }
 
 header {
-    background-color: var(--main-color);
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    padding-bottom: 2%; 
-    & nav
-    {
-       display: inline;
-       margin-top: 100px;
-   
-       & a {
-           text-decoration: none;
-           color: white;
-           font-size: 16px;
-       } 
-       & img{
-               width: 2rem;
-               margin-bottom: -0.6%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+  }
 
-       }
-       & ul{
-           list-style-type: none;
-       }
-       & li {
-           display: inline;
-           margin-right: 10px;
-       }
-       & a:hover{
-        color: black;
-       }
-       .searchicon{
-        width: 2%;
-        padding-bottom: 25px;
-       }
-       .navButton :hover{
-            color: aliceblue;
-            background-color: aqua;
-       }
-       .navButton{
-        padding-left: 5%;
-       }
-       .text1{
-        padding-left: 5%;
-       }
-       & .logopng3{
-        width: 11rem;
-        margin-bottom: -2.4%;
-        margin-left: 4%;
-       }
-   }
-   
-    
+nav {
+    width: 100%;
+    display: flex;  
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 2.5rem;
+    & ul{
+        display: flex;
+        flex-direction: row;
+        gap:1.82rem;
+    }
+    & li{
+        list-style: none;
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+    & a:hover{
+        color: rgb(10,92,118);
+    }
+    & .headerButton{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    & svg {
+        fill: white;    
+    }
+    & .logopng1{
+        padding-top: 0.5rem;
+    }
+  
 }
-
 
 
 footer {
-    background-color: #0A5C76;
-    padding:0px;
-    text-align: center;
-    & p{
-    color: white;
-    text-align: center;
-    margin-bottom: 0px;
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    padding-top: 0.5rem;
+    text-align: left;
+    & hr{
+        align-items: center;
+        margin-top: 2rem;
+        border: none;
+        height: 0.1rem;
+        background-color: white;
+        width: 80%;
+        grid-column: 1 / span 3;
+        grid-row: 2;
     }
-     & a{
+    & p{
+        color: white;
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+    &> p{
+        text-align: center;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(205, 205, 205);
+    }
+    & a{
+        color: rgb(205, 205, 205);
         text-decoration: none;
+        font-size: 14px;
     }
     & ul, li{
+        margin-left: 6rem;
+        margin-bottom: 0rem;
         list-style: none;
-        padding: 0.8rem;
+        font-size: 1.2rem;
+        padding: 0.3rem;
+        &> p{
+            font-size: 18px;
+        }
     }
-    & .logopngfooter {
-        max-width: 60%; /* Make sure the images don't exceed their container */
-      }
-    .footerGrid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-        padding-top: 20px;
+    & img{
+        margin-left: 15rem;
+        width: 70%;
+        justify-content: space-around
+    } 
+    & svg {
+        fill: rgb(205, 205, 205); 
     }
-     & .footer-section:nth-child(2) img {
-        padding: 5px;
-    }
-     & hr{
-        margin-bottom: 10px;
-        width: 80%;
-        margin-left: 10%;
-    }
-      
-}
-@media (max-width: 1000px) {
-    nav {
-        & .text, button{
-        font-size: 0.8rem;
-    }
-    }
-    nav .text{
-        display: none;
+    & a:hover{
+        color: rgb(10,92,118);;
     }
 }
