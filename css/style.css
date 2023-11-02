@@ -73,7 +73,6 @@ p {
         font-size: 1rem;
         width: 0.8rem;
         height: 3rem;
-        border-radius: var(--border-radius);
     }
   }
   
@@ -273,6 +272,9 @@ p {
     }
     nav #text{
         display: none;
+    }
+    .newPlaces {
+        grid-template-columns: repeat(2, 1fr);
     }
     
 }

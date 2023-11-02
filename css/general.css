@@ -6,6 +6,14 @@
     --main-bg-color: #f8f8f8;
     
 }
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+:root {
+    --main-fonts: Pangolin;
+    --border-radius: 2rem;
+    --button-border-radius: 1rem;
+    --margin-side: 8rem;
+}
 
 article button {
     border: none;

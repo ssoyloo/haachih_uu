@@ -103,14 +103,9 @@ const recommendPlacesData = [
   
 ];
 
-recommendPlacesData.forEach((place, index) => {
+recommendPlacesData.forEach((place) => {
   const article = document.createElement('article');
   article.classList.add('RecommendPlacesToFlex');
-
-  if (index === 0) {
-    article.classList.add('bigRecommendPlace');
-  }
-
   article.innerHTML = `
     <div class="image">
       <img src="${place.image}" alt="${place.title}">
