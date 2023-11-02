@@ -43,6 +43,10 @@ article {
             width: 100% ;
             height: auto;
         }
+        & meter{
+            margin-left: 20%;
+            margin-top: 1%;
+        }
     }
     /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
     & .PlanInfo{
