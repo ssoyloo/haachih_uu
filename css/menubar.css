@@ -1,15 +1,5 @@
 @import url('./general.css');
 
-* {
-    box-sizing: border-box;
-    font-family: Pangolin;
-}
-
-/*Дэлгэцний гол хэсэг*/
-main{
-    margin-left: var(--margin-side);
-    margin-right: var(--margin-side);
-}
 /*Нэр ба зураас*/
 .name{
     & h1{
@@ -66,24 +56,9 @@ article {
         padding-top: 1.5rem;
         position: relative;
         color: #7d7d7d;
-        & h3{
-            color: black;
-            padding-bottom: 0.3rem;
-        }
-        & .like{
-            float: right;
-            border: none;
-            background-color: white;
-        }
+
         & .value{
             width:100%;
-            border: none;
-            border-radius: var(--button-border-radius);
-            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            color: white;
-            cursor: pointer;
-            padding: 0.7em 0.7em;
-            font-size: 1em;   
         }
         & a {
             float: right;

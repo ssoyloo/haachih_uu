@@ -1,13 +1,8 @@
 @import url('./general.css');
 
-* {
-    box-sizing: border-box;
-    font-family: Pangolin;
-}
+
 /*Дэлгэцээ хуваах*/
 main{
-    margin-left: var(--margin-side);
-    margin-right: var(--margin-side);
     display: grid;
     gap: 2rem;
     & .name{
@@ -72,15 +67,8 @@ main{
 }
 
 article {
-    margin-bottom: 2rem;
-    border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #555;
-    border-radius: 1rem;
-    & img{
-        border-radius: 1rem;
-        width: 25rem;
-        height: 20rem;
-    }
+
+    
 
     & .PlaceInfo{
         padding: 2rem;
@@ -91,34 +79,14 @@ article {
             color: black;
             padding-bottom: 0.3rem;
         }
-        & meter{
-            position:absolute;
-            margin-left: 10%;
-            margin-top: -3.5%;
-        }
-        & .like{
-            float: right;
-            border: none;
-            background-color: white;
-        }
-        & .heartbutton{
-            float: right;
-            margin: 0.5rem;
-            border: none;
-            background-color: white;
-        }
+
+     
+
 
         & .value{
             margin-top: 4.5rem;
             float: right;
-            width:40%;
-            border: none;
-            border-radius: 1rem;
-            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            color: white;
-            cursor: pointer;
-            padding: 0.7em 0.7em;
-            font-size: 1em;   
+            width:40%; 
         }
         & a {
             float: right;
@@ -152,57 +120,3 @@ article {
     }
 }
 
-footer {
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    padding-top: 0.5rem;
-    text-align: left;
-    & hr{
-        align-items: center;
-        margin-top: 2rem;
-        border: none;
-        height: 0.1rem;
-        background-color: white;
-        width: 80%;
-        grid-column: 1 / span 3;
-        grid-row: 2;
-    }
-    & p{
-        color: white;
-        grid-column: 1 / span 3;
-        grid-row: 3;
-    }
-    &> p{
-        text-align: center;
-        font-size: 14px;
-        font-family: Arial, Helvetica, sans-serif;
-        color: rgb(205, 205, 205);
-    }
-    & a{
-        color: rgb(205, 205, 205);
-        text-decoration: none;
-        font-size: 14px;
-    }
-    & ul, li{
-        margin-left: 6rem;
-        margin-bottom: 0rem;
-        list-style: none;
-        font-size: 1.2rem;
-        padding: 0.3rem;
-        &> p{
-            font-size: 18px;
-        }
-    }
-    & img{
-        margin-left: 15rem;
-        width: 70%;
-        justify-content: space-around
-    } 
-    & svg {
-        fill: rgb(205, 205, 205); 
-    }
-    & a:hover{
-        color: rgb(10,92,118);;
-    }
-}

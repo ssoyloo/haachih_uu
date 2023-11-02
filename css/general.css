@@ -4,29 +4,9 @@
     --main-color: rgb(10,92,118);
     --secondary-color: rgb(41,151,185);
     --main-bg-color: #f8f8f8;
-    
-}
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
-:root {
-    --main-fonts: Pangolin;
-    --border-radius: 2rem;
+    --border-radius: 1rem;
     --button-border-radius: 1rem;
     --margin-side: 8rem;
-}
-
-article button {
-    border: none;
-    border-radius: var(--border-radius);
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-left: 2%;
-    padding: 0.7em 0.7em;
-    font-size: 1em;
-    border-radius: 1rem;
-    
 }
 *{
     margin: 0;
@@ -38,15 +18,55 @@ article button {
 body {
     font-family: Pangolin;
 }
+/*Дэлгэцний гол хэсэг*/
+main{
+    margin-left: var(--margin-side);
+    margin-right: var(--margin-side);
+}
+/*Blogcard доторх зураг, товч, одны дизайн*/
 article {
-    & img {
-    max-width: 100%;
+    margin-bottom: 2rem;
+    border: none;
+    box-shadow: 0.1rem 0.2rem 0.5rem #555;
     border-radius: var(--border-radius);
-    margin-bottom: 2%;
-    }
-    & h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  }
+        & img {
+        max-width: 100%;
+        border-radius: var(--border-radius);
+        }
+        & h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        }
+        & .value {
+            border: none;
+            border-radius: var(--border-radius);
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 2%;
+            padding: 0.7em 0.7em;
+            font-size: 1em;
+            border-radius: 1rem;
+        }
+        & .like{
+            float: right;
+            border: none;
+            background-color: white;
+        }
+        & meter{
+            position:absolute;
+            margin-left: 10%;
+            margin-top: -6%;
+            height: 2rem;
+            width: 3.7rem;
+            appearance: none;
+            color: white;
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+            padding: 0.4rem;
+            border-radius: 1rem;
+            text-align: center;
+        }
+}
+
