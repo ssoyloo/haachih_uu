@@ -1,0 +1,147 @@
+
+body {
+    font-family: pangolin;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+main{
+  margin-top: 1rem;
+}
+
+.mainPlans {
+  display: grid;
+  grid-template-columns: 70% 30%; /* Two equal columns */
+  gap: 1rem; /* Adjust the gap between columns */
+}
+
+.leftsection, .rightsection {
+  padding: 1rem; /* Optional: Add padding to sections */
+}
+.subplan-grid {
+  display: grid;
+  grid-template-columns: 5% 30% 60%; /* Two columns, first one will be as wide as its content, second will take the remaining space */
+  gap: 1rem; /* Adjust the gap between columns */
+  border: 1px solid #b7b2b2;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+   /* Optional: Add border to sections */
+}
+.similartitle{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.leftsection{
+  padding-bottom: 2rem;
+  & img{
+    border-radius: 100%;
+    width: 80%;
+    height: 80%;
+    margin: 2rem;
+  }
+  & h2{
+    padding: 1rem;
+  }
+}
+.plans-container{
+  margin: top 0.2rem;
+}
+
+.rightsection{
+  & .ratingplan{
+    border: 1px solid #b7b2b2;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Style the article container */
+.plan-detials {
+  max-width: 37rem;
+  margin: 0 auto;
+  padding: 1rem;
+  & h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.7rem;
+  }
+  & p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  & #gazar1 {
+    width: 100%;
+  }
+  & address {
+    font-style: normal;
+    margin: 0.8rem 0;
+  }
+  & time {
+    font-size: 1.2em;
+  }
+  & a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  & button {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    & span {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-right: 0.4rem;
+    }
+    
+  }
+  & button:hover {
+    background-color: #0056b3;
+  }
+  
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  & .subPlans {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      background-color: #fff;
+      transition: box-shadow 0.3s;
+      max-width: 18rem; /* Set a maximum width */
+      width: 100%; /* Fill available space */
+      margin: 0 1rem 1rem; /* Add some margin for spacing */
+      border-radius: 1rem;
+  }
+  & .subPlans:hover{
+      background-color: #d0dce9;
+      transition: 0.4s;
+  }
+  & button{
+      margin-top: 2%;
+  }
+  & img{
+      border-radius: 1rem;
+      height: 14rem;
+  }
+}
+.titleplan{
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .mainPlans{
+    display: block;
+}
+  .plan-details{
+    text-align: right;
+  }
+}

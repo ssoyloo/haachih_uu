@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "Untitled",
+			"path": "."
+		},
+		{
+			"name": "jsmodule",
+			"path": "../../haachih_uu/jsmodule"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5503,
+		"liveServer.settings.multiRootWorkspaceName": "Untitled"
+	}
+}
