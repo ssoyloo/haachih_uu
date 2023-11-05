@@ -68,8 +68,6 @@ main{
 
 article {
 
-    
-
     & .PlaceInfo{
         padding: 2rem;
         position: relative;
@@ -79,10 +77,11 @@ article {
             color: black;
             padding-bottom: 0.3rem;
         }
-
-     
-
-
+        & meter{
+            margin-top: -6%;
+            margin-left: 10%;
+        }
+    
         & .value{
             margin-top: 4.5rem;
             float: right;

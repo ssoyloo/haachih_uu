@@ -19,13 +19,10 @@ body {
     font-family: Pangolin;
 }
 /*Дэлгэцний гол хэсэг*/
-main{
-    margin-left: var(--margin-side);
-    margin-right: var(--margin-side);
-}
+
 /*Blogcard доторх зураг, товч, одны дизайн*/
 article {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: none;
     box-shadow: 0.1rem 0.2rem 0.5rem #555;
     border-radius: var(--border-radius);
@@ -56,9 +53,8 @@ article {
             background-color: white;
         }
         & meter{
-            position:absolute;
-            margin-left: 10%;
-            margin-top: -6%;
+            text-align: center;
+            position:relative;
             height: 2rem;
             width: 3.7rem;
             appearance: none;
@@ -66,7 +62,7 @@ article {
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             padding: 0.4rem;
             border-radius: 1rem;
-            text-align: center;
+            
         }
 }
 
