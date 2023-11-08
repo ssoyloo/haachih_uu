@@ -1,14 +1,6 @@
 @import url('./general.css');
 
-body {
-    font-family: pangolin;
-}
-body{
-  margin: 0;
-  padding: 0;
-}
 main{
-  margin-top: 1rem;
   margin-left: var(--margin-side);
   margin-right: var(--margin-side);
   display: grid;
@@ -36,9 +28,8 @@ main{
       padding-bottom: 2rem;
       text-align: center;
     }
-    & .subPlans {
+    & .similarPlans {
         background-color: #fff;
-        transition: box-shadow 0.3s;
         max-width: 20rem; 
         width: 100%; 
         margin: 1rem;
@@ -100,6 +91,10 @@ main{
     & .value{
       grid-column: 3 / span 1;
     }
+    & .value:hover{
+      background-color: white;
+      transition: 0.4s;
+    }
     & a {
         float: right;
         text-decoration: none;
@@ -156,5 +151,10 @@ main{
   }  
 }
 
+.ratingplan{
 
-
+  & progress{
+    height: 3rem;
+    width: 15rem;
+  }
+}
