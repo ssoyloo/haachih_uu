@@ -41,7 +41,8 @@ main{
         transition: box-shadow 0.3s;
         max-width: 20rem; 
         width: 100%; 
-        margin: 0 1rem 1rem; 
+        margin: 1rem;
+
     }
     & .subPlans:hover{
         background-color: #d0dce9;
@@ -59,32 +60,48 @@ main{
 
 .subplan-grid {
   display: grid;
-  grid-template-columns: 30% 60%; /* Two columns, first one will be as wide as its content, second will take the remaining space */
-  gap: 1rem; /* Adjust the gap between columns */
+  grid-template-columns: 25% 73%; 
+  gap: 1rem; 
   border: 1px solid #b7b2b2;
   border-radius: 1rem;
   margin: 1rem;
   padding-bottom: 1rem;
-   /* Optional: Add border to sections */
    & img{
-    border-radius: 100%;
+    border-radius: 50%;
     width: 80%;
     height: 80%;
-    margin: 2rem;
+    margin: 1.5rem 1rem 1rem 2rem;
   }
    & .PlanInfo{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
     font-size: 1rem;
     padding: 1rem;
     padding-top: 1.5rem;
     position: relative;
     color: #7d7d7d;
-
+    & h4{
+      grid-column: 1 / span 3;
+      padding-top: 1.2rem;
+      color: black;
+      font-size: 1.2rem;
+    }
+    & .tag{
+      line-height: 2rem;
+    }
+    & .intro{
+      grid-column: 1 / span 3;
+      padding-bottom: 1rem;
+    }
+    & meter{
+      left: 8rem;
+      top: -0.5rem
+    }
     & .value{
-        width:100%;
+      grid-column: 3 / span 1;
     }
     & a {
         float: right;
-        margin-right: 5rem;
         text-decoration: none;
         color: #7d7d7d;
     }
@@ -95,6 +112,7 @@ main{
   & .time{
     color: #0A5C76;
     float: left;
+    padding: 1rem 2rem 1rem 1rem;
   }
   & ol{
     list-style: none;
@@ -111,6 +129,7 @@ main{
         height: 3.5rem;
         content: "";
         line-height: 3.5rem;
+        left: -1rem;
         display: block;     
         text-align: center;
         border-radius: 50%;
@@ -125,7 +144,7 @@ main{
         position: absolute;
         background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
         top: 1rem;
-        left: 7.5rem;
+        left: 9.5rem;
     }
     > li:last-child:after {
         content: none;
@@ -134,10 +153,8 @@ main{
         content: counter(step);
         counter-increment: step; 
     }
-}
-  
+  }  
 }
 
-/*Бүгдийг харуулах товчны байрлал дизайн*/
 
 
