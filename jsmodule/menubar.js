@@ -13,37 +13,37 @@ class Plan {
         article.classList.add('item');
         article.innerHTML = `
         <div class="PlanImage">
-        <img src="${this.image}" alt="${this.title}">
-        <meter id="gazar1" value="1" max="1">⭐ 5</meter>
-    </div>
-    <div class="PlanInfo">
-        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
-        <h3>${this.title}</h3>
-        <p>
-            <i class="fa-solid fa-tag"></i>
-            ${this.tag}
-        </p>
-
-        <address>
-            <i class="fa-solid fa-location-dot"></i>
-            ${this.location}
-        </address>
-
-        <a href="11326020">
-            <i class="fa-solid fa-phone"></i>
-            ${this.evaluation}</a> 
-        <p>
-            <i class="fa-regular fa-clock"></i>
-            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-        <ol>
-            <li class="active">Хоолны газар</li>
-            <li>Хүрээлэн</li>
-            <li>Караоке</li>
-            <li>Паб, лоунж</li>
-            <li>Клаб</li>
-        </ol>
-        <button class="value"><span>${this.buttonText}</span>-c эхэлье</button>
-    </div>
+                        <img src="zurag/ubnight.jpeg" alt="bla">
+                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>4</span></meter>
+                    </div>
+                    <div class="PlanInfo">
+                        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
+                        <h3>Оройн шоудалт 1</h3>
+                        <p>
+                            <i class="fa-solid fa-tag"></i>
+                            Орой яахын?
+                        </p>
+ 
+                        <address>
+                            <i class="fa-solid fa-location-dot"></i>
+                            СБД, 1-р хороо - УБ,  Сөүл гудамж
+                        </address>
+ 
+                        <a href="11326020">
+                            <i class="fa-solid fa-phone"></i>
+                            11326020</a>
+                        <p>
+                            <i class="fa-regular fa-clock"></i>
+                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
+                        <ol>
+                            <li class="active">Хоолны газар</li>
+                            <li class="active">Хүрээлэн</li>
+                            <li class="active">Караоке</li>
+                            <li>Паб, лоунж</li>
+                            <li>Клаб</li>
+                        </ol>
+                        <button class="value"><span>100</span>K-c эхэлье</button>
+                    </div>
         `;
         return article;
     }

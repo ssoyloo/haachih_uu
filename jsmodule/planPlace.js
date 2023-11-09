@@ -11,23 +11,25 @@ class Place {
         this.numberList=1;
     }
     render() {
-        return `<article class="subplan-grid">
-                        
-                <h2 class="Bignumber">${this.numberList}</h2>
-                <img class="PlanPhoto" src="${this.image}" alt="bla">
-                <article class="plan-detials">
-                <h3>${this.title}</h3>
-                <p>${this.category}</p>
-                <meter id="gazar1" value="5" min="0" max="5">5 out of 5</meter>
-
-                <address>${this.address}</address>
-                <p><time datetime="2023-02-08">00:00</time>-<time>${this.hours}</time></p>
-                <a href="11326020">11326020</a>
-                <h4>Танилцуулга</h4>
-                <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
-                <a href="./plan.html"><button><span>${this.buttonText}</span>-c эхэлье </button></a>
-                </article>
-            </article >`;
+        return `
+        <p class="time"><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                    <li>
+                        <article class="subplan-grid">
+                            <img class="PlanImage" src="zurag/park.jpeg" alt="bla">
+                            <div class="PlanInfo">
+                                <h3>Хүүхдийн парк</h3>
+                                <p class="tag"><i class="fa-solid fa-tag"></i> Хүрээлэн</p>
+                                <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>2.5</span></meter>
+                                <address><i class="fa-solid fa-location-dot"></i>СБД, 1-р хороо</address>
+                                <a class="phone" href="11326020"><i class="fa-solid fa-phone"></i>11326020</a>
+                                <p class="timen"><i class="fa-regular fa-clock"></i><time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                                <h4>Танилцуулга: </h4>
+                                <p class="intro">Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа.</p>
+                                <button class="value"><span>100</span>K-c эхэлье</button>
+                            </div>
+                        </article>
+                    </li>
+        `;
     }
 }
 
@@ -64,7 +66,7 @@ class PlaceRenderer {
     renderPlaces(targetElement) {
         const container = document.querySelector(targetElement);
         container.innerHTML = ''; // Clear the container first
-        this._placesList.slice(0, 3).forEach(placeData => {
+        this._placesList.slice(0, 5).forEach(placeData => {
             const place = new Place(placeData);
             container.insertAdjacentHTML('beforeend', place.render());
         });

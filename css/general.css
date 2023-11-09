@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
+ 
 :root {
     --main-color: rgb(10,92,118);
     --secondary-color: rgb(41,151,185);
@@ -13,13 +13,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 /* Body styles */
 body {
     font-family: Pangolin;
 }
 /*Дэлгэцний гол хэсэг*/
-
+ 
 /*Blogcard доторх зураг, товч, одны дизайн*/
 article {
     margin-bottom: 1rem;
@@ -61,8 +61,7 @@ article {
             color: white;
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             padding: 0.4rem;
-            border-radius: 1rem;
-            
+            border-radius: 1rem;  
         }
 }
-
+ 
