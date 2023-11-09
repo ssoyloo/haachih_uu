@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/headerfooter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Menubar</title>
+    <script src="./jsmodule/function.js"></script>
 
 </head>
 <body>
@@ -17,9 +18,9 @@
             ><img class="logopng1" src="zurag/logo.png" alt="haachihuu_logo" width="250px">
             </a>
             <ul>
-                <li><a  href="./menubar.html">Орой яахын?</a></li>
-                <li><a  href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
-                <li><a  href="./menubar.html">Арван жил шдээ</a></li>
+                <li><a  href="./menubar.html?tag=Орой яахын">Орой яахын?</a></li>
+                <li><a  href="./menubar.html?tag=Төрсөн өдөр">Төрсөн өдөр гэсэн үү дээ?</a></li>
+                <li><a  href="./menubar.html?tag=Хотын төв">Арван жил шдээ</a></li>
                 <li><a  href="./menubar.html">Валинтин гэсээн</a></li>
                 <li><a  href="./menubar.html">Хөдөө гарья</a></li>            
             </ul> 
@@ -40,226 +41,16 @@
 
     <main>
         <section class="name">
-            <h1>Орой яахын ?</h1>
+            <h1>Орой яахын?</h1>
             <hr>
         </section>
     
-        <section class="plans">
-            <h2 class="ilerts">Төлөвлөгөөнүүд</h2>
-
-                <article class="item">
-                    <div class="PlanImage">
-                        <img src="zurag/ubnight.jpeg" alt="bla">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>4</span></meter>
-                    </div>
-                    <div class="PlanInfo">
-                        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
-                        <h3>Оройн шоудалт 1</h3>
-                        <p>
-                            <i class="fa-solid fa-tag"></i>
-                            Орой яахын?
-                        </p>
-
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i>
-                            СБД, 1-р хороо - УБ,  Сөүл гудамж
-                        </address>
-
-                        <a href="11326020">
-                            <i class="fa-solid fa-phone"></i>
-                            11326020</a> 
-                        <p>
-                            <i class="fa-regular fa-clock"></i>
-                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                        <ol>
-                            <li class="active">Хоолны газар</li>
-                            <li class="active">Хүрээлэн</li>
-                            <li class="active">Караоке</li>
-                            <li>Паб, лоунж</li>
-                            <li>Клаб</li>
-                        </ol>
-                        <button class="value"><span>100</span>K-c эхэлье</button>
-                    </div>
-                </article>
-
-                <article class="item">
-                    <div class="PlanImage">
-                        <img src="zurag/ubnight.jpeg" alt="bla">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>4.5</span></meter>
-                    </div>
-                    <div class="PlanInfo">
-                        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
-                        <h3>Оройн шоудалт 1</h3>
-                        <p>
-                            <i class="fa-solid fa-tag"></i>
-                            Орой яахын?
-                        </p>
-
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i>
-                            СБД, 1-р хороо - УБ,  Сөүл гудамж
-                        </address>
-
-                        <a href="11326020">
-                            <i class="fa-solid fa-phone"></i>
-                            11326020</a> 
-                        <p>
-                            <i class="fa-regular fa-clock"></i>
-                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                        <ol>
-                            <li class="active">Хоолны газар</li>
-                            <li>Хүрээлэн</li>
-                            <li>Караоке</li>
-                            <li>Паб, лоунж</li>
-                            <li>Клаб</li>
-                        </ol>
-                        <button class="value"><span>100</span>K-c эхэлье</button>
-                    </div>
-                </article>
-
-                <article class="item">
-                    <div class="PlanImage">
-                        <img src="zurag/ubnight.jpeg" alt="bla">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>4</span></meter>
-                    </div>
-                    <div class="PlanInfo">
-                        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
-                        <h3>Оройн шоудалт 1</h3>
-                        <p>
-                            <i class="fa-solid fa-tag"></i>
-                            Орой яахын?
-                        </p>
-
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i>
-                            СБД, 1-р хороо - УБ,  Сөүл гудамж
-                        </address>
-
-                        <a href="11326020">
-                            <i class="fa-solid fa-phone"></i>
-                            11326020</a> 
-                        <p>
-                            <i class="fa-regular fa-clock"></i>
-                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                        <ol>
-                            <li class="active">Хоолны газар</li>
-                            <li class="active">Хүрээлэн</li>
-                            <li class="active">Караоке</li>
-                            <li class="active">Паб, лоунж</li>
-                            <li>Клаб</li>
-                        </ol>
-                        <button class="value"><span>100</span>K-c эхэлье</button>
-                    </div>
-                </article>
-
-                <article class="item">
-                    <div class="PlanImage">
-                        <img src="zurag/ubnight.jpeg" alt="bla">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>3</span></meter>
-                    </div>
-                    <div class="PlanInfo">
-                        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
-                        <h3>Оройн шоудалт 1</h3>
-                        <p>
-                            <i class="fa-solid fa-tag"></i>
-                            Орой яахын?
-                        </p>
-
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i>
-                            СБД, 1-р хороо - УБ,  Сөүл гудамж
-                        </address>
-
-                        <a href="11326020">
-                            <i class="fa-solid fa-phone"></i>
-                            11326020</a> 
-                        <p>
-                            <i class="fa-regular fa-clock"></i>
-                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                        <ol>
-                            <li class="active">Хоолны газар</li>
-                            <li class="active">Хүрээлэн</li>
-                            <li class="active">Караоке</li>
-                            <li class="active">Паб, лоунж</li>
-                            <li class="active">Клаб</li>
-                        </ol>
-                        <button class="value"><span>100</span>K-c эхэлье</button>
-                    </div>
-                </article>
-
-                <article class="item">
-                    <div class="PlanImage">
-                        <img src="zurag/ubnight.jpeg" alt="bla">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>3</span></meter>
-                    </div>
-                    <div class="PlanInfo">
-                        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
-                        <h3>Оройн шоудалт 1</h3>
-                        <p>
-                            <i class="fa-solid fa-tag"></i>
-                            Орой яахын?
-                        </p>
-
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i>
-                            СБД, 1-р хороо - УБ,  Сөүл гудамж
-                        </address>
-
-                        <a href="11326020">
-                            <i class="fa-solid fa-phone"></i>
-                            11326020</a> 
-                        <p>
-                            <i class="fa-regular fa-clock"></i>
-                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                        <ol>
-                            <li class="active">Хоолны газар</li>
-                            <li class="active">Хүрээлэн</li>
-                            <li>Караоке</li>
-                            <li>Паб, лоунж</li>
-                            <li>Клаб</li>
-                        </ol>
-                        <button class="value"><span>100</span>K-c эхэлье</button>
-                    </div>
-                </article>
-
-                <article class="item">
-                    <div class="PlanImage">
-                        <img src="zurag/ubnight.jpeg" alt="bla">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>2.5</span></meter>
-                    </div>
-                    <div class="PlanInfo">
-                        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
-                        <h3>Оройн шоудалт 1</h3>
-                        <p>
-                            <i class="fa-solid fa-tag"></i>
-                            Орой яахын?
-                        </p>
-
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i>
-                            СБД, 1-р хороо - УБ,  Сөүл гудамж
-                        </address>
-
-                        <a href="11326020">
-                            <i class="fa-solid fa-phone"></i>
-                            11326020</a> 
-                        <p>
-                            <i class="fa-regular fa-clock"></i>
-                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-                        <ol class="circle">
-                            <li>Хоолны газар</li>
-                            <li>Хүрээлэн</li>
-                            <li>Караоке</li>
-                            <li>Паб, лоунж</li>
-                            <li>Клаб</li>
-                        </ol>
-                        <button class="value"><span>100</span>K-c эхэлье</button>
-                    </div>
-                </article>
+        <section class="plans">           
         </section>
 
-        <section class="Bugd">              
-            <button class="btn">Бүгдийг харах</button>
+        <section class="Bugd">      
+            <a href="./menubar.html"><button class="btn">Бүгдийг харах</button></a>        
+            
             <hr>
         </section>  
     </main>
@@ -281,6 +72,6 @@
         <hr>
         <p>&copy; Haachih uu inc.2023. We love our customers.</p>
     </footer>
-    
+<script src="./jsmodule/menubar.js"></script>
 </body>
 </html>

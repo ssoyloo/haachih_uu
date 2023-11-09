@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Улаанбаатар хот дотроо нэг өдрийг хөгжилтэй өнгөрүүлэх төлөвлөгөө болон газруудыг харуулна.">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="./zurag/logo.png">
+    <link rel="icon" type="image/x-icon" href="./zurag/searchicon.png">
     <title>Haachih uu?</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/headerfooter.css">
     <link rel="stylesheet" href="./css/./general.css">
-    <script src="./jsmodule/websiteManager.js"></script>
-    <script src="./jsmodule/function.js"></script>
+    <script src="./jsmodule/place.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
 
 </head>
@@ -22,11 +22,11 @@
             ><img class="logopng1" src="zurag/logo.png" alt="haachihuu_logo" width="250px">
             </a>
             <ul>
-                <li><a  href="./menubar.html">Орой яахын?</a></li>
-                <li><a  href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
-                <li><a  href="./menubar.html">Арван жил шдээ</a></li>
-                <li><a  href="./menubar.html">Валинтин гэсээн</a></li>
-                <li><a  href="./menubar.html">Хөдөө гарья</a></li>            
+                <li><a class="navText"  href="./menubar.html?tag=Орой яахын">Орой яахын?</a></li>
+                <li><a class="navText"  href="./menubar.html?tag=Төрсөн өдөр">Төрсөн өдөр гэсэн үү дээ?</a></li>
+                <li><a class="navText"  href="./menubar.html?tag=Хотын төв">Арван жил шдээ</a></li>
+                <li><a class="navText" href="./menubar.html">Валинтин гэсээн</a></li>
+                <li><a class="navText" href="./menubar.html">Хөдөө гарья</a></li>            
             </ul> 
             <section class="headerButton">
                 <a class="navSearch" href="./search.html">
@@ -47,6 +47,7 @@
         
 
         <article class="background">
+            <img src="./zurag/background.jpg">
         </article>
         <div class="Lsearch">
             <select class="option1" name="huniiToo">
@@ -94,7 +95,7 @@
         <h2>Топ л гээд байгаам чинь</h2>
         <section class="plans">     
         </section>
-        <script src="./IndexWebsiteManager.js"></script>
+        
     </section>
         <h2>Санал болгочихъё</h2>
         <section class="placesToRecommend">
@@ -111,15 +112,15 @@
                 </article>
                 <article class="subRecommend">
 
-                    <script src="./IndexWebsiteManager.js"></script>
+                    
                 </article>
             
         </section>
         <h2>Шинээр нэмэгдсэн</h2>
         <section class="newPlaces">
-            
-            <script src="./IndexWebsiteManager.js"></script>
         </section>
+
+
         
     </main>
 
@@ -154,6 +155,8 @@
     </footer>
       
 
-
+    <script src="./jsmodule/indexPlan.js"></script>
+    <script src="./jsmodule/indexPlace.js"></script>
+    <script src="./jsmodule/function.js"></script>
 </body>
 </html>
