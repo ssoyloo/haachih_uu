@@ -1,240 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-/*undsen tohiruulga*/
+@import url('./general.css');
+ 
 body {
     font-family: pangolin;
-    margin: 0;
-    padding: 0;
-   
 }
+body{
+  margin: 0;
+  padding: 0;
+}
+main{
+  margin-top: 1rem;
+  margin-left: var(--margin-side);
+  margin-right: var(--margin-side);
+  display: grid;
+  grid-template-columns: 70% 30%; /* Two equal columns */
+  gap: 1rem; /* Adjust the gap between columns */
  
-main {
-    width: 85%;
-    margin: auto;
-}
-/*tuhain gazriin ner*/
-.placeName  {
-    margin-top: 1rem;
-    & h2{
-        font-weight: lighter;
-        font-size: 1rem;
-        font-weight: bold
+  & .name{
+    grid-column: 1 / span 2;
+    & h1{
+      font-size: 1.3rem;
+      padding: 1rem;
     }
-}
-/*gazrrin neren doorh urt zuraas*/
-#hr1 {
-    height: 0.1rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    margin: 0.4rem 0;
-}
-/*zuraasan door tuhain gazriin hayg, tsagiin huvaari, utasiig haruulsan heseg*/
-.idk {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    & a{
-        text-decoration: none;
+    & hr{
+      height: 0.25rem;
+      background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
-}
+  }
  
-.undsen_heseg {
-    margin-top: 2%;
+  & .plans {
+    grid-column: 1 / span 2;
     display: grid;
-    grid-row: auto;
-    grid-template-columns: 65% 30%;
-    grid-column-gap: 5%;
-    grid-row-gap: 5%;
-}
-/*Undsen heseg deh ehnii gazriin zurgiig haruulah heseg*/
-#bigPic {
-    object-fit: cover;
-    overflow: hidden;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray;
-    & img {
+    grid-template-columns: auto auto auto auto;
+    & h2{
+      grid-column: 1 / span 4;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+    & .subPlans {
+        background-color: #fff;
+        transition: box-shadow 0.3s;
+        max-width: 20rem;
         width: 100%;
-        height: 100%;
-    }
-}
-/*zuragnii hajuu taliin checkbar*/
-aside {
-    border-radius: 1rem;
-    padding: 0.5rem 1em;
-    box-shadow: 0 4px 8px 0 gray;
-    & li , p, h3{
-        margin: 5%;
-    }
-    & img {
-        width: 1rem;
-    }
-    & p {
-        font-size: 12px;
-    }
-    & li {
-        font-size: 14px;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-    }
-    & h3 {
-        font-size: 16px;
-        margin-top: -0.5rem;
-    }
-    & div{
-        display: flex;
-        gap: 1rem;
-    }
-}
+        margin: 1rem;
  
-/*taniltsuulga ni*/
-#taniltsuulga {
-    padding: 1.5rem;
-    & p {
-        padding: 0.5rem;
-        margin-left: 30px;
-        font-weight: bold;
     }
-}
- 
-/**/
-.ratingplace {
-    width: 100%;
-    padding: 1.5rem;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem ;
-    & ul {
-        margin-top: 0.1rem;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        & li {
-            list-style: none ;
-            display: flex;
-            padding: 0.2rem;
-            color: #0A5C76;
-        }
-    }
-    & progress {
-        width: 60%;
-        height: 60%;
-    }
-    & .ratingTitle{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    & #stars{
-        color: #0A5C76;
-    }
-}
- 
-/**/
-.ratingOnComment {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    height: 9.2rem;
-    overflow: auto;
-    & #comment {
-        font-size: 12px;
-    }
-}
- 
-/*progress oo goy buduun baarag bolgosiin*/
-progress {
-    position: relative;
-    left: 1rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    border-radius: 25px;
-}
- 
-/*budagdsan ghiimu unelegdsen ghimu ter hesgiig ni borderradius ugj muguud ungiig ni uusgachihlaa*/
-progress::-webkit-progress-value {
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    border-radius: 25px;
-}
- 
-/*ene harin ariin budagdaagui heseg ni*/
-progress::-webkit-progress-bar {
-    background-color: lightgray;
-    border-radius: 25px;
-}
- 
-/*daraagiin heseg buyu ijil tustei gazruud*/
-.similarPlans {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    margin-top: 5%;
-    & h2 {
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
-    & section {
-        width: 100%;
-        display: flex;
-        gap: 2.5rem;
-    }
-    & meter{
-        width: 1.5rem;
-    }
-}
-.content{
-    display: flex;
-}
- 
- 
-article {
-    background-color: #f9f9f9;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray;
-    overflow: hidden;
-    & img {
-        width: 50%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
- 
-.negyum{
-    width: 100%;
-    display: flex;
-    padding: 0.2rem 0.5rem;
-    flex-direction: column;
- 
-    & section{
-        display: flex;
-        gap: 1rem;
-        justify-content: space-between;
-    }
-    & p{
-        font-size: 0.7rem;
+    & .subPlans:hover{
+        background-color: #d0dce9;
+        transition: 0.4s;
     }
     & button{
-        margin: 0.5rem 0.5rem;
-        cursor: pointer;
-        padding: 0.1rem 0.2rem;
-        border-radius: 0.4rem;
-        border-style: none;
-        color: white;
-        font-family: pangolin;
-        background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+        margin-top: 2%;
     }
+    & img{
+        border-radius: 1rem;
+        height: 14rem;
+    }
+  }
 }
  
-.miniTitle{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.subplan-grid {
+  display: grid;
+  grid-template-columns: 25% 73%;
+  gap: 1rem;
+  border: 1px solid #b7b2b2;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding-bottom: 1rem;
+   & img{
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    margin: 1.5rem 1rem 1rem 2rem;
+  }
+   & .PlanInfo{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    font-size: 1rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    position: relative;
+    color: #7d7d7d;
+    & h4{
+      grid-column: 1 / span 3;
+      padding-top: 1.2rem;
+      color: black;
+      font-size: 1.2rem;
+    }
+    & .tag{
+      line-height: 2rem;
+    }
+    & .intro{
+      grid-column: 1 / span 3;
+      padding-bottom: 1rem;
+    }
+    & meter{
+      left: 8rem;
+      top: -0.5rem
+    }
+    & .value{
+      grid-column: 3 / span 1;
+    }
+    & a {
+        float: right;
+        text-decoration: none;
+        color: #7d7d7d;
+    }
+  }
 }
  
-h2, h3, h4 {
-    color: #333333;
-}
- 
-address, time, p, ul , a{
-    color: #666666;
+.leftsection{
+  & .time{
+    color: #0A5C76;
+    float: left;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+  & ol{
+    list-style: none;
+    size: 1em;
+    counter-reset: step;
+    > li{
+      font-size: 2rem;
+      position: relative;
+      color: white;
+  }
+    > li:before {
+        float: left;
+        width: 3.5rem;
+        height: 3.5rem;
+        content: "";
+        line-height: 3.5rem;
+        left: -1rem;
+        display: block;    
+        text-align: center;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+    }
+    > li:after {
+        width: 0.2rem;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        top: 1rem;
+        left: 9.5rem;
+    }
+    > li:last-child:after {
+        content: none;
+    }
+    > li:before {
+        content: counter(step);
+        counter-increment: step;
+    }
+  }  
 }
