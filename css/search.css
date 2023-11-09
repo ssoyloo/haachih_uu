@@ -1,8 +1,10 @@
 @import url('./general.css');
-
-
+ 
+ 
 /*Дэлгэцээ хуваах*/
 main{
+    margin-left: var(--margin-side);
+    margin-right: var(--margin-side);
     display: grid;
     gap: 2rem;
     & .name{
@@ -12,7 +14,7 @@ main{
     & .place{
         grid-column: 1 / span 2;
         grid-row: 2;
-
+ 
     }
     & .Bugd{
         grid-column: 1 / span 3;
@@ -23,7 +25,7 @@ main{
     display: grid;
     gap: 1rem;
     grid-template-columns: 35% 65%;
-
+ 
 }
 .filter{
     & article{
@@ -55,7 +57,7 @@ main{
 }
 /*Нэр ба зураасаа гоё болгох*/
 .name{
-    
+   
     & h1{
         font-size: 1.2rem;
         padding: 1rem;
@@ -65,14 +67,14 @@ main{
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
-
+ 
 article {
-
+ 
     & .PlaceInfo{
         padding: 2rem;
         position: relative;
         color: #7d7d7d;
-
+ 
         & h3{
             color: black;
             padding-bottom: 0.3rem;
@@ -81,11 +83,11 @@ article {
             margin-top: -6%;
             margin-left: 10%;
         }
-    
+   
         & .value{
             margin-top: 4.5rem;
             float: right;
-            width:40%; 
+            width:40%;
         }
         & a {
             float: right;
@@ -95,11 +97,11 @@ article {
         }
     }
 }
-
+ 
 /*Бүгдийг харуулах товчны байрлал дизайн*/
 .Bugd{
     margin-bottom: 5rem;
-
+ 
     & hr{
         height: 0.25rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
@@ -118,4 +120,4 @@ article {
         font-size: 1em;
     }
 }
-
+ 
