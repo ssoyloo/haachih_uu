@@ -61,7 +61,7 @@ article {
             color: white;
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             padding: 0.4rem;
-            border-radius: 1rem;  
+            border-radius: 0.7rem;  
         }
 }
  
