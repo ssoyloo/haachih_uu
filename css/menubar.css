@@ -50,6 +50,8 @@ article {
         & meter{
             margin-left: -16%;
             margin-top: 2%;
+            height: 2rem;
+            width: 3.7rem;
         }
     }
     /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
