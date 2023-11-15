@@ -36,6 +36,7 @@ article {
         margin-bottom: 10px;
         }
         & .value {
+            font-family: Pangolin;
             border: none;
             border-radius: var(--border-radius);
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
@@ -55,8 +56,6 @@ article {
         & meter{
             text-align: center;
             position:relative;
-            height: 2rem;
-            width: 3.7rem;
             appearance: none;
             color: white;
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));

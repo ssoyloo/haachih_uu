@@ -12,6 +12,7 @@ main{
     & hr{
         height: 0.25rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+        margin-bottom: 2rem;
     }
 }
 /*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
@@ -47,8 +48,8 @@ article {
             height: auto;
         }
         & meter{
-            margin-left: 20%;
-            margin-top: 1%;
+            margin-left: -16%;
+            margin-top: 2%;
         }
     }
     /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
