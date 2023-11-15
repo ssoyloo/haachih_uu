@@ -45,6 +45,26 @@ nav {
     }
   
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    /* min-width: 1rem; */
+    box-shadow: 0.1rem 0.2rem 0.5rem #555;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 1rem;
+    z-index: 1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));

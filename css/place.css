@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url(./general.css);
 
 body {
     font-family: pangolin;

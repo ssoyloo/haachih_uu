@@ -1,4 +1,4 @@
-@import url('root.css');
+@import url(./general.css);
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
  
 body {
@@ -128,6 +128,11 @@ article {
             font-size: 0.7rem;
         }
         & button{
+            border-style: none;
+            background-color: #fff;
+            width: 1rem;
+        }
+        & .delgerengui {
             margin: 0.5rem 0.5rem;
             cursor: pointer;
             padding: 0.1rem 0.2rem;
@@ -136,8 +141,41 @@ article {
             color: white;
             font-family: pangolin;
             background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+            height: 2rem;
+            width: 13rem;
         }
+        & li {
+            list-style: none;
+        }
+        & a {
+            text-decoration: none;
+        }
+        
     }
+}
+
+.seeAll {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+    border-radius: 0.5rem;
+    border-style: none;
+    color: #fff;
+    font-family: pangolin;
+    font-size: 16px;
+    width: 12rem;
+    height: 2rem;
+    margin-top: 2rem;
+}
+
+.suuliinZuraas{
+    width: 108.8%;
+    height: 0.1rem;
+    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    margin-top: -1rem;
+    margin-bottom: 5rem;
+    border-style: none;
 }
  
 address, time, p, ul , li, a, label{
