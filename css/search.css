@@ -6,6 +6,7 @@ main{
     margin-left: var(--margin-side);
     margin-right: var(--margin-side);
     display: grid;
+    grid-template-columns: 35% 35% 30%;
     gap: 2rem;
     & .name{
         grid-column: 1 / span 3;
@@ -24,7 +25,7 @@ main{
 .result{
     display: grid;
     gap: 1rem;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 30% 65%;
  
 }
 .filter{
@@ -69,7 +70,9 @@ main{
 }
  
 article {
- 
+    & img{
+        height:100% ;
+    }
     & .PlaceInfo{
         padding: 2rem;
         position: relative;
@@ -120,6 +123,12 @@ article {
         cursor: pointer;
         padding: 0.7em 0.7em;
         font-size: 1em;
+    }
+    & .btn:hover{
+        box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #0A5C76, 0px 0px 0px 10px white, 0px 0px 0px 10.5px #2FA2C6;
+        background-image: none;
+        background-color: #fff;
+        color: #0A5C76;
     }
 }
  
