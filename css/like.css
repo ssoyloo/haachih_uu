@@ -2,6 +2,16 @@
 main{
     margin-left: var(--margin-side);
     margin-right: var(--margin-side);
+    display: grid;
+    grid-auto-columns: 49% 49%;
+    gap: 2rem;
+    .name{
+        grid-column: 1 / span 2;
+    }
+    .Bugd{
+        grid-column: 1 / span 2;
+    }
+
 }
 /*Нэр ба зураас*/
 .name{
@@ -12,124 +22,93 @@ main{
     & hr{
         height: 0.25rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
-        margin-bottom: 2rem;
     }
 }
-/*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
-.plans{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: auto auto;
- 
-    & .ilerts{
-        grid-column: 1 / span 2;
-        margin-bottom: 0;
-        padding: 1rem;
-    }
-    & .item{
-        display: grid;
-        max-width: 50vw;
-        gap: 1rem;
-        grid-template-areas: 'PlanImage PlanInfo';
-    }
-}
-/*Blogcard доторх мэдээлэл болон зурагны дизайн*/
 article {
-    border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #555;
-    border-radius: 1rem;
-    /*Зураг болон үнэлгээ*/
-    & .PlanImage{
-        display: flex;
- 
-        & img{
-            border-radius: 1rem;
-            width: 100% ;
-            height: auto;
-        }
-        & meter{
-            margin-left: -16%;
-            margin-top: 2%;
-            height: 2rem;
-            width: 3.7rem;
-        }
+    height: 30%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    
+    & img{
+        height: 19.2rem;
+        width: 25rem;
     }
-    /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-    & .PlanInfo{
-        padding: 1rem;
-        padding-top: 1.5rem;
-        position: relative;
+}
+.PlanImage, .PlaceImage{
+    & meter{
+        position: absolute;
+        margin-left:-4%;
+        margin-top: 0.5%;
+        height: 2rem;
+        width: 4rem;
+    }
+}
+
+.PlanInfo, .PlaceInfo{
+    padding: 1rem;
+    padding-top: 1.5rem;
+    position: relative;
+    color: #7d7d7d;
+    & .like{
+        float: right;
+        margin-right: 5%;
+    }
+    & .value{
+        width:85%;
+    }
+    & a {
+        float: right;
+        margin-right: 5rem;
+        text-decoration: none;
         color: #7d7d7d;
- 
-        & .value{
-            width:100%;
+    }
+    & ol{
+        margin-top: 0.5rem;
+        list-style: none;
+        size: 1em;
+        counter-reset: step;
+        > li{
+            width: 100%;
+            font-size: 0.8rem;
+            position: relative;
+            text-transform: uppercase;
+            color: black;
+            margin-bottom: 0.8rem;
+            }
+        > li:before {
+            width: 1.5rem;
+            height: 1.5rem;
+            content: "";
+            margin-right: 1rem;
+            line-height: 1.5rem;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));;
         }
-        & a {
-            float: right;
-            margin-right: 5rem;
-            text-decoration: none;
-            color: #7d7d7d;
+        > li:after {
+             width: 0.15rem;
+             height: 100%;
+             content: '';
+             position: absolute;
+             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));;
+             top: 1rem;
+             left: 3%;
         }
-        & ol{
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            size: 1em;
-            counter-reset: step;
-            > li{
-                width: 20%;
-                float: left;
-                font-size: 0.8rem;
-                position: relative;
-                text-align: center;
-                text-transform: uppercase;
-                margin-top: 1rem;
-                margin-bottom: 1.5rem;
-                color: #7d7d7d;
-            }
-            > li:before {
-                width: 2rem;
-                height: 2rem;
-                content: "";
-                line-height: 2rem;
-                display: block;
-                text-align: center;
-                margin: 0 auto 0.3rem auto;
-                border-radius: 50%;
-                position: relative;
-                z-index: 2;
-                background-color: #b3b3b3;
-            }
-            > li:after {
-                 width: 100%;
-                 height: 0.1rem;
-                 content: '';
-                 position: absolute;
-                 background-color: #b3b3b3;
-                 top: 1rem;
-                 left: -50%;
-            }
-            > li:first-child:after {
-                 content: none;
-            }
- 
-            > li.active {
-                color: black;  
-            }
- 
-            > li.active:before {
-                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-             }
- 
- 
-            > li:before {
-                content: counter(step);
-                counter-increment: step;
-            }
+        > li:last-child:after {
+             content: none;
+        }
+
+        > li:before {
+            content: counter(step);
+            counter-increment: step;
         }
     }
 }
- 
+
 /*Бүгдийг харуулах товчны байрлал дизайн*/
 .Bugd{
     margin-top: 5rem;
@@ -157,364 +136,5 @@ article {
         background-image: none;
         background-color: #fff;
         color: #0A5C76;
-    }
-}
- 
-@media (max-width: 1650px) {
- 
-    .name{
-        & h1{
-            font-size: 1.2rem;
-            padding: 0.7rem;
-        }
-        & hr{
-            height: 0.25rem;
-        }
-    }
-    /*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
-    .plans{
-        gap: 1rem;
-        & .ilerts{
-            padding: 1rem;
-        }
-        & .item{
-            max-width: 50vw;
-            gap: 0.5rem;
-        }
-    }
-    /*Blogcard доторх мэдээлэл болон зурагны дизайн*/
-    article {
-        & .PlanImage{
-            & meter{
-                margin-left: -22%;
-                margin-top: 3%;
-            }
-        }
-        /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-        & .PlanInfo{
-            padding: 1rem;
-            font-size: 0.9rem;
-            & h3{
-                font-size: 1.3rem;
-            }
-        }
-    }
-   
-    /*Бүгдийг харуулах товчны байрлал дизайн*/
-    .Bugd{
-        margin-top: 3rem;
-        margin-bottom: 3rem;
- 
-        & .btn{
-            width: 13rem;
-            margin-left: 36rem;
-        }
-    }
-   
-}
- 
-@media (max-width: 1550px) {
-   
- 
-    /*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
-    .plans{
-        gap: 1rem;
-        & .ilerts{
-            padding: 0.7rem;
-        }
-        & .item{
-            gap: 0.2rem;
-        }
-    }
-    /*Blogcard доторх мэдээлэл болон зурагны дизайн*/
-    article {
-        & .PlanImage{
-            & meter{
-                font-size: 0.9rem;
-                height: 1.7rem;
-                width: 3.3rem;
-            }
-        }
-        /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-        & .PlanInfo{
-            padding: 1rem;
-            font-size: 0.8rem;
-            & h3{
-                font-size: 1.2rem;
-            }
-            & ol{
-                > li{
-                    font-size: 0.7rem;
-                }
-            }
- 
-        }
-    }
-   
-    /*Бүгдийг харуулах товчны байрлал дизайн*/
-    .Bugd{
-        & .btn{
-            margin-left: 30rem;
-            font-size: 0.8rem;
-        }
-    }
-   
-}
- 
-@media (max-width: 1370px) {
-    main{
-        margin-left: 6rem;
-        margin-right: 6rem;
-    }
- 
-    /*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
-    .plans{
-        gap: 0.7rem;
-        & .ilerts{
-            padding: 0.5rem;
-        }
-    }
-    /*Blogcard доторх мэдээлэл болон зурагны дизайн*/
-    article {
-        & .PlanImage{
-            & meter{
-                font-size: 0.9rem;
-                height: 1.7rem;
-                width: 3.3rem;
-            }
-        }
-        /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-        & .PlanInfo{
-            padding: 0.7rem;
-            font-size: 0.8rem;
-            & h3{
-                font-size: 1.2rem;
-            }
-            & ol{
-                > li{
-                    font-size: 0.6rem;
-                }
-            }
-            & .like{
-                font-size: 0.7rem;
-            }
- 
-        }
-    }
-   
-    /*Бүгдийг харуулах товчны байрлал дизайн*/
-    .Bugd{
-        & .btn{
-            margin-left: 28rem;
-        }
-    }
-   
-}
-@media (max-width: 1200px) {
-    main{
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
- 
-    /*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
-    .plans{
-        gap: 0.6rem;
-        & .ilerts{
-            padding: 0.4rem;
-        }
-    }
-    /*Blogcard доторх мэдээлэл болон зурагны дизайн*/
-    article {
-        & .PlanImage{
-            & meter{
-                font-size: 0.8rem;
-                height: 1.5rem;
-                width: 3.1rem;
-            }
-        }
-        /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-        & .PlanInfo{
- 
-            & h3{
-                font-size: 1.1rem;
-            }
-            & ol{
-                > li{
-                    font-size: 0.5rem;
-                }
-            }
-            & .like{
-                font-size: 0.6rem;
-            }
- 
-        }
-    }  
-    /*Бүгдийг харуулах товчны байрлал дизайн*/
-    .Bugd{
-        & .btn{
-            margin-left: 26rem;
-        }
-    }
-   
-}
- 
-@media (max-width: 1080px) {
-    main{
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
-    .name{
-        & h1{
-            font-size: 1rem;
-            padding: 0.5rem;
-        }
-    }
-    /*Дэлгэцийг 2 хэсэг хуваах ба хуваасан хэсэг бүрийг үг зургаар нь хуваана*/
-    .plans{
-        gap: 0.5rem;
-        & .ilerts{
-            padding: 0.4rem;
-            font-size: 1.2rem;
-        }
-    }
-    /*Blogcard доторх мэдээлэл болон зурагны дизайн*/
-    article {
-        & .PlanImage{
-            & meter{
-                font-size: 0.7rem;
-                height: 1.5rem;
-                width: 2.8rem;
-            }
-        }
-        /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-        & .PlanInfo{
-            & h3{
-                font-size: 1rem;
-            }
-            & ol{
-                > li{
-                    font-size: 0.5rem;
-                }
-            }
-            & .like{
-                font-size: 0.5rem;
-            }
- 
-        }
-    }  
-    /*Бүгдийг харуулах товчны байрлал дизайн*/
-    .Bugd{
-        & .btn{
-            margin-left: 22rem;
-        }
-    }
-   
-}
-@media (max-width: 990px) {
-    main{
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .plans{
-        gap: 0.7rem;
-        & .ilerts{
-            padding: 0.3rem;
-        }
-    }
-    .Bugd{
-        & .btn{
-            margin-left: 23rem;
-        }
-    }
-}
-@media (max-width: 900px) {
-    main{
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
-    .plans{
-        display:inline-block;
-   
-        & .ilerts{
-            margin-bottom: 0;
-            padding: 1rem;
-        }
-        & .item{
-            display: grid;
-            max-width: 100vw;
-            gap: 1rem;
-            grid-template-areas: 50% 50%;
-        }
-    }
-    article {
-        & .PlanImage{
-            & meter{
-                font-size: 0.8rem;
-                height: 1.5rem;
-                width: 3.1rem;
-            }
-        }
-        /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-        & .PlanInfo{
- 
-            & h3{
-                font-size: 1.1rem;
-            }
-            & ol{
-                > li{
-                    font-size: 0.7rem;
-                }
-            }
-            & .like{
-                font-size: 0.6rem;
-            }
- 
-        }
-    }  
-    .Bugd{
-        & .btn{
-            margin-left: 13rem;
-        }
-    }
-}
-@media (max-width: 620px){
-    main{
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .plans{
-   
-        & .ilerts{
-            padding: 0.3rem;
-        }
-    }
-    article {
-        & .PlanImage{
-            & meter{
-                font-size: 0.7rem;
-                height: 1.3rem;
-                width: 2.6rem;
-            }
-        }
-        /*Зурагны хажууд байх төлөвлөгөөний нэр, тайлбар*/
-        & .PlanInfo{
-            font-size: 0.6rem;
-            & h3{
-                font-size: 0.7rem;
-            }
-            & ol{
-                > li{
-                    font-size: 0.5rem;
-                }
-            }
-            & .like{
-                font-size: 0.6rem;
-            }
-        }
-    }  
-    .Bugd{
-        & .btn{
-            margin-left: 7rem;
-        }
     }
 }
