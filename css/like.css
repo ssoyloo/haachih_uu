@@ -28,7 +28,6 @@ main{
     }
 }
 article {
-    height: 30%;
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 1rem;
