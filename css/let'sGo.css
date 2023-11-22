@@ -302,6 +302,44 @@ h2 {
 }
  
 /* endees media queries ee bichij ehelyaa */
+@media only screen and (max-width: 1050px) {
+    /* Adjust the container for slightly larger screens but not full desktop size */
+    .container {
+        width: 90%;
+        margin: auto;
+        padding: 0 15px;
+    }
+
+    /* Fine-tune font sizes for comfortable reading */
+    body, h1, h2, h3, h4, h5, h6 {
+        font-size: larger;
+    }
+
+    /* Ensure images are still responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Consider a multi-column layout that makes use of the wider screen */
+    .column {
+        width: 33.33%;
+        float: left;
+        padding: 10px;
+    }
+
+    /* Increase padding and margins to make better use of space */
+    .padding, .margin {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    /* Adjust visibility of elements as necessary */
+    .hide-on-large, .show-on-large {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 780px) {
     .container {
         width: 95%;
@@ -353,5 +391,8 @@ h2 {
         display: none;
     }
 }
+
+
+
 
 
