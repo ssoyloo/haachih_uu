@@ -55,7 +55,6 @@ article {
             color: #0A5C76;
         }
         & .like{
-            float: right;
             border: none;
             background-color: white;
         }
