@@ -35,6 +35,7 @@ article {
         width: 25rem;
     }
 }
+
 .PlanImage, .PlaceImage{
     & meter{
         position: absolute;
@@ -56,12 +57,20 @@ article {
     }
     & .value{
         width:85%;
+
     }
     & a {
         float: right;
         margin-right: 5rem;
         text-decoration: none;
         color: #7d7d7d;
+    }
+    & .IntroName{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    & .intro{
+        margin-bottom: 1rem;
     }
     & ol{
         margin-top: 0.5rem;
