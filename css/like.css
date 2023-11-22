@@ -16,8 +16,9 @@ main{
 /*Нэр ба зураас*/
 .name{
     & h1{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding: 1rem;
+        color: #0A5C76;
     }
     & hr{
         height: 0.25rem;

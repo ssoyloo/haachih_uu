@@ -159,6 +159,7 @@ article {
         background-image: none;
         background-color: #fff;
         color: #0A5C76;
+        transition: 0.5s;
     }
 }
  
