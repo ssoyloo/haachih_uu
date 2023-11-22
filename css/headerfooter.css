@@ -7,25 +7,6 @@ header {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    & .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-      
-    & .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        /* min-width: 1rem; */
-        box-shadow: 0.1rem 0.2rem 0.5rem #555;
-        border-radius: var(--border-radius);
-        padding: 0.8rem 1rem;
-        z-index: 1;
-    }
-      
-    & .dropdown:hover .dropdown-content {
-        display: block;
-    }
   }
 
 nav {
