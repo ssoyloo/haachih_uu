@@ -302,38 +302,53 @@ h2 {
 }
  
 /* endees media queries ee bichij ehelyaa */
-
-@media only screen and (max-width: 480px) {
-    /* Ensure the container width is responsive */
+@media only screen and (max-width: 780px) {
     .container {
-        width: 100%;
+        width: 95%;
+        margin: auto;
         padding: 0 10px;
     }
-
-    /* Adjust font sizes for readability on small screens */
     body, h1, h2, h3, h4, h5, h6 {
-        font-size: smaller;
+        font-size: medium;
     }
-
-    /* Make images responsive to fit their containers */
     img {
         max-width: 100%;
         height: auto;
     }
+    .column {
+        width: 50%;
+        float: left;
+        padding: 5px;
+    }
+    .padding, .margin {
+        padding: 10px;
+        margin: 10px;
+    }
+    .hide-on-medium, .show-on-medium {
+        display: none;
+    }
+}
 
-    /* Stack columns vertically instead of horizontally */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    body, h1, h2, h3, h4, h5, h6 {
+        font-size: smaller;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
     .column {
         width: 100%;
         display: block;
     }
-
-    /* Adjust padding and margins to save space */
     .padding, .margin {
         padding: 5px;
         margin: 5px;
     }
-
-    /* Hide elements not critical for mobile users */
     .hide-on-mobile {
         display: none;
     }
