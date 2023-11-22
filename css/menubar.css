@@ -60,7 +60,9 @@ article {
         padding-top: 1.5rem;
         position: relative;
         color: #7d7d7d;
- 
+        & .like{
+            float: right;
+        }
         & .value{
             width:100%;
         }
@@ -157,6 +159,7 @@ article {
         background-image: none;
         background-color: #fff;
         color: #0A5C76;
+        transition: 0.5s;
     }
 }
  

@@ -16,8 +16,11 @@ main{
 /*Нэр ба зураас*/
 .name{
     & h1{
-        font-size: 1.2rem;
-        padding: 1rem;
+        font-size: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: #0A5C76;
+        text-align: center;
     }
     & hr{
         height: 0.25rem;
@@ -35,6 +38,7 @@ article {
         width: 25rem;
     }
 }
+
 .PlanImage, .PlaceImage{
     & meter{
         position: absolute;
@@ -56,12 +60,20 @@ article {
     }
     & .value{
         width:85%;
+
     }
     & a {
         float: right;
         margin-right: 5rem;
         text-decoration: none;
         color: #7d7d7d;
+    }
+    & .IntroName{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    & .intro{
+        margin-bottom: 1rem;
     }
     & ol{
         margin-top: 0.5rem;

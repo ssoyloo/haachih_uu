@@ -24,7 +24,7 @@ body {
 article {
     margin-bottom: 1rem;
     border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #555;
+    box-shadow: 0.1rem 0.2rem 0.5rem #8e8e8e;
     border-radius: var(--border-radius);
         & img {
         max-width: 100%;
@@ -53,6 +53,7 @@ article {
             background-image: none;
             background-color: #fff;
             color: #0A5C76;
+            transition: 0.5s;
         }
         & .like{
             border: none;
