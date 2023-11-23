@@ -29,7 +29,7 @@ main{
 }
 article {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 48% 50%;
     gap: 1rem;
     
     & img{
@@ -50,16 +50,15 @@ article {
 
 .PlanInfo, .PlaceInfo{
     padding: 1rem;
-    padding-top: 1.5rem;
-    position: relative;
     color: #7d7d7d;
     & .like{
         float: right;
         margin-right: 5%;
     }
     & .value{
-        width:85%;
-
+        width: 100%;
+        display: flexbox;
+        align-items: flex-end;
     }
     & a {
         float: right;
