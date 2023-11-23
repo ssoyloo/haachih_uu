@@ -31,7 +31,6 @@ article {
         border-radius: var(--border-radius);
         }
         & h3 {
-        font-size: 1.5rem;
         color: #333;
         margin-bottom: 10px;
         }
@@ -66,7 +65,8 @@ article {
             color: white;
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             padding: 0.4rem;
-            border-radius: 0.7rem;  
+            border-radius: 0.6rem;  
+            height: 2rem;
         }
 }
  
