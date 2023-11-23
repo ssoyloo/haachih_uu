@@ -33,7 +33,7 @@ article {
     gap: 1rem;
     
     & img{
-        height: 19.2rem;
+        height: 100%;
         width: 25rem;
     }
 }
