@@ -29,11 +29,11 @@ main{
 }
 article {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 48% 50%;
     gap: 1rem;
     
     & img{
-        height: 19.2rem;
+        height: 100%;
         width: 25rem;
     }
 }
@@ -50,16 +50,14 @@ article {
 
 .PlanInfo, .PlaceInfo{
     padding: 1rem;
-    padding-top: 1.5rem;
-    position: relative;
     color: #7d7d7d;
     & .like{
         float: right;
-        margin-right: 5%;
     }
     & .value{
-        width:85%;
-
+        width: 100%;
+        display: flexbox;
+        align-items: flex-end;
     }
     & a {
         float: right;
@@ -130,9 +128,9 @@ article {
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
     & .btn{
-        width: 15rem;
-        margin-left: 44rem;
-        margin-top: -1.2rem;
+        width: 15%;
+        margin-left: 36%;
+        margin-top: -1%;
         position: absolute;
         border: none;
         border-radius: var(--button-border-radius);

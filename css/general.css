@@ -24,7 +24,7 @@ body {
 article {
     margin-bottom: 1rem;
     border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #8e8e8e;
+    box-shadow: 0.1rem 0.2rem 0.5rem #b0b0b0;
     border-radius: var(--border-radius);
         & img {
         max-width: 100%;
@@ -42,7 +42,6 @@ article {
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin-left: 2%;
             padding: 0.7em 0.7em;
             font-size: 1em;
             border-radius: 1rem;
