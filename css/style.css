@@ -24,13 +24,14 @@ h3 {
     font-size: 20px;
 }
  
-p {
+p , address {
     color: #555;
     font-size: 14px;
+    margin-bottom: 0.4rem;
 }
- 
+
 .Lsearch {
-    padding-top: 30rem;
+    padding-top: 16rem;
     display: flex;
     text-align: center;
     overflow: hidden;
@@ -78,13 +79,11 @@ button {
     border-radius: var(--border-radius);
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
     padding: 0.7em 0.7em;
     font-size: 1em;
     font-family: pangolin;
 }
-
+/* top tuluvluguunuud */
 .plansContainer{
     margin-top: 18%;
     margin-bottom: 2rem;
@@ -96,7 +95,7 @@ button {
         & .subPlans {
             border: 1px solid #ccc;
             background-color: #fff;
-            max-width: 280px; /* Set a maximum width */
+            max-width: 85%; /* Set a maximum width */
             width: 100%; /* Fill available space */
             margin: 0 10px 20px; /* Add some margin for spacing */
             border-radius: 1rem;
@@ -109,8 +108,6 @@ button {
             }
         }
         & address {
-            color: #555;
-            font-size: 14px;
             margin-left: 1.5rem;
         }
         & p {
@@ -125,17 +122,22 @@ button {
             margin-top: 2%;
             border-radius: 0.5rem;
             margin: 0.8rem ;
-            margin-left: 4.5rem;
+            margin-left: 1.5rem;
+            width: 15rem;
         }
     }
 }
 }
- 
+
+/* sanal bolgochihoy */
 .placesToRecommend {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
+    & .title {
+        display: flex;
+        justify-content: space-between;
+    }
     & .BigRecommend {
         text-align: center;
         border: 1px solid #ccc;
@@ -146,41 +148,48 @@ button {
         height: 100%;
         border-radius: 50px;
         margin-right: 20px;
-     
         & img{
             height: 100%;
             width: 100%;
             border-radius: 5%;
         }
-        & button{
-            margin-bottom: 2%;
+ 
+        & .infomation {
+            position: absolute;
+        }
+        & .title {
+            margin: 2rem ;
         }
     }
      & .subRecommend{
         max-width: 500px;
         width: 100%;
-        border-radius: 50px;
-        overflow: hidden;
+        & h3 {
+           font-size: 22px; 
+        }
+        & .title {
+            margin: 0.5rem ;
+        }
     }
     & button{
-        margin-top: 2%;
+        margin-top:3%;
+            border-radius: 0.5rem;
+            margin-left: 0.5rem;
+            width: 15rem;
     }
-   
 }
  
 .RecommendPlacesToFlex img{
-    max-width: 150px;
-    width: 90%;
-    max-height: 150px;
-    margin: 5%;
-    border-radius: 5%;
+    height: 100%;
+    width: auto;
+    max-height: 13rem;
+    border-radius: 1rem;
 }
 .RecommendPlacesToFlex {
     margin-top: 30px;
     display: flex;
     max-width: 100%;
     border-radius: 20px;
-    border: 2px solid #ccc;
     max-height: 100%;
     & .image {
         flex: 1;
@@ -188,8 +197,7 @@ button {
     }
     & .details {
         flex: 1;
-        padding: 15px;
-        text-align: center;
+        margin: 1rem;
     }
 }
 .newPlaces {
@@ -200,7 +208,7 @@ button {
     & .subNewPlaces {
         display: flex;
         background-color: #fff;
-        border: 1px solid #ccc;
+
         max-width: 500px;
         border-radius: 20px;
         & .image {
