@@ -42,8 +42,14 @@ main{
             padding: 0.5rem;
         }
     }
-    & span{
-        padding: 0.3rem 1rem 0.3rem 1rem;
+    & p{
+        position: relative;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 1rem;
+        padding-right: 2rem;
+        margin-left: 90%;
+        margin-top: -5%;
         text-align: center;
         border-radius: 1rem;
         color: var(--main-bg-color);
@@ -135,4 +141,4 @@ article {
         color: #0A5C76;
     }
 }
- 
+Urana Orgil Rk-д бичих

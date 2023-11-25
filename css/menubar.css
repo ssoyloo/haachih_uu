@@ -30,6 +30,7 @@ main{
         display: grid;
         max-width: 50vw;
         gap: 1rem;
+        grid-template-columns: 50% 50%;
         grid-template-areas: 'PlanImage PlanInfo';
     }
 }
@@ -60,9 +61,7 @@ article {
         padding-top: 1.5rem;
         position: relative;
         color: #7d7d7d;
-        & .like{
-            float: right;
-        }
+ 
         & .value{
             width:100%;
         }
@@ -142,9 +141,9 @@ article {
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
     & .btn{
-        width: 15%;
-        margin-left: 36%;
-        margin-top: -1%;
+        width: 15rem;
+        margin-left: 44rem;
+        margin-top: -1.2rem;
         position: absolute;
         border: none;
         border-radius: var(--button-border-radius);
@@ -159,7 +158,6 @@ article {
         background-image: none;
         background-color: #fff;
         color: #0A5C76;
-        transition: 0.5s;
     }
 }
  
@@ -201,7 +199,19 @@ article {
                 font-size: 1.3rem;
             }
         }
-    }   
+    }
+   
+    /*Бүгдийг харуулах товчны байрлал дизайн*/
+    .Bugd{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+ 
+        & .btn{
+            width: 13rem;
+            margin-left: 36rem;
+        }
+    }
+   
 }
  
 @media (max-width: 1550px) {
@@ -241,6 +251,15 @@ article {
  
         }
     }
+   
+    /*Бүгдийг харуулах товчны байрлал дизайн*/
+    .Bugd{
+        & .btn{
+            margin-left: 30rem;
+            font-size: 0.8rem;
+        }
+    }
+   
 }
  
 @media (max-width: 1370px) {
@@ -283,6 +302,14 @@ article {
  
         }
     }
+   
+    /*Бүгдийг харуулах товчны байрлал дизайн*/
+    .Bugd{
+        & .btn{
+            margin-left: 28rem;
+        }
+    }
+   
 }
 @media (max-width: 1200px) {
     main{
@@ -322,7 +349,14 @@ article {
             }
  
         }
-    }   
+    }  
+    /*Бүгдийг харуулах товчны байрлал дизайн*/
+    .Bugd{
+        & .btn{
+            margin-left: 26rem;
+        }
+    }
+   
 }
  
 @media (max-width: 1080px) {
@@ -369,6 +403,13 @@ article {
  
         }
     }  
+    /*Бүгдийг харуулах товчны байрлал дизайн*/
+    .Bugd{
+        & .btn{
+            margin-left: 22rem;
+        }
+    }
+   
 }
 @media (max-width: 990px) {
     main{
@@ -379,6 +420,11 @@ article {
         gap: 0.7rem;
         & .ilerts{
             padding: 0.3rem;
+        }
+    }
+    .Bugd{
+        & .btn{
+            margin-left: 23rem;
         }
     }
 }
@@ -426,6 +472,11 @@ article {
  
         }
     }  
+    .Bugd{
+        & .btn{
+            margin-left: 13rem;
+        }
+    }
 }
 @media (max-width: 620px){
     main{
@@ -462,4 +513,9 @@ article {
             }
         }
     }  
+    .Bugd{
+        & .btn{
+            margin-left: 7rem;
+        }
+    }
 }

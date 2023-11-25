@@ -8,37 +8,13 @@
     <link rel="stylesheet" href="./css/headerfooter.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <title>Like</title>
+    <script src="./component/header-footer.js"></script>
+    <script src="./component/addplan.js"></script>
+    <link rel="icon" type="image/x-icon" href="./zurag/logo1.png" />
   </head>
   <body>
     <header>
-      <nav>
-        <a href="index.html">
-          <img class="logopng1" src="zurag/logo.png" alt="haachihuu_logo"/>
-        </a>
-        <ul>
-          <li><a href="./menubar.html">Орой яахын?</a></li>
-          <li><a href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
-          <li><a href="./menubar.html">Арван жил шдээ</a></li>
-          <li><a href="./menubar.html">Валинтин гэсээн</a></li>
-          <li><a href="./menubar.html">Хөдөө гарья</a></li>
-        </ul>
-        <section class="headerButton">
-          <a class="navSearch" href="./like.html">
-            <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-          </a>
-          <a class="navLogin" href="./login.html">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1.3em"
-              viewBox="0 0 448 512"
-            >
-              <path
-                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-              />
-            </svg>
-          </a>
-        </section>
-      </nav>
+      <all-header></all-header>
     </header>
 
     <main>
@@ -94,7 +70,7 @@
         <h2 class="ilerts">Газар:</h2>
         <article class="placeResult">
             <figure class="PlaceImage">
-                <img src="zurag/sura1.jpg" alt="sura">
+                <img src="./zurag/sura.jpg" alt="sura">
                 <meter value="3.5" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>3.5</span></meter>
             </figure>
             <figure class="PlaceInfo">
@@ -111,7 +87,7 @@
         </article>
         <article class="placeResult">
             <figure class="PlaceImage">
-                <img src="zurag/sura1.jpg" alt="sura">
+                <img src="./zurag/sura.jpg" alt="sura">
                 <meter value="3.5" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>3.5</span></meter>
             </figure>
             <figure class="PlaceInfo">
@@ -135,27 +111,7 @@
     </main>
 
     <footer>
-      <a href="#"><img src="zurag/logo.png" alt="bla2" /></a>
-      <ul>
-        <li><p>Бидэнтэй холбогдох</p></li>
-        <li>
-          <a href="#"><i class="fa-regular fa-envelope"></i> Gmail</a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
-        </li>
-      </ul>
-      <ul>
-        <li><p>Тусламж үйлчилгээ</p></li>
-        <li><a href="#">Асуулт хариулт</a></li>
-        <li><a href="#">Санал хүсэлт</a></li>
-        <li><a href="#">Үйлчилгээний нөхцөл</a></li>
-      </ul>
-      <hr />
-      <p>&copy; Haachih uu inc.2023. We love our customers.</p>
+      <all-footer></all-footer>
     </footer>
   </body>
 </html>

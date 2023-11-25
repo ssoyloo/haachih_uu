@@ -1,27 +1,30 @@
 class Place {
     constructor(data) {
         this.image = data.image;
-        this.title = data.title;
+        this.name = data.name;
         this.category = data.category;
         this.address = data.address;
         this.hours = data.hours;
         this.buttonText = data.buttonText;
+        
     }
 
     render() {
         return `<article class="subNewPlaces">
                   <div class="image">
-                      <img src="${this.image}" alt="${this.title}">
+                      <img src="${this.image}" alt="${this.name}">
                   </div>
                   <div class="details">
-                      <h3>${this.title}</h3>
+                      <h3>${this.name}</h3>
                       <p>${this.category}</p>
                       <address>${this.address}</address>
+                      <i class="far fa-clock"></i>
                       <time>${this.hours}</time><br>
-                      <button><span>${this.buttonText}</span></button>
+                      <a href="./place.html"><button><span>${this.buttonText}</span></button></a>
+                      
                   </div>
               </article>`;
-    }
+    } 
 }
 
 class PlaceRenderer {

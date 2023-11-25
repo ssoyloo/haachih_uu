@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Төлөвлөгөөг олон зүйлээр шүүлтүүрдэн хайж олох боломжтой"
+    />
+    <title>Let's go</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./zurag/logo1.png" />
+    <link rel="stylesheet" href="./css/let'sGo.css" />
+    <link rel="stylesheet" href="./css/headerfooter.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <script src="./component/header-footer.js"></script>
+    <script src="./component/search.js"></script>
+    <script src="./jsmodule/letsgo.js"></script>
+    <script src="./jsmodule/function.js"></script>
+  </head>
+  <body>
+    <header>
+      <all-header></all-header>
+    </header>
+    <main>
+      <div class="Lsearch">
+        <search-place></search-place>
+      </div>
+
+      <section class="undsen">
+        <aside>
+          <h2>Filter by:</h2>
+          <hr />
+          <h3>Таний төсөв</h3>
+          <label for="file"
+            >MNT <span>10,000 </span>- MNT <span>700,000+</span></label
+          >
+          <!-- <progress id="file" value="1" max="100"></progress> -->
+          <input
+            class="priceFilter"
+            type="range"
+            id="priceRange"
+            name="priceRange"
+            min="0"
+            max="500"
+            oninput="updatePriceValue(this.value)"
+          />
+
+          <hr />
+          <h3>Од</h3>
+          <ol>
+            <li>
+              <p><input type="checkbox" aria-label="Rating" />1-Одтой:</p>
+              <p>19</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="Rating" />2-Одтой:</p>
+              <p>8</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="Rating" />3-Одтой:</p>
+              <p>12</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="Rating" />4-Одтой:</p>
+              <p>26</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="Rating" />5-Одтой:</p>
+              <p>31</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="Rating" />Одгүй:</p>
+              <p>123</p>
+            </li>
+          </ol>
+
+          <hr />
+          <h3>Check box</h3>
+          <ol>
+            <li>
+              <p><input type="checkbox" aria-label="filter" />Үнэгүй wifi</p>
+              <p>20</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="filter" />Vip өрөө</p>
+              <p>2</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="filter" />Машины зогсоол</p>
+              <p>25</p>
+            </li>
+            <li>
+              <p>
+                <input type="checkbox" aria-label="filter" />Дуу тусгаарлагч
+              </p>
+              <p>3</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="filter" />Микрофон</p>
+              <p>18</p>
+            </li>
+            <li>
+              <p><input type="checkbox" aria-label="filter" />Спикер</p>
+              <p>18</p>
+            </li>
+          </ol>
+        </aside>
+
+        <section class="result">
+          <h2>Хайлтын илэрц: <span>3</span></h2>
+        </section>
+      </section>
+      <section class="bugd">
+        <button class="btn">Бүгдийг харах</button>
+        <hr class="suuliinZuraas" />
+      </section>
+    </main>
+    <footer>
+      <all-footer></all-footer>
+    </footer>
+  </body>
+</html>

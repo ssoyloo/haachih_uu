@@ -1,3 +1,4 @@
+
 class Plan {
     constructor(data) {
         this.title = data.title;
@@ -6,45 +7,65 @@ class Plan {
         this.tag = data.tag;
         this.location = data.location;
         this.buttonText = data.buttonText;
+        this.place1 = data.place1;
+        this.place2 = data.place2;
+        this.place3 = data.place3;
+        this.place4 = data.place4;
+        this.place5 = data.place5;
+        this.stars = data.stars; 
+        this.id = data.id;
     }
 
-    render() {
+    render() {        
         const article = document.createElement('article');
         article.classList.add('item');
         article.innerHTML = `
         <div class="PlanImage">
-                        <img src="zurag/ubnight.jpeg" alt="bla">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>4</span></meter>
+                        <img src="${this.image}" alt="${this.title}">
+                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>${this.stars}</span></meter>
                     </div>
                     <div class="PlanInfo">
-                        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
-                        <h3>Оройн шоудалт 1</h3>
+                        <button onclick="addtocart('${this.id}');" class="like"><i class="fa-solid fa-heart"></i></button>
+                        <h3>${this.title}</h3>
                         <p>
                             <i class="fa-solid fa-tag"></i>
-                            Орой яахын?
+                            ${this.tag}
                         </p>
  
                         <address>
                             <i class="fa-solid fa-location-dot"></i>
-                            СБД, 1-р хороо - УБ,  Сөүл гудамж
+                            ${this.location}
                         </address>
  
-                        <a href="11326020">
-                            <i class="fa-solid fa-phone"></i>
-                            11326020</a>
+                        
                         <p>
                             <i class="fa-regular fa-clock"></i>
                             <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
+
+                        
                         <ol>
-                            <li class="active">Хоолны газар</li>
-                            <li class="active">Хүрээлэн</li>
-                            <li class="active">Караоке</li>
-                            <li>Паб, лоунж</li>
-                            <li>Клаб</li>
+                                ${this.place1 ? `<li class="active">${this.place1}</li>` : '<li class="deactive"></li>'}
+                                ${this.place2 ? `<li class="active">${this.place2}</li>` : '<li class="deactive"></li>'}
+                                ${this.place3 ? `<li class="active">${this.place3}</li>` : '<li class="deactive"></li>'}
+                                ${this.place4 ? `<li class="active">${this.place4}</li>` : '<li class="deactive"></li>'}
+                                ${this.place5 ? `<li class="active">${this.place5}</li>` : '<li class="deactive"></li>'}
                         </ol>
-                        <button class="value"><span>100</span>K-c эхэлье</button>
+                        <a href="./plan.html?planName=${this.title}&tag=${this.tag}"" ><button class="value"><span>${this.buttonText}</span>-c эхэлье</button></a>
+                        
                     </div>
         `;
+        const likeButton = article.querySelector('.like');
+
+            likeButton.addEventListener('click', () => {
+                if (likeButton.style.color === 'red') {
+                    likeButton.style.color = 'black';
+                } else {
+                    likeButton.style.color = 'red';
+                }
+                
+            });
+
+
         return article;
     }
 }
@@ -54,18 +75,15 @@ class PlanRenderer {
         this._plansList = [];
         this._apiUrl = apiUrl;
         this._tagFilter = tagFilter;
+        let plansInFav;
     }
 
     fetchAndRenderPlaces(targetSelector) {
         fetch(this._apiUrl)
             .then(response => response.json())
             .then(data => {
-                if (data && Array.isArray(data.record)) {
                     this._plansList = this.filterPlacesByTag(data.record);
                     this.renderPlans(targetSelector);
-                } else {
-                    console.error('Error: Expected an array of records in the response');
-                }
             })
             .catch(error => {
                 console.error('Error fetching places data:', error);
@@ -76,13 +94,13 @@ class PlanRenderer {
         if (!this._tagFilter) {
             return placesData;
         }
-        return placesData.filter(place => place.tag.toLowerCase() === this._tagFilter.toLowerCase());
+        return placesData.filter(place => place.tag.toLowerCase() == this._tagFilter.toLowerCase());
     }
 
     renderPlans(targetSelector) {
         const targetElement = document.querySelector(targetSelector);
-        targetElement.innerHTML = ''; // Clear existing content
-        this._plansList.forEach(planData => { // Slice the first 6 elements
+        targetElement.innerHTML = ''; 
+        this._plansList.forEach(planData => {
             const plan = new Plan(planData);
             targetElement.appendChild(plan.render());
         });
@@ -95,5 +113,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const tagFilter = urlParams.get('tag');
     const planRenderer = new PlanRenderer(apiUrl, tagFilter);
-    planRenderer.fetchAndRenderPlaces('.plans'); // Make sure the '.plans' selector exists in your HTML
+    planRenderer.fetchAndRenderPlaces('.plans');
 });
