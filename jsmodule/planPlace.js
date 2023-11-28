@@ -23,7 +23,7 @@ class Place {
                             <p class="timen"><i class="fa-regular fa-clock"></i><time datetime="2023-02-08">${this.hours}</time></p>
                             <h4>Танилцуулга: </h4>
                             <p class="intro">Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа.</p>
-                            <button class="value"><span>${this.buttonText}</span></button>
+                            <a href='../place.html'><button class="value"><span>${this.buttonText}</span>К-с эхэлнэ</button></a>          
                         </div>
                     </article>
         `;
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const planNameFilter = urlParams.get('planName');
     console.log('Plan Name Filter:', planNameFilter); // Check the value in the console
 
-    const apiUrl = "https://api.jsonbin.io/v3/b/65449c0554105e766fcac45f";
+    const apiUrl = "https://api.jsonbin.io/v3/b/65642e7854105e766fd5f6fd";
     const placeRenderer = new PlaceRenderer(apiUrl, planNameFilter);
     placeRenderer.fetchAndRenderPlaces('.leftsection');
 });

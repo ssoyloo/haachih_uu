@@ -4,6 +4,7 @@ class searchPlace extends HTMLElement {
     }
     connectedCallback() {
         this.parentNode.innerHTML = `
+        <div class="Lsearch">
         <select aria-label="huniiToo" id="huniiToo">
                 <option value="">Хүний тоо</option>
                 <option value="2">2</option>
@@ -44,6 +45,7 @@ class searchPlace extends HTMLElement {
                 <option value="Enjoy">Хөгжилдөх газар</option>
             </select>
             <button type="button" onclick="getValueForFilter()">LET'S GO</button>
+            </div>
             `;
 }
 }

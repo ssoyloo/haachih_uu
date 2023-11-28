@@ -20,7 +20,7 @@ class Place {
                       <address>${this.address}</address>
                       <i class="far fa-clock"></i>
                       <time>${this.hours}</time><br>
-                      <a href="./place.html"><button><span>${this.buttonText}</span></button></a>
+                      <a href="./place.html"><button><span>${this.buttonText}</span>К -с эхэлнэ</button></a>
                       
                   </div>
               </article>`;
@@ -70,7 +70,7 @@ class PlaceRenderer {
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryFilter = urlParams.get('category');
-    const apiUrl = "https://api.jsonbin.io/v3/b/65449c0554105e766fcac45f";
+    const apiUrl = "https://api.jsonbin.io/v3/b/65642e6812a5d376599f7004";
     const placeRenderer = new PlaceRenderer(apiUrl, categoryFilter);
     placeRenderer.fetchAndRenderPlaces('.newPlaces');
 });

@@ -18,41 +18,25 @@ class Plan {
 
     render() {        
         const article = document.createElement('article');
-        article.classList.add('item');
+        article.classList.add('planResult');
         article.innerHTML = `
-        <div class="PlanImage">
-                        <img src="${this.image}" alt="${this.title}">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>${this.stars}</span></meter>
-                    </div>
-                    <div class="PlanInfo">
-                        <button onclick="addtocart('${this.id}');" class="like"><i class="fa-solid fa-heart"></i></button>
-                        <h3>${this.title}</h3>
-                        <p>
-                            <i class="fa-solid fa-tag"></i>
-                            ${this.tag}
-                        </p>
- 
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i>
-                            ${this.location}
-                        </address>
- 
-                        
-                        <p>
-                            <i class="fa-regular fa-clock"></i>
-                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-
-                        
-                        <ol>
-                                ${this.place1 ? `<li class="active">${this.place1}</li>` : '<li class="deactive"></li>'}
-                                ${this.place2 ? `<li class="active">${this.place2}</li>` : '<li class="deactive"></li>'}
-                                ${this.place3 ? `<li class="active">${this.place3}</li>` : '<li class="deactive"></li>'}
-                                ${this.place4 ? `<li class="active">${this.place4}</li>` : '<li class="deactive"></li>'}
-                                ${this.place5 ? `<li class="active">${this.place5}</li>` : '<li class="deactive"></li>'}
-                        </ol>
-                        <a href="./plan.html?planName=${this.title}&tag=${this.tag}"" ><button class="value"><span>${this.buttonText}</span>-c эхэлье</button></a>
-                        
-                    </div>
+        <figure class="PlanImage">
+        <img src="zurag/ubnight.jpeg" alt="bla" />
+        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>4</span></meter>
+    </figure>
+    <figure class="PlanInfo">
+        <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
+        <h3>Төлөвлөгөө 1</h3>
+        <p><i class="fa-solid fa-tag"></i> Орой яахын?</p>
+        <address><i class="fa-solid fa-location-dot"></i> СБД, 1-р хороо - УБ, Сөүл гудамж </address>
+        <p><i class="fa-regular fa-clock"></i> <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
+        <ol>
+            <li>Паб, лоунж</li>
+            <li>Клаб</li>
+            <li>Караоке</li>
+        </ol>
+        <button class="value"><span>100</span>K-c эхэлье</button>
+    </figure>
         `;
         const likeButton = article.querySelector('.like');
 
@@ -109,7 +93,7 @@ class PlanRenderer {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = "https://api.jsonbin.io/v3/b/65642e7854105e766fd5f6fd";
+    const apiUrl = "https://api.jsonbin.io/v3/b/6543a6a454105e766fca6fa1";
     const urlParams = new URLSearchParams(window.location.search);
     const tagFilter = urlParams.get('tag');
     const planRenderer = new PlanRenderer(apiUrl, tagFilter);

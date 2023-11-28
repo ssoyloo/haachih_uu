@@ -94,7 +94,7 @@ class Plan {
   }
   
   document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = "https://api.jsonbin.io/v3/b/65449c0554105e766fcac45f";
+    const apiUrl = "https://api.jsonbin.io/v3/b/65642e6812a5d376599f7004";
     const urlParams = new URLSearchParams(window.location.search);
     const tagFilter = urlParams.get('tag');
     const huniiTooFilter=urlParams.get('countPeople');

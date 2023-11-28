@@ -4,7 +4,7 @@
 /* Body styles */
 body {
     font-family: Pangolin;
-    background-image: url('../zurag/background.jpg');
+    /* background-image: url('../zurag/background.jpg'); */
     background-repeat: no-repeat;
     background-size: 100% 23%;  
 }
