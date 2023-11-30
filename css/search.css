@@ -1,114 +1,152 @@
-@import url('./general.css');
+@import url(./general.css);
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
  
- 
-/*Дэлгэцээ хуваах*/
-main{
-    margin-left: var(--margin-side);
-    margin-right: var(--margin-side);
-    display: grid;
-    grid-template-columns: 35% 35% 25%;
-    gap: 2rem;
-    & .name{
-        grid-column: 1 / span 3;
-        grid-row: 1;
-    }
-    & .place{
-        grid-column: 1 / span 2;
-        grid-row: 2;
- 
-    }
-    & .Bugd{
-        grid-column: 1 / span 3;
-        grid-row: 3;
-    }
-}
-.result{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 30% 65%;
- 
-}
-.filter{
-    & article{
-        padding: 2rem;
-    }
-    & h3{
-        padding-bottom: 1rem;
-    }
-    & ol{
-        list-style: none;
-        size: 1em;
-        & li{
-            padding: 0.5rem;
-        }
-    }
-    & span{
-        padding: 0.3rem 1rem 0.3rem 1rem;
-        text-align: center;
-        border-radius: 1rem;
-        color: var(--main-bg-color);
-        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
-    }
-}
-/*Нэр ба зураасаа гоё болгох*/
-.name{
+body {
+    font-family: pangolin;
+    margin: 0;
+    padding: 0;
    
-    & h1{
-        font-size: 1.2rem;
-        padding: 1rem;
+}
+ 
+main {
+    width: 85%;
+    margin: auto;
+}
+ 
+/*LetsGo buttontoi filterdej searchilj bga heseg maani*/
+.Lsearch {
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 30%;
+    border-radius: 20px;
+    width: 50%;
+    margin: 2rem;
+    margin-left: 25%;
+    & select, button{
+        flex: 1;
+        font-size: 14px;
+    }
+    & select{
+        width: 8rem;
+        padding: 0.5rem;
+        font-family: pangolin;
+        color:#666666 ;
+        background-color: #ececec;
+    }
+    & button {
+        background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+        color: #fff;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        font-family: pangolin;
+    }
+    & button:hover {
+        background-color: #0056b3;
+    }
+    & #huniiToo {
+        border-radius: 20px 0 0 20px;
+    }
+    & .option1, .option2, .option3 {
+        text-align: center;
+        font-size: 16px;
+        width: 10px;
+        height: 50px;
+        border-radius: var(--border-radius);
+    }
+  }
+    .priceFilter[type=range] {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Style to make the slider more appealing */
+    .priceFilter[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: rgb(10,92,118);
+        cursor: pointer;
+    }
+
+    .priceFilter[type=range]::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: rgb(10,92,118);
+        cursor: pointer;
+    }
+ 
+.undsen {
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: 25% 67%;
+    grid-column-gap: 8%;
+}
+ 
+aside {
+    border-radius: 1rem;
+    padding: 0.5rem 1em;
+    box-shadow: 0 1px 2px 0 gray;
+    height: 35rem;
+    padding: 2rem 2.5rem;
+    & li {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 13px;
+        justify-content: space-between;
+        gap: 2rem;
     }
     & hr{
-        height: 0.25rem;
-        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+        height: 0.1rem;
+        margin: 1rem 3rem;
+    }
+    & h2 {
+        text-align: center;
+    }
+    & h3 {
+        font-size: 17px;
+        margin-bottom: 0.7rem;
+    }
+    & label {
+        font-size: 13px;
+    }
+    & input {
+        margin-right: 1rem;
     }
 }
  
-article {
-    & img{
-        height:100% ;
+.result {
+    display: grid;
+    grid-template-columns: 35% 62%;
+    gap: 1%;
+    & .intro{
+       padding-bottom: 5%; 
+    }
+    & .PlaceImage{
+        height: 100%;
+        width: 95%;
     }
     & .PlaceInfo{
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        padding-top: 1rem;
-        position: relative;
-        color: #7d7d7d;
-        & .tag{
-            grid-column: 1 / span 3;
-        }
+        padding-top: 2rem;
         & h3{
-            color: black;
-            padding-bottom: 0.3rem;
+            font-size: 150%;
         }
-        & h4{
-            color: black;
-            font-size: 1.2rem;
-            grid-column: 1 / span 3;
-        }
-        & meter{
-            height: 2rem;
-            width: 3.7rem;
-        }
-        & .intro{
-            grid-column: 1 / span 3;
-          }
         & .value{
-            grid-column: 3 / span 1;
-            width:100%;
-            height: 70%;
+            width: 100%;
         }
         & a {
             text-decoration: none;
-            color: #7d7d7d;
-        }
+        } 
         & .like{
-            align-items: flex-end;
+
         }
     }
 }
- 
-/*Бүгдийг харуулах товчны байрлал дизайн*/
+
 .Bugd{
+    margin-top: 5rem;
     margin-bottom: 5rem;
  
     & hr{
@@ -116,12 +154,12 @@ article {
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
     & .btn{
-        width: 15rem;
-        margin-left: 44rem;
-        margin-top: -0.8rem;
+        width: 15%;
+        margin-left: 36%;
+        margin-top: -1%;
         position: absolute;
         border: none;
-        border-radius: var(--border-radius);
+        border-radius: var(--button-border-radius);
         background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
         color: white;
         cursor: pointer;
@@ -133,6 +171,14 @@ article {
         background-image: none;
         background-color: #fff;
         color: #0A5C76;
+        transition: 0.5s;
     }
 }
+ 
+address, time, p, ul , li, a, label{
+    color: #666666;
+}
+
+ 
+ 
  

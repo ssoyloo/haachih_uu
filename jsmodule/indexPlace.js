@@ -63,6 +63,7 @@ class PlaceRenderer {
         });
     }
 }
+replacechildren function ashigla genee 
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
