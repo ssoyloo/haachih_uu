@@ -11,28 +11,35 @@
     <script src="./jsmodule/menubar.js"></script>
     <script src="./jsmodule/function.js"></script>
     <script src="./component/header-footer.js"></script>
-    <script src="./component/addplan-component.js"></script>
+    <script type="module" src="./component/add-to-card.js"></script>
+    <script type="module" src="./component/favourite.js"></script>
     <link rel="icon" type="image/x-icon" href="./zurag/logo1.png" />
 </head>
+<style>
+</style>
+
 <body>
     <header>
         <all-header></all-header>
     </header>
  
     <main>
+        
         <section class="name">
             <h1>Орой яахын ?</h1>
             <hr>
+            <later-comp></later-comp>
         </section>
-   
+        
         <section class="plans">
-            <h2 class="ilerts">Төлөвлөгөөнүүд</h2>
- 
-                
+            <h2 class="ilerts">Төлөвлөгөөнүүд</h2>   
+            
         </section>
+        
+        
  
         <section class="Bugd">              
-            <button class="btn">Бүгдийг харах</button>
+            <button id="toggleButton" class="btn">Бүгдийг харах</button>
             <hr>
         </section>  
     </main>

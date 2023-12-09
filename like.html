@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <title>Like</title>
     <script src="./component/header-footer.js"></script>
-    <script src="./component/addplan.js"></script>
     <link rel="icon" type="image/x-icon" href="./zurag/logo1.png" />
     <script src="./jsmodule/favourite.js"></script>
+    <script type="module" src="./component/favourite.js"></script>
+    <script type="module" src="./component/add-to-card.js"></script>
   </head>
   <body>
     <header>
@@ -26,10 +27,9 @@
 
       <section class="plans">
         <h2 class="ilerts">Төлөвлөгөө:</h2>
-
-          <article class="planResult">
-            
-          </article>
+        <button onclick="removeAll()">removeAll</button>
+          <later-comp>
+          </later-comp>
       </section>
 
       <section class="place">
@@ -80,4 +80,12 @@
       <all-footer></all-footer>
     </footer>
   </body>
+  <script>
+    function removeAll(){
+            localStorage.removeItem('lists');
+            const comp = document.querySelector('later-comp');
+            comp.jsonToCard();
+            comp.render_watch();
+        }
+  </script>
 </html>

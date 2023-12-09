@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      name="description"
-      content="Улаанбаатар хот дотроо нэг өдрийг хөгжилтэй өнгөрүүлэх төлөвлөгөө болон газруудыг харуулна."
+    name="description"
+    content="Улаанбаатар хот дотроо нэг өдрийг хөгжилтэй өнгөрүүлэх төлөвлөгөө болон газруудыг харуулна."
     />
     <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
     ></script>
     <link rel="icon" type="image/x-icon" href="./zurag/logo1.png" />
     <title>Haachih uu?</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/headerfooter.css" />
@@ -23,26 +23,32 @@
     <script src="./component/header-footer.js"></script>
     <script src="./component/search.js"></script>
     <script src="./jsmodule/function.js"></script>
+    <script type="module" src="./component/add-to-card.js"></script>
+    <script type="module" src="./component/favourite.js"></script>
     <!-- <script src="./js2/indexPlan.js"></script> -->
     <!-- <script src="./jsmodule/indexPlace.js"></script> -->
-    <!-- <script src="./component/plan-list.js"></script> -->
+    <script type="module" src="./component/plan-list.js"></script>
+    <script type="module" src="./component/index-place-list.js"></script>
+    <script type="module" src="./component/index-rec-place-list.js"></script>
   </head>
   <body>
     <header>
       <all-header></all-header>
     </header>
     <main>
+      
       <search-place></search-place>
+      <section class="back-section">
+        
+      </section>
+      <later-comp></later-comp>
       <plan-list></plan-list>
-      <rec-place-list></rec-place-list>
-      <place-list></place-list>
+      <rec-place-list topPlace="4"></rec-place-list>
+      <place-list ></place-list>
     </main>
 
     <footer>
       <all-footer></all-footer>
     </footer>
-    <script src="./component/plan-list.js"></script>
-    <script src="./component/place-list.js"></script>
-    <script src="./component/rec-place-list.js"></script>
   </body>
 </html>

@@ -1,0 +1,19 @@
+{
+  "name": "haachih_uu",
+  "version": "1.0.0",
+  "description": "Найзуудаараа, ажлаараа, хамт олноороо гаръя гэхээр хаачихаа мэдэхгүй байна уу? Тэгвэл бид танд haachih_uu сайтыг санал болгож байна.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}

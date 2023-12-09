@@ -23,13 +23,13 @@ class searchPlace extends HTMLElement {
             </select>
             <select aria-label="oirhonGazar" id="oirhonGazar">
                 <option value="">Ойрхон газар</option>
-                <option value="HanUul">Хан-Уул дүүрэг</option>
-                <option value="SonginoHairhan">Сонгино хайрхан дүүрэг</option>
-                <option value="Baynzurh">Баянзүрх дүүрэг</option>
-                <option value="Chingeltei">Чингэлтэй дүүрэг</option>
-                <option value="Sukhbaatar">Сүхбаатар дүүрэг</option>
-                <option value="Nalaih">Налайх дүүрэг</option>
-                <option value="Bayngol">Баянгол дүүрэг</option>
+                <option value="Address 1">Address 1</option>
+                <option value="Address 2">Address 2</option>
+                <option value="Address 3">Address 3</option>
+                <option value="Address 4">Address 4</option>
+                <option value="Address 5">Address 5</option>
+                <option value="Address 6">Address 6</option>
+                <option value="Address 7">Address 7</option>
             </select>
             <select aria-label="type" id="type">
                 <option value="">Төрөл</option>

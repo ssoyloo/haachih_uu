@@ -20,51 +20,44 @@ class Plan {
         const article = document.createElement('article');
         article.classList.add('item');
         article.innerHTML = `
-        <div class="PlanImage">
-                        <img src="${this.image}" alt="${this.title}">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>${this.stars}</span></meter>
-                    </div>
-                    <div class="PlanInfo">
-                        <button onclick="addtocart('${this.id}');" class="like"><i class="fa-solid fa-heart"></i></button>
-                        <h3>${this.title}</h3>
-                        <p>
-                            <i class="fa-solid fa-tag"></i>
-                            ${this.tag}
-                        </p>
- 
-                        <address>
-                            <i class="fa-solid fa-location-dot"></i>
-                            ${this.location}
-                        </address>
- 
-                        
-                        <p>
-                            <i class="fa-regular fa-clock"></i>
-                            <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
-
-                        
-                        <ol>
-                                ${this.place1 ? `<li class="active">${this.place1}</li>` : '<li class="deactive"></li>'}
-                                ${this.place2 ? `<li class="active">${this.place2}</li>` : '<li class="deactive"></li>'}
-                                ${this.place3 ? `<li class="active">${this.place3}</li>` : '<li class="deactive"></li>'}
-                                ${this.place4 ? `<li class="active">${this.place4}</li>` : '<li class="deactive"></li>'}
-                                ${this.place5 ? `<li class="active">${this.place5}</li>` : '<li class="deactive"></li>'}
-                        </ol>
-                        <a href="./plan.html?planName=${this.title}&tag=${this.tag}"" ><button class="value"><span>${this.buttonText}</span>-c эхэлье</button></a>
-                        
-                    </div>
+            <div class="PlanImage">
+                <img src="${this.image}" alt="${this.title}">
+                <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>${this.stars}</span></meter>
+            </div>
+            <div class="PlanInfo">
+                <h3>${this.title}</h3>
+                <p>
+                    <i class="fa-solid fa-tag"></i>
+                    ${this.tag}
+                </p>
+                <add-to-card data-id="${this.id}" class="add-to-card">Add to Card</add-to-card>
+                <address>
+                    <i class="fa-solid fa-location-dot"></i>
+                    ${this.location}
+                </address>
+                <p>
+                    <i class="fa-regular fa-clock"></i>
+                    <time datetime="2023-02-08">7:30</time>-<time>21:00</time>
+                </p>
+                <ol>
+                    ${this.place1 ? `<li class="active">${this.place1}</li>` : '<li class="deactive"></li>'}
+                    ${this.place2 ? `<li class="active">${this.place2}</li>` : '<li class="deactive"></li>'}
+                    ${this.place3 ? `<li class="active">${this.place3}</li>` : '<li class="deactive"></li>'}
+                    ${this.place4 ? `<li class="active">${this.place4}</li>` : '<li class="deactive"></li>'}
+                    ${this.place5 ? `<li class="active">${this.place5}</li>` : '<li class="deactive"></li>'}
+                </ol>
+                <a href="./plan.html?planName=${this.title}&tag=${this.tag}" >
+                    <button class="value"><span>${this.buttonText}</span>-С эхэлнэ</button>
+                </a>
+            </div>
         `;
-        const likeButton = article.querySelector('.like');
 
-            likeButton.addEventListener('click', () => {
-                if (likeButton.style.color === 'red') {
-                    likeButton.style.color = 'black';
-                } else {
-                    likeButton.style.color = 'red';
-                }
-                
-            });
+        const addToCardButton = article.querySelector('.add-to-card');
 
+        addToCardButton.addEventListener('click', () => {
+            // Handle the add-to-card functionality here
+            console.log(`Adding plan with ID ${this.id} to the card`);
+        });
 
         return article;
     }
@@ -75,19 +68,27 @@ class PlanRenderer {
         this._plansList = [];
         this._apiUrl = apiUrl;
         this._tagFilter = tagFilter;
-        let plansInFav;
     }
 
-    fetchAndRenderPlaces(targetSelector) {
-        fetch(this._apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                    this._plansList = this.filterPlacesByTag(data.record);
-                    this.renderPlans(targetSelector);
-            })
-            .catch(error => {
-                console.error('Error fetching places data:', error);
-            });
+    async fetchAndRenderPlaces(targetSelector) {
+        try {
+            const response = await fetch(this._apiUrl);
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+    
+            const data = await response.json();
+    
+            if (data && Array.isArray(data.record)) {
+                this._plansList = this.filterPlacesByTag(data.record);
+                this.renderPlans(targetSelector);
+            } else {
+                console.error('Error: Expected an array of records in the response');
+            }
+        } catch (error) {
+            console.error('Error fetching or parsing data:', error.message);
+        }
     }
 
     filterPlacesByTag(placesData) {
@@ -105,7 +106,6 @@ class PlanRenderer {
             targetElement.appendChild(plan.render());
         });
     }
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {

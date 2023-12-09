@@ -1,11 +1,10 @@
-
 class PlanList extends HTMLElement {
 
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
     this.plans = [];
-  }
+  }     
 
   connectedCallback() {
     this.fetchPlans();
@@ -21,7 +20,7 @@ class PlanList extends HTMLElement {
     try {
       const response = await fetch(`https://api.jsonbin.io/v3/b/65642e7854105e766fd5f6fd`);
       
-      // Check if the response indicates an exhausted limit
+      
       if (response.status === 429) {
         console.warn('API Requests exhausted. Consider upgrading your plan or waiting for the limit to reset.');
         return;
@@ -36,8 +35,8 @@ class PlanList extends HTMLElement {
     }
   }
   sortPlansByStars() {
-    this.plans.sort((a, b) => b.stars - a.stars); // Sort plans in descending order based on stars
-    this.plans = this.plans.slice(0, 4); // Select the top 4 plans
+    this.plans.sort((a, b) => b.stars - a.stars); 
+    this.plans = this.plans.slice(0, 4); 
   }
   
   
@@ -47,17 +46,7 @@ class PlanList extends HTMLElement {
   
     this.shadowRoot.innerHTML = `
       <style>
-        .plans {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-          gap: 20px;
-        }
-        .subPlans {
-          border: 1px solid #ccc;
-          padding: 10px;
-          text-align: center;
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
  
 :root {
     --main-color: rgb(10,92,118);
@@ -128,16 +117,132 @@ article {
             padding: 0.4rem;
             border-radius: 0.7rem;  
         }
+}
+meter{
+    height: 1.8rem;
+}
+      main {
+        width: 85%;
+        margin: auto;
+    }
+     
+    h2 {
+        margin-bottom: 20px;
+        font-size: 22px;
+        color: #333;
+        text-align: center;
+    }
+     
+     article {
+        & img {
+        max-width: 100%;
+        border-radius: 1rem;
+        margin-bottom: 2%;
         }
-        meter{
-            height: 1.8rem;
+        & h3 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    }
+     
+    p {
+        color: #555;
+        font-size: 14px;
+    }
+     
+    .Lsearch {
+        padding-top: 30rem;
+        display: flex;
+        text-align: center;
+        overflow: hidden;
+        margin-left: 30%;
+        border-radius: 20px;
+        width: 50%;
+        margin: 2rem;
+        margin-left: 25%;
+        & select, button{
+            flex: 1;
+            font-size: 14px;
         }
+        & select{
+            width: 8rem;
+            padding: 0.5rem;
+            font-family: pangolin;
+            color:#666666 ;
+            background-color: #ffffff;
+            opacity: 60%;
+        }
+        
+        & button:hover {
+            background-color: #0056b3;
+        }
+        & #huniiToo {
+            border-radius: 20px 0 0 20px;
+        }
+        & .option1, .option2, .option3 {
+            text-align: center;
+            font-size: 16px;
+            width: 10px;
+            height: 50px;
+            border-radius: var(--border-radius);
+        }
+      }
+     
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+     
+    .plan-container{
+
+        & .plans {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            & .value{
+              & button {
+                border: none;
+                border-radius: var(--border-radius);
+                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                padding: 0.7em 0.7em;
+                font-size: 1em;
+            }
+            } 
+            & .PlanInfo {
+                height:29rem;
+                border: 1px solid #ccc;
+                padding: 15px;
+                background-color: #fff;
+                transition: box-shadow 0.3s;
+                max-width: 17rem; /* Set a maximum width */
+                width: 100%; /* Fill available space */
+                margin: 0 10px 20px; /* Add some margin for spacing */
+                border-radius: 1rem;
+            }
+            & .PlanInfo:hover{
+                background-color: #d0dce9;
+                transition: 0.4s;
+            }
+            & button{
+                margin-top: 2%;
+            }
+            & img{
+                border-radius: 20px;
+                height:14rem;
+            }
+        }
+    }
       </style>
       <section class='plan-container'>
         <h2>Топ л гээд байгаам чинь</h2>
         <div class="plans">
           ${plans.map(plan => `
-            <article class='subPlans'>
+            <article class='PlanInfo'>
               <img src="${plan.image}" alt="${plan.title}" />
               <div class="title">
                 <h3>${plan.title}</h3>
@@ -146,7 +251,7 @@ article {
                 </meter>
               </div>
               <p><i class="fa-solid fa-tag"></i>${plan.tag}</p>
-              <button @click="${() => this.handleAddToCart(plan)}">Add to Cart</button>
+              <add-to-card></add-to-card>
               <address>
                 <i class="fa-solid fa-location-dot"></i>${plan.location}
               </address>
@@ -159,11 +264,6 @@ article {
         </div>
       </section>
     `;
-  }
-  
-
-  handleAddToCart(plan) {
-    this.dispatchEvent(new CustomEvent('add-to-cart', { detail: { plan } }));
   }
 }
 

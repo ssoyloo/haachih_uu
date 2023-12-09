@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <title>Show/Hide Button Example</title>
+</head>
+<body>
+
+  <!-- Your plans go here -->
+  <div id="plansContainer">
+    <!-- Plan 1 -->
+    <div class="plan">Plan 1</div>
+    <!-- Plan 2 -->
+    <div class="plan">Plan 2</div>
+    <!-- Plan 3 -->
+    <div class="plan">Plan 3</div>
+    <!-- ... More plans ... -->
+    <div class="plan">Plan 3</div>
+    <div class="plan">Plan 3</div>
+    <div class="plan">Plan 3</div>
+    <div class="plan">Plan 3</div>
+  </div>
+
+  <!-- Button to show/hide all plans -->
+  <button id="toggleButton">Show All Plans</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the plans container and the button
+      var plansContainer = document.getElementById('plansContainer');
+      var toggleButton = document.getElementById('toggleButton');
+
+      // Hide the button initially
+      toggleButton.classList.add('hidden');
+
+      // Check the number of plans
+      var numberOfPlans = plansContainer.children.length;
+
+      // Show or hide the button based on the number of plans
+      if (numberOfPlans > 6) {
+        toggleButton.classList.remove('hidden');
+      } else {
+        toggleButton.classList.add('hidden');
+      }
+
+      // Add click event to the button
+      toggleButton.addEventListener('click', function () {
+        // Toggle visibility of all plans
+        for (var i = 0; i < plansContainer.children.length; i++) {
+          plansContainer.children[i].classList.toggle('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
