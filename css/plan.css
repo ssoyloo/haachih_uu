@@ -7,6 +7,13 @@ body{
   margin: 0;
   padding: 0;
 }
+.sayNothing{
+  & h2{
+    margin-top: -3rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+  }
+}
 main{
   margin-top: 1rem;
   margin-left: var(--margin-side);

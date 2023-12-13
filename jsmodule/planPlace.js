@@ -48,6 +48,11 @@ class PlaceRenderer {
                     console.log(data); 
                     if (data && Array.isArray(data.record)) {
                         this._placesList = this.filterPlacesByPlanName(data.record);
+                        if(this._placesList==0){
+                            const notify=document.querySelector('.sayNothing1');
+                            console.log(notify);
+                            notify.innerHTML = 'Here are no similar places in this plan.';
+                        }
                         this.renderPlaces(targetElement);
                     } else {
                         console.error('Error: Expected an array of records in the response');

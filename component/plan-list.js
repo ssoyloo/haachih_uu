@@ -46,6 +46,12 @@ class PlanList extends HTMLElement {
       this.plans = data.record || [];
       this.sortPlansByStars();
       this.filterPlansByTagAndName();
+      if(this.plans.length==0){
+        console.log('zero');
+        const notify=document.querySelector('.sayNothing');
+        console.log(notify);
+        notify.innerHTML = '<h2>Here are no similar plans.</h2>';
+      }
       this.render();
     } catch (error) {
       console.error('Error fetching plans:', error);
@@ -265,7 +271,7 @@ meter{
     }
       </style>
       <section class='plan-container'>
-        <h2>Топ л гээд байгаам чинь</h2>
+        
         <div class="item">
           ${plans.map(plan => `
             <article class='PlanInfo'>
