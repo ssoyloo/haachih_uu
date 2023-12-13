@@ -177,7 +177,7 @@ class PlaceList extends HTMLElement {
           <div class="details">
           
               <h3>${place.name}</h3> <!-- Change 'this.name' to 'place.name' -->
-              <add-to-card></add-to-card>
+              <add-place-card></add-place-card>
               <p>${place.category}</p> <!-- Change 'this.category' to 'place.category' -->
               <address>${place.address}</address> <!-- Change 'this.address' to 'place.address' -->
               <i class="far fa-clock"></i>

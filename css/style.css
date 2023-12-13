@@ -97,7 +97,8 @@ button:hover {
     background-color: #0056b3;
 }
  
-/* .plansContainer{
+ .plansContainer{
+    width: 10rem;
     & .plans {
         display: flex;
         justify-content: center;
@@ -107,8 +108,8 @@ button:hover {
             border: 1px solid #ccc;
             padding: 15px;
             background-color: #fff;
-            transition: box-shadow 0.3s; */
-            /* max-width: 300px;
+            transition: box-shadow 0.3s; 
+            max-width: 300px;
             width: 100%;
             margin: 0 10px 20px; 
             border-radius: 1rem;
@@ -124,7 +125,7 @@ button:hover {
             border-radius: 20px;
         }
     }
-} */
+} 
  
 .placesToRecommend {
     display: flex;

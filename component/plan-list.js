@@ -4,14 +4,30 @@ class PlanList extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.plans = [];
-  }     
-
-  connectedCallback() {
-    this.fetchPlans();
+  }    
+  
+  static get observedAttributes() {
+    return ['selected-tag'];
+  }
+  static get observedAttributes() {
+    return ['selected-planName'];
   }
 
+  connectedCallback() {
+    const urlParams = new URLSearchParams(window.location.search);
+    this._selectedTag = urlParams.get('tag'); // Corrected from 'selectedTag' to 'tag'
+    this._selectedName=urlParams.get('planName');
+    this.fetchPlans();
+  }
+  
+
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'selected-category' && oldValue !== newValue) {
+    if (name === 'selected-tag' && oldValue !== newValue) {
+      this._selectedTag = newValue;
+      this.fetchPlans();
+    }
+    if (name === 'selected-planName' && oldValue !== newValue) {
+      this._selectedName = newValue;
       this.fetchPlans();
     }
   }
@@ -29,6 +45,7 @@ class PlanList extends HTMLElement {
       const data = await response.json();
       this.plans = data.record || [];
       this.sortPlansByStars();
+      this.filterPlansByTagAndName();
       this.render();
     } catch (error) {
       console.error('Error fetching plans:', error);
@@ -38,6 +55,15 @@ class PlanList extends HTMLElement {
     this.plans.sort((a, b) => b.stars - a.stars); 
     this.plans = this.plans.slice(0, 4); 
   }
+  filterPlansByTagAndName() {
+    if (this._selectedTag || this._selectedName) {
+        this.plans = this.plans.filter(plan =>
+            (this._selectedTag ? plan.tag.toLowerCase() == this._selectedTag.toLowerCase() : true) &&
+            (this._selectedName ? plan.title.toLowerCase() !== this._selectedName.toLowerCase() : true)
+        );
+    }
+}
+
   
   
 
@@ -196,7 +222,7 @@ meter{
      
     .plan-container{
 
-        & .plans {
+        & .item {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -240,7 +266,7 @@ meter{
       </style>
       <section class='plan-container'>
         <h2>Топ л гээд байгаам чинь</h2>
-        <div class="plans">
+        <div class="item">
           ${plans.map(plan => `
             <article class='PlanInfo'>
               <img src="${plan.image}" alt="${plan.title}" />

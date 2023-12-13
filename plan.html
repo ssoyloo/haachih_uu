@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/plan.css">
     <script src="./component/header-footer.js"></script>
     <script src="jsmodule/planPlace.js"></script>
+    <script type="module" src="./component/plan-list.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -47,55 +48,29 @@
                         <p>Энэ төлөвлөгөөний дагуу болзоогоо зохион байгуулсан чинь найз охин минь намайг яасан мэдрэмжтэй юм. Баярлалаа хайраа гэж магтсийшдээ :)</p>
                 </section>
                 </aside>
+                <section class="rateAction>">
+                    <template id="star-rating-template">
+                        <form>
+                       <fieldset>
+                         <slot name="star-rating-legend"><legend>Rate your experience:</legend></slot>
+                          <rating>
+                            <input type="radio" name="rating" value="1" aria-label="1 star" required/>
+                            <input type="radio" name="rating" value="2" aria-label="2 stars"/>
+                            <input type="radio" name="rating" value="3" aria-label="3 stars"/>
+                            <input type="radio" name="rating" value="4" aria-label="4 stars"/>
+                            <input type="radio" name="rating" value="5" aria-label="5 stars"/>
+                          </rating>
+                         </fieldset>
+                          <button type="reset">Reset</button>
+                          <button type="submit">Submit</button>
+                     </form>
+                     </template>
+                </section>
             </aside>
  
         <section class="plans">
             <h2 class="similartitle">Ижил төстэй</h2>
-                <article class="subPlans">
-                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top1">
-                    
-                    <div class="subPlanWord">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>2.5</span></meter>
-                        <h3>Топ 1</h3>
-                        <p><i class="fa-solid fa-tag"></i> Орой яахын?</p>
-                        <address><i class="fa-solid fa-location-dot"></i> СБД, 1-р хороо - УБ,  Сөүл гудамж</address>    
-                        <a href="./menubar.html"><button class="value"><span>100</span>К-с эхэлье</button></a>
-                    </div>
-                </article>
-
-                <article class="subPlans">
-                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top1">
-                    
-                    <div class="subPlanWord">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>2.5</span></meter>
-                        <h3>Топ 1</h3>
-                        <p><i class="fa-solid fa-tag"></i> Орой яахын?</p>
-                        <address><i class="fa-solid fa-location-dot"></i> СБД, 1-р хороо - УБ,  Сөүл гудамж</address>    
-                        <a href="./menubar.html"><button class="value"><span>100</span>К-с эхэлье</button></a>
-                    </div>
-                </article>
-                <article class="subPlans">
-                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top1">
-                    
-                    <div class="subPlanWord">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>2.5</span></meter>
-                        <h3>Топ 1</h3>
-                        <p><i class="fa-solid fa-tag"></i> Орой яахын?</p>
-                        <address><i class="fa-solid fa-location-dot"></i> СБД, 1-р хороо - УБ,  Сөүл гудамж</address>    
-                        <a href="./menubar.html"><button class="value"><span>100</span>К-с эхэлье</button></a>
-                    </div>
-                </article>
-                <article class="subPlans">
-                    <img src="https://www.selenatravel.com/upload/media/default/0001/01/thumb_856_default_big.jpeg" alt="top1">
-                    
-                    <div class="subPlanWord">
-                        <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>2.5</span></meter>
-                        <h3>Топ 1</h3>
-                        <p><i class="fa-solid fa-tag"></i> Орой яахын?</p>
-                        <address><i class="fa-solid fa-location-dot"></i> СБД, 1-р хороо - УБ,  Сөүл гудамж</address>    
-                        <a href="./menubar.html"><button class="value"><span>100</span>К-с эхэлье</button></a>
-                    </div>
-                </article>
+                <plan-list></plan-list>
         </section>
     </section>
     </main>
@@ -104,4 +79,28 @@
     </footer>
  
 </body>
+<script>
+    const bla = document.querySelector('.plan-container'); 
+        const h2Element = bla.querySelector('h2');
+
+        if (h2Element) {
+        h2Element.remove();
+        }
+
+
+
+
+//let starRating = document.getElementById("star-rating-template").content;
+//document.body.appendChild(starRating);
+
+customElements.define('star-rating',
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const starRating = document.getElementById('star-rating-template').content;
+      const shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.appendChild(starRating.cloneNode(true));
+  }
+});
+</script>
 </html>

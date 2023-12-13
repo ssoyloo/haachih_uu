@@ -9,6 +9,7 @@ class Plan {
         this.stars=data.stars;
         this.countPeople=data.countPeople;
         this.introduction=data.introduction;
+        this.phone=data.phone;
     }
   
     render() {
@@ -18,25 +19,32 @@ class Plan {
           <img src="${this.image}" alt="${this.name}" />
           <div class="information">
               <h3>${this.name}</h3>
+              
               <meter value="0.85" min="0.0" max="5.0">
                   <i class="fa-solid fa-star"></i> <span>${this.stars}</span>
               </meter>
-              <button onclick='changeColor()' class="like"><i class="fa-regular fa-heart"></i></button>
+              
+              <add-place-card></add-place-card>
+              
               <div class="info">
                   <p class="tag">
                       <i class="fa-solid fa-tag"></i>
                       ${this.tag}
                   </p>
+                  
                   <address class="addr">
                       <i class="fa-solid fa-location-dot"></i>
                       ${this.address}
                   </address>
+                  
+                  
 
                   <a href="tel:${this.phone}" class="phone">
                       <i class="fa-solid fa-phone"></i>${this.phone}
                   </a>
                   <p>Хүний багтаамж: ${this.countPeople}</p>
               </div>
+              
               <p>${this.introduction}</p>
               <a href="./place.html" class="delgerengui">
                   <span>${this.buttonText}</span>K-c эхэлье
@@ -75,10 +83,9 @@ class PlanRenderer {
     }
 
     return placesData.filter(place => {
-        const huniiTooMatch = !this._huniiTooFilter || place.countPeople == this._huniiTooFilter;
+        const huniiTooMatch = !this._huniiTooFilter || place.countPeople >= parseInt(this._huniiTooFilter, 10);
         const oirhonGazarMatch = !this._oirhonGazarFilter || place.address.includes(this._oirhonGazarFilter);
         const typeMatch = !this._typeFilter || place.category.toLowerCase() === this._typeFilter.toLowerCase();
-
         return huniiTooMatch && oirhonGazarMatch && typeMatch;
     });
 }

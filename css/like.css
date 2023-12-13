@@ -11,6 +11,7 @@ main{
     .Bugd{
         grid-column: 1 / span 2;
     }
+    
 
 }
 /*Нэр ба зураас*/
@@ -25,6 +26,20 @@ main{
     & hr{
         height: 0.25rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    }
+    & button {
+        border: none;
+        border-radius: var(--border-radius);
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        padding: 0.7em 0.7em;
+        font-size: 1em;
+        text-align: center;
+        margin-left: 45%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 article {

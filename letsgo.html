@@ -20,6 +20,8 @@
     <script src="./component/search.js"></script>
     <script src="./jsmodule/letsgo.js"></script>
     <script src="./jsmodule/function.js"></script>
+    <script type="module" src="./component/add-place-to-card.js"></script>
+    <script type="module" src="./component/favouritePlace.js"></script>
   </head>
   <body>
     <header>
@@ -27,7 +29,7 @@
     </header>
     <main>
         <search-place></search-place>
-
+        
       <section class="undsen">
         <aside>
           <h2>Filter by:</h2>
@@ -107,9 +109,10 @@
             </li>
           </ol>
         </aside>
-
+        
         <section class="result">
           <h2>Хайлтын илэрц: <span>3</span></h2>
+          <favourite-place></favourite-place>
         </section>
       </section>
       <section class="bugd">

@@ -48,7 +48,8 @@ async fetchPlaces(topCount) {
             text-align: center;
             border: 1px solid #ccc;
             background-color: #fff;
-            width: 100%;
+            max-width:50%;
+            width: 90%;
             height: 50%;
             border-radius: 50px;
             margin-right: 20px;
@@ -74,14 +75,14 @@ async fetchPlaces(topCount) {
        
     }
      
-    .RecommendPlacesToFlex img{
+    .subNewPlaces img{
         max-width: 150px;
         width: 90%;
         max-height: 150px;
         margin: 5%;
         border-radius: 5%;
     }
-    .RecommendPlacesToFlex {
+    .subNewPlaces {
         margin-top: 30px;
         display: flex;
         max-width: 100%;
@@ -202,12 +203,14 @@ async fetchPlaces(topCount) {
         <article class="BigRecommend">
           ${places[0]
             ? `
+            
               <div class="image">
                 <img src="${places[0].image}" alt="${places[0].name}">
               </div>
               <div class="details">
+              
                 <h3>${places[0].name}</h3>
-                <add-to-card></add-to-card>
+                <add-place-card></add-place-card>
                 <p>${places[0].category}</p>
                 <address>${places[0].address}</address>
                 <i class="far fa-clock"></i>
@@ -224,13 +227,13 @@ async fetchPlaces(topCount) {
           ${places
             .map((place) => {
               return `
-                <article class="RecommendPlacesToFlex">
+                <article class="subNewPlaces" >
                   <div class="image">
                     <img src="${place.image}" alt="${place.name}">
                   </div>
                   <div class="details">
                     <h3>${place.name}</h3>
-                    <add-to-card></add-to-card>
+                    <add-place-card></add-place-card>
                     <p>${place.category}</p>
                     <address>${place.address}</address>
                     <i class="far fa-clock"></i>

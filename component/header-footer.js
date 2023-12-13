@@ -13,7 +13,7 @@ class header extends HTMLElement {
           <li><a href="./menubar.html?tag=Төрсөн өдөр">Төрсөн өдөр гэсэн үү дээ?</a></li>
           <li><a href="./menubar.html?tag=Арван жил">Арван жил шдээ</a></li>
           <li><a href="./menubar.html?tag=">Валинтин гэсээн</a></li>
-          <li><a href="./menubar.html?tag=Хөдөө">Хөдөө гарья</a></li>
+          <li><a href="./menubar.html?tag=Гол амралт">Хөдөө гарья</a></li>
         </ul>
         <section class="headerButton">
           <a class="navSearch" href="./like.html">

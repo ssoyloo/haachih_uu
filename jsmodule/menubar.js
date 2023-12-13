@@ -22,7 +22,7 @@ class Plan {
         article.innerHTML = `
             <div class="PlanImage">
                 <img src="${this.image}" alt="${this.title}">
-                <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>${this.stars}</span></meter>
+                <meter value="${this.stars}" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>${this.stars}</span></meter>
             </div>
             <div class="PlanInfo">
                 <h3>${this.title}</h3>
@@ -68,6 +68,7 @@ class PlanRenderer {
         this._plansList = [];
         this._apiUrl = apiUrl;
         this._tagFilter = tagFilter;
+        this.jsonLength=[];
     }
 
     async fetchAndRenderPlaces(targetSelector) {
@@ -82,6 +83,20 @@ class PlanRenderer {
     
             if (data && Array.isArray(data.record)) {
                 this._plansList = this.filterPlacesByTag(data.record);
+                console.log("JSON length:", this._plansList.length);
+                // if(this._plansList.length>6){
+                //     var button = document.createElement('button');
+
+                //     // Set button properties
+                //     button.innerHTML = 'See All'; // Button text
+                //     button.id = 'myButton'; // Button ID for reference
+
+                //     // Add a click event listener to the button
+                //     button.addEventListener('click', function() {
+                //     alert('Button clicked!');
+                //     });
+                //     document.getElementsByClassName('Bugd').appendChild(button);
+                // }
                 this.renderPlans(targetSelector);
             } else {
                 console.error('Error: Expected an array of records in the response');
@@ -101,10 +116,12 @@ class PlanRenderer {
     renderPlans(targetSelector) {
         const targetElement = document.querySelector(targetSelector);
         targetElement.innerHTML = ''; 
+        
         this._plansList.forEach(planData => {
             const plan = new Plan(planData);
             targetElement.appendChild(plan.render());
         });
+        
     }
 }
 
@@ -114,4 +131,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const tagFilter = urlParams.get('tag');
     const planRenderer = new PlanRenderer(apiUrl, tagFilter);
     planRenderer.fetchAndRenderPlaces('.plans');
+    
 });

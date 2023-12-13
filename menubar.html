@@ -26,9 +26,9 @@
     <main>
         
         <section class="name">
-            <h1>Орой яахын ?</h1>
+            <h1 id="pageTitle">Орой яахын ?</h1>
             <hr>
-            <later-comp></later-comp>
+            <favourite-plan></favourite-plan>
         </section>
         
         <section class="plans">
@@ -49,4 +49,23 @@
     </footer>
    
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            // Get the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const pageTitle = urlParams.get('tag');
+
+            // Update the h1 content based on the URL parameter
+            if (pageTitle) {
+                document.getElementById('pageTitle').textContent = pageTitle;
+            }
+            const bla = document.querySelector('.plan-container'); // Assuming 'plan-list' is a class, not a tag name
+            const h2Element = bla.querySelector('h2');
+
+            if (h2Element) {
+            h2Element.remove();
+            }
+        });
+    
+</script>
 </html>

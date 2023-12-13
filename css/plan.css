@@ -27,6 +27,36 @@ main{
     }
   }
 }
+.rateAction{
+  & rating {
+       display: inline-flex;
+     }
+    & input { 
+      appearance: none;
+      margin: 0;
+      box-shadow: none; 
+    }
+    & input::after {
+      content: '\2605';
+      font-size: 32px;
+    }
+    & rating:hover input:invalid::after,
+    rating:focus-within input:invalid::after {
+      color: #888;
+    }
+    & input:invalid::after,
+    rating:hover input:hover ~ input:invalid::after,
+    input:focus ~ input:invalid::after  {
+      color: #ddd;
+     }
+    & input:valid {
+      color: orange;
+    }
+    & input:checked ~ input:not(:checked)::after {
+      color: #ccc;
+      content: '\2606'; /* optional. hollow star */
+    }
+}
 .plans {
   grid-column: 1 / span 2;
   display: grid;

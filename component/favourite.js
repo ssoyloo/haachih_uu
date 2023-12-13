@@ -12,7 +12,7 @@ class FavouriteList {
         <meter value="0.85" min="0.0" max="5.0"><i class="fa-solid fa-star"></i> <span>${this.plans.stars}</span></meter>
     </div>
     <div class="PlanInfo">
-        
+        <h4>${this.plans.type}</h4>
         <h3>${this.plans.title}</h3>
         <p>
             <i class="fa-solid fa-tag"></i>
@@ -42,30 +42,29 @@ class FavouriteListComponent extends HTMLElement {
     constructor() {
         super();
         this.lists = [];
-        this.className = "watch";
         this.returnValue = "";
-        this.watchNum = 0;
+        this.favNum = 0;
         this.listJSON = []; 
     }
 
 
     addToCart(myProduct) {
+        
         // console.log(myProduct);
         // this.lists.push(myProduct);
         // const product = new FavouriteList(myProduct);
         // this.listJSON.push(myProduct);
         // localStorage.setItem("lists", JSON.stringify(this.listJSON));
-        // this.watchNum++;
+        // this.favNum++;
         // this.returnValue += product.render_later_list(); 
         const isDuplicate = this.listJSON.some((existingProduct) => existingProduct.title === myProduct.title);
         if (!isDuplicate) {
             this.lists.push(myProduct);
-            const product = new FavouriteList(myProduct);
             this.listJSON.push(myProduct);
             localStorage.setItem("lists", JSON.stringify(this.listJSON));
-            this.watchNum++;
-            this.returnValue += product.render_later_list();
-            window.alert("successfully added");
+            this.favNum++;
+            console.log(this.lists)
+            window.alert("successfully added. Total item "+this.favNum);
         } else {
             window.alert(`You alread added "${myProduct.title}" in your favourite.`);
         }
@@ -73,52 +72,34 @@ class FavouriteListComponent extends HTMLElement {
 
     
     jsonToCard() {
+        const plansContainer = document.querySelector(".plans");
         if (JSON.parse(localStorage.getItem("lists"))) {
             const lists = JSON.parse(localStorage.getItem("lists"));
             for (const data of lists) {
                 const product = new FavouriteList(data);
                 this.returnValue += product.render_later_list();
             }
-            if (document.querySelector(".plans")) {
-                document    
-                    .querySelector(".plans")
-                    .insertAdjacentHTML("beforeend", this.returnValue);
-            }
-        } else {
-            if (document.querySelector(".plans")) {
-                document.querySelector(
-                    ".plans"
-                ).innerHTML = `<style>
-                .checkout-button{display:none;} 
-                button {
-                    border: none;
-                    border-radius: var(--border-radius);
-                    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-                    color: white;
-                    cursor: pointer;
-                    transition: background-color 0.3s;
-                    padding: 0.7em 0.7em;
-                    font-size: 1em;
-                }
-                </style>
-                <h2 class="baihgui">Here is no plans.</h2>`;
+            document.querySelector(".plans").insertAdjacentHTML("beforeend", this.returnValue);
+            
+        }else{
+            if (plansContainer) {
+                plansContainer.innerHTML = `<h2 class="baihgui">Here is no plans.</h2>`;
             }
         }
     }
     connectedCallback() {
         if (localStorage.getItem("lists")) {
             this.listJSON = JSON.parse(localStorage.getItem("lists"));
-            this.watchNum = this.listJSON.length;
+            this.favNum = this.listJSON.length;
         } else {
             this.listJSON = [];
         }
         this.jsonToCard();
     }
-    disconnectedCallback() { }
 
     get productCount() {
-        return this.watchNum;
+        return this.favNum;
     }
 }
 
-window.customElements.define("later-comp", FavouriteListComponent);
+window.customElements.define("favourite-plan", FavouriteListComponent);
