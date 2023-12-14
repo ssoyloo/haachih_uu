@@ -123,14 +123,14 @@ class RecommendPlaceList extends HTMLElement {
       meter{
           height: 1.8rem;
       }
-
+ 
       h2 {
         margin: 3rem;
           font-size: 24px;
           color: #333;
           text-align: center;
       }
-      
+     
       .placesToRecommend {
         display: flex;
         justify-content: space-between;
@@ -172,7 +172,7 @@ class RecommendPlaceList extends HTMLElement {
         & button{
             margin-top: 2%;
         }
-    
+   
         & .RecommendPlacesToFlex img{
             height: 100%;
             width: auto;
@@ -200,7 +200,7 @@ class RecommendPlaceList extends HTMLElement {
             }
         }
     }
-
+ 
         </style>
         <h2>Санал болгочихъё</h2>
   <section class='placesToRecommend'>

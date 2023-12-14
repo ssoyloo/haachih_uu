@@ -26,7 +26,7 @@ class searchPlace extends HTMLElement {
           }
            & a {
               font-size: 16px;                  
-              
+             
               color: white;
           }
           & a:hover{
