@@ -14,7 +14,7 @@ class RecommendPlaceList extends HTMLElement {
 
 async fetchPlaces(topCount) {
     try {
-        const response = await fetch(`https://api.jsonbin.io/v3/b/65642e6812a5d376599f7004`);
+        const response = await fetch(`https://api.jsonbin.io/v3/b/657d8988dc7465401883f827`);
         if (response.status === 429) {
             console.warn('API Requests exhausted. Consider upgrading your plan or waiting for the limit to reset.');
             return;

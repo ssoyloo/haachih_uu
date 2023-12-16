@@ -2,8 +2,8 @@
 main{
     margin-left: var(--margin-side);
     margin-right: var(--margin-side);
-    display: grid;
-    grid-auto-columns: 49% 49%;
+    /* display: grid;
+    grid-auto-columns: 49% 49%; */
     gap: 2rem;
     .name{
         grid-column: 1 / span 2;
@@ -13,6 +13,24 @@ main{
     }
     
 
+}
+.plans{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto auto;
+ 
+    & .ilerts{
+        grid-column: 1 / span 2;
+        margin-bottom: 0;
+        padding: 1rem;
+    }
+    & .item{
+        display: grid;
+        max-width: 50vw;
+        gap: 1rem;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'PlanImage PlanInfo';
+    }
 }
 /*Нэр ба зураас*/
 .name{

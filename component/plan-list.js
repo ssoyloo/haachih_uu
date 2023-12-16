@@ -1,11 +1,30 @@
 class PlanList extends HTMLElement {
-
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.plans = [];
-  }    
+    constructor() {
+      super();
+      this.attachShadow({ mode: 'open' });
+      this.plans = [];
+      this._selectedTag = null;
+      this._selectedName = null;
+      this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
   
+    connectedCallback() {
+      const urlParams = new URLSearchParams(window.location.search);
+      this._selectedTag = urlParams.get('tag');
+      this._selectedName = urlParams.get('planName');
+  
+      const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      darkModeMediaQuery.addListener(() => {
+        this.darkMode = darkModeMediaQuery.matches;
+        this.render();
+      });
+  
+      this.fetchPlans();
+    }   
+  // toggleDarkMode() {
+  //   this.darkMode = !this.darkMode;
+  //   this.render();
+  // }
   static get observedAttributes() {
     return ['selected-tag'];
   }
@@ -13,12 +32,7 @@ class PlanList extends HTMLElement {
     return ['selected-planName'];
   }
 
-  connectedCallback() {
-    const urlParams = new URLSearchParams(window.location.search);
-    this._selectedTag = urlParams.get('tag'); // Corrected from 'selectedTag' to 'tag'
-    this._selectedName=urlParams.get('planName');
-    this.fetchPlans();
-  }
+ 
   
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -34,7 +48,7 @@ class PlanList extends HTMLElement {
 
   async fetchPlans() {
     try {
-      const response = await fetch(`https://api.jsonbin.io/v3/b/65642e7854105e766fd5f6fd`);
+      const response = await fetch(`https://api.jsonbin.io/v3/b/657d8960dc7465401883f81a`);
       
       
       if (response.status === 429) {
@@ -45,7 +59,8 @@ class PlanList extends HTMLElement {
       const data = await response.json();
       this.plans = data.record || [];
       this.sortPlansByStars();
-      this.filterPlansByTagAndName();
+      this.filterPlansByName();
+      this.filterByTagName();
       if(this.plans.length==0){
         console.log('zero');
         const notify=document.querySelector('.sayNothing');
@@ -61,13 +76,19 @@ class PlanList extends HTMLElement {
     this.plans.sort((a, b) => b.stars - a.stars); 
     this.plans = this.plans.slice(0, 4); 
   }
-  filterPlansByTagAndName() {
-    if (this._selectedTag || this._selectedName) {
+  filterPlansByName() {
+    if (this._selectedName) {
         this.plans = this.plans.filter(plan =>
-            (this._selectedTag ? plan.tag.toLowerCase() == this._selectedTag.toLowerCase() : true) &&
             (this._selectedName ? plan.title.toLowerCase() !== this._selectedName.toLowerCase() : true)
         );
     }
+}
+filterByTagName(){
+  if(this._selectedTag){
+    this.plans = this.plans.filter(plan =>
+      (this._selectedTag ? plan.tag.toLowerCase() == this._selectedTag.toLowerCase() : true) 
+  );
+  }
 }
 
   
@@ -75,6 +96,7 @@ class PlanList extends HTMLElement {
 
   render() {
     const plans = this.plans || [];
+    const themeClass = this.darkMode ? 'dark-theme' : 'light-theme';
   
     this.shadowRoot.innerHTML = `
       <style>
@@ -88,19 +110,19 @@ class PlanList extends HTMLElement {
     --button-border-radius: 1rem;
     --margin-side: 8rem;
 }
+:host(.dark-theme) {
+  background-color: #333;
+  color: #fff;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
  
-/* Body styles */
 body {
     font-family: Pangolin;
 }
-/*Дэлгэцний гол хэсэг*/
- 
-/*Blogcard доторх зураг, товч, одны дизайн*/
 article {
     margin-bottom: 1rem;
     border: none;
@@ -255,6 +277,8 @@ meter{
                 width: 100%; /* Fill available space */
                 margin: 0 10px 20px; /* Add some margin for spacing */
                 border-radius: 1rem;
+                background-color: ${this.darkMode ? '#555' : '#fff'};
+                color: ${this.darkMode ? '#fff' : '#333'};
             }
             & .PlanInfo:hover{
                 background-color: #d0dce9;

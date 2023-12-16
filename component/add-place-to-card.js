@@ -2,7 +2,7 @@ class AddToCard extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-            <button>Add to Favourite</button>
+            <button>Add to Fav</button>
         `;
     }
 
