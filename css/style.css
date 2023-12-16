@@ -76,6 +76,7 @@
    
   .allDot {
       margin-top: -2rem;
+      margin-left: -7rem;
       & .dot {
           text-align: center;
           position: relative;
