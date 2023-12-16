@@ -103,14 +103,17 @@ filterByTagName(){
       <link rel="stylesheet" href="../css/style.css">
       @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
  
-:root {
-    --main-color: rgb(10,92,118);
-    --secondary-color: rgb(41,151,185);
-    --main-bg-color: #f8f8f8;
-    --border-radius: 1rem;
-    --button-border-radius: 1rem;
-    --margin-side: 8rem;
-}
+      :root {
+        --main-color: rgb(215, 97, 219);
+        --secondary-color: rgb(112, 217, 249);
+        --hover-color:rgb(98, 0, 123);
+        --bg-light-color: #fff;
+        --bg-dark-color:rgb(16, 12, 28);
+        --border-radius: 1rem;
+        --button-border-radius: 1rem;
+        --margin-side: 8rem;
+        --box-shadow: 0.1rem 0.2rem 0.3rem #bdbdbd;
+    }
 :host(.dark-theme) {
   background-color: #333;
   color: #fff;

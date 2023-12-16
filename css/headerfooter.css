@@ -7,7 +7,7 @@ header {
     flex-direction: row;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     & .dropdown {
         position: relative;
         display: inline-block;
