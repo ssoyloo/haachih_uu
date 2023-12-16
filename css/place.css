@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
+ 
 body {
     font-family: pangolin;
     margin: 0;
     padding: 0;
-    
+   
 }
-
+ 
 main {
     width: 85%;
     margin: auto;
 }
-
+ 
 .placeName  {
     margin-top: 1rem;
     & h2{
@@ -20,13 +20,13 @@ main {
         font-weight: bold
     }
 }
-
+ 
 #hr1 {
     height: 0.1rem;
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     margin: 0.4rem 0;
 }
-
+ 
 .idk {
     display: flex;
     flex-direction: row;
@@ -37,7 +37,7 @@ main {
         text-decoration: none;
     }
 }
-
+ 
 .undsen_heseg {
     margin-top: 2%;
     display: grid;
@@ -46,13 +46,8 @@ main {
     grid-column-gap: 5%;
     grid-row-gap: 5%;
 }
-
-h3 {
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-#bigPic {
+ 
+.slideshow-container {
     object-fit: cover;
     overflow: hidden;
     border-radius: 1rem;
@@ -61,8 +56,91 @@ h3 {
         width: 100%;
         height: 100%;
     }
+    & .favorite {
+        position: absolute;
+        background: none;
+        border: none;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        color: #fff;
+    }
 }
-
+ 
+/* Slideshow container */
+.slideshow-container {
+    /* max-height: 39rem; */
+    width: 100%;
+    position: relative;
+    margin: auto;
+    & .mySlides {
+        & img {
+            height: auto;
+            object-fit: cover;
+        }
+    }
+ 
+    /* Next & previous buttons */
+    & .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        width: auto;
+        padding: 0.8rem;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+ 
+    /* Position the "next button" to the right */
+    &  .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+ 
+    /* On hover, add a black background color with a little bit see-through */
+    & .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }    
+      /* Fading animation */
+    & .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+}
+ 
+ 
+.allDot {
+    margin-top: -2rem;
+    & .dot {
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    & .active, .dot:hover {
+        background-color: #717171;
+    }
+}
+ 
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+ 
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+ 
 aside {
     border-radius: 1rem;
     padding: 0.5rem 1em;
@@ -92,47 +170,53 @@ aside {
     }
    
 }
-
-
-
+ 
+ 
+ 
 #taniltsuulga {
     & p {
-        margin-left: 30px;
+        margin:  0 1rem 1rem 2rem ;
         font-weight: bold;
     }
+    & h3 {
+        margin: 1rem;
+    }
 }
-
-.ratingOnComment {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    height: 10rem;
-    overflow: auto;
-}
-
-
-
+ 
 .ratingplace {
     width: 100%;
-    padding: 1.5rem;
-    list-style-type: none; 
+    padding: 1rem;
+    list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 1rem ;
+    gap: 0.5rem ;
     & ul {
-        margin-top: 0.1rem;
         width: 80%;
-        display: flex; 
+        display: flex;
         flex-direction: column;
         & li {
             list-style: none ;
             display: flex;
-           padding: 0.5rem;
+           padding: 0.2rem;
+           font-size: 14px;
         }
     }
+    & p {
+        font-size: 14px;
+    }
     & progress {
+        margin-top: 0.2rem;
         width: 60%;
-        height: 60%;
+        height: 40%;
+    }
+    & .ratingOnComment {
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+        overflow: auto;
+    }
+    & .scrollable-content{
+        /* overflow: auto; */
     }
     & .ratingTitle{
         width: 100%;
@@ -143,49 +227,71 @@ aside {
     & #stars{
         color: #0A5C76;
     }
+    & #submit-button {
+        background: none;
+        border: none;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+    & input {
+        width: 80%;
+        font-family: pangolin;
+    }
+ 
 }
-
+ 
 progress {
     position: relative;
     left: 1rem;
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     border-radius: 25px;
 }
-
+ 
 progress::-webkit-progress-value {
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     border-radius: 25px;
 }
-
+ 
 progress::-webkit-progress-bar {
-    background-color: lightgray; 
+    background-color: lightgray;
     border-radius: 25px;
 }
-
+ 
 h2, h3, h4 {
     color: #333333;
 }
-
+ 
 address, time, p, ul , a{
     color: #666666;
 }
-
+ 
 .similarPlans {
     display: flex;
-    gap: 20px;
+    gap: 1em;
     flex-direction: column;
-  
     margin-top: 5%;
     & h2 {
         font-weight: bold;
     }
+    & .miniTitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     & section {
         width: 100%;
-        display: flex; 
-        gap: 2.5rem; 
+        display: flex;
+        gap: 2.5rem;
     }
     & meter{
-        width: 1.5rem;
+        text-align: center;
+        position:relative;
+        appearance: none;
+        color: white;
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        padding: 0.4rem;
+        border-radius: 0.7rem;  
     }
 }
 .content{
@@ -193,26 +299,26 @@ address, time, p, ul , a{
     display: flex;
    
 }
-
-
+ 
+ 
 article {
     background-color: #f9f9f9;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 gray;
-    overflow: hidden; 
+    overflow: hidden;
     & img {
         width: 50%;
-        height: 100%; 
-        object-fit: cover; 
+        height: 100%;
+        object-fit: cover;
     }
 }
-
-.negyum{
+ 
+.sectionOfInformation{
     width: 100%;
     display: flex;
     padding: 0.2rem 0.5rem;
     flex-direction: column;
-  
+ 
     & section{
         display: flex;
         gap: 1rem;
@@ -237,10 +343,141 @@ article {
     align-items: center;
     justify-content: space-between;
 }
-
-
-/* h3, p, address, time, a {
-    margin: 0;
-} */
-
-
+ 
+/* Responsive style */
+@media (max-width: 768px) {
+    /* Adjust main container */
+    main {
+        width: 95%;
+        margin: 10px auto;
+    }
+ 
+    /* Stack sections vertically in .undsen_heseg */
+    .undsen_heseg {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+ 
+ 
+    /* Adjust text and image sizes */
+    h2, h3, h4 {
+        font-size: smaller;
+    }
+ 
+    /* Adjust layout for .similarPlans */
+    .similarPlans section {
+        flex-direction: column;
+    }
+ 
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+ 
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: row; /* Align side-by-side */
+        max-width: 100%;
+        margin: 10px 0;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        background: #ffffff; /* White background */
+        align-items: center; /* Center items vertically */
+        overflow: hidden; /* Ensures the content fits within the borders */
+    }
+ 
+    .content img {
+        flex-shrink: 0; /* Prevent the image from shrinking */
+        width: 100px; /* Fixed width for the image */
+        height: auto; /* Adjust height automatically */
+        border-radius: 8px 0 0 8px; /* Rounded left corners for the image */
+        object-fit: cover; /* Cover the content box */
+    }
+ 
+    .sectionOfInformation {
+        padding: 10px;
+        display: flex;
+        flex-direction: column; /* Stack information vertically */
+        align-items: flex-start; /* Align to the start of the flex container */
+        justify-content: center; /* Center content vertically */
+        flex-grow: 1; /* Allow the section to fill the space */
+    }
+ 
+    .sectionOfInformation h3 {
+        margin: 0;
+        font-size: 1.1em; /* Adjust the font size */
+    }
+ 
+    .sectionOfInformation p,
+    .sectionOfInformation button {
+        font-size: 0.9em; /* Smaller font size for paragraph and button */
+    }
+ 
+    .sectionOfInformation button {
+        background-color: #0A5C76; /* Button background color */
+        color: white; /* Button text color */
+        padding: 5px 15px; /* Padding inside the button */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners for button */
+        margin-top: 5px; /* Margin top for spacing */
+    }
+}
+ 
+@media (max-width: 768px) {
+    .content img {
+        height: 100%;
+        width: 50%;
+        object-fit: cover;
+    }
+ 
+    .content meter {
+        /* Adjust the meter height and style */
+        height: auto; /* Example height, you can adjust as needed */
+        width: auto; /* Full width of its container */
+        -webkit-appearance: none; /* Removes default styling on Webkit browsers */
+        appearance: none; /* Removes default styling */
+    }
+ 
+    .content meter::-webkit-progress-bar {
+        background-color: #f3f3f3; /* Light grey background for the meter */
+        border-radius: 3px;
+    }
+ 
+    .content meter::-webkit-progress-value {
+        background-color: #0A5C76; /* Use your desired progress color */
+        border-radius: 3px;
+    }
+ 
+    .content meter::-moz-progress-bar {
+        /* For Firefox */
+        background-color: #0A5C76; /* Use your desired progress color */
+        border-radius: 3px;
+    }
+ 
+ 
+    /* Adjust font size for the rest of the content */
+    .content h3, .content p, .content .fa {
+        font-size: 0.8em; /* Smaller font size for text and icons */
+    }
+        .content .button-container {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100%; /* Full height of the container */
+        }
+   
+        .content button {
+            /* Additional button styling */
+            padding: 8px 16px; /* Padding inside the button */
+            font-size: 0.8em; /* Font size of button text */
+            /* Center the button text */
+            text-align: center;
+            /* Optional: if the button is a block element, set margins to auto */
+            margin: auto;
+   
+        }
+    }
+   

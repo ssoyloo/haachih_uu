@@ -39,69 +39,7 @@ async fetchPlaces(topCount) {
 
     this.shadowRoot.innerHTML = `
       <style>
-      .placesToRecommend {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        overflow: hidden;
-        & .BigRecommend {
-            text-align: center;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            max-width:50%;
-            width: 90%;
-            height: 50%;
-            border-radius: 50px;
-            margin-right: 20px;
-         
-            & img{
-                height: 100%;
-                width: 100%;
-                border-radius: 5%;
-            }
-            & button{
-                margin-bottom: 2%;
-            }
-        }
-         & .subRecommend{
-            max-width: 500px;
-            width: 100%;
-            border-radius: 50px;
-            overflow: hidden;
-        }
-        & button{
-            margin-top: 2%;
-        }
-       
-    }
-     
-    .subNewPlaces img{
-        max-width: 150px;
-        width: 90%;
-        max-height: 150px;
-        margin: 5%;
-        border-radius: 5%;
-    }
-    .subNewPlaces {
-        margin-top: 30px;
-        display: flex;
-        max-width: 100%;
-        border-radius: 20px;
-        border: 2px solid #ccc;
-        max-height: 100%;
-        & .image {
-            flex: 1;
-            max-width: 300px;
-        }
-        & .details {
-            flex: 1;
-            padding: 15px;
-            text-align: center;
-            & meter {
-                height: 2rem;
-            }
-        }
-    }
+      
     
     @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
     
@@ -116,90 +54,148 @@ async fetchPlaces(topCount) {
       --margin-side: 8rem;
       --box-shadow: 0.1rem 0.2rem 0.3rem #bdbdbd;
   }
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Body styles */
-    body {
-      font-family: Pangolin;
-    }
-    /*Дэлгэцний гол хэсэг*/
-    
-    /*Blogcard доторх зураг, товч, одны дизайн*/
-    article {
-      margin-bottom: 1rem;
-      border: none;
-      box-shadow: 0.1rem 0.2rem 0.5rem #555;
-      border-radius: var(--border-radius);
-          & img {
-          max-width: 100%;
-          border-radius: var(--border-radius);
-          }
-          & h3 {
-          font-size: 1.5rem;
-          color: #333;
-          margin-bottom: 10px;
-          }
-          & .value {
-              font-family: Pangolin;
-              border: none;
-              border-radius: var(--border-radius);
-              background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-              color: white;
-              cursor: pointer;
-              transition: background-color 0.3s;
-              margin-left: 2%;
-              padding: 0.7em 0.7em;
-              font-size: 1em;
-              border-radius: 1rem;
-          }
-          & .value:hover{
-              box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #0A5C76, 0px 0px 0px 10px white, 0px 0px 0px 10.5px #2FA2C6;
-              background-image: none;
-              background-color: #fff;
-              color: #0A5C76;
-              transition: 0.2s;
-          }
-          & .like{
-              float: right;
-              border: none;
-              background-color: white;
-          }
-          & meter{
-              text-align: center;
-              position:relative;
-              appearance: none;
-              color: white;
-              background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-              padding: 0.4rem;
-              border-radius: 0.7rem;  
-          }
-    }
-    meter{
-      height: 1.8rem;
-    }
-    main {
-    width: 85%;
-    margin: auto;
-    }
-    
-    h2 {
-    margin-bottom: 1.5rem;
-    font-size: 22px;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* Body styles */
+body {
+    font-family: Pangolin;
+}
+/*Дэлгэцний гол хэсэг*/
+ 
+/*Blogcard доторх зураг, товч, одны дизайн*/
+article {
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: 0.1rem 0.2rem 0.5rem #555;
+    border-radius: var(--border-radius);
+        & img {
+        max-width: 100%;
+        border-radius: var(--border-radius);
+        }
+        & h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+        }
+        & .value {
+            font-family: Pangolin;
+            border: none;
+            border-radius: var(--border-radius);
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 2%;
+            padding: 0.7em 0.7em;
+            font-size: 1em;
+            border-radius: 1rem;
+        }
+        & .value:hover{
+            box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #0A5C76, 0px 0px 0px 10px white, 0px 0px 0px 10.5px #2FA2C6;
+            background-image: none;
+            background-color: #fff;
+            color: #0A5C76;
+            transition: 0.2s;
+        }
+        & .like{
+            float: right;
+            border: none;
+            background-color: white;
+        }
+        & meter{
+            text-align: center;
+            position:relative;
+            appearance: none;
+            color: white;
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+            padding: 0.4rem;
+            border-radius: 0.7rem;  
+        }
+}
+meter{
+    height: 1.8rem;
+}
+
+h2 {
+  margin: 3rem;
+    font-size: 24px;
     color: #333;
     text-align: center;
-    }
-    h3 {
-    font-size: 20px;
-    }
-    
-    p {
-    color: #555;
-    font-size: 14px;
-    }
+}
+
+.placesToRecommend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  & .BigRecommend {
+      text-align: center;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      max-width: 60%;
+      width: 100%;
+      max-height: 10%;
+      height: 100%;
+      border-radius: 50px;
+      margin-right: 20px;
+   
+      & img{
+          height: 100%;
+          width: 100%;
+          border-radius: 5%;
+      }
+      & button{
+          margin-bottom: 2%;
+      }
+      & .image{
+        position: relative;
+      }
+      & .details {
+          position: absolute;
+          margin-top: -13rem;
+      }
+  }
+   & .subRecommend{
+      max-width: 500px;
+      width: 100%;
+      border-radius: 50px;
+      overflow: hidden;
+  }
+  & button{
+      margin-top: 2%;
+  }
+
+  & .subNewPlaces img{
+      height: 100%;
+      width: auto;
+      max-height: 13rem;
+      border-radius: 1rem;
+  }
+  & .subNewPlaces {
+      margin-top: 30px;
+      display: flex;
+      max-width: 100%;
+      border-radius: 20px;
+      max-height: 100%;
+      & .image {
+          flex: 1;
+          max-width: 300px;
+      }
+      & .details {
+          flex: 1;
+          margin: 1rem;
+          & .value{
+            margin-top: 2%;
+            text-align: center;
+            border-radius: 0.5rem;
+        }
+      }
+  }
+}
       </style>
       <h2>Санал болгочихъё</h2>
       <section class='placesToRecommend'>

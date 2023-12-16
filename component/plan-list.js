@@ -100,6 +100,10 @@ filterByTagName(){
   
     this.shadowRoot.innerHTML = `
       <style>
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
       <link rel="stylesheet" href="../css/style.css">
       @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
  
@@ -119,184 +123,152 @@ filterByTagName(){
   color: #fff;
 }
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- 
+
+/* Body styles */
 body {
-    font-family: Pangolin;
+  font-family: Pangolin;
 }
+/*Дэлгэцний гол хэсэг*/
+
+/*Blogcard доторх зураг, товч, одны дизайн*/
 article {
-    margin-bottom: 1rem;
-    border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #555;
-    border-radius: var(--border-radius);
-        & img {
-        max-width: 100%;
-        border-radius: var(--border-radius);
-        }
-        & h3 {
-        font-size: 1.5rem;
-        color: #333;
-        margin-bottom: 10px;
-        }
-        & .value {
-            font-family: Pangolin;
-            border: none;
-            border-radius: var(--border-radius);
-            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-left: 2%;
-            padding: 0.7em 0.7em;
-            font-size: 1em;
-            border-radius: 1rem;
-        }
-        & .value:hover{
-            box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #0A5C76, 0px 0px 0px 10px white, 0px 0px 0px 10.5px #2FA2C6;
-            background-image: none;
-            background-color: #fff;
-            color: #0A5C76;
-            transition: 0.2s;
-        }
-        & .like{
-            float: right;
-            border: none;
-            background-color: white;
-        }
-        & meter{
-            text-align: center;
-            position:relative;
-            appearance: none;
-            color: white;
-            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            padding: 0.4rem;
-            border-radius: 0.7rem;  
-        }
+  margin-bottom: 1rem;
+  border: none;
+  box-shadow: 0.1rem 0.2rem 0.5rem #555;
+  border-radius: var(--border-radius);
+      & img {
+      max-width: 100%;
+      border-radius: var(--border-radius);
+      }
+      & h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+      }
+      & .value {
+          font-family: Pangolin;
+          border: none;
+          border-radius: var(--border-radius);
+          background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+          color: white;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          margin-left: 2%;
+          padding: 0.7em 0.7em;
+          font-size: 1em;
+          border-radius: 1rem;
+      }
+      & .value:hover{
+          box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #0A5C76, 0px 0px 0px 10px white, 0px 0px 0px 10.5px #2FA2C6;
+          background-image: none;
+          background-color: #fff;
+          color: #0A5C76;
+          transition: 0.2s;
+      }
+      & .like{
+          float: right;
+          border: none;
+          background-color: white;
+      }
+      & meter{
+          text-align: center;
+          position:relative;
+          appearance: none;
+          color: white;
+          background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+          padding: 0.4rem;
+          border-radius: 0.7rem;  
+      }
 }
 meter{
-    height: 1.8rem;
+  height: 1.8rem;
 }
-      main {
-        width: 85%;
-        margin: auto;
-    }
-     
-    h2 {
-        margin-bottom: 20px;
-        font-size: 22px;
-        color: #333;
-        text-align: center;
-    }
-     
-     article {
-        & img {
-        max-width: 100%;
-        border-radius: 1rem;
-        margin-bottom: 2%;
-        }
-        & h3 {
-        font-size: 20px;
-        color: #333;
-        margin-bottom: 10px;
-    }
-    }
-     
-    p {
-        color: #555;
-        font-size: 14px;
-    }
-     
-    .Lsearch {
-        padding-top: 30rem;
-        display: flex;
-        text-align: center;
-        overflow: hidden;
-        margin-left: 30%;
-        border-radius: 20px;
-        width: 50%;
-        margin: 2rem;
-        margin-left: 25%;
-        & select, button{
-            flex: 1;
-            font-size: 14px;
-        }
-        & select{
-            width: 8rem;
-            padding: 0.5rem;
-            font-family: pangolin;
-            color:#666666 ;
-            background-color: #ffffff;
-            opacity: 60%;
-        }
-        
-        & button:hover {
-            background-color: #0056b3;
-        }
-        & #huniiToo {
-            border-radius: 20px 0 0 20px;
-        }
-        & .option1, .option2, .option3 {
-            text-align: center;
-            font-size: 16px;
-            width: 10px;
-            height: 50px;
-            border-radius: var(--border-radius);
-        }
+    main {
+      width: 85%;
+      margin: auto;
+  }
+   
+  h2 {
+    margin: 3rem;
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+  }
+   
+   article {
+      & img {
+      max-width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 2%;
       }
-     
-    
-    button:hover {
-        background-color: #0056b3;
-    }
-     
-    .plan-container{
+      & h3 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 10px;
+  }
+  }
+   
+  p {
+      color: #555;
+      font-size: 14px;
+  }
 
-        & .item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            & .value{
-              & button {
-                border: none;
-                border-radius: var(--border-radius);
-                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-                color: white;
-                cursor: pointer;
-                transition: background-color 0.3s;
-                padding: 0.7em 0.7em;
-                font-size: 1em;
-            }
-            } 
-            & .PlanInfo {
-                height:29rem;
-                border: 1px solid #ccc;
-                padding: 15px;
-                background-color: #fff;
-                transition: box-shadow 0.3s;
-                max-width: 17rem; /* Set a maximum width */
-                width: 100%; /* Fill available space */
-                margin: 0 10px 20px; /* Add some margin for spacing */
-                border-radius: 1rem;
-                background-color: ${this.darkMode ? '#555' : '#fff'};
+  button:hover {
+      background-color: #0056b3;
+  }
+   
+  .plan-container{
+   
+    & .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        & .PlanInfo {
+            border: 1px solid #ccc;
+            background-color: #fff;
+            max-width: 280px; /* Set a maximum width */
+            width: 100%; /* Fill available space */
+            margin: 0 10px 20px; /* Add some margin for spacing */
+            border-radius: 1rem;
+            background-color: ${this.darkMode ? '#555' : '#fff'};
                 color: ${this.darkMode ? '#fff' : '#333'};
-            }
-            & .PlanInfo:hover{
-                background-color: #d0dce9;
-                transition: 0.4s;
-            }
-            & button{
-                margin-top: 2%;
-            }
-            & img{
-                border-radius: 20px;
-                height:14rem;
+        & .title {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem;
+            & meter {
+                margin-top: -0.3rem;
+                height: 100%;
             }
         }
+        & address {
+            color: #555;
+            font-size: 14px;
+            margin-left: 1.5rem;
+        }
+        & p {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        & .PlanInfo:hover{
+            background-color: #d0dce9;
+            transition: 0.4s;
+        }
+        & button{
+            margin-top: 2%;
+            border-radius: 0.5rem;
+            margin: 0.8rem ;
+            margin-left: 4.7rem;
+        }
     }
+}
+}
+         
       </style>
       <section class='plan-container'>
         

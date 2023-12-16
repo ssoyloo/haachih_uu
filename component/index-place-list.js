@@ -43,64 +43,50 @@ class PlaceList extends HTMLElement {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 10px;
+        gap: 1rem;
         & .subNewPlaces {
             display: flex;
             background-color: #fff;
             border: 1px solid #ccc;
-            max-width: 500px;
+            max-width: 100%;
             border-radius: 20px;
+            max-height: 100%;
             & .image {
-                padding: 15px;
                 flex: 1;
-                border-radius: 20px;/* Set a maximum width for the image side */
-                & img{
-                    height: 90%;
-                    width: 90%;
-                    border-radius: 20px;
-                }
+                max-width: 300px;
             }
             & .details {
                 flex: 1;
-                padding: 15px;
-                text-align: center;
-                & button{
-                    margin-top: 2%;
-                }
+                margin: 1rem;
+       
+                & .value{
+                  margin-top: 2%;
+                  text-align: center;
+                  margin-left: 24%;
+                  border-radius: 0.5rem;
+              }
                
             }
         }
+        & .subNewPlaces img{
+            height: 100%;
+            width: auto;
+            border-radius: 1rem;
+        }
     }
-    main {
-      width: 85%;
-      margin: auto;
-  }
-   
-  h2 {
-      margin-bottom: 1.5rem;
-      font-size: 22px;
-      color: #333;
-      text-align: center;
-  }
-  h3 {
-      font-size: 20px;
-  }
-   
-  p {
-      color: #555;
-      font-size: 14px;
-  }
-   
     @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
  
     :root {
-        --main-color: rgb(10,92,118);
-        --secondary-color: rgb(41,151,185);
-        --main-bg-color: #f8f8f8;
-        --border-radius: 1rem;
-        --button-border-radius: 1rem;
-        --margin-side: 8rem;
-    }
+      --main-color: rgb(215, 97, 219);
+      --secondary-color: rgb(112, 217, 249);
+      --hover-color:rgb(98, 0, 123);
+      --bg-light-color: #fff;
+      --bg-dark-color:rgb(16, 12, 28);
+      --border-radius: 1rem;
+      --button-border-radius: 1rem;
+      --margin-side: 8rem;
+      --box-shadow: 0.1rem 0.2rem 0.3rem #bdbdbd;
+  }
     *{
         margin: 0;
         padding: 0;
@@ -162,6 +148,12 @@ class PlaceList extends HTMLElement {
                 padding: 0.4rem;
                 border-radius: 0.7rem;  
             }
+    }
+    h2 {
+      margin: 3rem;
+        font-size: 24px;
+        color: #333;
+        text-align: center;
     }
     meter{
         height: 1.8rem;
