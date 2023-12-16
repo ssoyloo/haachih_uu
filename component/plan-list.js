@@ -100,6 +100,7 @@ filterByTagName(){
   
     this.shadowRoot.innerHTML = `
       <style>
+      <link rel="stylesheet" href="../css/style.css">
       @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
  
 :root {
