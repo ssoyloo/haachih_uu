@@ -1,0 +1,14 @@
+@import url(./general.css);
+
+body{
+    height: 100vh;
+    display: grid;
+    font-family: Roboto;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+  
+*{
+    box-sizing: border-box;
+}
+  
