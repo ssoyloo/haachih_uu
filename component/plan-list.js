@@ -119,7 +119,7 @@ filterByTagName(){
         --box-shadow: 0.1rem 0.2rem 0.3rem #bdbdbd;
     }
 :host(.dark-theme) {
-  background-color: #333;
+  background-color: var(--bg-dark-color);
   color: #fff;
 }
 *{
@@ -222,7 +222,7 @@ meter{
   }
    
   .plan-container{
-   
+     background-color: ${this.darkMode ? 'var(--bg-dark-color)' : '#fff'};
     & .item {
         display: flex;
         justify-content: center;
@@ -235,8 +235,6 @@ meter{
             width: 100%; /* Fill available space */
             margin: 0 10px 20px; /* Add some margin for spacing */
             border-radius: 1rem;
-            background-color: ${this.darkMode ? '#555' : '#fff'};
-                color: ${this.darkMode ? '#fff' : '#333'};
         & .title {
             display: flex;
             justify-content: space-between;
