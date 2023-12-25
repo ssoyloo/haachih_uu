@@ -1,7 +1,7 @@
 class PlanList extends HTMLElement {
     constructor() {
       super();
-      this.attachShadow({ mode: 'open' });
+      this.myRoot= this.attachShadow({ mode: 'closed' });
       this.plans = [];
       this._selectedTag = null;
       this._selectedName = null;
@@ -18,7 +18,7 @@ class PlanList extends HTMLElement {
         this.darkMode = darkModeMediaQuery.matches;
         this.render();
       });
-  
+      // this.myRoot.innerHTML = ''; 
       this.fetchPlans();
     }   
   // toggleDarkMode() {
@@ -97,8 +97,8 @@ filterByTagName(){
   render() {
     const plans = this.plans || [];
     const themeClass = this.darkMode ? 'dark-theme' : 'light-theme';
-  
-    this.shadowRoot.innerHTML = `
+    
+    this.myRoot.innerHTML = `
       <style>
       <link
     rel="stylesheet"

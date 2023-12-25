@@ -3,7 +3,7 @@ class AddToCard extends HTMLElement {
         super();
         this.innerHTML = `
 
-            <button>Add to card</button>
+            <button>Add to Fav</button>
         `;
     }
 
