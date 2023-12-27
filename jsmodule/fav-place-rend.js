@@ -4,7 +4,7 @@ export class FavouritePlaceList {
         
     }
 
-    render_later_list() {
+    render_place_list() {
         return `
         <article class="placeResult">
             <figure class="PlaceImage">

@@ -4,7 +4,6 @@ body {
     font-family: pangolin;
     margin: 0;
     padding: 0;
-   
 }
  
 main {
@@ -23,7 +22,7 @@ main {
  
 #hr1 {
     height: 0.1rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     margin: 0.4rem 0;
 }
  
@@ -131,11 +130,6 @@ main {
     }
 }
  
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
- 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
@@ -174,8 +168,10 @@ aside {
  
  
 #taniltsuulga {
+    background-color: #fff;
+    text-align: justify;
     & p {
-        margin:  0 1rem 1rem 2rem ;
+        margin:  0 2rem 1rem 2rem ;
         font-weight: bold;
     }
     & h3 {
@@ -183,46 +179,57 @@ aside {
     }
 }
  
-.ratingplace {
+.ratingPlace {
     width: 100%;
     padding: 1rem;
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 0.5rem ;
-    & ul {
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        & li {
-            list-style: none ;
-            display: flex;
-           padding: 0.2rem;
-           font-size: 14px;
-        }
-    }
+    background-color: #fff;
     & p {
         font-size: 14px;
     }
-    & progress {
-        margin-top: 0.2rem;
-        width: 60%;
-        height: 40%;
+    & .ratingTitle{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem 0 1rem;
+        width: 100%;
+    }
+    & .myRating {
+        display: inline-block;
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: center;
+        & input[type="radio"] {
+            display: none;
+          }
+        & label {
+            display: inline-block;
+            padding: 5px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ccc;
+          }
+    }
+   
+    &  .myRating label:hover,
+    .myRatinglabel:hover ~ label {
+      color: #ffca08;
+    }
+   
+    & .myRating input[type="radio"]:checked ~ label {
+      color: #ffca08;
     }
     & .ratingOnComment {
         display: flex;
         flex-direction: column;
-        height: 10rem;
+        height: 13rem;
         overflow: auto;
-    }
-    & .scrollable-content{
-        /* overflow: auto; */
-    }
-    & .ratingTitle{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding: 0 0 0 1rem;
+        & h4 {
+            font-size: 18px;
+        }
     }
     & #stars{
         color: #0A5C76;
@@ -244,12 +251,12 @@ aside {
 progress {
     position: relative;
     left: 1rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     border-radius: 25px;
 }
  
 progress::-webkit-progress-value {
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    background-image: linear-gradient(to bottom right,var(--main-color), var(--secondary-color));
     border-radius: 25px;
 }
  
@@ -266,45 +273,44 @@ address, time, p, ul , a{
     color: #666666;
 }
  
-.similarPlans {
+.newPlaces {
+    margin: 2rem 0;
     display: flex;
-    gap: 1em;
-    flex-direction: column;
-    margin-top: 5%;
-    & h2 {
-        font-weight: bold;
-    }
-    & .miniTitle{
+    justify-content: space-between;
+    gap: 2rem;
+ 
+    & .subNewPlaces {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        & .details {
+            flex: 1;
+            margin: 1rem;
+            & .value{
+              margin-top: 2%;
+              text-align: center;
+              border-radius: 0.5rem;
+          }
+           
+        }
     }
-    & section {
-        width: 100%;
-        display: flex;
-        gap: 2.5rem;
+    & .subNewPlaces img {
+        height: 100%;
+        width: 50%;
+        border-radius: 1rem;
     }
-    & meter{
-        text-align: center;
-        position:relative;
-        appearance: none;
-        color: white;
-        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-        padding: 0.4rem;
-        border-radius: 0.7rem;  
+    & i {
+        color: #666666;
     }
-}
-.content{
-   
-    display: flex;
-   
 }
  
  
 article {
     background-color: #f9f9f9;
     border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray;
+    box-shadow: var(--box-shadow);
     overflow: hidden;
     & img {
         width: 50%;
@@ -313,42 +319,12 @@ article {
     }
 }
  
-.sectionOfInformation{
-    width: 100%;
-    display: flex;
-    padding: 0.2rem 0.5rem;
-    flex-direction: column;
- 
-    & section{
-        display: flex;
-        gap: 1rem;
-        justify-content: space-between;
-    }
-    & p{
-        font-size: 0.7rem;
-    }
-    & button{
-        margin: 0.5rem 0.5rem;
-        cursor: pointer;
-        padding: 0.1rem 0.2rem;
-        border-radius: 0.4rem;
-        border-style: none;
-        color: white;
-        font-family: pangolin;
-        background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    }
-}
-.miniTitle{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
  
 /* Responsive style */
 @media (max-width: 768px) {
     /* Adjust main container */
     main {
-        width: 95%;
+        width: 90%;
         margin: 10px auto;
     }
  
@@ -365,7 +341,7 @@ article {
     }
  
     /* Adjust layout for .similarPlans */
-    .similarPlans section {
+    .newPlaces section {
         flex-direction: column;
     }
  
@@ -375,109 +351,17 @@ article {
         height: auto;
     }
 }
- 
-@media (max-width: 768px) {
-    .content {
-        display: flex;
-        flex-direction: row; /* Align side-by-side */
-        max-width: 100%;
-        margin: 10px 0;
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-        background: #ffffff; /* White background */
-        align-items: center; /* Center items vertically */
-        overflow: hidden; /* Ensures the content fits within the borders */
-    }
- 
-    .content img {
-        flex-shrink: 0; /* Prevent the image from shrinking */
-        width: 100px; /* Fixed width for the image */
-        height: auto; /* Adjust height automatically */
-        border-radius: 8px 0 0 8px; /* Rounded left corners for the image */
-        object-fit: cover; /* Cover the content box */
-    }
- 
-    .sectionOfInformation {
-        padding: 10px;
-        display: flex;
-        flex-direction: column; /* Stack information vertically */
-        align-items: flex-start; /* Align to the start of the flex container */
-        justify-content: center; /* Center content vertically */
-        flex-grow: 1; /* Allow the section to fill the space */
-    }
- 
-    .sectionOfInformation h3 {
-        margin: 0;
-        font-size: 1.1em; /* Adjust the font size */
-    }
- 
-    .sectionOfInformation p,
-    .sectionOfInformation button {
-        font-size: 0.9em; /* Smaller font size for paragraph and button */
-    }
- 
-    .sectionOfInformation button {
-        background-color: #0A5C76; /* Button background color */
-        color: white; /* Button text color */
-        padding: 5px 15px; /* Padding inside the button */
-        border: none; /* No border */
-        border-radius: 4px; /* Rounded corners for button */
-        margin-top: 5px; /* Margin top for spacing */
+@media (max-width: 1150px) {
+    .newPlaces {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
     }
 }
- 
 @media (max-width: 768px) {
-    .content img {
-        height: 100%;
-        width: 50%;
-        object-fit: cover;
+    .newPlaces {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
- 
-    .content meter {
-        /* Adjust the meter height and style */
-        height: auto; /* Example height, you can adjust as needed */
-        width: auto; /* Full width of its container */
-        -webkit-appearance: none; /* Removes default styling on Webkit browsers */
-        appearance: none; /* Removes default styling */
-    }
- 
-    .content meter::-webkit-progress-bar {
-        background-color: #f3f3f3; /* Light grey background for the meter */
-        border-radius: 3px;
-    }
- 
-    .content meter::-webkit-progress-value {
-        background-color: #0A5C76; /* Use your desired progress color */
-        border-radius: 3px;
-    }
- 
-    .content meter::-moz-progress-bar {
-        /* For Firefox */
-        background-color: #0A5C76; /* Use your desired progress color */
-        border-radius: 3px;
-    }
- 
- 
-    /* Adjust font size for the rest of the content */
-    .content h3, .content p, .content .fa {
-        font-size: 0.8em; /* Smaller font size for text and icons */
-    }
-        .content .button-container {
-            display: flex; /* Use flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            height: 100%; /* Full height of the container */
-        }
-   
-        .content button {
-            /* Additional button styling */
-            padding: 8px 16px; /* Padding inside the button */
-            font-size: 0.8em; /* Font size of button text */
-            /* Center the button text */
-            text-align: center;
-            /* Optional: if the button is a block element, set margins to auto */
-            margin: auto;
-   
-        }
-    }
-   
+}

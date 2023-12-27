@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+</head>
+<body>
+    <form id="commentForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores enim, totam odit tempore provident laboriosam illum maiores earum dicta ipsum facilis rem corrupti? Iste veniam, consequatur voluptates excepturi odio autem sequi, mollitia provident libero fugiat repudiandae voluptas optio consequuntur.</p>
+    </form>
+
+    <script>
+        function submitForm() {
+            // Get values from the form
+            var username = document.getElementById('username').value;
+            var comment = document.getElementById('comment').value;
+
+            // Create a data object
+            var data = {
+                username: username,
+                comment: comment
+            };
+
+            // Send data to the server using an AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/path/to/server-script', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Handle the response from the server
+                    console.log('Data sent successfully');
+                }
+            };
+
+            xhr.send(JSON.stringify(data));
+        }
+    </script>
+</body>
+</html>

@@ -20,6 +20,10 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./jsmodule/place-details.js"></script>
+    <script type="module" src="./component/place-list.js"></script>
+    <script src="./jsmodule/index-place.js"></script>
+    <script type="module" src="./component/place-comp.js"></script>
   </head>
   <body>
     <header>
@@ -28,11 +32,11 @@
  
     <main>
       <section class="placeName">
-        <h2>Гүрү ресторан</h2>
+        <h2 id = "name">Гүрү ресторан</h2>
         <hr id="hr1" />
       </section>
       <section class="idk">
-        <address>
+        <address id = "location">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -61,7 +65,7 @@
           </svg>
           <time datetime="2023-02-08">00:00</time>-<time>23:59</time>
         </p>
-        <a href="85258645">
+        <a href="85258645" id = "phone">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -71,7 +75,7 @@
               d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
             />
           </svg>
-          85258645
+         
         </a>
       </section>
  
@@ -80,15 +84,15 @@
           <button class="favorite">
             <i class="fa-regular fa-heart"></i>
           </button>
-          <div class="mySlides fade">
+          <div class="mySlides">
             <img src="/zurag/guru.jpg" style="width: 100%" />
           </div>
  
-          <div class="mySlides fade">
+          <div class="mySlides">
             <img src="/zurag/guru1.jpg" style="width: 100%" />
           </div>
  
-          <div class="mySlides fade">
+          <div class="mySlides">
             <img src="/zurag/guru2.JPG" style="width: 100%" />
           </div>
  
@@ -115,7 +119,7 @@
             </svg>
             Хоолны газар
           </p>
-          <h3>Багтаамж: 70</h3>
+          <h3 id="capacity">Багтаамж: 70</h3>
           <ul>
             <li>
               <div>
@@ -123,6 +127,7 @@
                 Өлгүүр
               </div>
               <img
+                id = "ulguur"
                 src="zurag/checkmark_green.png"
                 class="checkmark"
                 alt="green_checkmark"
@@ -142,6 +147,7 @@
                 Үнэгүй wifi
               </div>
               <img
+              id = "wifi"
                 src="zurag/checkmark_green.png"
                 class="checkmark"
                 alt="green_checkmark"
@@ -161,6 +167,7 @@
                 VIP
               </div>
               <img
+              id = "vip"
                 src="zurag/checkmark_green.png"
                 class="checkmark"
                 alt="green_checkmark"
@@ -180,6 +187,7 @@
                 Машины зогсоол
               </div>
               <img
+              id = "parking"
                 src="zurag/checkmark_red.png"
                 class="checkmark"
                 alt="green_checkmark"
@@ -199,6 +207,7 @@
                 Дуу тусгаарлагч
               </div>
               <img
+              id = "noice"
                 src="zurag/checkmark_red.png"
                 class="checkmark"
                 alt="green_checkmark"
@@ -212,7 +221,8 @@
                   alt="changaYrigch"
                 />Спикер
               </div>
-              <img src="zurag/checkmark_green.png" alt="green_checkmark" />
+              <img
+              id = "speaker" src="zurag/checkmark_green.png" alt="green_checkmark" />
             </li>
             <li>
               <div>
@@ -228,6 +238,7 @@
                 Микрофон
               </div>
               <img
+              id = "mic"
                 src="zurag/checkmark_green.png"
                 class="checkmark"
                 alt="green_checkmark"
@@ -237,7 +248,7 @@
         </aside>
         <article id="taniltsuulga">
           <h3>Танилцуулга</h3>
-          <p>
+          <p id = "introduction">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue
             tristique sem sit amet ullamcorper. Pellentesque cursus libero a
             posuere mattis. Sed at varius velit. Quisque vitae iaculis neque.
@@ -246,39 +257,33 @@
             lorem interdum faucibus. Donec cursus mollis neque, at consectetur
             purus tincidunt vitae. Maecenas sodales sem erat. Sed sed maximus
             odio. Curabitur imperdiet est at quam sollicitudin, vel sagittis
-            magna tincidunt.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eaque nisi fugiat suscipit reprehenderit! Sint, velit autem? Repudiandae cum, consequatur molestias expedita officiis tempore nemo obcaecati enim aperiam cupiditate ex?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aspernatur quaerat dignissimos officiis sit, laudantium repudiandae tenetur similique et saepe necessitatibus debitis, consequatur quam vel unde commodi, voluptas explicabo animi.
+            magna tincidunt. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Voluptatem eaque nisi fugiat suscipit reprehenderit! Sint,
+            velit autem?
           </p>
         </article>
-        <article class="ratingplace">
+        <article class="ratingPlace">
           <div class="ratingTitle">
             <h3>Үнэлгээ</h3>
-            <p id="stars">⭐⭐⭐⭐⭐</p>
+            <meter value="${plan.stars}" min="0.0" max="5.0">
+              <i class="fa-solid fa-star"></i> <span>4</span>
+            </meter>
           </div>
- 
-          <ul class="labels">
-            <li for="5">
-              5 од<progress id="5" value="100" max="100"></progress>
-            </li>
-            <li for="4">
-              4 од<progress id="4" value="80" max="100"></progress>
-            </li>
-            <li for="3">
-              3 од<progress id="3" value="60" max="100"></progress>
-            </li>
-            <li for="2">
-              2 од<progress id="2" value="40" max="100"></progress>
-            </li>
-            <li for="1">
-              1 од<progress id="1" value="20" max="100"></progress>
-            </li>
-          </ul>
- 
+          <div class="myRating">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5"><i class="fa-solid fa-star"></i></label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4"><i class="fa-solid fa-star"></i></label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3"><i class="fa-solid fa-star"></i></label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2"><i class="fa-solid fa-star"></i></label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1"><i class="fa-solid fa-star"></i></label>
+          </div>
           <section class="ratingOnComment">
             <h4>Сэтгэгдэл</h4>
             <div class="scrollable-content">
-              <p id="stars">⭐⭐⭐⭐⭐</p>
               <p id="comment">Urana, Oct, 2023</p>
               <p>Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа</p>
               <p>
@@ -300,181 +305,67 @@
         </article>
       </section>
  
-      <section class="similarPlans">
-        <h2>Ижил төстэй газрууд:</h2>
- 
-        <section>
-          <article class="content">
-            <img src="zurag/caffebene.jpg" alt="bene" />
-            <div class="sectionOfInformation">
-              <section class="miniTitle">
-                <h3>Caffe bene</h3>
-                <meter value="${plan.stars}" min="0.0" max="5.0">
-                  <i class="fa-solid fa-star"></i> <span>4</span>
-                </meter>
-              </section>
- 
-              <p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-                  />
-                </svg>
-                Кафе
-              </p>
-              <p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
-                  />
-                </svg>
-                <time datetime="2023-02-08">7:30</time>-<time>21:00</time>
-              </p>
-              <button><span>10</span>K-c эхэлье</button>
+      <h2>Ижил төстэй газрууд:</h2>
+      <section class="newPlaces">
+          <article class="subNewPlaces">
+            <div class="image"></div>
+              <img src="zurag/caffebene.jpg" alt="bene" />
             </div>
+            <div class="details">
+              <h3>Caffe bene</h3>
+            <p>
+              <i class="fa-solid fa-tag"></i>
+              Кафе
+            </p>
+            <address>
+              <i class="fa-solid fa-location-dot"></i>${plan.location}
+            </address>
+            <i class="far fa-clock"></i>
+            <time>${place.hours}</time><br>
+            <a href="./place.html"><button class="value" ><span>100</span>К -с эхэлнэ</button></a>
+          </div>
           </article>
-          <article class="content">
-            <img src="zurag/caffebene.jpg" alt="bene" />
-            <div class="sectionOfInformation">
-              <section class="miniTitle">
-                <h3>Caffe bene</h3>
-                <meter value="${plan.stars}" min="0.0" max="5.0">
-                  <i class="fa-solid fa-star"></i> <span>1</span>
-                </meter>
-              </section>
- 
-              <p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-                  />
-                </svg>
-                Кафе
-              </p>
-              <p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
-                  />
-                </svg>
-                <time datetime="2023-02-08">7:30</time>-<time>21:00</time>
-              </p>
-              <button><span>10</span>K-c эхэлье</button>
+          <article class="subNewPlaces">
+            <div class="image"></div>
+              <img src="zurag/caffebene.jpg" alt="bene" />
             </div>
+            <div class="details">
+              <h3>Caffe bene</h3>
+            <p>
+              <i class="fa-solid fa-tag"></i>
+              Кафе
+            </p>
+            <address>
+              <i class="fa-solid fa-location-dot"></i>${plan.location}
+            </address>
+            <i class="far fa-clock"></i>
+            <time>${place.hours}</time><br>
+            <a href="./place.html"><button class="value" ><span>${place.buttonText}</span>К -с эхэлнэ</button></a>
+          </div>
           </article>
-          <article class="content">
-            <img src="zurag/caffebene.jpg" alt="bene" />
-            <div class="sectionOfInformation">
-              <section class="miniTitle">
-                <h3>Caffe bene</h3>
-                <meter value="${plan.stars}" min="0.0" max="5.0">
-                  <i class="fa-solid fa-star"></i> <span>4.5</span>
-                </meter>
-              </section>
- 
-              <p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
-                  />
-                </svg>
-                Кафе
-              </p>
-              <p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
-                  />
-                </svg>
-                <time datetime="2023-02-08">7:30</time>-<time>21:00</time>
-              </p>
-              <button><span>10</span>K-c эхэлье</button>
+          <article class="subNewPlaces">
+            <div class="image"></div>
+              <img src="zurag/caffebene.jpg" alt="bene" />
             </div>
+            <div class="details">
+              <h3>Caffe bene</h3>
+            <p>
+              <i class="fa-solid fa-tag"></i>
+              Кафе
+            </p>
+            <address>
+              <i class="fa-solid fa-location-dot"></i>${plan.location}
+            </address>
+            <i class="far fa-clock"></i>
+            <time>${place.hours}</time><br>
+            <a href="./place.html"><button class="value" ><span>${place.buttonText}</span>К -с эхэлнэ</button></a>
+          </div>
           </article>
-        </section>
       </section>
     </main>
  
     <footer>
-      <a href="index.html"><img src="zurag/logo.png" alt="bla2" /></a>
-      <ul>
-        <li><p>Бидэнтэй холбогдох</p></li>
-        <li>
-          <a href="#">
-            <svg
-              class="footerIcon"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-              />
-            </svg>
-            Gmail</a
-          >
-        </li>
-        <li>
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 448 512"
-            >
-              <path
-                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-              />
-            </svg>
-            Instagram</a
-          >
-        </li>
-        <li>
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
-              />
-            </svg>
-            Facebook</a
-          >
-        </li>
-      </ul>
-      <ul>
-        <li><p>Тусламж үйлчилгээ</p></li>
-        <li><a href="#">Асуулт хариулт</a></li>
-        <li><a href="#">Санал хүсэлт</a></li>
-        <li><a href="#">Үйлчилгээний нөхцөл</a></li>
-      </ul>
-      <hr />
-      <p>&copy; Haachih uu inc.2023. We love our customers.</p>
+      <all-footer></all-footer>
     </footer>
     <script>
       let slideIndex = 1;

@@ -1,5 +1,5 @@
 @import url(./general.css);
-
+ 
   /* Body styles */
   body {
       font-family: Pangolin;
@@ -66,11 +66,6 @@
       & .prev:hover, .next:hover {
           background-color: rgba(0,0,0,0.8);
       }    
-        /* Fading animation */
-      & .fade {
-          animation-name: fade;
-          animation-duration: 1.5s;
-      }
   }
    
    
@@ -95,13 +90,11 @@
    
    
    
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-   
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
+ 
+ 
+ 
+   /* On smaller screens, decrease text size */
+   @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
   }
    
@@ -139,40 +132,39 @@
       }
   }
    
-  /*Responsive bolgoj bui heseg end baina*/
   @media only screen and (max-width: 768px) {
-      /* Add your responsive styles here */
-     
-      /* Example: Adjust the layout of content cards */
-      .content {
-          flex-direction: column;
-          align-items: center;
-      }
+    /* Add your responsive styles here */
    
-      /* Example: Center the button within its container */
-      .button-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-   
-      /* Example: Adjust image heights */
-      .content img {
-          max-height: 150px; /* or any other height */
-      }
-   
-      /* Example: Reduce font sizes */
-      h1, h2, h3, p, .button-container button {
-          font-size: 0.8em;
-      }
-   
-      /* Example: Modify padding and margins for smaller screen */
-      .content {
-          padding: 10px;
-      }
-      select {
-          font-size: 0.8em; /* Decrease the font size */
-          width: auto; /* Adjust width as needed, or use a specific value */
-          padding: 5px; /* Adjust padding to reduce size */
-      }
+    /* Example: Adjust the layout of content cards */
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    /* Example: Center the button within its container */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    /* Example: Adjust image heights */
+    .content img {
+        max-height: 150px; /* or any other height */
+    }
+ 
+    /* Example: Reduce font sizes */
+    h1, h2, h3, p, .button-container button {
+        font-size: 0.8em;
+    }
+ 
+    /* Example: Modify padding and margins for smaller screen */
+    .content {
+        padding: 10px;
+    }
+    select {
+        font-size: 0.8em; /* Decrease the font size */
+        width: auto; /* Adjust width as needed, or use a specific value */
+        padding: 5px; /* Adjust padding to reduce size */
+    }
   }

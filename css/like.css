@@ -1,5 +1,8 @@
 @import url('./general.css');
 main{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 49% 49%;
     margin-left: var(--margin-side);
     margin-right: var(--margin-side);
     /* display: grid;
@@ -15,9 +18,7 @@ main{
 
 }
 .plans{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: auto auto;
+    
  
     & .ilerts{
         grid-column: 1 / span 2;

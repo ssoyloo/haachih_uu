@@ -4,7 +4,7 @@ export class FavouriteList {
         
     }
 
-    render_later_list() {
+    render_plan_list() {
         return `
         <article class="item">
     <div class="PlanImage">

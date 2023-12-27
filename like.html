@@ -22,9 +22,12 @@
             <hr />
             <section class="button"><button onclick="removeAll()">removeAll</button></section>
         </section>
-        <favourite-plan></favourite-plan>
+        
         <section class="plans">
-            
+            <favourite-plan></favourite-plan>
+        </section>
+        <section class="places">
+            <favourite-place></favourite-place>
         </section>
 
         <section class="Bugd">
@@ -46,9 +49,14 @@
     <script>
         function removeAll() {
             localStorage.removeItem("lists");
-            const comp = document.querySelector("favourite-plan");
-            comp.jsonToCard();
-            comp.render_watch();
+            localStorage.removeItem("listsPlan");
+            const places = document.querySelector("favourite-place");
+            const plans=document.querySelector('favourite-plan');
+            plans.jsonToCard();
+            places.jsonToCard();
+            plans.render_count();
+            places.render_count();
+            // comp.render_place_list();
         }
     </script>
 </body>

@@ -1,0 +1,162 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Хайлтын илэрцээр нь газруудыг харахаас гадна 2янзын шүүлтүүрээр шүүх боломжтой.">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="./css/headerfooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
+    <title>Search</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a  href="index.html"
+            ><img class="logopng1" src="zurag/logo.png" alt="haachihuu_logo" width="250px">
+            </a>
+            <ul>
+                <li><a  href="./menubar.html">Орой яахын?</a></li>
+                <li><a  href="./menubar.html">Төрсөн өдөр гэсэн үү дээ?</a></li>
+                <li><a  href="./menubar.html">Арван жил шдээ</a></li>
+                <li><a  href="./menubar.html">Валинтин гэсээн</a></li>
+                <li><a  href="./menubar.html">Хөдөө гарья</a></li>            
+            </ul>
+            <section class="headerButton">
+                <a class="navSearch" href="./search.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 512 512">
+                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                    </svg>
+                </a>
+                <div class="dropdown">
+                    <a class="navLogin" href="./login.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 448 512">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                        </svg>
+                    </a>
+                    <form class="dropdown-content">
+                        <label for="email">И-Мэйл хаяг:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        <label for="pwd">Нууц үг:</label>
+                        <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+                        <input type="submit">
+                    </form>
+                </div>
+            </section>  
+        </nav>
+    </header>
+ 
+    <main>
+        <section class="name">
+            <h1>Sura</h1>
+            <hr>
+        </section>
+       
+        <section class="place">
+            <h2>Хайлтын илэрц: 3</h2>
+           
+            <article class="result">
+                <img class="PlaceImage" src="zurag/sura.jpg" alt="sura">
+                <figure class="PlaceInfo">
+                    <h3>Sura</h3>
+                    <meter value="3.5" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>3.5</span></meter>
+                    <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
+                    <p class="tag"><i class="fa-solid fa-tag"></i> Хоолны газар</p>
+                    <address><i class="fa-solid fa-location-dot"></i> СБД, 1-р хороо</address>
+                    <p><i class="fa-regular fa-clock"></i> <time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                    <a href="11326020"><i class="fa-solid fa-phone"></i> 11326020</a>
+                    <h4>Танилцуулга</h4>
+                    <p class="intro">Сура монголд албан ёсны эрхтэйгээр оруулж ирсэн гайхалтай амт бөгөөд таныг жаргалд умбуулна кс хаххаха</p>
+                    <button class="value"><span>100</span>K-c эхэлье</button>
+                </figure>
+            </article>
+ 
+            <article class="result">
+                <img class="PlaceImage" src="zurag/sura.jpg" alt="sura">
+                <figure class="PlaceInfo">
+                    <h3>Sura</h3>
+                    <meter value="3.5" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>3.5</span></meter>
+                    <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
+                    <p class="tag"><i class="fa-solid fa-tag"></i> Хоолны газар</p>
+                    <address><i class="fa-solid fa-location-dot"></i> СБД, 1-р хороо</address>
+                    <p><i class="fa-regular fa-clock"></i> <time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                    <a href="11326020"><i class="fa-solid fa-phone"></i> 11326020</a>
+                    <h4>Танилцуулга</h4>
+                    <p class="intro">Сура монголд албан ёсны эрхтэйгээр оруулж ирсэн гайхалтай амт бөгөөд таныг жаргалд умбуулна кс хаххаха</p>
+                    <button class="value"><span>100</span>K-c эхэлье</button>
+                </figure>
+            </article>
+ 
+            <article class="result">
+                <img class="PlaceImage" src="zurag/sura.jpg" alt="sura">
+                <figure class="PlaceInfo">
+                    <h3>Sura</h3>
+                    <meter value="3.5" min="0.0" max="5.0"><i class="fa-solid fa-star"></i><span>3.5</span></meter>
+                    <button class="like"><i class="fa-regular fa-heart fa-2xl"></i></button>
+                    <p class="tag"><i class="fa-solid fa-tag"></i> Хоолны газар</p>
+                    <address><i class="fa-solid fa-location-dot"></i> СБД, 1-р хороо</address>
+                    <p><i class="fa-regular fa-clock"></i> <time datetime="2023-02-08">00:00</time>-<time>23:59</time></p>
+                    <a href="11326020"><i class="fa-solid fa-phone"></i> 11326020</a>
+                    <h4>Танилцуулга</h4>
+                    <p class="intro">Сура монголд албан ёсны эрхтэйгээр оруулж ирсэн гайхалтай амт бөгөөд таныг жаргалд умбуулна кс хаххаха</p>
+                    <button class="value"><span>100</span>K-c эхэлье</button>
+                </figure>
+            </article>
+        </section>
+        <aside class="filter">
+            <article>
+            <h3>Төрөл:</h3>
+                <ol>
+                    <li>Хоолны газар<p>10</p></li>
+                    <li>Кафе<p>10</p></li>
+                    <li>Паб лоунж<p>10</p></li>
+                    <li>Караоке<p>10</p></li>
+                    <li>Зуслан<p>10</p></li>
+                    <li>Клаб<p>10</p></li>
+                    <li>Музей<p>10</p></li>
+                    <li>Кино театр<p>10</p></li>
+                    <li>Хүрээлэн<p>10</p></li>
+                    <li>Хөгжилдөх газар<p>10</p></li>
+                </ol>
+            </article>
+ 
+            <article>
+            <h3>Ангилал:</h3>
+                <ol>
+                    <li>Орой яахын?<p>10</p></li>
+                    <li>Төрсөн өдөр гэсэн үү дээ?<p>10</p></li>
+                    <li>Арван жил шдээ<p>10</p></li>
+                    <li>Валинтин гэсэн<p>10</p></li>
+                    <li>Хөдөө гарья<p>10</p></li>
+                </ol>
+            </article>
+        </aside>
+ 
+        <section class="Bugd">              
+            <button class="btn">Бүгдийг харах</button>
+            <hr>
+        </section>
+ 
+    </main>
+ 
+    <footer>
+        <a href="#"><img  src="zurag/logo.png" alt="bla2"></a>
+        <ul>
+            <li><p>Бидэнтэй холбогдох</p></li>
+            <li><a href="#"><i class="fa-regular fa-envelope"></i> Gmail</a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+        </ul>
+        <ul>
+            <li><p>Тусламж үйлчилгээ</p></li>
+            <li><a href="#">Асуулт хариулт</a></li>
+            <li><a href="#">Санал хүсэлт</a></li>
+            <li><a href="#">Үйлчилгээний нөхцөл</a></li>
+        </ul>
+        <hr>
+        <p>&copy; Haachih uu inc.2023. We love our customers.</p>
+    </footer>
+</body>
+</html> -->

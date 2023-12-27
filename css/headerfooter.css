@@ -8,6 +8,7 @@ header {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+    
     & .dropdown {
         position: relative;
         display: inline-block;
@@ -76,6 +77,32 @@ nav {
         position: sticky;
         bottom: 0;
         margin-top: -1rem;
+        margin-left: -0.2rem;
+        background-color: #fff;
+        color: transparent;
+        & span {
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+    }
+    & .countPlace{
+        
+        height: 15px;
+        width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        font-weight: bold;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        position: sticky;
+        bottom: 0;
+        margin-top: 0.65rem;
+        margin-left: -0.5rem;
         background-color: #fff;
         color: transparent;
         & span {

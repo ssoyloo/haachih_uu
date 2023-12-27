@@ -27,7 +27,7 @@ body {
 article {
     margin-bottom: 1rem;
     border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #555;
+    box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
         & img {
         max-width: 100%;
@@ -51,13 +51,8 @@ article {
             font-size: 1em;
             border-radius: 1rem;
         }
-        & .value:hover{
-            box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #0A5C76, 0px 0px 0px 10px white, 0px 0px 0px 10.5px #2FA2C6;
-            background-image: none;
-            background-color: #fff;
-            color: #0A5C76;
-            transition: 0.2s;
-        }
+       
+   
         & .like{
             float: right;
             border: none;
@@ -75,4 +70,10 @@ article {
 }
 meter{
     height: 1.8rem;
+}
+ 
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--bg-dark-color);
+    }
 }
