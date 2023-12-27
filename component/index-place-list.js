@@ -127,13 +127,6 @@ class PlaceList extends HTMLElement {
                 font-size: 1em;
                 border-radius: 1rem;
             }
-            & .value:hover{
-                box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #0A5C76, 0px 0px 0px 10px white, 0px 0px 0px 10.5px #2FA2C6;
-                background-image: none;
-                background-color: #fff;
-                color: #0A5C76;
-                transition: 0.2s;
-            }
             & .like{
                 float: right;
                 border: none;

@@ -5,7 +5,6 @@ class PlanList extends HTMLElement {
       this.plans = [];
       this._selectedTag = null;
       this._selectedName = null;
-      this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
   
     connectedCallback() {
@@ -13,18 +12,8 @@ class PlanList extends HTMLElement {
       this._selectedTag = urlParams.get('tag');
       this._selectedName = urlParams.get('planName');
   
-      const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      darkModeMediaQuery.addListener(() => {
-        this.darkMode = darkModeMediaQuery.matches;
-        this.render();
-      });
-  
       this.fetchPlans();
     }   
-  // toggleDarkMode() {
-  //   this.darkMode = !this.darkMode;
-  //   this.render();
-  // }
   static get observedAttributes() {
     return ['selected-tag'];
   }
@@ -96,7 +85,6 @@ filterByTagName(){
 
   render() {
     const plans = this.plans || [];
-    const themeClass = this.darkMode ? 'dark-theme' : 'light-theme';
   
     this.shadowRoot.innerHTML = `
       <style>
@@ -118,10 +106,7 @@ filterByTagName(){
         --margin-side: 8rem;
         --box-shadow: 0.1rem 0.2rem 0.3rem #bdbdbd;
     }
-:host(.dark-theme) {
-  background-color: var(--bg-dark-color);
-  color: #fff;
-}
+
 *{
   margin: 0;
   padding: 0;
@@ -222,7 +207,7 @@ meter{
   }
    
   .plan-container{
-     background-color: ${this.darkMode ? 'var(--bg-dark-color)' : '#fff'};
+    
     & .item {
         display: flex;
         justify-content: center;

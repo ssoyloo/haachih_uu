@@ -69,8 +69,6 @@ nav {
     }
 }
  
- 
- 
 footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     display: grid;

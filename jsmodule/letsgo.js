@@ -1,4 +1,4 @@
-class Plan {
+class Place {
     constructor(data) {
         this.name = data.name;
         this.image = data.image;

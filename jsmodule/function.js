@@ -7,8 +7,9 @@ function getValueForFilter() {
   var detailValue = document.getElementById('detail').value;
   
   // Display selected values
-  var newUrl = "./letsgo.html" +  "?address=" + oirhonGazarValue + "&category=" + typeValue+"&countPeople=" + huniiTooValue;
+  var newUrl = "./letsgo.html" +  "?address=" + oirhonGazarValue + "&category=" + typeValue+"&countPeople=" + huniiTooValue + "&star"+starValue + "&detail"+ detailValue;
   window.location.href = newUrl;
+
 }
  
 
