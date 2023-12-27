@@ -18,7 +18,7 @@ class PlaceList extends HTMLElement {
 
   async fetchPlaces() { 
     try {
-      const response = await fetch(`https://api.jsonbin.io/v3/b/657d8988dc7465401883f827`);
+      const response = await fetch(`https://api.jsonbin.io/v3/b/658bcbe8dc746540188951e3`);
 
       
       if (response.status === 429) {

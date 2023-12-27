@@ -55,7 +55,7 @@ class Place {
   }
 }
 
-class PlanRenderer {
+class PlaceRenderer {
   constructor(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, typeFilter) {
       this._plansList = [];
       this._apiUrl = apiUrl;
@@ -90,6 +90,7 @@ class PlanRenderer {
     });
 }
 
+
   renderPlans(targetSelector) {
       const targetElement = document.querySelector(targetSelector);
       targetElement.innerHTML = '';
@@ -101,12 +102,12 @@ class PlanRenderer {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const apiUrl = "https://api.jsonbin.io/v3/b/657d8988dc7465401883f827";
+  const apiUrl = "https://api.jsonbin.io/v3/b/658bcbe8dc746540188951e3";
   const urlParams = new URLSearchParams(window.location.search);
   const tagFilter = urlParams.get('tag');
   const huniiTooFilter = urlParams.get('countPeople');
   const oirhonGazarFilter = urlParams.get('address');
   const typeFilter = urlParams.get('category');
-  const planRenderer = new PlanRenderer(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, typeFilter);
+  const planRenderer = new PlaceRenderer(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, typeFilter);
   planRenderer.fetchAndRenderPlaces('.result');
 });

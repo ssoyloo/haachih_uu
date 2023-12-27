@@ -27,7 +27,7 @@ body {
 article {
     margin-bottom: 1rem;
     border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #555;
+    box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
         & img {
         max-width: 100%;
@@ -74,9 +74,6 @@ meter{
 
 @media (prefers-color-scheme: dark) {
     body {
-      background-color: var(--bg-dark-color);
+      background-color: var(--bg-dark-color); 
     }
-    article {
-        color: var(--main-color);
-    }
-  }
+}

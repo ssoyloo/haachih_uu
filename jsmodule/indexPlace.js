@@ -79,7 +79,7 @@ class PlaceRenderer {
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryFilter = urlParams.get('category');
-    const apiUrl = "https://api.jsonbin.io/v3/b/65449c0554105e766fcac45f";
+    const apiUrl = "https://api.jsonbin.io/v3/b/658bcbe8dc746540188951e3";
     const placeRenderer = new PlaceRenderer(apiUrl, categoryFilter);
     placeRenderer.fetchAndRenderPlaces('.newPlaces');
 });

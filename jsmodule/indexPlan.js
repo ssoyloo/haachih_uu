@@ -78,7 +78,7 @@ class PlanRenderer {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const apiUrl = "https://api.jsonbin.io/v3/b/6543a6a454105e766fca6fa1";
+  const apiUrl = "https://api.jsonbin.io/v3/b/658bccaadc74654018895226";
   const urlParams = new URLSearchParams(window.location.search);
   const tagFilter = urlParams.get('tag');
   const planRenderer = new PlanRenderer(apiUrl, tagFilter);

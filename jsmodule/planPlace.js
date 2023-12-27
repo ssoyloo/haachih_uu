@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const planNameFilter = urlParams.get('planName');
     console.log('Plan Name Filter:', planNameFilter); // Check the value in the console
 
-    const apiUrl = "https://api.jsonbin.io/v3/b/657d8988dc7465401883f827";
+    const apiUrl = "https://api.jsonbin.io/v3/b/658bcbe8dc746540188951e3";
     const placeRenderer = new PlaceRenderer(apiUrl, planNameFilter);
     placeRenderer.fetchAndRenderPlaces('.leftsection');
 });

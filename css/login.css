@@ -29,6 +29,11 @@ main {
             border-image-slice: 1;
             border-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color)) 1;
         }
+        * .signup{
+            background: linear-gradient(var(--secondary-color), var(--main-color)); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        }
         & .login{
             color: #fff;
             font-weight: lighter;

@@ -210,55 +210,7 @@ article {
         & a {
             text-decoration: none;
         }
-        & ol{
-            display: flex;
-            flex-direction: column; /* This will stack the list items vertically */
-            list-style: none;
-            padding-left: 0; /* This removes padding to align with the start of the container */
-            counter-reset: step;
-            > li{
-                width: 100%; /* This will make the list items use the full width available */
-                font-size: 0.7rem;
-                position: relative;
-                text-align: left; /* Align the text to the left */
-                text-transform: uppercase;
-                margin-top: 1rem;
-                color: #ffffff;
-            }
-            > li:before {
-                width: 1rem;
-                height: 1rem;
-                content: counter(step);
-                counter-increment: step;
-                line-height: 1.2rem;
-                display: block;
-                text-align: center;
-                border-radius: 50%;
-                position: absolute;
-                left: 0; /* Align the pseudo-element to the left */
-                top: 0; /* Align the pseudo-element to the top of the li */
-                z-index: 2;
-                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));  
-            }
-            > li:after {
-                width: 0.1rem;
-                height: 100%;
-                content: '';
-                position: absolute;
-               
-                left: 0.4rem;
-                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            }
-            > li:last-child:after {
-                content: none;
-            }
-            > li.active:before {
-                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            }
-            & p {
-                margin-left: 1.5rem;
-            }
-        }  
+      
     }
 }
  
