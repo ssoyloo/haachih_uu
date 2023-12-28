@@ -12,7 +12,7 @@ main {
     width: 85%;
     margin: auto;
 }
- 
+
 /*LetsGo buttontoi filterdej searchilj bga heseg maani*/
 .Lsearch {
     display: flex;
@@ -115,6 +115,20 @@ aside {
     & input {
         margin-right: 1rem;
     }
+    & .filterbutton{
+        margin: 0.5rem 0.5rem;
+        padding: 0.4rem 0.2rem;
+        border-radius: 0.6rem;
+        border: none;
+        color: white;
+        font-family: pangolin;
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        height: 2rem;
+        width: 13rem;
+        text-align: center;
+        margin-left: 17rem;
+        float: right;
+    }
 }
  
 .result {
@@ -172,7 +186,7 @@ article {
             border-style: none;
             color: white;
             font-family: pangolin;
-            background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             height: 2rem;
             width: 13rem;
             text-align: center;
