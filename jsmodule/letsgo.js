@@ -60,12 +60,14 @@ class Place {
 }
 
 class PlaceRenderer {
-  constructor(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, typeFilter) {
+  constructor(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, starFilter, detailFilter, typeFilter) {
       this._placesList = [];
       this._apiUrl = apiUrl;
       this._tagFilter = tagFilter;
       this._huniiTooFilter = huniiTooFilter;
       this._oirhonGazarFilter = oirhonGazarFilter; // Add oirhonGazarFilter here
+      this._starFilter = starFilter;
+      this._detailFilter = detailFilter;
       this._typeFilter = typeFilter;
   }
 
@@ -80,19 +82,30 @@ class PlaceRenderer {
               console.error('Error fetching places data:', error);
           });
   }
-
+  
   filterPlacesBy(placesData) {
-    if (!this._huniiTooFilter && !this._oirhonGazarFilter && !this._typeFilter) {
-        return placesData;
+    if (!this._huniiTooFilter && !this._oirhonGazarFilter && !this._typeFilter && !this._starFilter.length && !this._detailFilter.length) {
+      return placesData;
     }
-
+  
     return placesData.filter(place => {
-        const huniiTooMatch = !this._huniiTooFilter || place.countPeople >= parseInt(this._huniiTooFilter, 10);
-        const oirhonGazarMatch = !this._oirhonGazarFilter || place.address.includes(this._oirhonGazarFilter);
-        const typeMatch = !this._typeFilter || place.category.toLowerCase() === this._typeFilter.toLowerCase();
-        return huniiTooMatch && oirhonGazarMatch && typeMatch;
+      const huniiTooMatch = !this._huniiTooFilter || place.countPeople >= parseInt(this._huniiTooFilter, 10);
+      const oirhonGazarMatch = !this._oirhonGazarFilter || place.address.includes(this._oirhonGazarFilter);
+      const typeMatch = !this._typeFilter || place.tag.toLowerCase() === this._typeFilter.toLowerCase();
+      const starMatch = !this._starFilter.length || this._starFilter.includes(place.stars.toString());
+  
+      const detailMatch = !this._detailFilter.length ||
+        (this._detailFilter.includes('freewifi') && place.freewifi) ||
+        (this._detailFilter.includes('parking') && place.parking) ||
+        (this._detailFilter.includes('noice') && place.noice) ||
+        (this._detailFilter.includes('VIProom') && place.VIProom) ||
+        (this._detailFilter.includes('microphone') && place.microphone) ||
+        (this._detailFilter.includes('speaker') && place.speaker);
+  
+      return huniiTooMatch && oirhonGazarMatch && typeMatch && starMatch && detailMatch;
     });
-}
+  }
+  
  
   renderPlaces(targetSelector) {
       const targetElement = document.querySelector(targetSelector);
@@ -111,6 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const huniiTooFilter = urlParams.get('countPeople');
   const oirhonGazarFilter = urlParams.get('address');
   const typeFilter = urlParams.get('category');
-  const placeRenderer = new PlaceRenderer(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, typeFilter);
+  const starFilter = urlParams.get('star');
+  const detailFilter =urlParams.get('detail')
+  const placeRenderer = new PlaceRenderer(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, starFilter, detailFilter, typeFilter);
   placeRenderer.fetchAndRenderPlaces('.result');
 });

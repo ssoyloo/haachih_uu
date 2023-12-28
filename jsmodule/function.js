@@ -18,7 +18,20 @@ function sideFilter(){
     window.location.href = newUrl;
 }
 
-
+function sideFilter() {
+    // Get selected star values
+    var starCheckboxes = document.querySelectorAll('#star input[type="checkbox"]:checked');
+    var starValues = Array.from(starCheckboxes).map(checkbox => checkbox.value);
+  
+    // Get selected detail values
+    var detailCheckboxes = document.querySelectorAll('#detail input[type="checkbox"]:checked');
+    var detailValues = Array.from(detailCheckboxes).map(checkbox => checkbox.value);
+  
+    // Construct the new URL
+    var newUrl = "./letsgo.html" + "?star=" + starValues.join(',') + "&detail=" + detailValues.join(',');
+    window.location.href = newUrl;
+  }
+  
 
 function changeColor() {
     var button = document.querySelector('.like');

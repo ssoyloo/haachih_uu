@@ -35,7 +35,7 @@ main {
         background-color: #ececec;
     }
     & button {
-        background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
         color: #fff;
         border: none;
         border-radius: 0 20px 20px 0;
@@ -191,7 +191,6 @@ article {
             width: 13rem;
             text-align: center;
             margin-left: 17rem;
-            float: right;
         }
         & #une {
             margin-left: 21.5rem;
