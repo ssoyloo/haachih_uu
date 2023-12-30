@@ -1,101 +1,22 @@
 @import url(./general.css);
  
  
-header {
+ all-header {
     width: 100%;
     display: flex;
     flex-direction: row;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    & .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-     
-    & .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        /* min-width: 1rem; */
-        box-shadow: 0.1rem 0.2rem 0.5rem #555;
-        border-radius: var(--border-radius);
-        padding: 0.8rem 1rem;
-        z-index: 1;
-    }
-     
-    & .dropdown:hover .dropdown-content {
-        display: block;
-    }
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
   }
- 
-nav {
-    width: 100%;
-    display: flex;  
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 2.5rem;
-    & ul{
-        display: flex;
-        flex-direction: row;
-        gap:1.82rem;
-    }
-    & li{
-        list-style: none;
-    }
-    & a {
-        text-decoration: none;
-        color: white;
-    }
-    & a:hover{
-        color: rgb(10,92,118);
-    }
-    & .headerButton{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    & svg {
-        fill: white;    
-    }
-    & .logopng1{
-        padding-top: 1rem;
-        padding-bottom: 0.5rem;
-        width:250px;
-    }
-    & .count {
-        height: 15px;
-        width: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.7rem;
-        font-weight: bold;
-        border: 2px solid rgb(255, 255, 255);
-        border-radius: 15px;
-        position: sticky;
-        bottom: 0;
-        margin-top: -1rem;
-        background-color: #fff;
-        color: transparent;
-        & span {
-            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-        }
-    }
-}
- 
- 
- 
 footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     display: grid;
-    grid-template-columns: 40% 30% 30%;
+    grid-template-columns: 30% 30% 30%;
     padding-top: 2rem;
+    margin-top: 2rem;
     text-align: left;
+    column-gap: 5%;
     & hr{
         margin-top: 2rem;
         margin-left: 10%;
@@ -109,38 +30,195 @@ footer {
     & p{
         color: white;
         grid-column: 1 / span 3;
-        grid-row: 3;
     }
-    &> p{
+    & > p{
         padding: 0.5rem;
         text-align: center;
         font-size: 1rem;
-        color: rgb(240, 240, 240);
+        color: rgb(255, 255, 255);
+        margin-top: 0.5rem;
     }
     & a{
-        color: rgb(240, 240, 240);
+        color: rgb(255, 255, 255);
         text-decoration: none;
         font-size: 1rem;
     }
-    & ul, li{
-        margin-left: 6rem;
+    & .contact li{
+        margin-left: 10rem;
         margin-bottom: 0rem;
         list-style: none;
-        font-size: 1.2rem;
+        padding: 0.3rem;
+        & > p{
+            font-size: 1.2rem;
+        }
+    }
+    & .service li{
+        margin-bottom: 0rem;
+        list-style: none;
         padding: 0.3rem;
         &> p{
             font-size: 1.2rem;
         }
     }
+
     & img{
-        margin-left: 15rem;
+        margin: 2rem 0 0 15rem; 
         width: 70%;
-        justify-content: space-around
     }
     & svg {
-        fill: rgb(205, 205, 205);
+        fill: rgb(255, 255, 255);
     }
     & a:hover{
-        color: rgb(10,92,118);;
+        color: var(--hover-color);
     }
 }
+
+
+@media screen and (max-width: 1068px) {
+    /* Adjust logo size */
+    nav .logopng1 {
+        width: 10rem; /* Adjust the size as needed */
+    }
+
+    /* Adjust text size inside li elements */
+    nav ul li a {
+        font-size: 0.8rem; /* Adjust the size as needed */
+    }
+    nav ul {
+        gap: 0.4rem; /* New gap size */
+    }
+
+    /* Adjust SVG size */
+    nav svg {
+        height: 0.8em; /* Adjust the size as needed */
+    }
+    nav .count {
+        height: 10px; /* Adjust the height as needed */
+        width: 10px; /* Adjust the width as needed */
+        font-size: 0.5rem; /* Adjust font size as needed */
+    }
+    nav .users {
+        gap: 0.4rem; /* Adjust the gap as needed */
+    }
+}
+
+/* footer hesgiig responsive bolgoson code end baina */
+@media screen and (max-width: 1140px) {
+    footer img{
+        width: 80%;
+        margin-left: 12rem;
+        margin-top: 3rem;
+    }
+    
+    .contact, .service{
+        margin-left: -3rem; 
+        padding: 0.2rem;
+    }
+
+     .contact li > a, .service li > a{
+        font-size: 0.9rem;
+    }
+    .contact li > p{
+        font-size: 10rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    footer img{
+        width: 80%;
+        margin-left: 9rem;
+        margin-top: 4rem;
+    }
+    
+    .contact{
+        margin-left: -5rem; 
+    }
+
+     .contact li > a, .service li > a{
+        font-size: 0.9rem;
+    }
+    .contact li > p{
+        font-size: 10rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    footer img{
+        width: 90%;
+        margin-left: 6rem;
+        margin-top: 3rem;
+    }
+    
+    .contact{
+        margin-left: -6rem; 
+    }
+    .service{
+        margin-left: -2rem; 
+    }
+    .contact li, .contact li a, .service{
+        font-size: 0.8rem;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+    }
+    footer .contact li p, footer .service li p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer img {
+        margin: 1rem auto; /* Center the logo */
+        width: 17rem; /* Reduce the size of the logo */
+    }
+
+    .contact li, .service li {
+        padding: 0.2rem;
+        font-size: 1rem;
+    }
+
+    .contact {
+        margin-left: -12rem;
+    }
+    ul {
+        column-gap: 5rem;
+    }
+    .contact p, .service p {
+        font-size: 1rem;
+    }
+
+}
+
+/* mobile-header ee zarlana */
+mobile-header {
+    display: none;
+}
+
+@media screen and (max-width: 965px) {
+    /* umnuh header ee none buyu hide hiij baina */
+    all-header {
+        display: none;
+    }
+    /* header > nav {
+        display: none;
+    } */
+    mobile-header  {
+        display: flex; /* or 'flex', depending on your layout */
+    }
+}
+
+

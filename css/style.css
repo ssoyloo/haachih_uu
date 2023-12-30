@@ -1,303 +1,171 @@
 @import url(./general.css);
- 
- 
-/* Body styles */
-body {
-    font-family: Pangolin;
-}
-/* Main styles */
-main {
-    width: 85%;
-    margin: auto;
-}
- 
-h2 {
-    margin-bottom: 1.5rem;
-    font-size: 22px;
-    color: #333;
-    text-align: center;
-}
-h3 {
-    font-size: 20px;
-}
- 
-p {
-    color: #555;
-    font-size: 14px;
-}
- 
-/* Slideshow container */
-.slideshow-container {
-    /* max-height: 39rem; */
-    width: 108.85%;
-    position: relative;
-    margin: auto;
-    & .mySlides {
-        margin-left: -8.5%;
-        & img {
-            height: 42rem;
-            object-fit: cover;
-        }
-    }
- 
-    /* Next & previous buttons */
-    & .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 45%;
-        width: auto;
-        padding: 0.8rem;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        margin-left:-8.5% ;
-    }
- 
-    /* Position the "next button" to the right */
-    &  .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
- 
-    /* On hover, add a black background color with a little bit see-through */
-    & .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }    
-      /* Fading animation */
-    & .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-}
- 
- 
-.allDot {
-    margin-top: -2rem;
-    & .dot {
-        text-align: center;
-        position: relative;
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-    & .active, .dot:hover {
-        background-color: #717171;
-    }
-}
- 
- 
- 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
- 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
- 
-/*shineer nemegdsen gazruud*/
-.newPlaces {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    & .subNewPlaces {
-        display: flex;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        max-width: 500px;
-        border-radius: 20px;
-        & .image {
-            padding: 15px;
-            flex: 1;
-            border-radius: 20px;/* Set a maximum width for the image side */
-            & img{
-                height: 90%;
-                width: 90%;
-                border-radius: 20px;
-            }
-        }
-        & .details {
-            flex: 1;
-            padding: 15px;
-            text-align: center;
-            & button{
-                margin-top: 2%;
-            }
-           
-        }
-    }
-}
- 
-/* .placesToRecommend {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    & .BigRecommend {
-        text-align: center;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        max-width: 60%;
-        width: 100%;
-        max-height: 10%;
-        height: 100%;
-        border-radius: 50px;
-        margin-right: 20px;
-     
-        & img{
-            height: 100%;
-            width: 100%;
-            border-radius: 5%;
-        }
-        & button{
-            margin-bottom: 2%;
-        }
-    }
-     & .subRecommend{
-        max-width: 500px;
-        width: 100%;
-        border-radius: 50px;
-        overflow: hidden;
-    }
-    & button{
-        margin-top: 2%;
-    }
-    & .RecommendPlacesToFlex img{
-        height: 100%;
-        width: auto;
-        max-height: 13rem;
-        border-radius: 1rem;
-    }
-    & .RecommendPlacesToFlex {
-        margin-top: 30px;
-        display: flex;
-        max-width: 100%;
-        border-radius: 20px;
-        max-height: 100%;
-        & .image {
-            flex: 1;
-            max-width: 300px;
-        }
-        & .details {
-            flex: 1;
-            margin: 1rem;
-        }
-    }
-} */
-@media (max-width: 780px) {
-    .logopngfooter {
-        max-width: 50%;
-    }
- 
-    .footerGrid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
- 
-    .newPlaces, .RecommendPlacesToFlex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
- 
-    .subNewPlaces, .subRecommend {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 10px 20px;
-    }
- 
-    .RecommendPlacesToFlex .image, .RecommendPlacesToFlex .details {
-        flex: 1;
-        max-width: none;
-    }
- 
-    .RecommendPlacesToFlex img {
-        max-width: 100%;
-        height: auto;
-       
-    }
-.BigRecommend{
-    max-width: 100%;
-    width: 100%;
-}
+
+  /* Body styles */
+  body {
+      font-family: Pangolin;
+  }
+  /* Main styles */
+  main {
+      width: 85%;
+      margin: auto;
+  }
    
-    nav .text{
-        display: none;
+  h2 {
+    margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 22px;
+      color: #333;
+      text-align: center;
+  }
+  h3 {
+      font-size: 20px;
+  }
+   
+  p {
+      color: #555;
+      font-size: 14px;
+  }
+   
+  /* Slideshow container */
+  .slideshow-container {
+      /* max-height: 39rem; */
+      width: 108.85%;
+      position: relative;
+      margin: auto;
+      & .mySlides {
+          margin-left: -8.5%;
+          & img {
+              height: 42rem;
+              object-fit: cover;
+          }
+      }
+   
+      /* Next & previous buttons */
+      & .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 45%;
+          width: auto;
+          padding: 0.8rem;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          margin-left:-8.5% ;
+      }
+   
+      /* Position the "next button" to the right */
+      &  .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+   
+      /* On hover, add a black background color with a little bit see-through */
+      & .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+      }    
+  }
+   
+   
+  .allDot {
+      margin-top: -2rem;
+      margin-left: -7rem;
+      & .dot {
+          text-align: center;
+          position: relative;
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+      }
+      & .active, .dot:hover {
+          background-color: #717171;
+      }
+  }
+   
+   /* On smaller screens, decrease text size */
+   @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+   
+  /*shineer nemegdsen gazruud*/
+  .newPlaces {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+      & .subNewPlaces {
+          display: flex;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          max-width: 500px;
+          border-radius: 20px;
+          & .image {
+              padding: 15px;
+              flex: 1;
+              border-radius: 20px;/* Set a maximum width for the image side */
+              & img{
+                  height: 90%;
+                  width: 90%;
+                  border-radius: 20px;
+              }
+          }
+          & .details {
+              flex: 1;
+              padding: 15px;
+              text-align: center;
+              & button{
+                  margin-top: 2%;
+              }
+             
+          }
+      }
+  }
+  @media (max-width: 1327px) {
+    .placesToRecommend .BigRecommend .details {
+        width:15%;
+        height: 4rem;
     }
-    .Lsearch{
-        display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Add your responsive styles here */
+   
+    /* Example: Adjust the layout of content cards */
+    .content {
+        flex-direction: column;
+        align-items: center;
     }
-    button.navButton {
-            padding: 8px 12px; /* Adjust padding as needed */
-            font-size: 14px; /* Adjust font size as needed */
-    }
-    p{
-        font-size: 12px;
-    }
-}
  
-@media (max-width: 1050px) {
-    nav {
-        & .text, button{
-        font-size: 12px;
-    }
-    }
-    .option1, .option2, .option3 {
-        font-size: 8px; /* Adjust the font size as needed */
-    }
-}
-@media (max-width: 780px) {
-    .BigRecommend img {
-        width: 100%; /* Set the image width to 100% */
-        height: auto; /* Maintain the aspect ratio */
-    }
-}
-/* ... (previous CSS rules) ... */
- 
-@media (max-width: 480px) {
-    nav .text, button.navButton {
-        font-size: 10px; /* Adjust font size for navigation items */
+    /* Example: Center the button within its container */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
  
-    .option1, .option2, .option3 {
-        font-size: 10px; /* Adjust font size for dropdown options */
+    /* Example: Adjust image heights */
+    .content img {
+        max-height: 150px; /* or any other height */
     }
  
-    .logopngfooter {
-        max-width: 30%; /* Adjust logo size in the footer */
+    /* Example: Reduce font sizes */
+    h1, h2, h3, p, .button-container button {
+        font-size: 0.8em;
     }
  
-    .footerGrid-container {
-        grid-template-columns: repeat(1, 1fr); /* Adjust footer grid layout */
+    /* Example: Modify padding and margins for smaller screen */
+    .content {
+        padding: 10px;
     }
- 
-    .Lsearch, button {
-        font-size: 12px; /* Adjust font size for search elements */
+    select {
+        font-size: 0.8em; /* Decrease the font size */
+        width: auto; /* Adjust width as needed, or use a specific value */
+        padding: 5px; /* Adjust padding to reduce size */
     }
- 
-    .background {
-        height: 500px; /* Adjust background height for smaller screens */
-    }
- 
-    .RecommendPlacesToFlex img, .subNewPlaces img {
-        max-width: 100%; /* Set image width to 100% for smaller screens */
-        height: auto; /* Maintain aspect ratio */
-    }
- 
-    p {
-        font-size: 12px; /* Adjust font size for paragraphs */
-    }
- 
-    .newPlaces, .RecommendPlacesToFlex, .subNewPlaces, .subRecommend {
-        margin: 0; /* Remove margin for grid items */
-    }
-}
+  }

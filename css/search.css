@@ -1,14 +1,12 @@
-@import url('root.css');
-
-* {
-    box-sizing: border-box;
-    font-family: Pangolin;
-}
+@import url('./general.css');
+ 
+ 
 /*Дэлгэцээ хуваах*/
 main{
     margin-left: var(--margin-side);
     margin-right: var(--margin-side);
     display: grid;
+    grid-template-columns: 35% 35% 25%;
     gap: 2rem;
     & .name{
         grid-column: 1 / span 3;
@@ -18,97 +16,94 @@ main{
         grid-column: 1 / span 2;
         grid-row: 2;
     }
-    & .Bugd{
-        grid-column: 1 / span 3;
-        grid-row: 3;
-    }
 }
 .result{
     display: grid;
-    gap: 0;
-    grid-template-areas: 'PlaceImage PlaceInfo';
+    gap: 2rem;
+    grid-template-columns: 30% 65%;
+ 
 }
 .filter{
     & article{
-        padding: 1rem;
+        padding: 2rem;
     }
-
+    & h3{
+        padding-bottom: 1rem;
+    }
+    & ol{
+        list-style: none;
+        size: 1em;
+        & li{
+            padding: 0.5rem;
+        }
+    }
+    & p{
+        position: relative;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 1rem;
+        padding-right: 2rem;
+        margin-left: 90%;
+        margin-top: -5%;
+        text-align: center;
+        border-radius: 1rem;
+        color: var(--main-bg-color);
+        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    }
 }
 /*Нэр ба зураасаа гоё болгох*/
 .name{
-    
+   
     & h1{
         font-size: 1.2rem;
+        padding: 1rem;
     }
     & hr{
         height: 0.25rem;
         background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
     }
 }
-
+ 
 article {
-    margin-bottom: 2rem;
-    border: none;
-    box-shadow: 0.1rem 0.2rem 0.5rem #555;
-    border-radius: 1rem;
     & img{
-        border-radius: 1rem;
-        width: 25rem;
-        height: auto;
+        height:100% ;
     }
-
     & .PlaceInfo{
-        & .heartbutton{
-            float: right;
-            margin: 0.5rem;
-            border: none;
-            background-color: white;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        padding-top: 1rem;
+        position: relative;
+        color: #7d7d7d;
+        & .tag{
+            grid-column: 1 / span 3;
         }
+        & h3{
+            color: black;
+            padding-bottom: 0.3rem;
+        }
+        & h4{
+            color: black;
+            font-size: 1.2rem;
+            grid-column: 1 / span 3;
+        }
+        & meter{
+            height: 2rem;
+            width: 3.7rem;
+        }
+        & .intro{
+            grid-column: 1 / span 3;
+          }
         & .value{
+            grid-column: 3 / span 1;
             width:100%;
-            border: none;
-            border-radius: var(--border-radius);
-            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            color: white;
-            cursor: pointer;
-            padding: 0.7em 0.7em;
-            font-size: 1em;   
+            height: 70%;
         }
         & a {
-            float: right;
-            margin-right: 5rem;
             text-decoration: none;
-            color: black;
+            color: #7d7d7d;
         }
-        & ol{
-            display: flex;
-            flex-direction: row;
-            & li{
-               
-            }
+        & .like{
+            align-items: flex-end;
         }
-    }
-}
-
-/*Бүгдийг харуулах товчны байрлал дизайн*/
-.Bugd{
-    margin-bottom: 5rem;
-
-    & hr{
-        height: 0.25rem;
-        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
-    }
-    & .btn{
-        width: 15rem;
-        margin-left: 44rem;
-        margin-top: -0.8rem;
-        position: absolute;
-        border: none;
-        border-radius: var(--border-radius);
-        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-        color: white;
-        cursor: pointer;
-        padding: 0.7em 0.7em;
-        font-size: 1em;
     }
 }

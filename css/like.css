@@ -1,0 +1,149 @@
+@import url('./general.css');
+main{
+    margin-left: var(--margin-side);
+    margin-right: var(--margin-side);
+    /* display: grid;
+    grid-auto-columns: 49% 49%; */
+    gap: 2rem;
+    .name{
+        grid-column: 1 / span 2;
+    }
+}
+.plans{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto auto;
+ 
+    & .ilerts{
+        grid-column: 1 / span 2;
+        margin-bottom: 0;
+        padding: 1rem;
+    }
+    & .item{
+        display: grid;
+        max-width: 50vw;
+        gap: 1rem;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'PlanImage PlanInfo';
+    }
+}
+/*Нэр ба зураас*/
+.name{
+    & h1{
+        font-size: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: #0A5C76;
+        text-align: center;
+    }
+    & hr{
+        height: 0.25rem;
+        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+    }
+    & button {
+        border: none;
+        border-radius: var(--border-radius);
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        padding: 0.7em 0.7em;
+        font-size: 1em;
+        text-align: center;
+        margin-left: 45%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+article {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    
+    & img{
+        height: 19.2rem;
+        width: 25rem;
+    }
+}
+
+.PlanImage, .PlaceImage{
+    & meter{
+        position: absolute;
+        margin-left:-4%;
+        margin-top: 0.5%;
+        height: 2rem;
+        width: 4rem;
+    }
+}
+
+.PlanInfo, .PlaceInfo{
+    padding: 1rem;
+    padding-top: 1.5rem;
+    position: relative;
+    color: #7d7d7d;
+    & .like{
+        float: right;
+        margin-right: 5%;
+    }
+    & .value{
+        width:85%;
+
+    }
+    & a {
+        float: right;
+        margin-right: 5rem;
+        text-decoration: none;
+        color: #7d7d7d;
+    }
+    & .IntroName{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    & .intro{
+        margin-bottom: 1rem;
+    }
+    & ol{
+        margin-top: 0.5rem;
+        list-style: none;
+        size: 1em;
+        counter-reset: step;
+        > li{
+            width: 100%;
+            font-size: 0.8rem;
+            position: relative;
+            text-transform: uppercase;
+            color: black;
+            margin-bottom: 0.8rem;
+            }
+        > li:before {
+            width: 1.5rem;
+            height: 1.5rem;
+            content: "";
+            margin-right: 1rem;
+            line-height: 1.5rem;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));;
+        }
+        > li:after {
+             width: 0.15rem;
+             height: 100%;
+             content: '';
+             position: absolute;
+             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));;
+             top: 1rem;
+             left: 3%;
+        }
+        > li:last-child:after {
+             content: none;
+        }
+
+        > li:before {
+            content: counter(step);
+            counter-increment: step;
+        }
+    }
+}

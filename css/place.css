@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-/*undsen tohiruulga*/
+ 
 body {
     font-family: pangolin;
     margin: 0;
     padding: 0;
-    
 }
-
+ 
 main {
     width: 85%;
     margin: auto;
 }
-/*tuhain gazriin ner*/
+ 
 .placeName  {
     margin-top: 1rem;
     & h2{
@@ -20,13 +19,13 @@ main {
         font-weight: bold
     }
 }
-/*gazrrin neren doorh urt zuraas*/
+ 
 #hr1 {
     height: 0.1rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
     margin: 0.4rem 0;
 }
-/*zuraasan door tuhain gazriin hayg, tsagiin huvaari, utasiig haruulsan heseg*/
+ 
 .idk {
     display: flex;
     flex-direction: row;
@@ -37,7 +36,7 @@ main {
         text-decoration: none;
     }
 }
-
+ 
 .undsen_heseg {
     margin-top: 2%;
     display: grid;
@@ -46,8 +45,8 @@ main {
     grid-column-gap: 5%;
     grid-row-gap: 5%;
 }
-/*Undsen heseg deh ehnii gazriin zurgiig haruulah heseg*/
-#bigPic {
+ 
+.slideshow-container {
     object-fit: cover;
     overflow: hidden;
     border-radius: 1rem;
@@ -55,9 +54,103 @@ main {
     & img {
         width: 100%;
         height: 100%;
+        position: relative;
+    }
+    & .favorite {
+        position: absolute;
+        background: none;
+        border: none;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        color: #fff;
+    }
+    & .addToCard {
+        position: absolute;
+        background: none;
+        border: none;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: #e7e7e7;
+        border-radius: 0.5rem;
+        margin-left: -2.5rem;
+        margin-top: 0.8rem;
+        & i {
+          color: #000;
+        }
+      }
+      & .addToCard:hover{
+        background-color: #797777;
+      }
+}
+.addToCard .fa-heart{
+    font-size: 1.3rem;
+  }
+ 
+/* Slideshow container */
+.slideshow-container {
+    /* max-height: 39rem; */
+    width: 100%;
+    position: relative;
+    margin: auto;
+    & .mySlides {
+        & img {
+            height: auto;
+            object-fit: cover;
+        }
+    }
+ 
+    /* Next & previous buttons */
+    & .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        width: auto;
+        padding: 0.8rem;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+ 
+    /* Position the "next button" to the right */
+    &  .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+ 
+    /* On hover, add a black background color with a little bit see-through */
+    & .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }    
+      /* Fading animation */
+    & .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
     }
 }
-/*zuragnii hajuu taliin checkbar*/
+ 
+ 
+.allDot {
+    margin-top: -2rem;
+    & .dot {
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    & .active, .dot:hover {
+        background-color: #717171;
+    }
+}
+ 
 aside {
     border-radius: 1rem;
     padding: 0.5rem 1em;
@@ -79,7 +172,7 @@ aside {
     }
     & h3 {
         font-size: 16px;
-        margin-top: -0.5rem;
+        margin-top: 1rem;
     }
     & div{
         display: flex;
@@ -87,148 +180,243 @@ aside {
     }
    
 }
-/*taniltsuulga ni*/
+ 
+ 
+ 
 #taniltsuulga {
-    padding: 1.5rem;
+    background-color: #fff;
+    text-align: justify;
     & p {
-        padding: 0.5rem;
-        margin-left: 30px;
+        margin:  0 2rem 1rem 2rem ;
         font-weight: bold;
     }
+    & h3 {
+        margin: 1rem;
+    }
 }
-
-.ratingplace {
+ 
+.ratingPlace {
     width: 100%;
-    padding: 1.5rem;
-    list-style-type: none; 
+    padding: 1rem;
+    list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 1rem ;
-    & ul {
-        margin-top: 0.1rem;
-        width: 80%;
-        display: flex; 
-        flex-direction: column;
-        & li {
-            list-style: none ;
-            display: flex;
-            padding: 0.2rem;
-            color: #0A5C76;
-        }
-    }
-    & progress {
-        width: 60%;
-        height: 60%;
+    gap: 0.5rem ;
+    background-color: #fff;
+    & p {
+        font-size: 14px;
     }
     & .ratingTitle{
-        width: 100%;
         display: flex;
         justify-content: space-between;
-    }
-    & #stars{
-        color: #0A5C76;
-    }
-}
-.ratingOnComment {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    height: 9.2rem;
-    overflow: auto;
-    & #comment {
-        font-size: 12px;
-    }
-}
-/*progress oo goy buduun baarag bolgosiin*/
-progress {
-    position: relative;
-    left: 1rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    border-radius: 25px;
-}
-/*budagdsan ghiimu unelegdsen ghimu ter hesgiig ni borderradius ugj muguud ungiig ni uusgachihlaa*/
-progress::-webkit-progress-value {
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    border-radius: 25px;
-}
-/*ene harin ariin budagdaagui heseg ni*/
-progress::-webkit-progress-bar {
-    background-color: lightgray; 
-    border-radius: 25px;
-}
-/*daraagiin heseg buyu ijil tustei gazruud*/
-.similarPlans {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    margin-top: 5%;
-    & h2 {
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
-    & section {
+        padding: 0 1rem 0 1rem;
         width: 100%;
-        display: flex; 
-        gap: 2.5rem; 
     }
-    & meter{
-        width: 1.5rem;
+    & .myRating {
+        display: inline-block;
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: center;
+        & input[type="radio"] {
+            display: none;
+          }
+        & label {
+            display: inline-block;
+            padding: 5px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ccc;
+          } 
     }
-}
-.content{
-    display: flex; 
-}
-
-
-article {
-    background-color: #f9f9f9;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray;
-    overflow: hidden; 
-    & img {
-        width: 50%;
-        height: 100%; 
-        object-fit: cover; 
+    
+    &  .myRating label:hover,
+    .myRatinglabel:hover ~ label {
+      color: #ffca08;
     }
-}
-
-.negyum{
-    width: 100%;
-    display: flex;
-    padding: 0.2rem 0.5rem;
-    flex-direction: column;
-  
-    & section{
+    
+    & .myRating input[type="radio"]:checked ~ label {
+      color: #ffca08;
+    }
+    & .ratingOnComment {
         display: flex;
-        gap: 1rem;
-        justify-content: space-between;
+        flex-direction: column;
+        height: 13rem;
+        overflow: auto;
+        padding: 0 0 0 1rem;
+        & h4 {
+            font-size: 18px;
+        }
     }
-    & p{
-        font-size: 0.7rem;
-    }
-    & button{
-        margin: 0.5rem 0.5rem;
+    & #submit-button {
+        background: none;
+        border: none;
+        width: 45px;
+        height: 45px;
         cursor: pointer;
-        padding: 0.1rem 0.2rem;
-        border-radius: 0.4rem;
-        border-style: none;
-        color: white;
-        font-family: pangolin;
-        background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     }
-}
-.miniTitle{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    & input {
+        width: 80%;
+        font-family: pangolin;
+    }
+ 
 }
 
 h2, h3, h4 {
     color: #333333;
 }
-
+ 
 address, time, p, ul , a{
     color: #666666;
 }
+ 
+.newPlaces {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 30% 30% 30% ;
+    gap: 2rem;
+    & .subNewPlaces {
+        display: grid;
+        grid-template-columns: 50% 50%  ;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        & meter {
+            position: absolute;
+            margin-left:-5.5rem;
+            margin-top: 0.5rem;
+            color:#fff;
+            & i {
+              color:#fff;
+            }
+          }
+          & .addToCard {
+            background: none;
+            border-radius: 0.5rem;
+            border: none;
+            width: 1.8rem;
+            height: 1.8rem;
+            & i {
+              color: #000;
+            }
+          }
+
+          & .addToCard:hover{
+            background-color: #e7e7e7;
+          }
+        & .details {
+            flex: 1;
+            margin: 1rem;
+            & .miniTitle {
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+              }
+            & .value{
+              margin-top: 2%;
+              text-align: center;
+              border-radius: 0.5rem;
+          }
+           
+        }
+    }
+    & .subNewPlaces img {
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+    }
+    & i {
+        color: #666666;
+    }
+}
+ 
+ 
+article {
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    & img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+ 
+ /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+/* Responsive style */
+@media (max-width: 768px) {
+    /* Adjust main container */
+    main {
+        width: 90%;
+        margin: 10px auto;
+    }
+ 
+    /* Stack sections vertically in .undsen_heseg */
+    .undsen_heseg {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+    }
+ 
+ 
+    /* Adjust text and image sizes */
+    h2, h3, h4 {
+        font-size: smaller;
+    }
+ 
+    /* Adjust layout for .similarPlans */
+    .newPlaces section {
+        flex-direction: column;
+    }
+ 
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 1150px) {
+    .newPlaces {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 1rem; 
+    }
+}
+@media (max-width: 550px) {
+    .mySlides .addToCard .fa-heart{
+        font-size: 1rem;
+    }
+    .mySlides .addToCard {
+        width: 1.5rem;
+        height: 1.4rem;
+    }
+}
+@media (max-width: 1037px) {
+    .ratingPlace  .myRating label {
+        font-size: 20px;
+    }
+}
+@media (max-width: 816px) {
+    .ratingPlace  .myRating label {
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .newPlaces {
+      display: grid;
+      grid-template-columns: 1fr; 
+      gap: 1rem; 
+    }
+    .ratingPlace  .myRating label {
+        font-size: 30px;
+    }
+}
 
 
+
+ 
+
+   

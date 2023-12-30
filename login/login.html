@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Нэвтрэх</title>
-</head>
-<body>
-    <img src="haachih.jpg" alt="haachih_uu?">
-    <a href="login.html"><h3>Нэвтрэх</h3></a>
-    <a href="signup.html"><h3>Бүртгүүлэх</h3></a>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <main>
+      <aside>
+        <img class="logo" src="/zurag/logo.png" alt="haachih_uu?" />
+        <a href="login.html"><h3>Нэвтрэх</h3></a>
+        <a href="login.html"><h3>Бүртгүүлэх</h3></a>
 
-    <article>
-        <input type="text" placeholder="Нэвтрэх нэр">
-        <input type="text" placeholder="Нууц үг">
-        <a href="signup.html"><p>Нууц үгээ мартсан уу?</p></a>
-    </article>
-    <article>
-        <img src="haajuutaliinzurag.jpg" alt="haajuutaliinzurag">
-    </article>
-</body>
+        <label for="inp" class="inp">
+          <input type="text" id="inp" placeholder="&nbsp;" />
+          <span class="label">Нэвтрэх нэр</span>
+          <span class="focus-bg"></span>
+        </label>
+        <label for="inp" class="inp">
+          <input type="text" id="inp" placeholder="&nbsp;" />
+          <span class="label">Нууц үг</span>
+          <span class="focus-bg"></span>
+        </label>
+
+        <p>Нууц үгээ мартсан уу?</p>
+        <button>Нэвтрэх</button>
+      </aside>
+      <img
+        class="TomZurag"
+        src="/zurag/background2.png"
+        alt="haajuutaliinzurag"
+      />
+    </main>
+  </body>
 </html>
