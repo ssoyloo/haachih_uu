@@ -21,16 +21,27 @@
     <link rel="stylesheet" href="./css/headerfooter.css" />
     <link rel="stylesheet" href="./css/general.css" />
     <script src="./component/header-footer.js"></script>
+    <script src="./component/mobile-header.js"></script>
+    <script src="./component/mobile-footer.js"></script>
     <script src="./component/search.js"></script>
     <script src="./jsmodule/function.js"></script>
-    <!-- <script src="./js2/indexPlan.js"></script> -->
-    <!-- <script src="./jsmodule/indexPlace.js"></script> -->
-    <!-- <script src="./component/plan-list.js"></script> -->
+    <script type="module" src="./component/add-to-card.js"></script>
+    <script type="module" src="./component/favouritePlan.js"></script>
+    <script type="module" src="./component/plan-list.js"></script>
+    <script type="module" src="./component/index-place-list.js"></script>
+    <script type="module" src="./component/index-rec-place-list.js"></script>
+    <script type="module" src="./component/add-place-to-card.js"></script>
+    <script type="module" src="./component/favouritePlace.js"></script>
+    <script type="module" src="./component/place-comp.js"></script>
+    <script type="module" src="./component/plan-comp.js"></script>
+    <script src="./jsmodule/place-details.js"></script>
   </head>
   <body>
     <header>
       <all-header></all-header>
+      <mobile-header></mobile-header>
     </header>
+
     <main>
       <search-place></search-place>
       <section class="slideshow-container">
@@ -39,11 +50,11 @@
         </div>
 
         <div class="mySlides fade">
-          <img src="/zurag/background2.jpeg" style="width: 100%" />
+          <img src="/zurag/background2.png" style="width: 100%" />
         </div>
 
         <div class="mySlides fade">
-          <img src="/zurag/background3.jpg" style="width: 100%" />
+          <img src="/zurag/background3.png" style="width: 100%" />
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -55,48 +66,49 @@
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
+      <favourite-plan></favourite-plan>
+      <h2>Топ л гээд байгаам чинь</h2>
       <plan-list></plan-list>
-      <rec-place-list></rec-place-list>
-      <place-list></place-list>
+      <rec-place-list topPlace="3"></rec-place-list>
+      <favourite-place frame="round"></favourite-place>
+      <index-place-list></index-place-list>
     </main>
 
     <footer>
       <all-footer></all-footer>
+      <mobile-footer></mobile-footer>
     </footer>
-    <script src="./component/plan-list.js"></script>
-    <script src="./component/place-list.js"></script>
-    <script src="./component/rec-place-list.js"></script>
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
-    </script>
   </body>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
 </html>
