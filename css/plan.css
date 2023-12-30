@@ -38,10 +38,10 @@ main{
   & rating {
        display: inline-flex;
      }
-    & input { 
+    & input {
       appearance: none;
       margin: 0;
-      box-shadow: none; 
+      box-shadow: none;
     }
     & input::after {
       content: '\2605';
@@ -195,21 +195,21 @@ main{
     }
   }  
 }
-
+ 
 .ratingplan{
     border: none;
     box-shadow: 0.1rem 0.2rem 0.5rem #555;
     border-radius: var(--border-radius);
     width: 100%;
     height: 50%;
-    padding: 1rem; 
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem ;
     & ul {
         margin-top: 0.1rem;
         width: 80%;
-        display: flex; 
+        display: flex;
         flex-direction: column;
         & li {
             list-style: none ;
@@ -244,18 +244,18 @@ progress {
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     border-radius: 25px;
 }
-
+ 
 progress::-webkit-progress-value {
     background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
     border-radius: 25px;
 }
-
+ 
 progress::-webkit-progress-bar {
-    background-color: lightgray; 
+    background-color: lightgray;
     border-radius: 25px;
 }
-
-
+ 
+ 
 @media (max-width: 1600px) {
   main{
     margin-left: 6rem;
@@ -305,9 +305,9 @@ progress::-webkit-progress-bar {
         height: 3rem;
         line-height: 3rem;
       }
-    } 
+    }
   }
-}   
+}  
 @media (max-width: 1100px) {
   main{
     font-size: 0.8rem;
@@ -373,14 +373,14 @@ progress::-webkit-progress-bar {
       margin: 5% 0 0 0;
     }
   }
-} 
+}
 @media (max-width: 930px) {
   main{
     margin-left: 2rem;
     margin-right: 2rem;
     display: block;
   }
-} 
+}
 @media (max-width: 680px) {
 main{
   font-size: 0.6rem;
