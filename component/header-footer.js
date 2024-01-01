@@ -16,7 +16,6 @@ class header extends HTMLElement {
           <li><a href="./menubar.html?tag=Хөдөө">Хөдөө гарья</a></li>
         </ul>
         <section class="headerButton">
-        
           <favourite-plan></favourite-plan>
           <favourite-place></favourite-place>
         </section>

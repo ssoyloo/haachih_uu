@@ -50,7 +50,7 @@ class FavouriteListComponent extends HTMLElement {
             document.querySelector(".plans").insertAdjacentHTML("beforeend", this.returnPlanValue);
         } else {
             if (plansContainer) {
-                plansContainer.innerHTML = `<h2 class="baihgui">There are no plans.</h2>`;
+                plansContainer.innerHTML = `<h2 class="baihgui">Танд дуртай зүйл байхгүй гэж үү?</h2>`;
             }
         }
     }

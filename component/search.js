@@ -111,7 +111,7 @@ class searchPlace extends HTMLElement {
             <option value="Garden">Хүрээлэн</option>
             <option value="Enjoy">Хөгжилдөх газар</option>
           </select>
-          <button type="button" onclick="getValueForFilter()">LET'S GO</button>
+          <button type="button" onclick="getValueForFilter()">HAACHIH UU?</button>
         </div>
       </div>
               `;

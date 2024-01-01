@@ -1,15 +1,21 @@
-class Plan {
+class Place {
     constructor(data) {
         this.name = data.name;
         this.image = data.image;
         this.tag = data.category;
         this.address = data.address;
-        this.buttonText = data.buttonText;
+        this.hours = data.hours; //tsagiin huvaari
+        this.buttonText = data.buttonText; //ehlehe une
         this.stars = data.stars;
-        this.stars=data.stars;
-        this.countPeople=data.countPeople;
+        this.countPeople=data.countPeople; //hunii bagtaamj
         this.introduction=data.introduction;
         this.phone=data.phone;
+        this.freewifi = data.freewifi;
+        this.parking = data.parking;
+        this.noice = data.noice;
+        this.VIProom = data.VIProom;
+        this.microphone = data.microphone;
+        this.speaker = data.speaker;
     }
   
     render() {
@@ -35,9 +41,7 @@ class Plan {
                   <address class="addr">
                       <i class="fa-solid fa-location-dot"></i>
                       ${this.address}
-                  </address>
-                  
-                  
+                  </address> 
 
                   <a href="tel:${this.phone}" class="phone">
                       <i class="fa-solid fa-phone"></i>${this.phone}
@@ -55,13 +59,15 @@ class Plan {
   }
 }
 
-class PlanRenderer {
-  constructor(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, typeFilter) {
-      this._plansList = [];
+class PlaceRenderer {
+  constructor(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, starFilter, detailFilter, typeFilter) {
+      this._placesList = [];
       this._apiUrl = apiUrl;
       this._tagFilter = tagFilter;
       this._huniiTooFilter = huniiTooFilter;
       this._oirhonGazarFilter = oirhonGazarFilter; // Add oirhonGazarFilter here
+      this._starFilter = starFilter;
+      this._detailFilter = detailFilter;
       this._typeFilter = typeFilter;
   }
 
@@ -69,33 +75,44 @@ class PlanRenderer {
       fetch(this._apiUrl)
           .then(response => response.json())
           .then(data => {
-              this._plansList = this.filterPlacesBy(data.record);
-              this.renderPlans(targetSelector);
+              this._placesList = this.filterPlacesBy(data.record);
+              this.renderPlaces(targetSelector);
           })
           .catch(error => {
               console.error('Error fetching places data:', error);
           });
   }
-
+  
   filterPlacesBy(placesData) {
-    if (!this._huniiTooFilter && !this._oirhonGazarFilter && !this._typeFilter) {
-        return placesData;
+    if (!this._huniiTooFilter && !this._oirhonGazarFilter && !this._typeFilter && !this._starFilter.length && !this._detailFilter.length) {
+      return placesData;
     }
-
+  
     return placesData.filter(place => {
-        const huniiTooMatch = !this._huniiTooFilter || place.countPeople >= parseInt(this._huniiTooFilter, 10);
-        const oirhonGazarMatch = !this._oirhonGazarFilter || place.address.includes(this._oirhonGazarFilter);
-        const typeMatch = !this._typeFilter || place.category.toLowerCase() === this._typeFilter.toLowerCase();
-        return huniiTooMatch && oirhonGazarMatch && typeMatch;
+      const huniiTooMatch = !this._huniiTooFilter || place.countPeople >= parseInt(this._huniiTooFilter, 10);
+      const oirhonGazarMatch = !this._oirhonGazarFilter || place.address.includes(this._oirhonGazarFilter);
+      const typeMatch = !this._typeFilter || place.tag.toLowerCase() === this._typeFilter.toLowerCase();
+      const starMatch = !this._starFilter.length || this._starFilter.includes(place.stars.toString());
+  
+      const detailMatch = !this._detailFilter.length ||
+        (this._detailFilter.includes('freewifi') && place.freewifi) ||
+        (this._detailFilter.includes('parking') && place.parking) ||
+        (this._detailFilter.includes('noice') && place.noice) ||
+        (this._detailFilter.includes('VIProom') && place.VIProom) ||
+        (this._detailFilter.includes('microphone') && place.microphone) ||
+        (this._detailFilter.includes('speaker') && place.speaker);
+  
+      return huniiTooMatch && oirhonGazarMatch && typeMatch && starMatch && detailMatch;
     });
-}
-
-  renderPlans(targetSelector) {
+  }
+  
+ 
+  renderPlaces(targetSelector) {
       const targetElement = document.querySelector(targetSelector);
       targetElement.innerHTML = '';
-      this._plansList.forEach(planData => {
-          const plan = new Plan(planData);
-          targetElement.appendChild(plan.render());
+      this._placesList.forEach(placeData => {
+          const place = new Place(placeData);
+          targetElement.appendChild(place.render());
       });
   }
 }
@@ -107,6 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const huniiTooFilter = urlParams.get('countPeople');
   const oirhonGazarFilter = urlParams.get('address');
   const typeFilter = urlParams.get('category');
-  const planRenderer = new PlanRenderer(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, typeFilter);
-  planRenderer.fetchAndRenderPlaces('.result');
+  const starFilter = urlParams.get('star');
+  const detailFilter =urlParams.get('detail')
+  const placeRenderer = new PlaceRenderer(apiUrl, tagFilter, huniiTooFilter, oirhonGazarFilter, starFilter, detailFilter, typeFilter);
+  placeRenderer.fetchAndRenderPlaces('.result');
 });

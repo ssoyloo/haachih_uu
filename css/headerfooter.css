@@ -8,6 +8,7 @@ header {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+<<<<<<< HEAD
     
     & .dropdown {
         position: relative;
@@ -28,6 +29,8 @@ header {
     & .dropdown:hover .dropdown-content {
         display: block;
     }
+=======
+>>>>>>> c05c96f745933852e819d128525ed7ec863fdb00
   }
  
 nav {
@@ -114,8 +117,6 @@ nav {
         }
     }
 }
- 
- 
  
 footer {
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));

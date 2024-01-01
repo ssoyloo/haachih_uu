@@ -12,7 +12,7 @@ main {
     width: 85%;
     margin: auto;
 }
- 
+
 /*LetsGo buttontoi filterdej searchilj bga heseg maani*/
 .Lsearch {
     display: flex;
@@ -35,7 +35,7 @@ main {
         background-color: #ececec;
     }
     & button {
-        background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
         color: #fff;
         border: none;
         border-radius: 0 20px 20px 0;
@@ -115,6 +115,20 @@ aside {
     & input {
         margin-right: 1rem;
     }
+    & .filterbutton{
+        margin: 0.5rem 0.5rem;
+        padding: 0.4rem 0.2rem;
+        border-radius: 0.6rem;
+        border: none;
+        color: white;
+        font-family: pangolin;
+        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+        height: 2rem;
+        width: 13rem;
+        text-align: center;
+        margin-left: 17rem;
+        float: right;
+    }
 }
  
 .result {
@@ -172,12 +186,11 @@ article {
             border-style: none;
             color: white;
             font-family: pangolin;
-            background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
+            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             height: 2rem;
             width: 13rem;
             text-align: center;
             margin-left: 17rem;
-            float: right;
         }
         & #une {
             margin-left: 21.5rem;
@@ -210,88 +223,8 @@ article {
         & a {
             text-decoration: none;
         }
-        & ol{
-            display: flex;
-            flex-direction: column; /* This will stack the list items vertically */
-            list-style: none;
-            padding-left: 0; /* This removes padding to align with the start of the container */
-            counter-reset: step;
-            > li{
-                width: 100%; /* This will make the list items use the full width available */
-                font-size: 0.7rem;
-                position: relative;
-                text-align: left; /* Align the text to the left */
-                text-transform: uppercase;
-                margin-top: 1rem;
-                color: #ffffff;
-            }
-            > li:before {
-                width: 1rem;
-                height: 1rem;
-                content: counter(step);
-                counter-increment: step;
-                line-height: 1.2rem;
-                display: block;
-                text-align: center;
-                border-radius: 50%;
-                position: absolute;
-                left: 0; /* Align the pseudo-element to the left */
-                top: 0; /* Align the pseudo-element to the top of the li */
-                z-index: 2;
-                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));  
-            }
-            > li:after {
-                width: 0.1rem;
-                height: 100%;
-                content: '';
-                position: absolute;
-               
-                left: 0.4rem;
-                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            }
-            > li:last-child:after {
-                content: none;
-            }
-            > li.active:before {
-                background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            }
-            & p {
-                margin-left: 1.5rem;
-            }
-        }  
+      
     }
-}
-
-.bugd {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    & hr{
-        height: 0.1rem;
-        background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
-        width: 100%;
-    }
-    & .btn{
-        width: 15rem;
-        margin-top: -1.2rem;
-        position: absolute;
-        border: none;
-        border-radius: 0.5rem;
-        background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-        color: white;
-        font-family: pangolin;
-        padding: 0.7em 0.7em;
-        font-size: 1em;
-        margin-left: 35%;
-    }
-}
-
-.suuliinZuraas{
-    width: 108.8%;
-    height: 0.1rem;
-    background-image: linear-gradient(to bottom right, #0A5C76, #2FA2C6);
-    margin-top: -1rem;
-    margin-bottom: 5rem;
-    border-style: none;
 }
  
 address, time, p, ul , li, a, label{
