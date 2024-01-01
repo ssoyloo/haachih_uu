@@ -95,10 +95,14 @@ class PlaceRenderer {
     return placesData.filter(place => {
         const huniiTooMatch = !this._huniiTooFilter || place.countPeople >= parseInt(this._huniiTooFilter, 10);
         const oirhonGazarMatch = !this._oirhonGazarFilter || place.address.includes(this._oirhonGazarFilter);
-        const typeMatch = !this._typeFilter || place.category.toLowerCase() === this._typeFilter.toLowerCase();
+        const typeMatch = !this._typeFilter || place.category.toLowerCase() == this._typeFilter.toLowerCase();
         return huniiTooMatch && oirhonGazarMatch && typeMatch;
     });
 }
+
+
+
+
 filterBySide(firstPlaceList){
     if (!this._starFilter && !this._detailFilter){
         return firstPlaceList;

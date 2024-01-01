@@ -3,52 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Component with Properties</title>
+  <title>Document</title>
 </head>
-<body>
-
-<!-- Define your custom element -->
-<script>
-  class MyComponent extends HTMLElement {
-    constructor() {
-      super();
-
-      // Retrieve the initial value from the 'initial-value' attribute
-      this.value = parseInt(this.getAttribute('initial-value')) || 0;
-
-      // Create a shadow DOM
-      this.attachShadow({ mode: 'open' });
-
-      // Initial render
-      this.render();
-
-      // Attach a click event listener to the component
-      this.addEventListener('click', () => this.handleChange());
-    }
-
-    // Function to handle changes
-    handleChange() {
-      // Perform some changes when the property is changed
-      // For simplicity, just increment the value here
-      this.value++;
-      this.render();
-    }
-
-    // Function to render the component
-    render() {
-      this.shadowRoot.innerHTML = `
-        <p>Current Value: ${this.value}</p>
-        <button>Change Value</button>
-      `;
-    }
+<style>
+  dl {
+    margin-left: 6px;
   }
-
-  // Define the custom element
-  customElements.define('my-component', MyComponent);
-</script>
-
-<!-- Use your custom element -->
-<my-component initial-value="0"></my-component>
-
+  dt {
+    color: #217ac0;
+    font-family: Consolas, "Liberation Mono", Courier;
+    font-size: 110%;
+    font-weight: bold;
+  }
+  dd {
+    margin-left: 16px;
+  }
+</style>
+<body>
+  <template id="element-details-template">
+    <style>
+      .name {
+        font-weight: bold;
+        color: #217ac0;
+        font-size: 120%;
+      }
+      #logoutButton  {
+        margin: 10px 0 -8px 0;
+      }
+      #logoutButton {
+        background: #217ac0;
+        padding: 2px 6px 2px 6px;
+        border: 1px solid #cee9f9;
+        border-radius: 4px;
+        color: white;
+      }
+      .attributes {
+        margin-left: 22px;
+        font-size: 90%;
+      }
+      .attributes p {
+        margin-left: 16px;
+        font-style: italic;
+      }
+      element-details{
+        display: flex;
+      }
+    </style>
+    <details>
+      <summary>
+          <slot class="name" name="element-name">NEED NAME</slot>
+        </span>
+      </summary>
+      <div class="attributes">
+        <slot name="attributes"><p>None</p></slot>
+      </div>
+    </details>
+  </template>
+        
+  <element-details>
+    <span slot="element-name">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 448 512">
+        <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+      </svg>
+    </span>
+    <dl slot="attributes">
+      <dt><a id="logoutButton">Log out</a></dt>
+    </dl>
+  </element-details>
 </body>
+<script>
+  customElements.define(
+    "element-details",
+    class extends HTMLElement {
+      constructor() {
+        super();
+        const template = document.getElementById("element-details-template").content;
+        const shadowRoot = this.attachShadow({ mode: "open" });
+        shadowRoot.appendChild(template.cloneNode(true));
+      }
+    },
+  );
+</script>
 </html>
