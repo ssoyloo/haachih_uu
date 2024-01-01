@@ -52,13 +52,6 @@ class Plan {
             </div>
         `;
 
-        const addToCardButton = article.querySelector('.add-to-card');
-
-        addToCardButton.addEventListener('click', () => {
-            // Handle the add-to-card functionality here
-            console.log(`Adding plan with ID ${this.id} to the card`);
-        });
-
         return article;
     }
 }
@@ -75,9 +68,6 @@ class PlanRenderer {
     async fetchAndRenderPlaces(targetSelector) {
         try {
             const response = await fetch(this._apiUrl);
-
-            
-    
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
@@ -99,13 +89,6 @@ class PlanRenderer {
             console.error('Error fetching or parsing data:', error.message);
         }
     }
-    // async updateStar(){
-    //     apiUrl1="localhost:3000/stars";
-    //     const data1 = await fetch(apiUrl1);
-    //     const data2=await data1.json();
-    //     this.anotherList=data2.record;
-    //     console.log(this.anotherList);
-    // }
 
     filterPlacesByTag(placesData) {
         if (!this._tagFilter) {
@@ -125,7 +108,6 @@ class PlanRenderer {
         
     }
 }
-
 document.addEventListener('DOMContentLoaded', () => {
     const apiUrl = "https://api.jsonbin.io/v3/b/65925efbdc746540188b74a9";
     const urlParams = new URLSearchParams(window.location.search);

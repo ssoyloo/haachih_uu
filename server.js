@@ -195,7 +195,7 @@ app.post("/notes", async (req, res) => {
  *               title: "Example Note"
  *               contents: "This is an example note."
  */
-app.get("/comment/:title", async (req, res) => {
+app.get("/stars/:title", async (req, res) => {
   const title = req.params.title;
   try {
     const [rows] = await db.query("select title, AVG(stars) as stars from stars where title=? group by title", [title]);
@@ -221,7 +221,7 @@ app.get("/stars", async (req, res) => {
 
 
 
-app.post("/comment", async (req, res) => {
+app.post("/stars", async (req, res) => {
   const { title, stars} = req.body;
   const username=req.session.username;
   if (!title || !stars || !username) {

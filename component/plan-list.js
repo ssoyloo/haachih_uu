@@ -99,110 +99,109 @@ filterByTagName(){
     const themeClass = this.darkMode ? 'dark-theme' : 'light-theme';
     
     this.myRoot.innerHTML = `
-    <style>
-      h2 {
-        margin: 3rem;
-        font-size: 24px;
-        color: #333;
-        text-align: center;
-      }
-
-      article {
-        & img {
-          max-width: 100%;
-          border-radius: 1rem;
-          margin-bottom: 2%;
-          position: relative;
-         }
-        & h3 {
-          font-size: 18px;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+      <link rel="stylesheet" href="/general.css">
+      <style>
+        h2 {
+          margin: 3rem;
+          font-size: 24px;
           color: #333;
-          margin-bottom: 10px;
+          text-align: center;
         }
+ 
+        article {
+          & img {
+            max-width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 2%;
+            position: relative;
+           }
+          & h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+          }
+        }
+   
+        p {
+          color: #555;
+          font-size: 14px;
+        }
+ 
+        button:hover {
+            background-color: #0056b3;
+        }
+ 
+        .plan-container{
+          background-color: ${this.darkMode ? "var(--bg-dark-color)" : "#fff"};
+          & .item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 1rem;
+              flex-wrap: wrap;
+              & .PlanInfo {
+                  border: 1px solid #ccc;
+                  background-color: #fff;
+                  max-width: 270px;
+                  width: 100%;
+                  margin: 0 10px 20px;
+                  border-radius: 1rem;
+                  background-color: ${this.darkMode ? "#555" : "#fff"};
+                      color: ${this.darkMode ? "#fff" : "#333"};
+              & .title {
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 0.8rem;
+                  & meter {
+                      margin-top: -0.3rem;
+                      height: 100%;
+                  }
+                  & img {
+                    position: relative;
+                  }
+              }
+              & address {
+                  color: #555;
+                  font-size: 14px;
+                  margin-left: 1.5rem;
+              }
+              & p {
+                  margin-left: 1.5rem;
+                  margin-bottom: 0.5rem;
+              }
+              & .PlanInfo:hover{
+                  background-color: #d0dce9;
+                  transition: 0.4s;
+              }
+              & .value{
+                  transform: translateX(55%);
+                  border-radius: 0.5rem;
+                  margin: 0.8rem ;
+                  right: 50%;
+              }
+          }
       }
  
-      p {
-        color: #555;
-        font-size: 14px;
+      .addToCard {
+        position: absolute;
+        background: none;
+        border: none;
+        color: #000;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: #e7e7e7;
+        border-radius: 0.5rem;
+        margin-left: -2.3rem;
+        margin-top: 0.5rem;
       }
-
-      button:hover {
-          background-color: #0056b3;
+      .addToCard .fa-heart {
+        font-size: 1.3rem;
       }
-
-      .plan-container{
-        background-color: ${this.darkMode ? "var(--bg-dark-color)" : "#fff"};
-        & .item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            & .PlanInfo {
-                border: 1px solid #ccc;
-                background-color: #fff;
-                max-width: 270px;
-                width: 100%;
-                margin: 0 10px 20px;
-                border-radius: 1rem;
-                background-color: ${this.darkMode ? "#555" : "#fff"};
-                    color: ${this.darkMode ? "#fff" : "#333"};
-            & .title {
-                display: flex;
-                justify-content: space-between;
-                padding: 0.8rem;
-                & meter {
-                    margin-top: -0.3rem;
-                    height: 100%;
-                }
-                & img {
-                  position: relative;
-                }
-            }
-            & address {
-                color: #555;
-                font-size: 14px;
-                margin-left: 1.5rem;
-            }
-            & p {
-                margin-left: 1.5rem;
-                margin-bottom: 0.5rem;
-            }
-            & .PlanInfo:hover{
-                background-color: #d0dce9;
-                transition: 0.4s;
-            }
-            & .value{
-                transform: translateX(55%);
-                border-radius: 0.5rem;
-                margin: 0.8rem ;
-                right: 50%;
-            }
-        }
-    }
-
-    .addToCard {
-      position: absolute;
-      background: none;
-      border: none;
-      color: #000;
-      width: 1.8rem;
-      height: 1.8rem;
-      background-color: #e7e7e7;
-      border-radius: 0.5rem;
-      margin-left: -2.3rem;
-      margin-top: 0.5rem;
-    }
-    .addToCard .fa-heart {
-      font-size: 1.3rem;
-    }
-    .addToCard:hover{
-      background-color: #797777;
-    }  
-    </style>
-      <link rel="stylesheet" href="/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+      .addToCard:hover{
+        background-color: #797777;
+      }  
+      </style>
       <section class='plan-container'>
         
         <div class="item">
@@ -211,12 +210,13 @@ filterByTagName(){
               <img src="${plan.image}" alt="${plan.title}" />
               <div class="title">
                 <h3>${plan.title}</h3>
+                <add-to-card></add-to-card>
                 <meter value="${plan.stars}" min="0.0" max="5.0">
                   <i class="fa-solid fa-star"></i> <span>${plan.stars}</span>
                 </meter>
               </div>
               <p><i class="fa-solid fa-tag"></i>${plan.tag}</p>
-              <add-to-card></add-to-card>
+              
               <address>
                 <i class="fa-solid fa-location-dot"></i>${plan.location}
               </address>

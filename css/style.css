@@ -9,8 +9,6 @@
       width: 85%;
       margin: auto;
   }
-
-  
    
   h2 {
     margin-top: 1rem;
@@ -90,11 +88,6 @@
       }
   }
    
-   
-   
- 
- 
- 
    /* On smaller screens, decrease text size */
    @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
@@ -133,7 +126,13 @@
           }
       }
   }
-   
+  @media (max-width: 1327px) {
+    .placesToRecommend .BigRecommend .details {
+        width:15%;
+        height: 4rem;
+    }
+  }
+ 
   @media only screen and (max-width: 768px) {
     /* Add your responsive styles here */
    

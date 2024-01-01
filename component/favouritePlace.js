@@ -31,7 +31,6 @@ class FavouritePlaceListComponent extends HTMLElement {
         }
         this.render_count();
     }
-
     jsonToCard() {
         const placesContainer = document.querySelector(".places");
 

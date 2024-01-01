@@ -30,7 +30,7 @@ export class FavouriteList {
             <time datetime="2023-02-08">7:30</time>-<time>21:00</time></p>
 
         
-        <a href="./plan.html?planName=${this.plans.title}&tag=${this.plans.tag}"" ><button class="value"><span>${this.plans.buttonText}</span></button></a>
+        <a href="./plan?planName=${this.plans.title}&tag=${this.plans.tag}"" ><button class="value"><span>${this.plans.buttonText}</span></button></a>
         
     </div>
     </article>

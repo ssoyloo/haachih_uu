@@ -77,3 +77,15 @@ meter{
       background-color: var(--bg-dark-color);
     }
 }
+.addToCard {
+    background: none;
+    border-radius: 0.5rem;
+    border: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    & i {
+      color: #000;
+    }
+  } .addToCard:hover{
+    background-color: #797777;
+  }

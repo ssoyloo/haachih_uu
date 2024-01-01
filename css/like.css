@@ -73,6 +73,9 @@ article {
 }
 
 .PlanImage, .PlaceImage{
+    & img{
+        height:  100%;
+    }
     & meter{
         position: absolute;
         margin-left:-4%;

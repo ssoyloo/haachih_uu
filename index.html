@@ -11,90 +11,88 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="icon" type="image/x-icon" href="logo1.png" />
+    <link rel="icon" type="image/x-icon" href="./logo1.png" />
     <title>Haachih uu?</title>
-      <link rel="stylesheet" href="/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- <link
+    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2//all.min.css"
-    /> -->
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="/style.css" />
+    
     <link rel="stylesheet" href="/headerfooter.css" />
     <link rel="stylesheet" href="/general.css" />
     <script src="/header-footer.js"></script>
+    <script src="/mobile-header.js"></script>
     <script src="/search.js"></script>
     <script src="/function.js"></script>
-    <script type="module" src="/add-plan-to-card.js"></script>
+    <script type="module" src="/add-to-card.js"></script>
     <script type="module" src="/favouritePlan.js"></script>
-    <!-- <script src="js2/indexPlan.js"></script> -->
-    <!-- <script src="jsmodule/indexPlace.js"></script> -->
     <script type="module" src="/plan-list.js"></script>
     <script type="module" src="/place-list.js"></script>
     <script type="module" src="/rec-place-list.js"></script>
     <script type="module" src="/add-place-to-card.js"></script>
     <script type="module" src="/favouritePlace.js"></script>
-    <script type="module" src="/place-details.js"></script>
-    <script type="module" src="/mobile-header.js"></script>
+    <script type="module" src="/add-plan-to-card.js"></script>
+    <script type="module" src="/favouritePlan.js"></script>
     <script type="module" src="/favourite-count.js"></script>
-
-    <script src="/get-plan-star.js"></script>
+    <script type="module" src="/place-comp.js"></script>
+    <script type="module" src="/plan-comp.js"></script>
+    <script src="/place-details.js"></script>
   </head>
   <body>
     <header>
       <all-header></all-header>
       <mobile-header></mobile-header>
     </header>
+ 
     <main>
       <search-place></search-place>
       <section class="slideshow-container">
         <div class="mySlides fade">
           <img src="/background1.jpg" style="width: 100%" />
         </div>
-
+ 
         <div class="mySlides fade">
           <img src="/background2.png" style="width: 100%" />
         </div>
-
+ 
         <div class="mySlides fade">
           <img src="/background3.png" style="width: 100%" />
         </div>
-
+ 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
-
+ 
         <div class="allDot" style="text-align: center">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
-      <!-- <favourite-plan></favourite-plan> -->
       <h2>Топ л гээд байгаам чинь</h2>
       <plan-list></plan-list>
-      <rec-place-list topPlace="3"></rec-place-list>
-      <!-- <favourite-place frame="round" ></favourite-place> -->
-      <h2>Шинээр нэмэгдсэн</h2>
-      <place-list topplace="6"></place-list>
+      <rec-place-list topPlace="4" isSort="yes"></rec-place-list>
+      <h2>Шинэ газрууд</h2>
+      <place-list topPlace="6" ></place-list>
     </main>
-
+ 
     <footer>
       <all-footer></all-footer>
+      <mobile-footer></mobile-footer>
     </footer>
   </body>
   <script>
     let slideIndex = 1;
     showSlides(slideIndex);
-
+ 
     function plusSlides(n) {
       showSlides((slideIndex += n));
     }
-
+ 
     function currentSlide(n) {
       showSlides((slideIndex = n));
     }
-
+ 
     function showSlides(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides");

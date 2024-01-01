@@ -10,7 +10,7 @@ async function printRatingValue(value) {
 console.log(formData);
 
 try {
-    const apiUrl = 'http://localhost:3000/comment';
+    const apiUrl = 'http://localhost:3000/stars';
 
     const response = await fetch(apiUrl, {
         method: 'POST',

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const planName = urlParams.get("planName");
     if (planName) {
-        const apiUrl = `http://localhost:3000/comment/${encodeURIComponent(planName)}`;
+        const apiUrl = `http://localhost:3000/stars/${encodeURIComponent(planName)}`;
         const starRen = new starRender(apiUrl, ".ratingTitle");
         starRen.fetchAndRender();
     } else {

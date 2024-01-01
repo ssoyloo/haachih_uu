@@ -4,115 +4,101 @@ class searchPlace extends HTMLElement {
     }
    
     connectedCallback() {
-      this.innerHTML = `
-          <style>
-          .option {
-            border-radius: 1rem ;
-            height: 7rem;
-            width: 70%;
-            opacity: 80%;
-            background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-            margin:3rem;
-            margin-left: 15%;
-            & p {
-              padding: 1rem;
-              text-align: center;
-              color: white;
-              font-weight:100;
-              font-size: 16px;   
-           }
-
-          & #tuluvluguu {
-            text-decoration: none;
-          }
-          .Lsearch {
+      this.parentNode.innerHTML = `
+            <style>
+            .option {
+              border-radius: 1rem;
+              height: 7rem;
+              width: 70%;
+              opacity: 90%;
+              background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
+              margin: 3rem auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              & p {
+                padding: 0.6rem;
+                text-align: center;
+                color: white;
+                font-size: 16px;
+              }
+            }
+   
+            .Lsearch {
               display: flex;
               text-align: center;
               overflow: hidden;
               border-radius: 1rem;
               width: 70%;
-              margin-left: 15%;
-              margin-top:0rem;
-              & select, button{
-                  flex: 1;
-                  font-size: 14px;
+              & select, button {
+                flex: 1;
+                font-size: 14px;
+                padding: 0.5rem;
               }
-              & select{
-                  width: 8rem;
-                  padding: 0.5rem;
-                  font-family: pangolin;
-                  color:#666666 ;
-                  background-color: #ffffff;
-                  opacity: 100%;
+              & select {
+                font-family: pangolin;
+                color: #666666;
+                background-color: #ffffff;
               }
               & button {
-                  background-image: linear-gradient(to bottom left, var(--main-color), var(--secondary-color));
-                  color: #fff;
-                  border: none;
-                  border-radius: 0 1rem 1rem 0;
-                  font-family: pangolin;
-                  opacity: 100%;
-              }
-              & button:hover {
-                  color: var(--hover-color);
-              }
-              & #huniiToo {
-                  border-radius: 0.4rem 0 0 0.4rem;
-              }
-              & .option1, .option2, .option3 {
-                  text-align: center;
-                  font-size: 16px;
-                  width: 10px;
-                  height: 50px;
-                  border-radius: var(--border-radius);
+                background-image: linear-gradient(to bottom left, var(--main-color), var(--secondary-color));
+                color: #fff;
+                border: none;
+                border-radius: 0 1rem 1rem 0;
+                font-family: pangolin;
               }
             }
-          }    
-          @media (max-width: 1100px) {
-            .option{
-              height: auto;
-              width: 95%;
+   
+            .Lsearch button:hover {
+              color: var(--hover-color);
             }
- 
-            .Lsearch {
-              flex-direction: column;
-              margin-left: auto;
-              margin-right: auto;
+   
+            @media (max-width: 1100px) {
+              .option{
+                height: auto;
+                width: 95%;
+              }
+   
+              .Lsearch {
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+              }
+   
+              .Lsearch select,
+              .Lsearch button {
+                width: calc(100% - 10px);
+                margin: 5px;
+                border-radius: 1rem;
+              }
+   
+              .Lsearch  select  {
+                width: calc(100% - 10px);
+              }
             }
- 
-            .Lsearch select,
-            .Lsearch button {
-              width: calc(100% - 10px);
-              margin: 5px;
-              border-radius: 1rem;
+   
+            @media (max-width: 1500px) {
+              .Lsearch select,
+              .Lsearch button {
+                flex-basis: calc(33.333% - 10px);
+              }
             }
- 
-            .Lsearch  select  {
-              width: calc(100% - 10px);
+   
+            @media (max-width: 768px) {
+              .Lsearch select,
+              .Lsearch button {
+                width: auto;
+                max-height:1.8rem;
+                margin-top: 0.3rem;
+                font-size: 0.65em;
+              }
+              .option p {
+                font-size: 0.8rem;
             }
-          }
- 
-          @media (max-width: 1500px) {
-            .Lsearch select,
-            .Lsearch button {
-              flex-basis: calc(33.333% - 10px);
+   
             }
-          }
- 
-          @media (max-width: 768px) {
-            .Lsearch select,
-            .Lsearch button {
-              width: auto;
-              max-height:1.8rem;
-              margin-top: 0.3rem;
-              font-size: 0.65em;
-            }
-            .option p {
-              font-size: 0.8rem;
-          }
- 
-          }      
-        </style>
+            </style>
         <div class="option">
           <p>Орох газраа хайж болдог байгаа шүү</p>
         <div class="Lsearch">
