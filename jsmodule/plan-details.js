@@ -15,7 +15,7 @@ class Place {
         return `     
             <p class="time"><time datetime="2023-02-08">${this.hours}</time></p>
             <article class="subplan-grid">
-                <img class="PlanImage" src="${this.image}" alt="${this.name}">
+                <img class="PlanImage" src="/sura.jpg" alt="${this.name}">
                 <div class="PlanInfo">
                     <h3>${this.name}</h3>
                     <p class="tag"><i class="fa-solid fa-tag"></i> ${this.category}</p>
@@ -25,7 +25,7 @@ class Place {
                     <p class="timen"><i class="fa-regular fa-clock"></i><time datetime="2023-02-08">${this.hours}</time></p>
                     <h4>Танилцуулга: </h4>
                     <p class="intro">Янзын хөөрхөн төлөвлөгөө байна. Үнэхээр зугаатай байлаа.</p>
-                    <a href='../place.html'><button class="value"><span>${this.buttonText}</span>К-с эхэлнэ</button></a>     
+                    <a href='/place'><button class="value"><span>${this.buttonText}</span>К-с эхэлнэ</button></a>     
                     <p class="invisible">${this.planName}</p>      
                 </div>
             </article>

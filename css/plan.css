@@ -36,7 +36,14 @@ main{
 }
 
 
-
+.comment{
+  display: grid;
+  grid-template-columns: 16% 50% 16%;
+  gap:1rem;
+  & time{
+    font-size: 0.6rem;
+  }
+}
 
 .rateAction{
   & rating {

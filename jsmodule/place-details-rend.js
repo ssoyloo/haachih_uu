@@ -37,14 +37,14 @@ window.onload = () => {
     console.log("vip " + vip_);
     console.log("spkr " + spkr_);
    
-    mic.src = mic_ ? "zurag/checkmark_green.png" : "zurag/checkmark_red.png";
-    wifi.src = wifi_ ? "zurag/checkmark_green.png" : "zurag/checkmark_red.png";
+    mic.src = mic_ ? "/checkmark_green.png" : "/checkmark_red.png";
+    wifi.src = wifi_ ? "/checkmark_green.png" : "/checkmark_red.png";
     parking.src = parking_
-      ? "zurag/checkmark_green.png"
-      : "zurag/checkmark_red.png";
-    vip.src = vip_ ? "zurag/checkmark_green.png" : "zurag/checkmark_red.png";
-    noice.src = noice_ ? "zurag/checkmark_green.png" : "zurag/checkmark_red.png";
-    speaker.src = spkr_ ? "zurag/checkmark_green.png" : "zurag/checkmark_red.png";
+      ? "/checkmark_green.png"
+      : "/checkmark_red.png";
+    vip.src = vip_ ? "/checkmark_green.png" : "/checkmark_red.png";
+    noice.src = noice_ ? "/checkmark_green.png" : "/checkmark_red.png";
+    speaker.src = spkr_ ? "/checkmark_green.png" : "/checkmark_red.png";
    
     ner.innerHTML = name_;
     dugaar.innerHTML = name_;
@@ -54,13 +54,13 @@ window.onload = () => {
   };
    
   // <img
-  //   src="zurag/checkmark_green.png"
+  //   src="/checkmark_green.png"
   //   class="checkmark"
   //   alt="green_checkmark"
   // ></img>;
    
   // <img
-  //   src="zurag/checkmark_red.png"
+  //   src="/checkmark_red.png"
   //   class="checkmark"
   //   alt="green_checkmark"
   // ></img>;

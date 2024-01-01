@@ -54,6 +54,7 @@ main {
     & img {
         width: 100%;
         height: 100%;
+        position: relative;
     }
     & .favorite {
         position: absolute;
@@ -64,7 +65,27 @@ main {
         height: 45px;
         color: #fff;
     }
+    & .addToCard {
+        position: absolute;
+        background: none;
+        border: none;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: #e7e7e7;
+        border-radius: 0.5rem;
+        margin-left: -2.5rem;
+        margin-top: 0.8rem;
+        & i {
+          color: #000;
+        }
+      }
+      & .addToCard:hover{
+        background-color: #797777;
+      }
 }
+.addToCard .fa-heart{
+    font-size: 1.3rem;
+  }
  
 /* Slideshow container */
 .slideshow-container {
@@ -130,11 +151,6 @@ main {
     }
 }
  
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
- 
 aside {
     border-radius: 1rem;
     padding: 0.5rem 1em;
@@ -156,7 +172,7 @@ aside {
     }
     & h3 {
         font-size: 16px;
-        margin-top: -0.5rem;
+        margin-top: 1rem;
     }
     & div{
         display: flex;
@@ -231,9 +247,6 @@ aside {
             font-size: 18px;
         }
     }
-    & #stars{
-        color: #0A5C76;
-    }
     & #submit-button {
         background: none;
         border: none;
@@ -248,23 +261,6 @@ aside {
  
 }
  
-progress {
-    position: relative;
-    left: 1rem;
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    border-radius: 25px;
-}
- 
-progress::-webkit-progress-value {
-    background-image: linear-gradient(to bottom right,var(--main-color), var(--secondary-color));
-    border-radius: 25px;
-}
- 
-progress::-webkit-progress-bar {
-    background-color: lightgray;
-    border-radius: 25px;
-}
- 
 h2, h3, h4 {
     color: #333333;
 }
@@ -275,19 +271,46 @@ address, time, p, ul , a{
  
 .newPlaces {
     margin: 2rem 0;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 30% 30% 30% ;
     gap: 2rem;
- 
     & .subNewPlaces {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 50% 50%  ;
         background-color: #fff;
         border: 1px solid #ccc;
         border-radius: 20px;
+        & meter {
+            position: absolute;
+            margin-left:-5.5rem;
+            margin-top: 0.5rem;
+            color:#fff;
+            & i {
+              color:#fff;
+            }
+          }
+          & .addToCard {
+            background: none;
+            border-radius: 0.5rem;
+            border: none;
+            width: 1.8rem;
+            height: 1.8rem;
+            & i {
+              color: #000;
+            }
+          }
+ 
+          & .addToCard:hover{
+            background-color: #e7e7e7;
+          }
         & .details {
             flex: 1;
             margin: 1rem;
+            & .miniTitle {
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+              }
             & .value{
               margin-top: 2%;
               text-align: center;
@@ -298,7 +321,7 @@ address, time, p, ul , a{
     }
     & .subNewPlaces img {
         height: 100%;
-        width: 50%;
+        width: 100%;
         border-radius: 1rem;
     }
     & i {
@@ -319,6 +342,10 @@ article {
     }
 }
  
+ /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
  
 /* Responsive style */
 @media (max-width: 768px) {
@@ -358,10 +385,33 @@ article {
       gap: 1rem;
     }
 }
+@media (max-width: 550px) {
+    .mySlides .addToCard .fa-heart{
+        font-size: 1rem;
+    }
+    .mySlides .addToCard {
+        width: 1.5rem;
+        height: 1.4rem;
+    }
+}
+@media (max-width: 1037px) {
+    .ratingPlace  .myRating label {
+        font-size: 20px;
+    }
+}
+@media (max-width: 816px) {
+    .ratingPlace  .myRating label {
+        font-size: 15px;
+    }
+}
 @media (max-width: 768px) {
     .newPlaces {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
     }
+    .ratingPlace  .myRating label {
+        font-size: 30px;
+    }
 }
+/*place.css*/

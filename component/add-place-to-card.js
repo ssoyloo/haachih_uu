@@ -1,31 +1,37 @@
 class AddToCard extends HTMLElement {
     constructor() {
         super();
-        this.innerHTML = `
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-            <button class="addToCard ">Add to fav</button>
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `
+        <link rel="stylesheet" href="/general.css">
+        <link rel="stylesheet" href="/style.css">
+            <style>
+            </style>
+            <button class="addToCard">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+            </button>
         `;
     }
 
     connectedCallback() {
-        this.addEventListener('click', (event) => {
-            if (event.target.tagName === 'BUTTON') {
-                const planInfoDiv = this.closest('.details');
-                const PlanImageDiv = this.closest('.subNewPlaces').childNodes[1];
-                console.log(PlanImageDiv);
-                const list = document.querySelector("favourite-place");
+        this.addEventListener('click', () => {
+            const planInfoDiv = this.closest('.details');
+            const PlanImageDiv = this.closest('.subNewPlaces').childNodes[1];
+            const list = document.querySelector("favourite-place");
+
+            if (list) {
                 const json = {
                     "title": planInfoDiv.querySelector('h3').textContent.trim(),
                     "image": PlanImageDiv.querySelector('img').getAttribute('src'),
                     "tag": planInfoDiv.querySelector('p').textContent.trim(),
                     "location": planInfoDiv.querySelector('address').textContent.trim(),
                     "buttonText": planInfoDiv.querySelector('a button').textContent.trim(),
-                    // "stars": PlanImageDiv.querySelector('meter').textContent.trim(),
                     "type": "place",
                     "unit": 1
                 };
                 list.addToCart(json);
+            } else {
+                console.error("favourite-place not found");
             }
         });
     }

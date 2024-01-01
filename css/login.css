@@ -1,102 +1,17 @@
 @import url(./general.css);
-
-<<<<<<< HEAD
-main {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 44.5% 60%;
-}
-
-main aside {
-    margin: 10rem;
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-main aside .logo {
-    margin: 2rem;
-    height: 10rem;
-    grid-column: 1 / span 2;
-}
-
-main aside a {
-    text-decoration: none;
-    color: black;
-}
-
-main aside h3 {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    text-align: center;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 0.15rem solid;
-    border-image-slice: 1;
-    border-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color)) 1;
-}
-
-main aside .signup {
-    background: linear-gradient(var(--secondary-color), var(--main-color));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-main aside .login {
-    color: #fff;
-    font-weight: lighter;
-    border-bottom: 0.2rem;
-    background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    border-top-right-radius: var(--border-radius);
-    border-top-left-radius: var(--border-radius);
-}
-
-main aside form {
-    grid-column: 1 / span 2;
-}
-
-main aside form input {
-    margin-top: 2rem;
-    width: 100%;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-family: Pangolin;
-    font-size: 1.2rem;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 0.1rem solid #555;
-}
-
-main aside p {
-    grid-column: 1 / span 2;
-    text-align: end;
-    font-weight: bolder;
-    background: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-
-main aside .TomZurag {
-    height: 100%;
-}
-
-main aside .value {
-    grid-column: 1 / span 2;
-    height: 3rem;
-    width: 100%;
-=======
-
+ 
+ 
 body {
     margin: 0;
     padding: 0;
     font-family: Pangolin;
-    background: linear-gradient(to right, var(--main-color), var(--secondary-color)); 
+    background: linear-gradient(to right, var(--main-color), var(--secondary-color));
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-
+ 
 .login-box {
     width: 20%;
     background: rgba(255, 255, 255, 0.8);
@@ -104,11 +19,11 @@ body {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
 }
-
+ 
 form {
     position: relative;
 }
-
+ 
 h2 {
     margin: 0 0 20px;
     padding: 0;
@@ -116,12 +31,12 @@ h2 {
     color: #333;
     text-align: center;
 }
-
+ 
 .user-box {
     position: relative;
     margin: 20px 0;
 }
-
+ 
 .user-box input {
     width: 100%;
     padding: 10px 0;
@@ -133,7 +48,7 @@ h2 {
     outline: none;
     background: transparent;
 }
-
+ 
 .user-box label {
     position: absolute;
     top: 0;
@@ -144,16 +59,15 @@ h2 {
     pointer-events: none;
     transition: 0.5s;
 }
-
+ 
 .user-box input:focus ~ label,
 .user-box input:valid ~ label {
     transform: translateY(-20px);
     font-size: 12px;
     color: #3498db;
 }
-
+ 
 .button button {
->>>>>>> c05c96f745933852e819d128525ed7ec863fdb00
     font-family: Pangolin;
     border: none;
     border-radius: var(--border-radius);
@@ -161,45 +75,33 @@ h2 {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-<<<<<<< HEAD
-    font-size: 1.2em;
-    border-radius: 0.5rem;
-}
-
-main aside .value:hover {
-    box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px var(--main-color), 0px 0px 0px 10px white, 0px 0px 0px 10.5px var(--secondary-color);
-=======
     padding: 0.7em 0.7em;
     font-size: 1em;
     width: 100%;
 }
-
+ 
 .button button:hover {
     box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px var(--main-color), 0px 0px 0px 10px white, 0px 0px 0px 10.5px var(--main-color);
->>>>>>> c05c96f745933852e819d128525ed7ec863fdb00
     background-image: none;
     background-color: #fff;
     color: var(--main-color);
     transition: 0.2s;
 }
-<<<<<<< HEAD
-=======
-
+ 
 .register {
     margin-top: 20px;
     font-size: 14px;
     text-align: center;
 }
-
+ 
 .register a {
     background: linear-gradient(to right, var(--main-color), var(--secondary-color));
     -webkit-background-clip: text;
     color: transparent;
     text-decoration: none;
-
+ 
 }
-
+ 
 .register a:hover {
     text-decoration: underline;
 }
->>>>>>> c05c96f745933852e819d128525ed7ec863fdb00

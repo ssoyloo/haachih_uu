@@ -4,7 +4,7 @@ class searchPlace extends HTMLElement {
     }
    
     connectedCallback() {
-      this.parentNode.innerHTML = `
+      this.innerHTML = `
           <style>
           .option {
             border-radius: 1rem ;
@@ -67,7 +67,51 @@ class searchPlace extends HTMLElement {
                   border-radius: var(--border-radius);
               }
             }
-          }          
+          }    
+          @media (max-width: 1100px) {
+            .option{
+              height: auto;
+              width: 95%;
+            }
+ 
+            .Lsearch {
+              flex-direction: column;
+              margin-left: auto;
+              margin-right: auto;
+            }
+ 
+            .Lsearch select,
+            .Lsearch button {
+              width: calc(100% - 10px);
+              margin: 5px;
+              border-radius: 1rem;
+            }
+ 
+            .Lsearch  select  {
+              width: calc(100% - 10px);
+            }
+          }
+ 
+          @media (max-width: 1500px) {
+            .Lsearch select,
+            .Lsearch button {
+              flex-basis: calc(33.333% - 10px);
+            }
+          }
+ 
+          @media (max-width: 768px) {
+            .Lsearch select,
+            .Lsearch button {
+              width: auto;
+              max-height:1.8rem;
+              margin-top: 0.3rem;
+              font-size: 0.65em;
+            }
+            .option p {
+              font-size: 0.8rem;
+          }
+ 
+          }      
         </style>
         <div class="option">
           <p>Орох газраа хайж болдог байгаа шүү</p>
@@ -111,7 +155,7 @@ class searchPlace extends HTMLElement {
             <option value="Garden">Хүрээлэн</option>
             <option value="Enjoy">Хөгжилдөх газар</option>
           </select>
-          <button type="button" onclick="getValueForFilter()">HAACHIH UU?</button>
+          <button type="button" onclick="getValueForFilter()">LET'S GO</button>
         </div>
       </div>
               `;

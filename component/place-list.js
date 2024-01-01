@@ -9,8 +9,9 @@ class PlaceList extends HTMLElement {
   connectedCallback() {
     const topPlace=this.getAttribute('topplace')
     const Styletype=this.getAttribute('style')
+    const isSort=this.getAttribute("sort");
     const topCount = parseInt(topPlace);
-    this.fetchPlaces(topCount, Styletype); 
+    this.fetchPlaces(topCount, Styletype, isSort); 
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -19,7 +20,7 @@ class PlaceList extends HTMLElement {
     }
   }
 
-  async fetchPlaces(topCount, Styletype) { 
+  async fetchPlaces(topCount, Styletype, isSort) { 
     try {
       const response = await fetch(`https://api.jsonbin.io/v3/b/658bcbe8dc746540188951e3`);
 
@@ -31,19 +32,27 @@ class PlaceList extends HTMLElement {
 
       const data = await response.json();
       this.places = data.record || [];
+      if(isSort=="yes"){
+        this.sortAndSlicePlaces(4);
+      }
+
       this.render(topCount, Styletype);
     } catch (error) {
       console.error('Error fetching places:', error); 
     }
   }
 
+  sortAndSlicePlaces(topCount) {
+    this.places.sort((a, b) => b.stars - a.stars);
+    this.places = this.places.slice(1, topCount);
+    }
+
   render(topCount, Styletype) {
     const places = this.places.slice(0, topCount) || [];
     let styleTemplate = ''; 
     if (Styletype == 'gridhiineshuu') {
       styleTemplate = `
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-  <link rel="stylesheet" href="../css/general.css">
+  
   <style>
     h2 {
       margin: 3rem;
@@ -127,6 +136,13 @@ class PlaceList extends HTMLElement {
     }
 
     @media (max-width: 1400px) {
+
+
+      .subRecommend{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+      }
       .subNewPlaces img {
         height: 100%;
         width: auto;
@@ -139,8 +155,10 @@ class PlaceList extends HTMLElement {
 
       .subNewPlaces {
         display: flex;
-        max-width: 100%;
-        max-height: 1rem;
+        max-width: 20rem;
+        height:auto;
+        border-radius: 2rem;
+        overflow: hidden;
       }
 
       .subNewPlaces .image {
@@ -193,7 +211,10 @@ class PlaceList extends HTMLElement {
         font-size: 0.8rem;
       }
     }
-  </style>`;
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/general.css">
+  `;
     } else  {
       styleTemplate = `
         <style>
@@ -316,7 +337,30 @@ class PlaceList extends HTMLElement {
       meter{
           height: 1.8rem;
       }
-        </style>`;
+
+      @media (max-width: 1300px) {
+        h2,  h3, .subNewPlaces h3 {
+          font-size: 1.5rem;
+        }
+  
+         p, .subNewPlaces p,
+         address, .subNewPlaces address,
+         time, .subNewPlaces time {
+          font-size: 0.9rem;
+        }
+  
+         .value, .subNewPlaces .value {
+          font-size: 0.9rem;
+          padding: 0.5rem;
+        }
+  
+         .value {
+          font-size: 0.8rem;
+        }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+       <link rel="stylesheet" href="/general.css">
+        `;
     }
     this.shadowRoot.innerHTML = `
     ${styleTemplate}
@@ -325,7 +369,7 @@ class PlaceList extends HTMLElement {
           ${places.map(place => `
           <article class="subNewPlaces">
           <div class="image">
-              <img src="${place.image}" alt="${place.name}"> <!-- Change 'this.image' to 'place.image' -->
+              <img src="/sura.jpg" alt="${place.name}"> <!-- Change 'this.image' to 'place.image' -->
           </div>
           <div class="details">
           
@@ -335,7 +379,7 @@ class PlaceList extends HTMLElement {
               <address>${place.address}</address> <!-- Change 'this.address' to 'place.address' -->
               <i class="far fa-clock"></i>
               <time>${place.hours}</time><br> <!-- Change 'this.hours' to 'place.hours' -->
-              <a href="./place.html"><button class="value" ><span>${place.buttonText}</span>К -с эхэлнэ</button></a>
+              <a href="/place"><button class="value" ><span>${place.buttonText}</span>К -с эхэлнэ</button></a>
               
           </div>
       </article>
@@ -344,9 +388,6 @@ class PlaceList extends HTMLElement {
     `;
   }
 
-  handleAddToCart(place) { 
-    this.dispatchEvent(new CustomEvent('add-to-cart', { detail: { place } }));
-  }
 }
 
 customElements.define('place-list', PlaceList); 

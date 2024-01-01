@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Component with Properties</title>
 </head>
 <body>
-    <form id="commentForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
 
-        <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" rows="4" required></textarea>
+<!-- Define your custom element -->
+<script>
+  class MyComponent extends HTMLElement {
+    constructor() {
+      super();
 
-        <button type="button" onclick="submitForm()">Submit</button>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores enim, totam odit tempore provident laboriosam illum maiores earum dicta ipsum facilis rem corrupti? Iste veniam, consequatur voluptates excepturi odio autem sequi, mollitia provident libero fugiat repudiandae voluptas optio consequuntur.</p>
-    </form>
+      // Retrieve the initial value from the 'initial-value' attribute
+      this.value = parseInt(this.getAttribute('initial-value')) || 0;
 
-    <script>
-        function submitForm() {
-            // Get values from the form
-            var username = document.getElementById('username').value;
-            var comment = document.getElementById('comment').value;
+      // Create a shadow DOM
+      this.attachShadow({ mode: 'open' });
 
-            // Create a data object
-            var data = {
-                username: username,
-                comment: comment
-            };
+      // Initial render
+      this.render();
 
-            // Send data to the server using an AJAX request
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/path/to/server-script', true);
-            xhr.setRequestHeader('Content-Type', 'application/json');
+      // Attach a click event listener to the component
+      this.addEventListener('click', () => this.handleChange());
+    }
 
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // Handle the response from the server
-                    console.log('Data sent successfully');
-                }
-            };
+    // Function to handle changes
+    handleChange() {
+      // Perform some changes when the property is changed
+      // For simplicity, just increment the value here
+      this.value++;
+      this.render();
+    }
 
-            xhr.send(JSON.stringify(data));
-        }
-    </script>
+    // Function to render the component
+    render() {
+      this.shadowRoot.innerHTML = `
+        <p>Current Value: ${this.value}</p>
+        <button>Change Value</button>
+      `;
+    }
+  }
+
+  // Define the custom element
+  customElements.define('my-component', MyComponent);
+</script>
+
+<!-- Use your custom element -->
+<my-component initial-value="0"></my-component>
+
 </body>
 </html>
