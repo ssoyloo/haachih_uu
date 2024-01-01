@@ -48,7 +48,7 @@ class PlanList extends HTMLElement {
 
   async fetchPlans() {
     try {
-      const response = await fetch(`https://api.jsonbin.io/v3/b/658bccaadc74654018895226`);
+      const response = await fetch(`https://api.jsonbin.io/v3/b/65925efbdc746540188b74a9`);
       
       
       if (response.status === 429) {

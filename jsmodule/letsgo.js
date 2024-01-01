@@ -129,7 +129,7 @@ filterBySide(firstPlaceList){
 }
  
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = "https://api.jsonbin.io/v3/b/658bcbe8dc746540188951e3";
+    const apiUrl = "https://api.jsonbin.io/v3/b/65925eb5266cfc3fde710003";
     const urlParams = new URLSearchParams(window.location.search);
     const tagFilter = urlParams.get('tag');
     const huniiTooFilter = urlParams.get('countPeople');
