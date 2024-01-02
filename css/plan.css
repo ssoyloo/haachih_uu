@@ -38,7 +38,7 @@ main{
 
 .comment{
   display: grid;
-  grid-template-columns: 16% 50% 16%;
+  grid-template-columns: 16% 50% 17%;
   gap:1rem;
   & time{
     font-size: 0.6rem;

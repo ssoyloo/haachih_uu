@@ -71,6 +71,18 @@ app.get("/notes/:title", async (req, res) => {
   }
 });
 
+
+app.get("/notes/:title", async (req, res) => {
+  const title = req.params.title;
+  try {
+    const [rows] = await db.query("SELECT * FROM notes WHERE title = ?", [title]);
+    res.send(rows);
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
 app.post("/notes", async (req, res) => {
   const { title, contents} = req.body;
   const username=req.session.username;

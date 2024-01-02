@@ -22,6 +22,7 @@
     <script type="module" src="/favourite-count.js"></script>
     <script type="module" src="/add-place-to-card.js"></script>
     <script type="module" src="/favouritePlace.js"></script>
+    <script type="module" src="/wc-letsgo-siderbar.js"></script>
     <script src="/header-footer.js"></script>
     <script src="/mobile-header.js"></script>
     <script src="/search.js"></script>
@@ -56,27 +57,51 @@
             oninput="updatePriceValue(this.value)"
           />
  
+          
+          <!-- <todo-item>Boldoo</todo-item>
+          <todo-item>
+              Boldoo
+              <span slot="description">This is a description.</span>
+          </todo-item> -->
           <hr />
           <h3>Од</h3>
           <ol
           id="star">
             <li>
-              <p><input type="checkbox" value="1" aria-label="1" />1-Одтой:</p>
+              <todo-item value="1">1-Одтой:
+                <span slot="description">12</span>
+              </todo-item>
+              <!-- <p><input type="checkbox" value="1" aria-label="1" />1-Одтой:</p> -->
             </li>
             <li>
-              <p><input type="checkbox" value="2" aria-label="2" />2-Одтой:</p>
+              <todo-item value="2">2-Одтой:
+                <span slot="description">12</span>
+              </todo-item>
+              <!-- <p><input type="checkbox" value="2" aria-label="2" />2-Одтой:</p> -->
             </li>
             <li>
-              <p><input type="checkbox" value="3" aria-label="3" />3-Одтой:</p>
+              <todo-item value="3">3-Одтой:
+                <span slot="description">12</span>
+              </todo-item>
+              <!-- <p><input type="checkbox" value="3" aria-label="3" />3-Одтой:</p> -->
             </li>
             <li>
-              <p><input type="checkbox" value="4" aria-label="4" />4-Одтой:</p>
+              <todo-item value="4">4-Одтой:
+                <span slot="description">12</span>
+              </todo-item>
+              <!-- <p><input type="checkbox" value="4" aria-label="4" />4-Одтой:</p> -->
             </li>
             <li>
-              <p><input type="checkbox" value="5" aria-label="5" />5-Одтой:</p>
+              <todo-item value="5">5-Одтой:
+                <span slot="description">12</span>
+              </todo-item>
+              <!-- <p><input type="checkbox" value="5" aria-label="5" />5-Одтой:</p> -->
             </li>
             <li>
-              <p><input type="checkbox" value="0" aria-label="0" />Одгүй:</p>
+              <todo-item value="0">0-Одтой:
+                <span slot="description">12</span>
+              </todo-item>
+              <!-- <p><input type="checkbox" value="0" aria-label="0" />Одгүй:</p> -->
             </li>
           </ol>
  
