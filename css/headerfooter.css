@@ -22,24 +22,24 @@ footer {
         margin-left: 10%;
         border: none;
         height: 0.1rem;
-        background-color: white;
+        background-color: var(--bg-light-color);
         width: 80%;
         grid-column: 1 / span 3;
         grid-row: 2;
     }
     & p{
-        color: white;
+        color: var(--bg-light-color);
         grid-column: 1 / span 3;
     }
     & > p{
         padding: 0.5rem;
         text-align: center;
         font-size: 1rem;
-        color: rgb(255, 255, 255);
+        color: var(--bg-light-color);
         margin-top: 0.5rem;
     }
     & a{
-        color: rgb(255, 255, 255);
+        color: var(--bg-light-color);
         text-decoration: none;
         font-size: 1rem;
     }
@@ -66,7 +66,7 @@ footer {
         width: 70%;
     }
     & svg {
-        fill: rgb(255, 255, 255);
+        fill: var(--bg-light-color);
     }
     & a:hover{
         color: var(--hover-color);

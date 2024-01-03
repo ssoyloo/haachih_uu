@@ -1,4 +1,4 @@
-@import url('./general.css');
+@import url('/general.css');
  
 body {
     font-family: pangolin;
@@ -30,7 +30,7 @@ main{
     }
     & hr{
       height: 0.25rem;
-      background-image: linear-gradient(to right bottom, #0A5C76, #2FA2C6);
+      background-image: linear-gradient(to right bottom, var(--main-color), var(--secondary-color));
     }
   }
 }
@@ -56,22 +56,22 @@ main{
     }
     & input::after {
       content: '\2605';
-      font-size: 32px;
+      font-size: 2rem;
     }
     & rating:hover input:invalid::after,
     rating:focus-within input:invalid::after {
-      color: #888;
+      color: var(--p-color);
     }
     & input:invalid::after,
     rating:hover input:hover ~ input:invalid::after,
     input:focus ~ input:invalid::after  {
-      color: #ddd;
+      color: var(--light-color)
      }
     & input:valid {
-      color: orange;
+      color: var(--active-star-color);
     }
     & input:checked ~ input:not(:checked)::after {
-      color: #ccc;
+      color: var(--deactive-star-color);
       content: '\2606'; /* optional. hollow star */
     }
 }
@@ -88,7 +88,7 @@ main{
   & .subPlans {
       max-width: 90%;
       width: 100%;
-      color: #7d7d7d;
+      color: var(--p-color);
   }
   & .subPlanWord{
     padding: 1rem;
@@ -111,7 +111,7 @@ main{
   display: grid;
   grid-template-columns: 25% 73%;
   gap: 1rem;
-  border: 1px solid #b7b2b2;
+  box-shadow: (--box-shadow);
   border-radius: 1rem;
   margin: 1rem;
   padding-bottom: 1rem;
@@ -128,11 +128,11 @@ main{
     padding: 1rem;
     padding-top: 1.5rem;
     position: relative;
-    color: #7d7d7d;
+    color: var(--p-color);
     & h4{
       grid-column: 1 / span 3;
       padding-top: 1.2rem;
-      color: black;
+      color: var(--bg-dark-color);
       font-size: 1.2rem;
     }
     & .tag{
@@ -154,14 +154,14 @@ main{
     & a {
         float: right;
         text-decoration: none;
-        color: #7d7d7d;
+        color: var(--p-color);
     }
   }
 }
  
 .leftsection{
   & .time{
-    color: #0A5C76;
+    color: var(--main-color);
     float: left;
     padding: 1rem 2rem 1rem 1rem;
   }
@@ -172,7 +172,7 @@ main{
     > li{
       font-size: 2rem;
       position: relative;
-      color: white;
+      color: var(--light-color);
   }
     > li:before {
         float: left;
@@ -218,9 +218,9 @@ main{
   display: flex;
   flex-direction: column;
   gap: 0.5rem ;
-  background-color: #fff;
+  background-color: var(--bg-light-color);
   & p {
-      font-size: 14px;
+      font-size: 1rem;
   }
   & .ratingTitle{
       display: flex;
@@ -238,20 +238,20 @@ main{
         }
       & label {
           display: inline-block;
-          padding: 5px;
-          font-size: 30px;
+          padding: 0.3rem;
+          font-size: 2rem;
           cursor: pointer;
-          color: #ccc;
+          color: var(--deactive-star-color);
         } 
   }
   
   &  .myRating label:hover,
   .myRatinglabel:hover ~ label {
-    color: #ffca08;
+    color: var(--active-star-color);
   }
   
   & .myRating input[type="radio"]:checked ~ label {
-    color: #ffca08;
+    color: var(--active-star-color);
   }
   & .ratingOnComment {
       display: flex;
@@ -260,17 +260,17 @@ main{
       overflow: auto;
       padding: 0 0 0 1rem;
       & h4 {
-          font-size: 18px;
+          font-size: 1rem;
       }
   }
   & #stars{
-      color: #0A5C76;
+      color: var(--main-color);
   }
   & #submit-button {
       background: none;
       border: none;
-      width: 45px;
-      height: 45px;
+      width: 3rem;
+      height: 3rem;
       cursor: pointer;
   }
   & input {
@@ -284,22 +284,22 @@ progress {
   position: relative;
   left: 1rem;
   background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-  border-radius: 25px;
+  border-radius: 1.6rem;
 }
 
 progress::-webkit-progress-value {
   background-image: linear-gradient(to bottom right,var(--main-color), var(--secondary-color));
-  border-radius: 25px;
+  border-radius: 1.6rem;
 }
 
 progress::-webkit-progress-bar {
-  background-color: lightgray;
-  border-radius: 25px;
+  background-color: var(--deactive-star-color);
+  border-radius: 1.6rem;
 }
 
 progress::-webkit-progress-bar {
-  background-color: lightgray;
-  border-radius: 25px;
+  background-color: var(--deactive-star-color);
+  border-radius: 1.6rem;
 }
 
 @media (max-width: 1600px) {
@@ -406,7 +406,7 @@ progress::-webkit-progress-bar {
     & .subPlans {
         max-width: 90%;
         width: 100%;
-        color: #7d7d7d;
+        color: var(--h-color);
     }
     & .subPlanWord{
       padding: 1rem;
@@ -479,7 +479,7 @@ main{
   & .subPlans {
       max-width: 90%;
       width: 100%;
-      color: #7d7d7d;
+      color: var(--p-color);
   }
   & .subPlanWord{
     padding: 1rem;

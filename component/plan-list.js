@@ -12,19 +12,14 @@ class PlanList extends HTMLElement {
       const urlParams = new URLSearchParams(window.location.search);
       this._selectedTag = urlParams.get('tag');
       this._selectedName = urlParams.get('planName');
-  
+      this.myRoot.innerHTML = ''; 
+      this.fetchPlans();
       const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       darkModeMediaQuery.addListener(() => {
         this.darkMode = darkModeMediaQuery.matches;
         this.render();
       });
-      // this.myRoot.innerHTML = ''; 
-      this.fetchPlans();
     }   
-  // toggleDarkMode() {
-  //   this.darkMode = !this.darkMode;
-  //   this.render();
-  // }
   static get observedAttributes() {
     return ['selected-tag'];
   }
@@ -104,8 +99,8 @@ filterByTagName(){
       <style>
         h2 {
           margin: 3rem;
-          font-size: 24px;
-          color: #333;
+          font-size: 1.5rem;
+          color: var(--h-color);
           text-align: center;
         }
  
@@ -117,19 +112,19 @@ filterByTagName(){
             position: relative;
            }
           & h3 {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--h-color);
+            margin-bottom: 1.1rem;
           }
         }
    
         p {
-          color: #555;
-          font-size: 14px;
+          color: var(--h-color);
+          font-size: 0.8rem;
         }
  
         button:hover {
-            background-color: #0056b3;
+            background-color: var(--main-color);
         }
  
         .plan-container{
@@ -141,14 +136,14 @@ filterByTagName(){
               gap: 1rem;
               flex-wrap: wrap;
               & .PlanInfo {
-                  border: 1px solid #ccc;
-                  background-color: #fff;
-                  max-width: 270px;
+                  border: 1px solid var(--deactive-star-color);
+                  background-color: var(--bg-light-color);
+                  max-width: 16rem;
                   width: 100%;
-                  margin: 0 10px 20px;
+                  margin: 0 0.8rem 1.6rem;
                   border-radius: 1rem;
-                  background-color: ${this.darkMode ? "#555" : "#fff"};
-                      color: ${this.darkMode ? "#fff" : "#333"};
+                  background-color: ${this.darkMode ? "var(--h-color)" : "var(--bg-light-color)"};
+                      color: ${this.darkMode ? "var(--bg-light-color)" : "var(--p-color)"};
               & .title {
                   display: flex;
                   justify-content: space-between;
@@ -162,8 +157,8 @@ filterByTagName(){
                   }
               }
               & address {
-                  color: #555;
-                  font-size: 14px;
+                  color: var(--p-color);
+                  font-size: 0.8rem;
                   margin-left: 1.5rem;
               }
               & p {
@@ -171,7 +166,7 @@ filterByTagName(){
                   margin-bottom: 0.5rem;
               }
               & .PlanInfo:hover{
-                  background-color: #d0dce9;
+                  background-color: var(--bg-dark-color);
                   transition: 0.4s;
               }
               & .value{
@@ -187,10 +182,10 @@ filterByTagName(){
         position: absolute;
         background: none;
         border: none;
-        color: #000;
+        color: var(--bg-dark-color);
         width: 1.8rem;
         height: 1.8rem;
-        background-color: #e7e7e7;
+        background-color: var(--p-color);
         border-radius: 0.5rem;
         margin-left: -2.3rem;
         margin-top: 0.5rem;
@@ -199,7 +194,7 @@ filterByTagName(){
         font-size: 1.3rem;
       }
       .addToCard:hover{
-        background-color: #797777;
+        background-color: var(-main-color);
       }  
       </style>
       <section class='plan-container'>

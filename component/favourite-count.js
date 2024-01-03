@@ -22,13 +22,13 @@ class FavouriteCount extends HTMLElement {
         let numberValue2 = 0;
 
         if (FavouritePlace) {
-            const favPlaceComponent = FavouritePlace.favPlaceCount;
+            const favPlaceComponent = FavouritePlace.favPlaceCount;//FavPlan.js n property duudaj bn
             if (favPlaceComponent) {
                 numberValue = favPlaceComponent;
             }
         }
         if (FavouritePlan) {
-            const favPlanComponent = FavouritePlan.favPlanCount;
+            const favPlanComponent = FavouritePlan.favPlanCount;//FavPlace.js n property duudaj bn
             if (favPlanComponent) {
                 numberValue2 = favPlanComponent;
             }

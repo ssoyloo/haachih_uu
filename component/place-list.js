@@ -46,8 +46,8 @@ class PlaceList extends HTMLElement {
         <style>
         h2 {
           margin: 3rem;
-            font-size: 24px;
-            color: #333;
+            font-size: 1rem;
+            color: var(--h-color);
             text-align: center;
         }
         .newPlaces {
@@ -57,23 +57,23 @@ class PlaceList extends HTMLElement {
           gap: 1rem;
           & .subNewPlaces {
               display: flex;
-              background-color: #fff;
-              border: 1px solid #ddd;
+              background-color: var(--bg-light-color);
+              border: 1px solid var(--deactive-star-color);
               max-width: 100%;
-              border-radius: 20px;
+              border-radius: 1.4rem;
               max-height: 100%;
               & meter {
                 position: absolute;
                 margin-left:-5.5rem;
                 margin-top: 0.5rem;
-                color:#fff;
+                color:var(--bg-light-color);
                 & i {
-                  color:#fff;
+                  color:var(--bg-light-color);
                 }
               }
               & .image {
                   flex: 1;
-                  max-width: 300px;
+                  max-width: 19rem;
               }
               & .addToCard {
                 background: none;
@@ -82,11 +82,11 @@ class PlaceList extends HTMLElement {
                 width: 1.8rem;
                 height: 1.8rem;
                 & i {
-                  color: #000;
+                  color: var(--bg-dark-color);
                 }
               }
               & .addToCard:hover{
-                background-color: #e7e7e7;
+                background-color: var(--bg-light-color);
               }
               & .details {
                   flex: 1;
@@ -104,7 +104,7 @@ class PlaceList extends HTMLElement {
                 }
               }
               & address, i, p, time{
-                color:#555;
+                color:var(--p-color);
               }
           }
  

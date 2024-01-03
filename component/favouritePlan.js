@@ -36,6 +36,7 @@ export class FavouriteListComponent extends HTMLElement {
 
     jsonToCard() {
         const plansContainer = document.querySelector(".plans");
+        if(plansContainer){
         plansContainer.innerHTML = '';
         if (JSON.parse(localStorage.getItem("listsPlan"))) {
             const listsPlan = JSON.parse(localStorage.getItem("listsPlan"));
@@ -49,6 +50,7 @@ export class FavouriteListComponent extends HTMLElement {
                 plansContainer.innerHTML = `<h2 class="baihgui">Зүрхэндээ төлөвлөгөө нэмээрэй</h2>`;
             }
         }
+    }
     }
 
     connectedCallback() {

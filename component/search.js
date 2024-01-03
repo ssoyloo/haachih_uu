@@ -20,8 +20,8 @@ class searchPlace extends HTMLElement {
               & p {
                 padding: 0.6rem;
                 text-align: center;
-                color: white;
-                font-size: 16px;
+                color: var(--bg-dark-color);
+                font-size: 1rem;
               }
             }
    
@@ -33,17 +33,17 @@ class searchPlace extends HTMLElement {
               width: 70%;
               & select, button {
                 flex: 1;
-                font-size: 14px;
+                font-size: 0.9rem;
                 padding: 0.5rem;
               }
               & select {
                 font-family: pangolin;
-                color: #666666;
-                background-color: #ffffff;
+                color: var(--p-color);
+                background-color: var(--bg-light-color);;
               }
               & button {
                 background-image: linear-gradient(to bottom left, var(--main-color), var(--secondary-color));
-                color: #fff;
+                color: var(--bg-light-color);
                 border: none;
                 border-radius: 0 1rem 1rem 0;
                 font-family: pangolin;
@@ -68,20 +68,20 @@ class searchPlace extends HTMLElement {
    
               .Lsearch select,
               .Lsearch button {
-                width: calc(100% - 10px);
-                margin: 5px;
+                width: calc(100% - 0.6rem);
+                margin: 0.3rem;
                 border-radius: 1rem;
               }
    
               .Lsearch  select  {
-                width: calc(100% - 10px);
+                width: calc(100% - 0.6rem);
               }
             }
    
             @media (max-width: 1500px) {
               .Lsearch select,
               .Lsearch button {
-                flex-basis: calc(33.333% - 10px);
+                flex-basis: calc(33.333% - 0.6rem);
               }
             }
    

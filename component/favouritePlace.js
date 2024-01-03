@@ -59,10 +59,10 @@ class FavouritePlaceListComponent extends HTMLElement {
         this.render_count();
         this.jsonToCard();
     }
-
     get favPlaceCount() {
         return this.favPlaceNum;
     }
+    
 }
 
 window.customElements.define("favourite-place", FavouritePlaceListComponent);

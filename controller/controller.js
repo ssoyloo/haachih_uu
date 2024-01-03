@@ -1,16 +1,20 @@
 const db = require('../config/database');
+
+const authenticateUser = async (username, password) => {
+    return db.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password]);
+};
+
 exports.authenticate = async (req, res) => {
     try {
         const { username, password } = req.body;
-        const [rows] = await db.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password]);
+        const [rows] = await authenticateUser(username, password);
+
         if (rows.length > 0) {
             req.session.loggedin = true;
             req.session.username = username;
             res.redirect('/index');
-            return { success: true, username: req.session.username };
         } else {
             const errorMessage = 'Incorrect Username or Password';
-            res.status(401).send(errorMessage);
             console.log(errorMessage);
         }
     } catch (error) {
@@ -29,7 +33,6 @@ exports.register = async (req, res) => {
             res.redirect('/');
         } catch (error) {
             console.error(error);
-            res.status(500).send('Internal Server Error');
         }
     } else {
         const errorMessage = 'Please Enter Username and Password';
@@ -42,15 +45,10 @@ exports.logout = (req, res) => {
     if (req.session.loggedin) {
 
         req.session.destroy((err) => {
-            if (err) {
-                console.error(err);
-                res.status(500).send('Internal Server Error');
-                return;
-            }
             res.redirect('/');
         });
     } else {
-        const errorMessage = 'You must be logged in to log out.';
+        const errorMessage = 'Yu c bolciw.';
         res.status(401).send(errorMessage);
     }
 };

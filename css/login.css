@@ -13,8 +13,9 @@ body {
 }
  
 .login-box {
-    width: 20%;
-    background: rgba(255, 255, 255, 0.8);
+    width: 20rem;
+    height: 25rem;
+    background: var(--bg-light-color);
     padding: 3rem;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
@@ -25,26 +26,26 @@ form {
 }
  
 h2 {
-    margin: 0 0 20px;
+    margin: 0 0 1.3rem;
     padding: 0;
-    font-size: 28px;
-    color: #333;
+    font-size: 1.4rem;
+    color: var(--h-color);
     text-align: center;
 }
  
 .user-box {
     position: relative;
-    margin: 20px 0;
+    margin: 1.3rem 0;
 }
  
 .user-box input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: #333;
+    color: var(--h-color);
     margin-bottom: 30px;
     border: none;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 0.1rem solid var(--secondary-color);
     outline: none;
     background: transparent;
 }
@@ -53,18 +54,18 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #3498db;
+    padding: 0.7rem 0;
+    font-size: 1rem;
+    color: var(--secondary-color);
     pointer-events: none;
     transition: 0.5s;
 }
  
 .user-box input:focus ~ label,
 .user-box input:valid ~ label {
-    transform: translateY(-20px);
-    font-size: 12px;
-    color: #3498db;
+    transform: translateY(-1.3rem);
+    font-size: 0.8rem;
+    color: var(--secondary-color);
 }
  
 .button button {
@@ -72,7 +73,7 @@ h2 {
     border: none;
     border-radius: var(--border-radius);
     background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
-    color: white;
+    color: var(--bg-light-color);
     cursor: pointer;
     transition: background-color 0.3s;
     padding: 0.7em 0.7em;
@@ -81,16 +82,16 @@ h2 {
 }
  
 .button button:hover {
-    box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px var(--main-color), 0px 0px 0px 10px white, 0px 0px 0px 10.5px var(--main-color);
+    box-shadow: 0 0 0 0.1rem var(--bg-light-color), 0 0 0 0.2rem var(--main-color), 0 0 0 0.4rem var(--bg-light-color), 0 0 0 0.4rem var(--main-color);
     background-image: none;
-    background-color: #fff;
+    background-color: var(--bg-light-color);
     color: var(--main-color);
     transition: 0.2s;
 }
  
 .register {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 1.3rem;
+    font-size: 0.9rem;
     text-align: center;
 }
  

@@ -23,14 +23,14 @@ main {
         appearance: none;
         width: 25px;
         height: 25px;
-        background: rgb(10,92,118);
+        background: var(--main-color);
         cursor: pointer;
     }
  
     .priceFilter[type=range]::-moz-range-thumb {
         width: 25px;
         height: 25px;
-        background: rgb(10,92,118);
+        background: var(--main-color);
         cursor: pointer;
     }
  
@@ -44,14 +44,14 @@ main {
 aside {
     border-radius: 1rem;
     padding: 0.5rem 1em;
-    box-shadow: 0 1px 2px 0 gray;
-    height: 35rem;
+    box-shadow: var(--box-shadow);
+    height: 40rem;
     padding: 2rem 2.5rem;
     & li {
         list-style: none;
         display: flex;
         flex-direction: row;
-        font-size: 13px;
+        font-size: 1rem;
         justify-content: space-between;
         gap: 2rem;
     }
@@ -63,11 +63,11 @@ aside {
         text-align: center;
     }
     & h3 {
-        font-size: 17px;
+        font-size: 1.2rem;
         margin-bottom: 0.7rem;
     }
     & label {
-        font-size: 13px;
+        font-size: 1rem;
     }
     & input {
         margin-right: 1rem;
@@ -77,7 +77,7 @@ aside {
         padding: 0.4rem 0.2rem;
         border-radius: 0.6rem;
         border: none;
-        color: white;
+        color: var(--bg-light-color);
         font-family: pangolin;
         background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
         height: 2rem;
@@ -98,7 +98,7 @@ article {
     display: flex;
     flex-direction: row;
     border-radius: 1rem;
-    box-shadow: 0 1px 2px 0 gray;
+    box-shadow: var(--box-shadow);
     & img {
         height: 100%;
         width: 40%;
@@ -124,7 +124,7 @@ article {
         }
         & button{
             border-style: none;
-            background-color: #fff;
+            background-color: var(--bg-light-color);
             width: 1rem;
         }
         & meter {
@@ -141,7 +141,7 @@ article {
             padding: 0.4rem 0.2rem;
             border-radius: 0.6rem;
             border-style: none;
-            color: white;
+            color: var(--bg-light-color);
             font-family: pangolin;
             background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
             height: 2rem;
@@ -154,7 +154,7 @@ article {
             margin-left: 21.5rem;
             font-size: 14px;
             font-weight: bold;
-            color: #000000;
+            color: var(--bg-dark-color);
         }
         & .info {
             margin-top: 1.5rem;
@@ -162,17 +162,17 @@ article {
             grid-row: auto;grid-template-columns: 30% 70%;
         }
         & .tag {
-            font-size: 15px;
+            font-size: 1rem;
             margin-bottom: 0.5rem;
         }
         & .addr {
-            font-size: 15px;
+            font-size: 1rem;
         }
         & .time {
-            font-size: 14px;
+            font-size: 1rem;
         }
         & .phone {
-            font-size: 14px;
+            font-size: 1rem;
         }
         & li {
             list-style: none;
@@ -186,7 +186,7 @@ article {
 }
  
 address, time, p, ul , li, a, label{
-    color: #666666;
+    color: var(--p-color);
 }
 h2 {
     font-size: 18px;
@@ -198,7 +198,7 @@ h2 {
     .container {
         width: 90%;
         margin: auto;
-        padding: 0 15px;
+        padding: 0 1rem;
     }
  
     /* Fine-tune font sizes for comfortable reading */
@@ -216,13 +216,13 @@ h2 {
     .column {
         width: 33.33%;
         float: left;
-        padding: 10px;
+        padding: 0.7rem;
     }
  
     /* Increase padding and margins to make better use of space */
     .padding, .margin {
-        padding: 15px;
-        margin: 15px;
+        padding: 1rem;
+        margin: 1rem;
     }
  
     /* Adjust visibility of elements as necessary */
@@ -250,8 +250,8 @@ h2 {
         padding: 5px;
     }
     .padding, .margin {
-        padding: 10px;
-        margin: 10px;
+        padding: 0.6rem;
+        margin: 0.6rem;
     }
     .hide-on-medium, .show-on-medium {
         display: none;
@@ -261,7 +261,7 @@ h2 {
 @media only screen and (max-width: 480px) {
     .container {
         width: 100%;
-        padding: 0 10px;
+        padding: 0 0.6rem;
     }
     body, h1, h2, h3, h4, h5, h6 {
         font-size: smaller;
@@ -275,8 +275,8 @@ h2 {
         display: block;
     }
     .padding, .margin {
-        padding: 5px;
-        margin: 5px;
+        padding: 0.3rem;
+        margin: 0.3rem;
     }
     .hide-on-mobile {
         display: none;

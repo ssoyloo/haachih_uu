@@ -22,7 +22,7 @@ class allHeader extends HTMLElement {
       }
       & a {
           text-decoration: none;
-          color: white;
+          color: var(--bg-light-color);
       }
       & a:hover{
           color: var(--hover-color);
@@ -38,22 +38,22 @@ class allHeader extends HTMLElement {
       & .logopng1{
           padding-top: 1rem;
           padding-bottom: 0.5rem;
-          width:250px;
+          width:16rem;
       }
       & .count {
-          height: 15px;
-          width: 15px;
+          height: 1rem;
+          width: 1rem;
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 0.7rem;
           font-weight: bold;
           border: 2px solid rgb(255, 255, 255);
-          border-radius: 15px;
+          border-radius: 1rem;
           position: sticky;
           bottom: 0;
           margin-top: -1rem;
-          background-color: #fff;
+          background-color: var(--bg-light-color);
           color: transparent;
           & span {
               background-image: linear-gradient(to bottom right, var(--main-color), var(--secondary-color));
@@ -78,10 +78,10 @@ class allHeader extends HTMLElement {
           transform: translateY(0);
       }
       40% {
-          transform: translateY(-30px);
+          transform: translateY(-2rem);
       }
       70% {
-          transform: translateY(-8px);
+          transform: translateY(-0.5rem);
       }
     }
    

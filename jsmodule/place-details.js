@@ -39,6 +39,7 @@ function fill() {
   var mic_ = sessionStorage.getItem("mic");
   var spkr_ = sessionStorage.getItem("spkr");
 
+  console.log(ner);
   console.log(name_);
   console.log(location_);
   console.log("wifi " + wifi_);
@@ -114,15 +115,13 @@ class CategoryPlace {
   }
 
   Download(targetElement, cat, Name) {
-    fetch(`${this.placeUrl}/latest`)
+    fetch(`${this.placeUrl}`)
       .then((result) => {
         result.json().then((jsob) => {
           const filteredPlace = jsob.record.filter(
             (filter) => filter.category == cat
           );
-
           const keys = Object.keys(filteredPlace);
-
           const length = keys.length;
 
           console.log(length);
@@ -137,7 +136,6 @@ class CategoryPlace {
                   const _map = new Place_(map);
                   return _map.render();
                 })
-                .reduce((p, c) => p + c, "")
             );
           }
         });

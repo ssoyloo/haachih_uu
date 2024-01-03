@@ -1,3 +1,4 @@
+@import url('/general.css');
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
  
 body {
@@ -31,7 +32,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
+    font-size: 0.8rem;
     & a{
         text-decoration: none;
     }
@@ -50,7 +51,7 @@ main {
     object-fit: cover;
     overflow: hidden;
     border-radius: 1rem;
-    box-shadow: 0 4px 8px 0 gray;
+    box-shadow: 0 0.25rem 0.5rem 0 var(--p-color);
     & img {
         width: 100%;
         height: 100%;
@@ -61,9 +62,9 @@ main {
         background: none;
         border: none;
         right: 0;
-        width: 45px;
-        height: 45px;
-        color: #fff;
+        width: 3rem;
+        height: 3rem;
+        color: var(--bg-light-color);
     }
     & .addToCard {
         position: absolute;
@@ -71,18 +72,19 @@ main {
         border: none;
         width: 1.8rem;
         height: 1.8rem;
-        background-color: #e7e7e7;
+        background-color: var(--bg-light-color);
         border-radius: 0.5rem;
         margin-left: -2.5rem;
         margin-top: 0.8rem;
         & i {
-          color: #000;
+          color: var(--bg-dark-color);
         }
       }
       & .addToCard:hover{
-        background-color: #797777;
+        background-color: var(--p-color);
       }
 }
+
 .addToCard .fa-heart{
     font-size: 1.3rem;
   }
@@ -109,21 +111,21 @@ main {
         padding: 0.8rem;
         color: white;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 1.2rem;
         transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
+        border-radius: 0 0.2rem 0.2rem 0;
         user-select: none;
     }
  
     /* Position the "next button" to the right */
     &  .next {
       right: 0;
-      border-radius: 3px 0 0 3px;
+      border-radius: 0.2rem 0 0 0.2rem;
     }
  
     /* On hover, add a black background color with a little bit see-through */
     & .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
+        background-color:var(--bg-dark-color);
     }    
       /* Fading animation */
     & .fade {
@@ -139,22 +141,22 @@ main {
         text-align: center;
         position: relative;
         cursor: pointer;
-        height: 15px;
-        width: 15px;
-        background-color: #bbb;
+        height: 1rem;
+        width: 1rem;
+        background-color: var(--deactive-star-color);
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
     }
     & .active, .dot:hover {
-        background-color: #717171;
+        background-color:var(--p-color);
     }
 }
  
 aside {
     border-radius: 1rem;
     padding: 0.5rem 1em;
-    box-shadow: 0 4px 8px 0 gray;
+    box-shadow: 0 0.4rem 0.5rem 0 var(--h-color);
     & li , p, h3{
         margin: 5%;
     }
@@ -162,16 +164,16 @@ aside {
         width: 1rem;
     }
     & p {
-        font-size: 12px;
+        font-size: 0.7rem;
     }
     & li {
-        font-size: 14px;
+        font-size: 0.8rem;
         list-style: none;
         display: flex;
         justify-content: space-between;
     }
     & h3 {
-        font-size: 16px;
+        font-size: 1rem;
         margin-top: 1rem;
     }
     & div{
@@ -184,7 +186,7 @@ aside {
  
  
 #taniltsuulga {
-    background-color: #fff;
+    background-color: var(--bg-light-color);
     text-align: justify;
     & p {
         margin:  0 2rem 1rem 2rem ;
@@ -202,9 +204,9 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 0.5rem ;
-    background-color: #fff;
+    background-color: var(--bg-light-color);
     & p {
-        font-size: 14px;
+        font-size: 0.8rem;
     }
     & .ratingTitle{
         display: flex;
@@ -222,20 +224,20 @@ aside {
           }
         & label {
             display: inline-block;
-            padding: 5px;
-            font-size: 30px;
+            padding: 0.3rem;
+            font-size: 2rem;
             cursor: pointer;
-            color: #ccc;
+            color:var(--deactive-star-color);
           }
     }
    
     &  .myRating label:hover,
     .myRatinglabel:hover ~ label {
-      color: #ffca08;
+      color: var(--active-star-color);
     }
    
     & .myRating input[type="radio"]:checked ~ label {
-      color: #ffca08;
+      color: var(--active-star-color);
     }
     & .ratingOnComment {
         display: flex;
@@ -244,14 +246,14 @@ aside {
         overflow: auto;
         padding: 0 0 0 1rem;
         & h4 {
-            font-size: 18px;
+            font-size: 1.2rem;
         }
     }
     & #submit-button {
         background: none;
         border: none;
-        width: 45px;
-        height: 45px;
+        width: 3rem;
+        height: 3rem;
         cursor: pointer;
     }
     & input {
@@ -262,11 +264,11 @@ aside {
 }
  
 h2, h3, h4 {
-    color: #333333;
+    color: var(--h-color);
 }
  
 address, time, p, ul , a{
-    color: #666666;
+    color: var(--p-color);
 }
  
 .newPlaces {
@@ -279,14 +281,14 @@ address, time, p, ul , a{
         grid-template-columns: 50% 50%  ;
         background-color: #fff;
         border: 1px solid #ccc;
-        border-radius: 20px;
+        border-radius: 1.4rem;
         & meter {
             position: absolute;
             margin-left:-5.5rem;
             margin-top: 0.5rem;
-            color:#fff;
+            color: var(--bg-light-color);
             & i {
-              color:#fff;
+              color:var(--bg-light-color);
             }
           }
           & .addToCard {
@@ -296,12 +298,12 @@ address, time, p, ul , a{
             width: 1.8rem;
             height: 1.8rem;
             & i {
-              color: #000;
+              color: var(--bg-dark-color);
             }
           }
  
           & .addToCard:hover{
-            background-color: #e7e7e7;
+            background-color: var(--bg-dark-color);
           }
         & .details {
             flex: 1;
@@ -344,7 +346,7 @@ article {
  
  /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
+    .prev, .next,.text {font-size: 0.7rem}
   }
  
 /* Responsive style */
@@ -352,13 +354,13 @@ article {
     /* Adjust main container */
     main {
         width: 90%;
-        margin: 10px auto;
+        margin: 0.6rem auto;
     }
  
     /* Stack sections vertically in .undsen_heseg */
     .undsen_heseg {
         grid-template-columns: 1fr;
-        grid-row-gap: 20px;
+        grid-row-gap: 1.4rem;
     }
  
  
@@ -396,12 +398,12 @@ article {
 }
 @media (max-width: 1037px) {
     .ratingPlace  .myRating label {
-        font-size: 20px;
+        font-size: 1.4rem;
     }
 }
 @media (max-width: 816px) {
     .ratingPlace  .myRating label {
-        font-size: 15px;
+        font-size: 1.4rem;
     }
 }
 @media (max-width: 768px) {
@@ -411,7 +413,7 @@ article {
       gap: 1rem;
     }
     .ratingPlace  .myRating label {
-        font-size: 30px;
+        font-size: 1rem;
     }
 }
  

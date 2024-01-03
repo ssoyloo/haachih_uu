@@ -2,16 +2,25 @@ const template = document.createElement("template");
     template.innerHTML = `
     <link rel="stylesheet" href="/let'sGo.css" />
         <style>
-        .description {
-            padding-left:1rem;
+        p {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
         }
+
+        .description {
+            justify-self: end; 
+            padding-left: 2rem;
+        }
+       
         </style>
 
-         <p><input type="checkbox" />
-         <slot></slot>
+        <p>
+        <input type="checkbox" value="freewifi" aria-label="freewifi" />
+        <slot></slot>
          <span class="description">
          <slot name="description"></slot>    
-        </span>
+         </span>
         </p>
     `;
 

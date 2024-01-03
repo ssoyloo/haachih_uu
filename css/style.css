@@ -14,7 +14,7 @@
     margin-top: 1rem;
       margin-bottom: 1.5rem;
       font-size: 22px;
-      color: #333;
+      color: var(--h-color);
       text-align: center;
   }
   h3 {
@@ -22,7 +22,7 @@
   }
    
   p {
-      color: #555;
+      color: var(--p-color);
       font-size: 14px;
   }
    
@@ -47,7 +47,7 @@
           top: 45%;
           width: auto;
           padding: 0.8rem;
-          color: white;
+          color: var(--bg-light-color);
           font-weight: bold;
           font-size: 18px;
           transition: 0.6s ease;
@@ -64,7 +64,7 @@
    
       /* On hover, add a black background color with a little bit see-through */
       & .prev:hover, .next:hover {
-          background-color: rgba(0,0,0,0.8);
+          background-color: var(--bg-dark-color);
       }    
   }
    
@@ -78,13 +78,13 @@
           cursor: pointer;
           height: 15px;
           width: 15px;
-          background-color: #bbb;
+          background-color: var(--p-color);
           border-radius: 50%;
           display: inline-block;
           transition: background-color 0.6s ease;
       }
       & .active, .dot:hover {
-          background-color: #717171;
+          background-color: var(--h-color);
       }
   }
    
@@ -101,8 +101,8 @@
       gap: 10px;
       & .subNewPlaces {
           display: flex;
-          background-color: #fff;
-          border: 1px solid #ccc;
+          background-color: var(--bg-light-color);
+          box-shadow: var(--box-shadow);
           max-width: 500px;
           border-radius: 20px;
           & .image {
